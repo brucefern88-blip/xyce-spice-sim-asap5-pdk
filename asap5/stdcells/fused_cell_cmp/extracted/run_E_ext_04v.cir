@@ -1,0 +1,160 @@
+* =============================================================================
+* run_E_ext_04v.cir — FUSED_E Extracted Transient at SLVT 0.40V
+* =============================================================================
+* 38T OAI22+NOR fused Hamming cell with layout parasitic capacitances
+* from Magic extraction (FUSED_E.ext, scale 1000 1 1, cap in aF /1000 = fF)
+* NOTE: FUSED_E extraction has input/output pin equivalences (layout routing
+* issue), so internal node parasitics are estimated from extraction data
+* with cross-reference to the reference testbench parasitic budget.
+* Outputs: oh0 (hd=0), oh1 (hd=1), oh2 (hd=2) — one-hot
+* ASAP5 SLVT, nfin=2, VDD=0.40V
+* Run:  Xyce run_E_ext_04v.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+* --- Supply ---
+Vvdd Vdd 0 0.40
+Vgnd Gnd 0 0
+
+* --- Stimulus: 4 input vectors sequentially ---
+* 0-200ps:   ai=0 bi=0 aj=0 bj=0 -> hd=0 (oh0=1, oh1=0, oh2=0)
+* 200-400ps: ai=1 bi=0 aj=0 bj=0 -> hd=1 (oh0=0, oh1=1, oh2=0)
+* 400-600ps: ai=1 bi=0 aj=1 bj=0 -> hd=2 (oh0=0, oh1=0, oh2=1)
+* 600-800ps: ai=0 bi=0 aj=1 bj=0 -> hd=1 (oh0=0, oh1=1, oh2=0)
+Vin_ai ai 0 PWL(0 0 190p 0 200p 0.4 590p 0.4 600p 0 800p 0)
+Vin_bi bi 0 DC 0
+Vin_aj aj 0 PWL(0 0 390p 0 400p 0.4 800p 0.4)
+Vin_bj bj 0 DC 0
+
+* =============================================================================
+* FUSED_E subcircuit — SLVT, nfin=2, with layout parasitics
+* =============================================================================
+* --- Input inverters (8T) ---
+Mn_iai nai ai Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_iai nai ai Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_ibi nbi bi Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_ibi nbi bi Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_iaj naj aj Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_iaj naj aj Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_ibj nbj bj Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_ibj nbj bj Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- XOR0 via OAI22: x0 = ai^bi (8T) ---
+Mp_q0_1 x0 nai q0pm1 Vdd pmos_slvt l=16n nfin=2
+Mp_q0_2 q0pm1 nbi Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_q0_3 x0 ai q0pm2 Vdd pmos_slvt l=16n nfin=2
+Mp_q0_4 q0pm2 bi Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_q0_1 q0nmid nai Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_q0_2 q0nmid nbi Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_q0_3 x0 ai q0nmid Gnd nmos_slvt l=16n nfin=2
+Mn_q0_4 x0 bi q0nmid Gnd nmos_slvt l=16n nfin=2
+
+* --- XOR1 via OAI22: x1 = aj^bj (8T) ---
+Mp_q1_1 x1 naj q1pm1 Vdd pmos_slvt l=16n nfin=2
+Mp_q1_2 q1pm1 nbj Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_q1_3 x1 aj q1pm2 Vdd pmos_slvt l=16n nfin=2
+Mp_q1_4 q1pm2 bj Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_q1_1 q1nmid naj Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_q1_2 q1nmid nbj Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_q1_3 x1 aj q1nmid Gnd nmos_slvt l=16n nfin=2
+Mn_q1_4 x1 bj q1nmid Gnd nmos_slvt l=16n nfin=2
+
+* --- OH2: NOR2(x0,x1) (4T) ---
+Mp_o2_1 o2ps x0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_o2_2 oh2 x1 o2ps Vdd pmos_slvt l=16n nfin=2
+Mn_o2_1 oh2 x0 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_o2_2 oh2 x1 Gnd Gnd nmos_slvt l=16n nfin=2
+
+* --- OH0: NAND2(x0,x1) via NOR+INV (6T) ---
+Mp_n0_1 no0 x0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_n0_2 no0 x1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_n0_1 no0 x0 n0ns Gnd nmos_slvt l=16n nfin=2
+Mn_n0_2 n0ns x1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_io0 oh0 no0 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_io0 oh0 no0 Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- OH1: NOR2(oh0,oh2) (4T) ---
+Mp_o1_1 o1ps oh0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_o1_2 oh1 oh2 o1ps Vdd pmos_slvt l=16n nfin=2
+Mn_o1_1 oh1 oh0 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_o1_2 oh1 oh2 Gnd Gnd nmos_slvt l=16n nfin=2
+
+* =============================================================================
+* Layout parasitic capacitances from FUSED_E.ext
+* NOTE: Extraction had pin equivalences (ai=bi=aj=bj=oh2 shorted in layout).
+* Output parasitics from extraction: oh0=5.17fF, oh1=1.80fF
+* Internal node parasitics estimated from extraction of similar FUSED_A/F/G
+* cells, scaled to FUSED_E's smaller 38T footprint (440nm x 140nm).
+* =============================================================================
+* --- Input pin parasitics ---
+Cpar_ai   ai   0  0.20f
+Cpar_bi   bi   0  0.20f
+Cpar_aj   aj   0  0.20f
+Cpar_bj   bj   0  0.20f
+* --- Input inverter outputs ---
+Cpar_nai  nai  0  0.15f
+Cpar_nbi  nbi  0  0.15f
+Cpar_naj  naj  0  0.15f
+Cpar_nbj  nbj  0  0.15f
+* --- OAI22 XOR outputs (x0, x1 drive 3 gates each: NOR2+NOR+INV) ---
+Cpar_x0   x0   0  5.0f
+Cpar_x1   x1   0  5.0f
+* --- NOR2 internal node ---
+Cpar_no0  no0  0  3.0f
+* --- Output node parasitics ---
+* oh0: extraction total = 5170 aF = 5.17 fF
+Cpar_oh0  oh0  0  5.17f
+* oh1: extraction total = 1802 aF = 1.80 fF (NOR2 output, short M1 wire)
+Cpar_oh1  oh1  0  1.80f
+* oh2: estimated from NOR2 output, similar to oh0 routing
+Cpar_oh2  oh2  0  3.0f
+
+* --- Output loads (external) ---
+CL_oh0 oh0 0 1f
+CL_oh1 oh1 0 1f
+CL_oh2 oh2 0 1f
+
+* =============================================================================
+* Analysis
+* =============================================================================
+.TRAN 1p 800p
+
+.PRINT TRAN V(ai) V(bi) V(aj) V(bj) V(oh0) V(oh1) V(oh2) I(Vvdd)
+
+* --- OH0 transitions ---
+.MEASURE TRAN tphl_oh0_1 TRIG V(ai) VAL=0.2 RISE=1 TARG V(oh0) VAL=0.2 FALL=1
+.MEASURE TRAN tplh_oh0_1 TRIG V(ai) VAL=0.2 FALL=1 TARG V(oh0) VAL=0.2 RISE=1
+
+* --- OH1 transitions ---
+.MEASURE TRAN tplh_oh1_1 TRIG V(ai) VAL=0.2 RISE=1 TARG V(oh1) VAL=0.2 RISE=1
+.MEASURE TRAN tphl_oh1_1 TRIG V(aj) VAL=0.2 RISE=1 TARG V(oh1) VAL=0.2 FALL=1
+.MEASURE TRAN tplh_oh1_2 TRIG V(ai) VAL=0.2 FALL=1 TARG V(oh1) VAL=0.2 RISE=2
+
+* --- OH2 transitions ---
+.MEASURE TRAN tplh_oh2_1 TRIG V(aj) VAL=0.2 RISE=1 TARG V(oh2) VAL=0.2 RISE=1
+.MEASURE TRAN tphl_oh2_1 TRIG V(ai) VAL=0.2 FALL=1 TARG V(oh2) VAL=0.2 FALL=1
+
+* --- Steady-state verification ---
+.MEASURE TRAN v_oh0_hd0 FIND V(oh0) AT=180p
+.MEASURE TRAN v_oh1_hd0 FIND V(oh1) AT=180p
+.MEASURE TRAN v_oh2_hd0 FIND V(oh2) AT=180p
+.MEASURE TRAN v_oh0_hd1a FIND V(oh0) AT=380p
+.MEASURE TRAN v_oh1_hd1a FIND V(oh1) AT=380p
+.MEASURE TRAN v_oh2_hd1a FIND V(oh2) AT=380p
+.MEASURE TRAN v_oh0_hd2 FIND V(oh0) AT=580p
+.MEASURE TRAN v_oh1_hd2 FIND V(oh1) AT=580p
+.MEASURE TRAN v_oh2_hd2 FIND V(oh2) AT=580p
+.MEASURE TRAN v_oh0_hd1b FIND V(oh0) AT=780p
+.MEASURE TRAN v_oh1_hd1b FIND V(oh1) AT=780p
+.MEASURE TRAN v_oh2_hd1b FIND V(oh2) AT=780p
+
+.MEASURE TRAN i_avg AVG I(Vvdd) FROM=0 TO=800p
+
+.END

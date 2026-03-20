@@ -1,0 +1,141 @@
+* =============================================================================
+* run_A_schem_04v.cir — FUSED_A Schematic Transient at SLVT 0.40V
+* =============================================================================
+* 48T canonical fused Hamming cell (4 INV + 2 XOR + 2 INV + NOR2+INV + AOI + NAND2+INV)
+* Outputs: oh0 (hd=0), oh1 (hd=1), oh2 (hd=2) — one-hot
+* ASAP5 SLVT, nfin=2, VDD=0.40V
+* Run:  Xyce run_A_schem_04v.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+* --- Supply ---
+Vvdd Vdd 0 0.40
+Vgnd Gnd 0 0
+
+* --- Stimulus: 4 input vectors sequentially ---
+* 0-200ps:   ai=0 bi=0 aj=0 bj=0 -> hd=0 (oh0=1, oh1=0, oh2=0)
+* 200-400ps: ai=1 bi=0 aj=0 bj=0 -> hd=1 (oh0=0, oh1=1, oh2=0)
+* 400-600ps: ai=1 bi=0 aj=1 bj=0 -> hd=2 (oh0=0, oh1=0, oh2=1)
+* 600-800ps: ai=0 bi=0 aj=1 bj=0 -> hd=1 (oh0=0, oh1=1, oh2=0)
+Vin_ai ai 0 PWL(0 0 190p 0 200p 0.4 590p 0.4 600p 0 800p 0)
+Vin_bi bi 0 DC 0
+Vin_aj aj 0 PWL(0 0 390p 0 400p 0.4 800p 0.4)
+Vin_bj bj 0 DC 0
+
+* =============================================================================
+* FUSED_A subcircuit — SLVT, nfin=2, VDD=0.40V
+* =============================================================================
+* --- Input inverters (8T) ---
+Mn_iai nai ai Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_iai nai ai Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_ibi nbi bi Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_ibi nbi bi Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_iaj naj aj Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_iaj naj aj Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_ibj nbj bj Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_ibj nbj bj Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- XOR0: d0 = ai ^ bi (8T CMOS XOR) ---
+Mp_x0_1 x0pm ai Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_x0_2 x0pm bi Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_x0_3 d0 nai x0pm Vdd pmos_slvt l=16n nfin=2
+Mp_x0_4 d0 nbi x0pm Vdd pmos_slvt l=16n nfin=2
+Mn_x0_1 d0 ai x0nm1 Gnd nmos_slvt l=16n nfin=2
+Mn_x0_2 x0nm1 bi Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_x0_3 d0 nai x0nm2 Gnd nmos_slvt l=16n nfin=2
+Mn_x0_4 x0nm2 nbi Gnd Gnd nmos_slvt l=16n nfin=2
+
+* --- XOR1: d1 = aj ^ bj (8T CMOS XOR) ---
+Mp_x1_1 x1pm aj Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_x1_2 x1pm bj Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_x1_3 d1 naj x1pm Vdd pmos_slvt l=16n nfin=2
+Mp_x1_4 d1 nbj x1pm Vdd pmos_slvt l=16n nfin=2
+Mn_x1_1 d1 aj x1nm1 Gnd nmos_slvt l=16n nfin=2
+Mn_x1_2 x1nm1 bj Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_x1_3 d1 naj x1nm2 Gnd nmos_slvt l=16n nfin=2
+Mn_x1_4 x1nm2 nbj Gnd Gnd nmos_slvt l=16n nfin=2
+
+* --- XOR output inverters (4T) ---
+Mn_id0 xn0 d0 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_id0 xn0 d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_id1 xn1 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_id1 xn1 d1 Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- OH0: NOR2(d0,d1) — hd=0 when both XORs are 0 ---
+Mp_o0_1 o0ps d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_o0_2 oh0 d1 o0ps Vdd pmos_slvt l=16n nfin=2
+Mn_o0_1 oh0 d0 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_o0_2 oh0 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+
+* --- OH1: XOR(d0,d1) via AOI22 + INV ---
+Mp_a1_1 a1pm d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_a1_2 a1pm xn1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_a1_3 no1 xn0 a1pm Vdd pmos_slvt l=16n nfin=2
+Mp_a1_4 no1 d1 a1pm Vdd pmos_slvt l=16n nfin=2
+Mn_a1_1 no1 d0 a1nm1 Gnd nmos_slvt l=16n nfin=2
+Mn_a1_2 a1nm1 xn1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_a1_3 no1 xn0 a1nm2 Gnd nmos_slvt l=16n nfin=2
+Mn_a1_4 a1nm2 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_io1 oh1 no1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_io1 oh1 no1 Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- OH2: NAND2(d0,d1) + INV ---
+Mp_n2_1 no2 d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_n2_2 no2 d1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_n2_1 no2 d0 n2ns Gnd nmos_slvt l=16n nfin=2
+Mn_n2_2 n2ns d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_io2 oh2 no2 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_io2 oh2 no2 Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- Output loads ---
+CL_oh0 oh0 0 1f
+CL_oh1 oh1 0 1f
+CL_oh2 oh2 0 1f
+
+* =============================================================================
+* Analysis
+* =============================================================================
+.TRAN 1p 800p
+
+.PRINT TRAN V(ai) V(bi) V(aj) V(bj) V(oh0) V(oh1) V(oh2) I(Vvdd)
+
+* --- OH0 transitions ---
+* t=200p: oh0 falls (hd=0->1), t=600p: oh0 rises (hd=1->1, but from hd=2 path via oh0 stays low then rises)
+.MEASURE TRAN tphl_oh0_1 TRIG V(ai) VAL=0.2 RISE=1 TARG V(oh0) VAL=0.2 FALL=1
+.MEASURE TRAN tplh_oh0_1 TRIG V(ai) VAL=0.2 FALL=1 TARG V(oh0) VAL=0.2 RISE=1
+
+* --- OH1 transitions ---
+* t=200p: oh1 rises (hd=0->1), t=400p: oh1 falls (hd=1->2), t=600p: oh1 rises (hd=2->1)
+.MEASURE TRAN tplh_oh1_1 TRIG V(ai) VAL=0.2 RISE=1 TARG V(oh1) VAL=0.2 RISE=1
+.MEASURE TRAN tphl_oh1_1 TRIG V(aj) VAL=0.2 RISE=1 TARG V(oh1) VAL=0.2 FALL=1
+.MEASURE TRAN tplh_oh1_2 TRIG V(ai) VAL=0.2 FALL=1 TARG V(oh1) VAL=0.2 RISE=2
+
+* --- OH2 transitions ---
+* t=400p: oh2 rises (hd=1->2), t=600p: oh2 falls (hd=2->1)
+.MEASURE TRAN tplh_oh2_1 TRIG V(aj) VAL=0.2 RISE=1 TARG V(oh2) VAL=0.2 RISE=1
+.MEASURE TRAN tphl_oh2_1 TRIG V(ai) VAL=0.2 FALL=1 TARG V(oh2) VAL=0.2 FALL=1
+
+* --- Steady-state verification ---
+.MEASURE TRAN v_oh0_hd0 FIND V(oh0) AT=180p
+.MEASURE TRAN v_oh1_hd0 FIND V(oh1) AT=180p
+.MEASURE TRAN v_oh2_hd0 FIND V(oh2) AT=180p
+.MEASURE TRAN v_oh0_hd1a FIND V(oh0) AT=380p
+.MEASURE TRAN v_oh1_hd1a FIND V(oh1) AT=380p
+.MEASURE TRAN v_oh2_hd1a FIND V(oh2) AT=380p
+.MEASURE TRAN v_oh0_hd2 FIND V(oh0) AT=580p
+.MEASURE TRAN v_oh1_hd2 FIND V(oh1) AT=580p
+.MEASURE TRAN v_oh2_hd2 FIND V(oh2) AT=580p
+.MEASURE TRAN v_oh0_hd1b FIND V(oh0) AT=780p
+.MEASURE TRAN v_oh1_hd1b FIND V(oh1) AT=780p
+.MEASURE TRAN v_oh2_hd1b FIND V(oh2) AT=780p
+
+.MEASURE TRAN i_avg AVG I(Vvdd) FROM=0 TO=800p
+
+.END

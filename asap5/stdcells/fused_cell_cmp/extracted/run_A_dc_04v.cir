@@ -1,0 +1,101 @@
+* =============================================================================
+* run_A_dc_04v.cir — FUSED_A DC VTC Sweep at SLVT 0.40V
+* =============================================================================
+* Sweep ai from 0 to 0.4V, bi=0, aj=0.4V, bj=0
+* This gives: d0 = ai^bi = ai, d1 = aj^bj = 1
+* hd transitions between 1 (ai=0, d0=0,d1=1) and 2 (ai=1, d0=1,d1=1)
+* Measure v_trip on oh1 (hd=1 output)
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+
+* --- Supply ---
+Vvdd Vdd 0 0.40
+Vgnd Gnd 0 0
+
+* --- Stimulus ---
+Vin_ai ai 0 DC 0
+Vin_bi bi 0 DC 0
+Vin_aj aj 0 DC 0.40
+Vin_bj bj 0 DC 0
+
+* =============================================================================
+* FUSED_A subcircuit — SLVT, nfin=2
+* =============================================================================
+* --- Input inverters (8T) ---
+Mn_iai nai ai Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_iai nai ai Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_ibi nbi bi Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_ibi nbi bi Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_iaj naj aj Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_iaj naj aj Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_ibj nbj bj Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_ibj nbj bj Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- XOR0: d0 = ai ^ bi (8T CMOS XOR) ---
+Mp_x0_1 x0pm ai Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_x0_2 x0pm bi Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_x0_3 d0 nai x0pm Vdd pmos_slvt l=16n nfin=2
+Mp_x0_4 d0 nbi x0pm Vdd pmos_slvt l=16n nfin=2
+Mn_x0_1 d0 ai x0nm1 Gnd nmos_slvt l=16n nfin=2
+Mn_x0_2 x0nm1 bi Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_x0_3 d0 nai x0nm2 Gnd nmos_slvt l=16n nfin=2
+Mn_x0_4 x0nm2 nbi Gnd Gnd nmos_slvt l=16n nfin=2
+
+* --- XOR1: d1 = aj ^ bj (8T CMOS XOR) ---
+Mp_x1_1 x1pm aj Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_x1_2 x1pm bj Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_x1_3 d1 naj x1pm Vdd pmos_slvt l=16n nfin=2
+Mp_x1_4 d1 nbj x1pm Vdd pmos_slvt l=16n nfin=2
+Mn_x1_1 d1 aj x1nm1 Gnd nmos_slvt l=16n nfin=2
+Mn_x1_2 x1nm1 bj Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_x1_3 d1 naj x1nm2 Gnd nmos_slvt l=16n nfin=2
+Mn_x1_4 x1nm2 nbj Gnd Gnd nmos_slvt l=16n nfin=2
+
+* --- XOR output inverters (4T) ---
+Mn_id0 xn0 d0 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_id0 xn0 d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_id1 xn1 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_id1 xn1 d1 Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- OH0: NOR2(d0,d1) ---
+Mp_o0_1 o0ps d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_o0_2 oh0 d1 o0ps Vdd pmos_slvt l=16n nfin=2
+Mn_o0_1 oh0 d0 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_o0_2 oh0 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+
+* --- OH1: XOR(d0,d1) via AOI22 + INV ---
+Mp_a1_1 a1pm d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_a1_2 a1pm xn1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_a1_3 no1 xn0 a1pm Vdd pmos_slvt l=16n nfin=2
+Mp_a1_4 no1 d1 a1pm Vdd pmos_slvt l=16n nfin=2
+Mn_a1_1 no1 d0 a1nm1 Gnd nmos_slvt l=16n nfin=2
+Mn_a1_2 a1nm1 xn1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_a1_3 no1 xn0 a1nm2 Gnd nmos_slvt l=16n nfin=2
+Mn_a1_4 a1nm2 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_io1 oh1 no1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_io1 oh1 no1 Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- OH2: NAND2(d0,d1) + INV ---
+Mp_n2_1 no2 d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp_n2_2 no2 d1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_n2_1 no2 d0 n2ns Gnd nmos_slvt l=16n nfin=2
+Mn_n2_2 n2ns d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn_io2 oh2 no2 Gnd Gnd nmos_slvt l=16n nfin=2
+Mp_io2 oh2 no2 Vdd Vdd pmos_slvt l=16n nfin=2
+
+* =============================================================================
+* DC sweep
+* =============================================================================
+.DC Vin_ai 0 0.4 0.001
+
+.PRINT DC V(ai) V(oh0) V(oh1) V(oh2)
+
+.MEASURE DC v_trip_oh1 WHEN V(oh1)=0.2 CROSS=1
+
+.END
