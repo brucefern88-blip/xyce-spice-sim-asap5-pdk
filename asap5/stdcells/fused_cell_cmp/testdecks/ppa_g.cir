@@ -1,0 +1,118 @@
+* FUSED_G (40T) — 16-vector transient, Xyce BSIM-CMG
+* Post-layout parasitics from Magic ASAP5 extraction
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=6
+
+Vvdd VDD 0 0.5
+
+* 16 vectors x 1ns = 16ns, 5ps rise/fall
+Vai ai 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 3.0000e-09 0.0 4.0000e-09 0.0 5.0000e-09 0.0 6.0000e-09 0.0 7.0000e-09 0.0 8.0000e-09 0.0 8.0050e-09 0.5 9.0000e-09 0.5 1.0000e-08 0.5 1.1000e-08 0.5 1.2000e-08 0.5 1.3000e-08 0.5 1.4000e-08 0.5 1.5000e-08 0.5)
+Vbi bi 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 3.0000e-09 0.0 4.0000e-09 0.0 4.0050e-09 0.5 5.0000e-09 0.5 6.0000e-09 0.5 7.0000e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 1.0000e-08 0.0 1.1000e-08 0.0 1.2000e-08 0.0 1.2005e-08 0.5 1.3000e-08 0.5 1.4000e-08 0.5 1.5000e-08 0.5)
+Vaj aj 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 2.0050e-09 0.5 3.0000e-09 0.5 4.0000e-09 0.5 4.0050e-09 0.0 5.0000e-09 0.0 6.0000e-09 0.0 6.0050e-09 0.5 7.0000e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 1.0000e-08 0.0 1.0005e-08 0.5 1.1000e-08 0.5 1.2000e-08 0.5 1.2005e-08 0.0 1.3000e-08 0.0 1.4000e-08 0.0 1.4005e-08 0.5 1.5000e-08 0.5)
+Vbj bj 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 1.0050e-09 0.5 2.0000e-09 0.5 2.0050e-09 0.0 3.0000e-09 0.0 3.0050e-09 0.5 4.0000e-09 0.5 4.0050e-09 0.0 5.0000e-09 0.0 5.0050e-09 0.5 6.0000e-09 0.5 6.0050e-09 0.0 7.0000e-09 0.0 7.0050e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 9.0050e-09 0.5 1.0000e-08 0.5 1.0005e-08 0.0 1.1000e-08 0.0 1.1005e-08 0.5 1.2000e-08 0.5 1.2005e-08 0.0 1.3000e-08 0.0 1.3005e-08 0.5 1.4000e-08 0.5 1.4005e-08 0.0 1.5000e-08 0.0 1.5005e-08 0.5)
+
+* === G circuit (40T) ===
+Mp_ia nai ai VDD VDD pmos_slvt l=16n nfin=2
+Mn_ia nai ai 0 0 nmos_slvt l=16n nfin=2
+Mp_ib nbi bi VDD VDD pmos_slvt l=16n nfin=2
+Mn_ib nbi bi 0 0 nmos_slvt l=16n nfin=2
+Mp_iaj naj aj VDD VDD pmos_slvt l=16n nfin=2
+Mn_iaj naj aj 0 0 nmos_slvt l=16n nfin=2
+Mp_ibj nbj bj VDD VDD pmos_slvt l=16n nfin=2
+Mn_ibj nbj bj 0 0 nmos_slvt l=16n nfin=2
+Mp1_q0 x0 nai q0_pm1 VDD pmos_slvt l=16n nfin=2
+Mp2_q0 q0_pm1 nbi VDD VDD pmos_slvt l=16n nfin=2
+Mp3_q0 x0 ai q0_pm2 VDD pmos_slvt l=16n nfin=2
+Mp4_q0 q0_pm2 bi VDD VDD pmos_slvt l=16n nfin=2
+Mn1_q0 q0_nmid nai 0 0 nmos_slvt l=16n nfin=2
+Mn2_q0 q0_nmid nbi 0 0 nmos_slvt l=16n nfin=2
+Mn3_q0 x0 ai q0_nmid 0 nmos_slvt l=16n nfin=2
+Mn4_q0 x0 bi q0_nmid 0 nmos_slvt l=16n nfin=2
+Mp1_q1 x1 naj q1_pm1 VDD pmos_slvt l=16n nfin=2
+Mp2_q1 q1_pm1 nbj VDD VDD pmos_slvt l=16n nfin=2
+Mp3_q1 x1 aj q1_pm2 VDD pmos_slvt l=16n nfin=2
+Mp4_q1 q1_pm2 bj VDD VDD pmos_slvt l=16n nfin=2
+Mn1_q1 q1_nmid naj 0 0 nmos_slvt l=16n nfin=2
+Mn2_q1 q1_nmid nbj 0 0 nmos_slvt l=16n nfin=2
+Mn3_q1 x1 aj q1_nmid 0 nmos_slvt l=16n nfin=2
+Mn4_q1 x1 bj q1_nmid 0 nmos_slvt l=16n nfin=2
+Mp_ix0 d0 x0 VDD VDD pmos_slvt l=16n nfin=2
+Mn_ix0 d0 x0 0 0 nmos_slvt l=16n nfin=2
+Mp_ix1 d1 x1 VDD VDD pmos_slvt l=16n nfin=2
+Mn_ix1 d1 x1 0 0 nmos_slvt l=16n nfin=2
+Mp1_a1 a1_pm d0 VDD VDD pmos_slvt l=16n nfin=2
+Mp2_a1 a1_pm x1 VDD VDD pmos_slvt l=16n nfin=2
+Mp3_a1 noh1 x0 a1_pm VDD pmos_slvt l=16n nfin=2
+Mp4_a1 noh1 d1 a1_pm VDD pmos_slvt l=16n nfin=2
+Mn1_a1 noh1 d0 a1_nm1 0 nmos_slvt l=16n nfin=2
+Mn2_a1 a1_nm1 x1 0 0 nmos_slvt l=16n nfin=2
+Mn3_a1 noh1 x0 a1_nm2 0 nmos_slvt l=16n nfin=2
+Mn4_a1 a1_nm2 d1 0 0 nmos_slvt l=16n nfin=2
+Mp1_n2 noh2 d0 VDD VDD pmos_slvt l=16n nfin=2
+Mp2_n2 noh2 d1 VDD VDD pmos_slvt l=16n nfin=2
+Mn1_n2 noh2 d0 n2_ns 0 nmos_slvt l=16n nfin=2
+Mn2_n2 n2_ns d1 0 0 nmos_slvt l=16n nfin=2
+
+CL_noh1 noh1 0 1f
+CL_noh2 noh2 0 1f
+
+* Estimated wire parasitics (from layout geometry)
+Cwire_0 nai 0 0.3f
+Cwire_1 nbi 0 0.3f
+Cwire_2 naj 0 0.3f
+Cwire_3 nbj 0 0.3f
+Cwire_4 d0 0 0.3f
+Cwire_5 d1 0 0.3f
+Cwire_6 x0 0 0.3f
+Cwire_7 x1 0 0.3f
+
+.TRAN 1p 1.6000e-08
+
+.PRINT TRAN V(ai) V(bi) V(aj) V(bj) V(noh1) V(noh2) I(Vvdd)
+
+* Functional verification: sample at 0.8ns into each vector
+.MEASURE TRAN v_noh1_v0 FIND V(noh1) AT=8.0000e-10
+.MEASURE TRAN v_noh2_v0 FIND V(noh2) AT=8.0000e-10
+.MEASURE TRAN v_noh1_v1 FIND V(noh1) AT=1.8000e-09
+.MEASURE TRAN v_noh2_v1 FIND V(noh2) AT=1.8000e-09
+.MEASURE TRAN v_noh1_v2 FIND V(noh1) AT=2.8000e-09
+.MEASURE TRAN v_noh2_v2 FIND V(noh2) AT=2.8000e-09
+.MEASURE TRAN v_noh1_v3 FIND V(noh1) AT=3.8000e-09
+.MEASURE TRAN v_noh2_v3 FIND V(noh2) AT=3.8000e-09
+.MEASURE TRAN v_noh1_v4 FIND V(noh1) AT=4.8000e-09
+.MEASURE TRAN v_noh2_v4 FIND V(noh2) AT=4.8000e-09
+.MEASURE TRAN v_noh1_v5 FIND V(noh1) AT=5.8000e-09
+.MEASURE TRAN v_noh2_v5 FIND V(noh2) AT=5.8000e-09
+.MEASURE TRAN v_noh1_v6 FIND V(noh1) AT=6.8000e-09
+.MEASURE TRAN v_noh2_v6 FIND V(noh2) AT=6.8000e-09
+.MEASURE TRAN v_noh1_v7 FIND V(noh1) AT=7.8000e-09
+.MEASURE TRAN v_noh2_v7 FIND V(noh2) AT=7.8000e-09
+.MEASURE TRAN v_noh1_v8 FIND V(noh1) AT=8.8000e-09
+.MEASURE TRAN v_noh2_v8 FIND V(noh2) AT=8.8000e-09
+.MEASURE TRAN v_noh1_v9 FIND V(noh1) AT=9.8000e-09
+.MEASURE TRAN v_noh2_v9 FIND V(noh2) AT=9.8000e-09
+.MEASURE TRAN v_noh1_v10 FIND V(noh1) AT=1.0800e-08
+.MEASURE TRAN v_noh2_v10 FIND V(noh2) AT=1.0800e-08
+.MEASURE TRAN v_noh1_v11 FIND V(noh1) AT=1.1800e-08
+.MEASURE TRAN v_noh2_v11 FIND V(noh2) AT=1.1800e-08
+.MEASURE TRAN v_noh1_v12 FIND V(noh1) AT=1.2800e-08
+.MEASURE TRAN v_noh2_v12 FIND V(noh2) AT=1.2800e-08
+.MEASURE TRAN v_noh1_v13 FIND V(noh1) AT=1.3800e-08
+.MEASURE TRAN v_noh2_v13 FIND V(noh2) AT=1.3800e-08
+.MEASURE TRAN v_noh1_v14 FIND V(noh1) AT=1.4800e-08
+.MEASURE TRAN v_noh2_v14 FIND V(noh2) AT=1.4800e-08
+.MEASURE TRAN v_noh1_v15 FIND V(noh1) AT=1.5800e-08
+.MEASURE TRAN v_noh2_v15 FIND V(noh2) AT=1.5800e-08
+
+* Delay: bi rises at vec4 (4ns), noh1 should fall
+.MEASURE TRAN t_bi_rise WHEN V(bi)=0.25 RISE=1
+.MEASURE TRAN t_noh1_fall WHEN V(noh1)=0.25 FALL=1
+.MEASURE TRAN tpd_noh1 PARAM='t_noh1_fall - t_bi_rise'
+.MEASURE TRAN i_avg AVG I(Vvdd) FROM=0 TO=1.6000e-08
+.MEASURE TRAN i_switch AVG I(Vvdd) FROM=4.0000e-09 TO=8.0000e-09
+
+.END

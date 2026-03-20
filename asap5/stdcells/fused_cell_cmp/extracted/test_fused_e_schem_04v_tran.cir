@@ -1,0 +1,146 @@
+* =============================================================================
+* test_fused_e_schem_04v_tran.cir — FUSED_E Schematic-Level Transient VDD=0.40V
+* =============================================================================
+* Schematic netlist (no layout extraction) to avoid routing shorts in layout.
+* ASAP5 GAA nanosheet SLVT TT calibrated models, BSIM-CMG level=107
+* Converted from fused_cell_E.sp: w= removed, l=16n, nfin=2,
+*   nmos_lvt -> nmos_slvt, pmos_lvt -> pmos_slvt, PMOS body -> Vdd
+*
+* Stimulus: ai=pulse 0->VDD, bi=0, aj=VDD, bj=0 => hd=1 initially (oh1 high)
+*           After ai rises: hd=2 (oh2 goes high)
+*
+* Run:  ~/xyce-stack/install/xyce/bin/Xyce -max-warnings 5 test_fused_e_schem_04v_tran.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+
+* --- Solver Options ---
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.40
+.param half_vdd = 0.20
+
+* =============================================================================
+* FUSED_E subcircuit — schematic-level (from fused_cell_E.sp)
+* Converted for Xyce: w= removed, l=16n, nfin=2, models -> slvt, PMOS body=Vdd
+* =============================================================================
+.subckt FUSED_E ai bi aj bj oh0 oh1 oh2 Vdd Gnd
+
+* --- Input inverters (8T) ---
+mn_iai nai ai Gnd Gnd nmos_slvt l=16n nfin=2
+mp_iai nai ai Vdd Vdd pmos_slvt l=16n nfin=2
+mn_ibi nbi bi Gnd Gnd nmos_slvt l=16n nfin=2
+mp_ibi nbi bi Vdd Vdd pmos_slvt l=16n nfin=2
+mn_iaj naj aj Gnd Gnd nmos_slvt l=16n nfin=2
+mp_iaj naj aj Vdd Vdd pmos_slvt l=16n nfin=2
+mn_ibj nbj bj Gnd Gnd nmos_slvt l=16n nfin=2
+mp_ibj nbj bj Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- XOR0 via OAI22: x0 = XNOR(ai,bi) (8T) ---
+mp_q0_1 x0 nai q0pm1 Vdd pmos_slvt l=16n nfin=2
+mp_q0_2 q0pm1 nbi Vdd Vdd pmos_slvt l=16n nfin=2
+mp_q0_3 x0 ai q0pm2 Vdd pmos_slvt l=16n nfin=2
+mp_q0_4 q0pm2 bi Vdd Vdd pmos_slvt l=16n nfin=2
+mn_q0_1 q0nmid nai Gnd Gnd nmos_slvt l=16n nfin=2
+mn_q0_2 q0nmid nbi Gnd Gnd nmos_slvt l=16n nfin=2
+mn_q0_3 x0 ai q0nmid Gnd nmos_slvt l=16n nfin=2
+mn_q0_4 x0 bi q0nmid Gnd nmos_slvt l=16n nfin=2
+
+* --- XOR1 via OAI22: x1 = XNOR(aj,bj) (8T) ---
+mp_q1_1 x1 naj q1pm1 Vdd pmos_slvt l=16n nfin=2
+mp_q1_2 q1pm1 nbj Vdd Vdd pmos_slvt l=16n nfin=2
+mp_q1_3 x1 aj q1pm2 Vdd pmos_slvt l=16n nfin=2
+mp_q1_4 q1pm2 bj Vdd Vdd pmos_slvt l=16n nfin=2
+mn_q1_1 q1nmid naj Gnd Gnd nmos_slvt l=16n nfin=2
+mn_q1_2 q1nmid nbj Gnd Gnd nmos_slvt l=16n nfin=2
+mn_q1_3 x1 aj q1nmid Gnd nmos_slvt l=16n nfin=2
+mn_q1_4 x1 bj q1nmid Gnd nmos_slvt l=16n nfin=2
+
+* --- OH2: NOR2(x0,x1) — hd=2 when both pairs differ (4T) ---
+mp_o2_1 o2ps x0 Vdd Vdd pmos_slvt l=16n nfin=2
+mp_o2_2 oh2 x1 o2ps Vdd pmos_slvt l=16n nfin=2
+mn_o2_1 oh2 x0 Gnd Gnd nmos_slvt l=16n nfin=2
+mn_o2_2 oh2 x1 Gnd Gnd nmos_slvt l=16n nfin=2
+
+* --- OH0 path: NOR2(x0,x1) + INV — hd=0 when both pairs match (6T) ---
+mp_n0_1 no0 x0 Vdd Vdd pmos_slvt l=16n nfin=2
+mp_n0_2 no0 x1 Vdd Vdd pmos_slvt l=16n nfin=2
+mn_n0_1 no0 x0 n0ns Gnd nmos_slvt l=16n nfin=2
+mn_n0_2 n0ns x1 Gnd Gnd nmos_slvt l=16n nfin=2
+mn_io0 oh0 no0 Gnd Gnd nmos_slvt l=16n nfin=2
+mp_io0 oh0 no0 Vdd Vdd pmos_slvt l=16n nfin=2
+
+* --- OH1: NOR2(oh0,oh2) — hd=1 when exactly one pair differs (4T) ---
+mp_o1_1 o1ps oh0 Vdd Vdd pmos_slvt l=16n nfin=2
+mp_o1_2 oh1 oh2 o1ps Vdd pmos_slvt l=16n nfin=2
+mn_o1_1 oh1 oh0 Gnd Gnd nmos_slvt l=16n nfin=2
+mn_o1_2 oh1 oh2 Gnd Gnd nmos_slvt l=16n nfin=2
+
+.ends FUSED_E
+
+* =============================================================================
+* Testbench
+* =============================================================================
+
+* --- Supply ---
+Vvdd VDD 0 {vdd_val}
+Vgnd GND 0 0
+
+* --- Input Stimuli ---
+* ai: pulse 0->VDD, 100p delay, 10p rise/fall, 190p width, 400p period
+* bi=0 DC, aj=VDD DC, bj=0 DC
+* Initial state (ai=0): x0=XNOR(0,0)=1, x1=XNOR(1,0)=0 => hd=1, oh1=1
+* After ai rises: x0=XNOR(1,0)=0, x1=XNOR(1,0)=0 => hd=2, oh2=1
+
+Vai ai  0 PULSE(0 {vdd_val} 100p 10p 10p 190p 400p)
+Vbi bi  0 0
+Vaj aj  0 {vdd_val}
+Vbj bj  0 0
+
+* --- DUT ---
+XDUT ai bi aj bj oh0 oh1 oh2 VDD GND FUSED_E
+
+* --- Output Loads ---
+CL_oh0 oh0 0 1f
+CL_oh1 oh1 0 1f
+CL_oh2 oh2 0 1f
+
+* =============================================================================
+* Analysis
+* =============================================================================
+.TRAN 1p 800p
+
+.PRINT TRAN V(ai) V(bi) V(aj) V(bj) V(oh0) V(oh1) V(oh2) I(Vvdd)
+
+* --- Propagation Delay: oh0 ---
+.MEASURE TRAN tphl_oh0 TRIG V(ai) VAL={half_vdd} RISE=1
++  TARG V(oh0) VAL={half_vdd} FALL=1
+
+.MEASURE TRAN tplh_oh0 TRIG V(ai) VAL={half_vdd} FALL=1
++  TARG V(oh0) VAL={half_vdd} RISE=1
+
+* --- Propagation Delay: oh1 ---
+.MEASURE TRAN tphl_oh1 TRIG V(ai) VAL={half_vdd} RISE=1
++  TARG V(oh1) VAL={half_vdd} FALL=1
+
+.MEASURE TRAN tplh_oh1 TRIG V(ai) VAL={half_vdd} FALL=1
++  TARG V(oh1) VAL={half_vdd} RISE=1
+
+* --- Propagation Delay: oh2 ---
+.MEASURE TRAN tphl_oh2 TRIG V(ai) VAL={half_vdd} RISE=1
++  TARG V(oh2) VAL={half_vdd} FALL=1
+
+.MEASURE TRAN tplh_oh2 TRIG V(ai) VAL={half_vdd} FALL=1
++  TARG V(oh2) VAL={half_vdd} RISE=1
+
+* --- Average supply current over full sim ---
+.MEASURE TRAN avg_idd AVG I(Vvdd) FROM=0 TO=800p
+
+* --- Total energy (charge integral * VDD) ---
+.MEASURE TRAN e_total INTEG I(Vvdd) FROM=0 TO=800p
+
+.END

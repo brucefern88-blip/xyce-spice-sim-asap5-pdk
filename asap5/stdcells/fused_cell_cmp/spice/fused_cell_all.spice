@@ -1,0 +1,471 @@
+* Fused Hamming Cell -- TSMC N5 Transistor-Level SPICE
+* Variants A(48T), E(38T), F(42T), G(40T)
+* VDD=0.5V, 2-fin FinFET, 16-vector functional + power
+
+* --- MOSFET Models (TSMC N5 approx, 2-fin) ---
+.model nch nmos level=1 vto=0.3 kp=108u lambda=0.08
++ tox=1.2n cgso=0.5f cgdo=0.5f cbd=0.04f cbs=0.04f
+.model pch pmos level=1 vto=-0.3 kp=72u lambda=0.1
++ tox=1.2n cgso=0.5f cgdo=0.5f cbd=0.04f cbs=0.04f
+
+Vdd_a vdd_a 0 0.5
+Vdd_e vdd_e 0 0.5
+Vdd_f vdd_f 0 0.5
+Vdd_g vdd_g 0 0.5
+
+* --- Input Stimulus (16 vectors x 100ps = 1.6ns) ---
+Vai ai 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 3.0000e-09 0.0 4.0000e-09 0.0 5.0000e-09 0.0 6.0000e-09 0.0 7.0000e-09 0.0 8.0000e-09 0.0 8.0050e-09 0.5 9.0000e-09 0.5 1.0000e-08 0.5 1.1000e-08 0.5 1.2000e-08 0.5 1.3000e-08 0.5 1.4000e-08 0.5 1.5000e-08 0.5)
+Vbi bi 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 3.0000e-09 0.0 4.0000e-09 0.0 4.0050e-09 0.5 5.0000e-09 0.5 6.0000e-09 0.5 7.0000e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 1.0000e-08 0.0 1.1000e-08 0.0 1.2000e-08 0.0 1.2005e-08 0.5 1.3000e-08 0.5 1.4000e-08 0.5 1.5000e-08 0.5)
+Vaj aj 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 2.0050e-09 0.5 3.0000e-09 0.5 4.0000e-09 0.5 4.0050e-09 0.0 5.0000e-09 0.0 6.0000e-09 0.0 6.0050e-09 0.5 7.0000e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 1.0000e-08 0.0 1.0005e-08 0.5 1.1000e-08 0.5 1.2000e-08 0.5 1.2005e-08 0.0 1.3000e-08 0.0 1.4000e-08 0.0 1.4005e-08 0.5 1.5000e-08 0.5)
+Vbj bj 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 1.0050e-09 0.5 2.0000e-09 0.5 2.0050e-09 0.0 3.0000e-09 0.0 3.0050e-09 0.5 4.0000e-09 0.5 4.0050e-09 0.0 5.0000e-09 0.0 5.0050e-09 0.5 6.0000e-09 0.5 6.0050e-09 0.0 7.0000e-09 0.0 7.0050e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 9.0050e-09 0.5 1.0000e-08 0.5 1.0005e-08 0.0 1.1000e-08 0.0 1.1005e-08 0.5 1.2000e-08 0.5 1.2005e-08 0.0 1.3000e-08 0.0 1.3005e-08 0.5 1.4000e-08 0.5 1.4005e-08 0.0 1.5000e-08 0.0 1.5005e-08 0.5)
+
+* === VARIANT A: Canonical (48T) ===
+Ma_iai_p a_nai ai vdd_a vdd_a pch W=100n L=12n
+Ma_iai_n a_nai ai 0 0 nch W=100n L=12n
+Ca_iai_i a_nai 0 0.15f
+Ma_ibi_p a_nbi bi vdd_a vdd_a pch W=100n L=12n
+Ma_ibi_n a_nbi bi 0 0 nch W=100n L=12n
+Ca_ibi_i a_nbi 0 0.15f
+Ma_iaj_p a_naj aj vdd_a vdd_a pch W=100n L=12n
+Ma_iaj_n a_naj aj 0 0 nch W=100n L=12n
+Ca_iaj_i a_naj 0 0.15f
+Ma_ibj_p a_nbj bj vdd_a vdd_a pch W=100n L=12n
+Ma_ibj_n a_nbj bj 0 0 nch W=100n L=12n
+Ca_ibj_i a_nbj 0 0.15f
+Ma_x0_p1 a_x0_pm ai vdd_a vdd_a pch W=100n L=12n
+Ma_x0_p2 a_x0_pm bi vdd_a vdd_a pch W=100n L=12n
+Ma_x0_p3 a_d0  a_nai a_x0_pm vdd_a pch W=100n L=12n
+Ma_x0_p4 a_d0  a_nbi a_x0_pm vdd_a pch W=100n L=12n
+Ma_x0_n1 a_d0  ai a_x0_nm1 0 nch W=100n L=12n
+Ma_x0_n2 a_x0_nm1  bi 0 0 nch W=100n L=12n
+Ma_x0_n3 a_d0  a_nai a_x0_nm2 0 nch W=100n L=12n
+Ma_x0_n4 a_x0_nm2  a_nbi 0 0 nch W=100n L=12n
+Ca_x0_i a_d0 0 0.15f
+Ma_x1_p1 a_x1_pm aj vdd_a vdd_a pch W=100n L=12n
+Ma_x1_p2 a_x1_pm bj vdd_a vdd_a pch W=100n L=12n
+Ma_x1_p3 a_d1  a_naj a_x1_pm vdd_a pch W=100n L=12n
+Ma_x1_p4 a_d1  a_nbj a_x1_pm vdd_a pch W=100n L=12n
+Ma_x1_n1 a_d1  aj a_x1_nm1 0 nch W=100n L=12n
+Ma_x1_n2 a_x1_nm1  bj 0 0 nch W=100n L=12n
+Ma_x1_n3 a_d1  a_naj a_x1_nm2 0 nch W=100n L=12n
+Ma_x1_n4 a_x1_nm2  a_nbj 0 0 nch W=100n L=12n
+Ca_x1_i a_d1 0 0.15f
+Ma_id0_p a_xn0 a_d0 vdd_a vdd_a pch W=100n L=12n
+Ma_id0_n a_xn0 a_d0 0 0 nch W=100n L=12n
+Ca_id0_i a_xn0 0 0.15f
+Ma_id1_p a_xn1 a_d1 vdd_a vdd_a pch W=100n L=12n
+Ma_id1_n a_xn1 a_d1 0 0 nch W=100n L=12n
+Ca_id1_i a_xn1 0 0.15f
+Ma_o0_p1 a_o0_ps a_d0 vdd_a vdd_a pch W=100n L=12n
+Ma_o0_p2 a_oh0 a_d1 a_o0_ps vdd_a pch W=100n L=12n
+Ma_o0_n1 a_oh0 a_d0 0 0 nch W=100n L=12n
+Ma_o0_n2 a_oh0 a_d1 0 0 nch W=100n L=12n
+Ca_o0_i a_oh0 0 0.15f
+Cla_oh0 a_oh0 0 1f
+Ma_a1_p1 a_a1_pm a_d0 vdd_a vdd_a pch W=100n L=12n
+Ma_a1_p2 a_a1_pm a_xn1 vdd_a vdd_a pch W=100n L=12n
+Ma_a1_p3 a_no1  a_xn0 a_a1_pm vdd_a pch W=100n L=12n
+Ma_a1_p4 a_no1  a_d1 a_a1_pm vdd_a pch W=100n L=12n
+Ma_a1_n1 a_no1  a_d0 a_a1_nm1 0 nch W=100n L=12n
+Ma_a1_n2 a_a1_nm1  a_xn1 0 0 nch W=100n L=12n
+Ma_a1_n3 a_no1  a_xn0 a_a1_nm2 0 nch W=100n L=12n
+Ma_a1_n4 a_a1_nm2  a_d1 0 0 nch W=100n L=12n
+Ca_a1_i a_no1 0 0.15f
+Ma_io1_p a_oh1 a_no1 vdd_a vdd_a pch W=100n L=12n
+Ma_io1_n a_oh1 a_no1 0 0 nch W=100n L=12n
+Ca_io1_i a_oh1 0 0.15f
+Cla_oh1 a_oh1 0 1f
+Ma_n2_p1 a_no2 a_d0 vdd_a vdd_a pch W=100n L=12n
+Ma_n2_p2 a_no2 a_d1 vdd_a vdd_a pch W=100n L=12n
+Ma_n2_n1 a_no2 a_d0 a_n2_ns 0 nch W=100n L=12n
+Ma_n2_n2 a_n2_ns a_d1 0 0 nch W=100n L=12n
+Ca_n2_i a_no2 0 0.15f
+Ma_io2_p a_oh2 a_no2 vdd_a vdd_a pch W=100n L=12n
+Ma_io2_n a_oh2 a_no2 0 0 nch W=100n L=12n
+Ca_io2_i a_oh2 0 0.15f
+Cla_oh2 a_oh2 0 1f
+
+* === VARIANT E: OAI22+NOR (38T) ===
+Me_iai_p e_nai ai vdd_e vdd_e pch W=100n L=12n
+Me_iai_n e_nai ai 0 0 nch W=100n L=12n
+Ce_iai_i e_nai 0 0.15f
+Me_ibi_p e_nbi bi vdd_e vdd_e pch W=100n L=12n
+Me_ibi_n e_nbi bi 0 0 nch W=100n L=12n
+Ce_ibi_i e_nbi 0 0.15f
+Me_iaj_p e_naj aj vdd_e vdd_e pch W=100n L=12n
+Me_iaj_n e_naj aj 0 0 nch W=100n L=12n
+Ce_iaj_i e_naj 0 0.15f
+Me_ibj_p e_nbj bj vdd_e vdd_e pch W=100n L=12n
+Me_ibj_n e_nbj bj 0 0 nch W=100n L=12n
+Ce_ibj_i e_nbj 0 0.15f
+Me_q0_p1 e_x0  e_nai e_q0_pm1 vdd_e pch W=100n L=12n
+Me_q0_p2 e_q0_pm1  e_nbi vdd_e vdd_e pch W=100n L=12n
+Me_q0_p3 e_x0  ai e_q0_pm2 vdd_e pch W=100n L=12n
+Me_q0_p4 e_q0_pm2  bi vdd_e vdd_e pch W=100n L=12n
+Me_q0_n1 e_q0_nmid e_nai 0 0 nch W=100n L=12n
+Me_q0_n2 e_q0_nmid e_nbi 0 0 nch W=100n L=12n
+Me_q0_n3 e_x0  ai e_q0_nmid 0 nch W=100n L=12n
+Me_q0_n4 e_x0  bi e_q0_nmid 0 nch W=100n L=12n
+Ce_q0_i e_x0 0 0.15f
+Me_q1_p1 e_x1  e_naj e_q1_pm1 vdd_e pch W=100n L=12n
+Me_q1_p2 e_q1_pm1  e_nbj vdd_e vdd_e pch W=100n L=12n
+Me_q1_p3 e_x1  aj e_q1_pm2 vdd_e pch W=100n L=12n
+Me_q1_p4 e_q1_pm2  bj vdd_e vdd_e pch W=100n L=12n
+Me_q1_n1 e_q1_nmid e_naj 0 0 nch W=100n L=12n
+Me_q1_n2 e_q1_nmid e_nbj 0 0 nch W=100n L=12n
+Me_q1_n3 e_x1  aj e_q1_nmid 0 nch W=100n L=12n
+Me_q1_n4 e_x1  bj e_q1_nmid 0 nch W=100n L=12n
+Ce_q1_i e_x1 0 0.15f
+Me_o2_p1 e_o2_ps e_x0 vdd_e vdd_e pch W=100n L=12n
+Me_o2_p2 e_oh2 e_x1 e_o2_ps vdd_e pch W=100n L=12n
+Me_o2_n1 e_oh2 e_x0 0 0 nch W=100n L=12n
+Me_o2_n2 e_oh2 e_x1 0 0 nch W=100n L=12n
+Ce_o2_i e_oh2 0 0.15f
+Cle_oh2 e_oh2 0 1f
+Me_n0_p1 e_no0 e_x0 vdd_e vdd_e pch W=100n L=12n
+Me_n0_p2 e_no0 e_x1 vdd_e vdd_e pch W=100n L=12n
+Me_n0_n1 e_no0 e_x0 e_n0_ns 0 nch W=100n L=12n
+Me_n0_n2 e_n0_ns e_x1 0 0 nch W=100n L=12n
+Ce_n0_i e_no0 0 0.15f
+Me_io0_p e_oh0 e_no0 vdd_e vdd_e pch W=100n L=12n
+Me_io0_n e_oh0 e_no0 0 0 nch W=100n L=12n
+Ce_io0_i e_oh0 0 0.15f
+Cle_oh0 e_oh0 0 1f
+Me_o1_p1 e_o1_ps e_oh0 vdd_e vdd_e pch W=100n L=12n
+Me_o1_p2 e_oh1 e_oh2 e_o1_ps vdd_e pch W=100n L=12n
+Me_o1_n1 e_oh1 e_oh0 0 0 nch W=100n L=12n
+Me_o1_n2 e_oh1 e_oh2 0 0 nch W=100n L=12n
+Ce_o1_i e_oh1 0 0.15f
+Cle_oh1 e_oh1 0 1f
+
+* === VARIANT F: Hybrid (42T) ===
+Mf_iai_p f_nai ai vdd_f vdd_f pch W=100n L=12n
+Mf_iai_n f_nai ai 0 0 nch W=100n L=12n
+Cf_iai_i f_nai 0 0.15f
+Mf_ibi_p f_nbi bi vdd_f vdd_f pch W=100n L=12n
+Mf_ibi_n f_nbi bi 0 0 nch W=100n L=12n
+Cf_ibi_i f_nbi 0 0.15f
+Mf_iaj_p f_naj aj vdd_f vdd_f pch W=100n L=12n
+Mf_iaj_n f_naj aj 0 0 nch W=100n L=12n
+Cf_iaj_i f_naj 0 0.15f
+Mf_ibj_p f_nbj bj vdd_f vdd_f pch W=100n L=12n
+Mf_ibj_n f_nbj bj 0 0 nch W=100n L=12n
+Cf_ibj_i f_nbj 0 0.15f
+Mf_q0_p1 f_x0  f_nai f_q0_pm1 vdd_f pch W=100n L=12n
+Mf_q0_p2 f_q0_pm1  f_nbi vdd_f vdd_f pch W=100n L=12n
+Mf_q0_p3 f_x0  ai f_q0_pm2 vdd_f pch W=100n L=12n
+Mf_q0_p4 f_q0_pm2  bi vdd_f vdd_f pch W=100n L=12n
+Mf_q0_n1 f_q0_nmid f_nai 0 0 nch W=100n L=12n
+Mf_q0_n2 f_q0_nmid f_nbi 0 0 nch W=100n L=12n
+Mf_q0_n3 f_x0  ai f_q0_nmid 0 nch W=100n L=12n
+Mf_q0_n4 f_x0  bi f_q0_nmid 0 nch W=100n L=12n
+Cf_q0_i f_x0 0 0.15f
+Mf_q1_p1 f_x1  f_naj f_q1_pm1 vdd_f pch W=100n L=12n
+Mf_q1_p2 f_q1_pm1  f_nbj vdd_f vdd_f pch W=100n L=12n
+Mf_q1_p3 f_x1  aj f_q1_pm2 vdd_f pch W=100n L=12n
+Mf_q1_p4 f_q1_pm2  bj vdd_f vdd_f pch W=100n L=12n
+Mf_q1_n1 f_q1_nmid f_naj 0 0 nch W=100n L=12n
+Mf_q1_n2 f_q1_nmid f_nbj 0 0 nch W=100n L=12n
+Mf_q1_n3 f_x1  aj f_q1_nmid 0 nch W=100n L=12n
+Mf_q1_n4 f_x1  bj f_q1_nmid 0 nch W=100n L=12n
+Cf_q1_i f_x1 0 0.15f
+Mf_ix0_p f_d0 f_x0 vdd_f vdd_f pch W=100n L=12n
+Mf_ix0_n f_d0 f_x0 0 0 nch W=100n L=12n
+Cf_ix0_i f_d0 0 0.15f
+Mf_ix1_p f_d1 f_x1 vdd_f vdd_f pch W=100n L=12n
+Mf_ix1_n f_d1 f_x1 0 0 nch W=100n L=12n
+Cf_ix1_i f_d1 0 0.15f
+Mf_o2_p1 f_o2_ps f_x0 vdd_f vdd_f pch W=100n L=12n
+Mf_o2_p2 f_oh2 f_x1 f_o2_ps vdd_f pch W=100n L=12n
+Mf_o2_n1 f_oh2 f_x0 0 0 nch W=100n L=12n
+Mf_o2_n2 f_oh2 f_x1 0 0 nch W=100n L=12n
+Cf_o2_i f_oh2 0 0.15f
+Clf_oh2 f_oh2 0 1f
+Mf_a1_p1 f_a1_pm f_d0 vdd_f vdd_f pch W=100n L=12n
+Mf_a1_p2 f_a1_pm f_x1 vdd_f vdd_f pch W=100n L=12n
+Mf_a1_p3 f_no1  f_x0 f_a1_pm vdd_f pch W=100n L=12n
+Mf_a1_p4 f_no1  f_d1 f_a1_pm vdd_f pch W=100n L=12n
+Mf_a1_n1 f_no1  f_d0 f_a1_nm1 0 nch W=100n L=12n
+Mf_a1_n2 f_a1_nm1  f_x1 0 0 nch W=100n L=12n
+Mf_a1_n3 f_no1  f_x0 f_a1_nm2 0 nch W=100n L=12n
+Mf_a1_n4 f_a1_nm2  f_d1 0 0 nch W=100n L=12n
+Cf_a1_i f_no1 0 0.15f
+Mf_io1_p f_oh1 f_no1 vdd_f vdd_f pch W=100n L=12n
+Mf_io1_n f_oh1 f_no1 0 0 nch W=100n L=12n
+Cf_io1_i f_oh1 0 0.15f
+Clf_oh1 f_oh1 0 1f
+
+* === VARIANT G: Active-Low (40T) ===
+Mg_iai_p g_nai ai vdd_g vdd_g pch W=100n L=12n
+Mg_iai_n g_nai ai 0 0 nch W=100n L=12n
+Cg_iai_i g_nai 0 0.15f
+Mg_ibi_p g_nbi bi vdd_g vdd_g pch W=100n L=12n
+Mg_ibi_n g_nbi bi 0 0 nch W=100n L=12n
+Cg_ibi_i g_nbi 0 0.15f
+Mg_iaj_p g_naj aj vdd_g vdd_g pch W=100n L=12n
+Mg_iaj_n g_naj aj 0 0 nch W=100n L=12n
+Cg_iaj_i g_naj 0 0.15f
+Mg_ibj_p g_nbj bj vdd_g vdd_g pch W=100n L=12n
+Mg_ibj_n g_nbj bj 0 0 nch W=100n L=12n
+Cg_ibj_i g_nbj 0 0.15f
+Mg_q0_p1 g_x0  g_nai g_q0_pm1 vdd_g pch W=100n L=12n
+Mg_q0_p2 g_q0_pm1  g_nbi vdd_g vdd_g pch W=100n L=12n
+Mg_q0_p3 g_x0  ai g_q0_pm2 vdd_g pch W=100n L=12n
+Mg_q0_p4 g_q0_pm2  bi vdd_g vdd_g pch W=100n L=12n
+Mg_q0_n1 g_q0_nmid g_nai 0 0 nch W=100n L=12n
+Mg_q0_n2 g_q0_nmid g_nbi 0 0 nch W=100n L=12n
+Mg_q0_n3 g_x0  ai g_q0_nmid 0 nch W=100n L=12n
+Mg_q0_n4 g_x0  bi g_q0_nmid 0 nch W=100n L=12n
+Cg_q0_i g_x0 0 0.15f
+Mg_q1_p1 g_x1  g_naj g_q1_pm1 vdd_g pch W=100n L=12n
+Mg_q1_p2 g_q1_pm1  g_nbj vdd_g vdd_g pch W=100n L=12n
+Mg_q1_p3 g_x1  aj g_q1_pm2 vdd_g pch W=100n L=12n
+Mg_q1_p4 g_q1_pm2  bj vdd_g vdd_g pch W=100n L=12n
+Mg_q1_n1 g_q1_nmid g_naj 0 0 nch W=100n L=12n
+Mg_q1_n2 g_q1_nmid g_nbj 0 0 nch W=100n L=12n
+Mg_q1_n3 g_x1  aj g_q1_nmid 0 nch W=100n L=12n
+Mg_q1_n4 g_x1  bj g_q1_nmid 0 nch W=100n L=12n
+Cg_q1_i g_x1 0 0.15f
+Mg_ix0_p g_d0 g_x0 vdd_g vdd_g pch W=100n L=12n
+Mg_ix0_n g_d0 g_x0 0 0 nch W=100n L=12n
+Cg_ix0_i g_d0 0 0.15f
+Mg_ix1_p g_d1 g_x1 vdd_g vdd_g pch W=100n L=12n
+Mg_ix1_n g_d1 g_x1 0 0 nch W=100n L=12n
+Cg_ix1_i g_d1 0 0.15f
+Mg_a1_p1 g_a1_pm g_d0 vdd_g vdd_g pch W=100n L=12n
+Mg_a1_p2 g_a1_pm g_x1 vdd_g vdd_g pch W=100n L=12n
+Mg_a1_p3 g_noh1  g_x0 g_a1_pm vdd_g pch W=100n L=12n
+Mg_a1_p4 g_noh1  g_d1 g_a1_pm vdd_g pch W=100n L=12n
+Mg_a1_n1 g_noh1  g_d0 g_a1_nm1 0 nch W=100n L=12n
+Mg_a1_n2 g_a1_nm1  g_x1 0 0 nch W=100n L=12n
+Mg_a1_n3 g_noh1  g_x0 g_a1_nm2 0 nch W=100n L=12n
+Mg_a1_n4 g_a1_nm2  g_d1 0 0 nch W=100n L=12n
+Cg_a1_i g_noh1 0 0.15f
+Clg_noh1 g_noh1 0 1f
+Mg_n2_p1 g_noh2 g_d0 vdd_g vdd_g pch W=100n L=12n
+Mg_n2_p2 g_noh2 g_d1 vdd_g vdd_g pch W=100n L=12n
+Mg_n2_n1 g_noh2 g_d0 g_n2_ns 0 nch W=100n L=12n
+Mg_n2_n2 g_n2_ns g_d1 0 0 nch W=100n L=12n
+Cg_n2_i g_noh2 0 0.15f
+Clg_noh2 g_noh2 0 1f
+
+.tran 5.0000e-12 1.6000e-08
+
+.control
+set noaskquit
+run
+
+echo ""
+echo "========================================================"
+echo "  FUNCTIONAL VERIFICATION"
+echo "========================================================"
+echo "Vec00 ai=0 bi=0 aj=0 bj=0  exp OH={0,1,2}=1,0,0"
+meas tran va0_0 find v(a_oh0) at=0.8000n
+meas tran va1_0 find v(a_oh1) at=0.8000n
+meas tran va2_0 find v(a_oh2) at=0.8000n
+meas tran ve0_0 find v(e_oh0) at=0.8000n
+meas tran ve1_0 find v(e_oh1) at=0.8000n
+meas tran ve2_0 find v(e_oh2) at=0.8000n
+meas tran vf1_0 find v(f_oh1) at=0.8000n
+meas tran vf2_0 find v(f_oh2) at=0.8000n
+meas tran vg1_0 find v(g_noh1) at=0.8000n
+meas tran vg2_0 find v(g_noh2) at=0.8000n
+echo "Vec01 ai=0 bi=0 aj=0 bj=1  exp OH={0,1,2}=0,1,0"
+meas tran va0_1 find v(a_oh0) at=1.8000n
+meas tran va1_1 find v(a_oh1) at=1.8000n
+meas tran va2_1 find v(a_oh2) at=1.8000n
+meas tran ve0_1 find v(e_oh0) at=1.8000n
+meas tran ve1_1 find v(e_oh1) at=1.8000n
+meas tran ve2_1 find v(e_oh2) at=1.8000n
+meas tran vf1_1 find v(f_oh1) at=1.8000n
+meas tran vf2_1 find v(f_oh2) at=1.8000n
+meas tran vg1_1 find v(g_noh1) at=1.8000n
+meas tran vg2_1 find v(g_noh2) at=1.8000n
+echo "Vec02 ai=0 bi=0 aj=1 bj=0  exp OH={0,1,2}=0,1,0"
+meas tran va0_2 find v(a_oh0) at=2.8000n
+meas tran va1_2 find v(a_oh1) at=2.8000n
+meas tran va2_2 find v(a_oh2) at=2.8000n
+meas tran ve0_2 find v(e_oh0) at=2.8000n
+meas tran ve1_2 find v(e_oh1) at=2.8000n
+meas tran ve2_2 find v(e_oh2) at=2.8000n
+meas tran vf1_2 find v(f_oh1) at=2.8000n
+meas tran vf2_2 find v(f_oh2) at=2.8000n
+meas tran vg1_2 find v(g_noh1) at=2.8000n
+meas tran vg2_2 find v(g_noh2) at=2.8000n
+echo "Vec03 ai=0 bi=0 aj=1 bj=1  exp OH={0,1,2}=1,0,0"
+meas tran va0_3 find v(a_oh0) at=3.8000n
+meas tran va1_3 find v(a_oh1) at=3.8000n
+meas tran va2_3 find v(a_oh2) at=3.8000n
+meas tran ve0_3 find v(e_oh0) at=3.8000n
+meas tran ve1_3 find v(e_oh1) at=3.8000n
+meas tran ve2_3 find v(e_oh2) at=3.8000n
+meas tran vf1_3 find v(f_oh1) at=3.8000n
+meas tran vf2_3 find v(f_oh2) at=3.8000n
+meas tran vg1_3 find v(g_noh1) at=3.8000n
+meas tran vg2_3 find v(g_noh2) at=3.8000n
+echo "Vec04 ai=0 bi=1 aj=0 bj=0  exp OH={0,1,2}=0,1,0"
+meas tran va0_4 find v(a_oh0) at=4.8000n
+meas tran va1_4 find v(a_oh1) at=4.8000n
+meas tran va2_4 find v(a_oh2) at=4.8000n
+meas tran ve0_4 find v(e_oh0) at=4.8000n
+meas tran ve1_4 find v(e_oh1) at=4.8000n
+meas tran ve2_4 find v(e_oh2) at=4.8000n
+meas tran vf1_4 find v(f_oh1) at=4.8000n
+meas tran vf2_4 find v(f_oh2) at=4.8000n
+meas tran vg1_4 find v(g_noh1) at=4.8000n
+meas tran vg2_4 find v(g_noh2) at=4.8000n
+echo "Vec05 ai=0 bi=1 aj=0 bj=1  exp OH={0,1,2}=0,0,1"
+meas tran va0_5 find v(a_oh0) at=5.8000n
+meas tran va1_5 find v(a_oh1) at=5.8000n
+meas tran va2_5 find v(a_oh2) at=5.8000n
+meas tran ve0_5 find v(e_oh0) at=5.8000n
+meas tran ve1_5 find v(e_oh1) at=5.8000n
+meas tran ve2_5 find v(e_oh2) at=5.8000n
+meas tran vf1_5 find v(f_oh1) at=5.8000n
+meas tran vf2_5 find v(f_oh2) at=5.8000n
+meas tran vg1_5 find v(g_noh1) at=5.8000n
+meas tran vg2_5 find v(g_noh2) at=5.8000n
+echo "Vec06 ai=0 bi=1 aj=1 bj=0  exp OH={0,1,2}=0,0,1"
+meas tran va0_6 find v(a_oh0) at=6.8000n
+meas tran va1_6 find v(a_oh1) at=6.8000n
+meas tran va2_6 find v(a_oh2) at=6.8000n
+meas tran ve0_6 find v(e_oh0) at=6.8000n
+meas tran ve1_6 find v(e_oh1) at=6.8000n
+meas tran ve2_6 find v(e_oh2) at=6.8000n
+meas tran vf1_6 find v(f_oh1) at=6.8000n
+meas tran vf2_6 find v(f_oh2) at=6.8000n
+meas tran vg1_6 find v(g_noh1) at=6.8000n
+meas tran vg2_6 find v(g_noh2) at=6.8000n
+echo "Vec07 ai=0 bi=1 aj=1 bj=1  exp OH={0,1,2}=0,1,0"
+meas tran va0_7 find v(a_oh0) at=7.8000n
+meas tran va1_7 find v(a_oh1) at=7.8000n
+meas tran va2_7 find v(a_oh2) at=7.8000n
+meas tran ve0_7 find v(e_oh0) at=7.8000n
+meas tran ve1_7 find v(e_oh1) at=7.8000n
+meas tran ve2_7 find v(e_oh2) at=7.8000n
+meas tran vf1_7 find v(f_oh1) at=7.8000n
+meas tran vf2_7 find v(f_oh2) at=7.8000n
+meas tran vg1_7 find v(g_noh1) at=7.8000n
+meas tran vg2_7 find v(g_noh2) at=7.8000n
+echo "Vec08 ai=1 bi=0 aj=0 bj=0  exp OH={0,1,2}=0,1,0"
+meas tran va0_8 find v(a_oh0) at=8.8000n
+meas tran va1_8 find v(a_oh1) at=8.8000n
+meas tran va2_8 find v(a_oh2) at=8.8000n
+meas tran ve0_8 find v(e_oh0) at=8.8000n
+meas tran ve1_8 find v(e_oh1) at=8.8000n
+meas tran ve2_8 find v(e_oh2) at=8.8000n
+meas tran vf1_8 find v(f_oh1) at=8.8000n
+meas tran vf2_8 find v(f_oh2) at=8.8000n
+meas tran vg1_8 find v(g_noh1) at=8.8000n
+meas tran vg2_8 find v(g_noh2) at=8.8000n
+echo "Vec09 ai=1 bi=0 aj=0 bj=1  exp OH={0,1,2}=0,0,1"
+meas tran va0_9 find v(a_oh0) at=9.8000n
+meas tran va1_9 find v(a_oh1) at=9.8000n
+meas tran va2_9 find v(a_oh2) at=9.8000n
+meas tran ve0_9 find v(e_oh0) at=9.8000n
+meas tran ve1_9 find v(e_oh1) at=9.8000n
+meas tran ve2_9 find v(e_oh2) at=9.8000n
+meas tran vf1_9 find v(f_oh1) at=9.8000n
+meas tran vf2_9 find v(f_oh2) at=9.8000n
+meas tran vg1_9 find v(g_noh1) at=9.8000n
+meas tran vg2_9 find v(g_noh2) at=9.8000n
+echo "Vec10 ai=1 bi=0 aj=1 bj=0  exp OH={0,1,2}=0,0,1"
+meas tran va0_10 find v(a_oh0) at=10.8000n
+meas tran va1_10 find v(a_oh1) at=10.8000n
+meas tran va2_10 find v(a_oh2) at=10.8000n
+meas tran ve0_10 find v(e_oh0) at=10.8000n
+meas tran ve1_10 find v(e_oh1) at=10.8000n
+meas tran ve2_10 find v(e_oh2) at=10.8000n
+meas tran vf1_10 find v(f_oh1) at=10.8000n
+meas tran vf2_10 find v(f_oh2) at=10.8000n
+meas tran vg1_10 find v(g_noh1) at=10.8000n
+meas tran vg2_10 find v(g_noh2) at=10.8000n
+echo "Vec11 ai=1 bi=0 aj=1 bj=1  exp OH={0,1,2}=0,1,0"
+meas tran va0_11 find v(a_oh0) at=11.8000n
+meas tran va1_11 find v(a_oh1) at=11.8000n
+meas tran va2_11 find v(a_oh2) at=11.8000n
+meas tran ve0_11 find v(e_oh0) at=11.8000n
+meas tran ve1_11 find v(e_oh1) at=11.8000n
+meas tran ve2_11 find v(e_oh2) at=11.8000n
+meas tran vf1_11 find v(f_oh1) at=11.8000n
+meas tran vf2_11 find v(f_oh2) at=11.8000n
+meas tran vg1_11 find v(g_noh1) at=11.8000n
+meas tran vg2_11 find v(g_noh2) at=11.8000n
+echo "Vec12 ai=1 bi=1 aj=0 bj=0  exp OH={0,1,2}=1,0,0"
+meas tran va0_12 find v(a_oh0) at=12.8000n
+meas tran va1_12 find v(a_oh1) at=12.8000n
+meas tran va2_12 find v(a_oh2) at=12.8000n
+meas tran ve0_12 find v(e_oh0) at=12.8000n
+meas tran ve1_12 find v(e_oh1) at=12.8000n
+meas tran ve2_12 find v(e_oh2) at=12.8000n
+meas tran vf1_12 find v(f_oh1) at=12.8000n
+meas tran vf2_12 find v(f_oh2) at=12.8000n
+meas tran vg1_12 find v(g_noh1) at=12.8000n
+meas tran vg2_12 find v(g_noh2) at=12.8000n
+echo "Vec13 ai=1 bi=1 aj=0 bj=1  exp OH={0,1,2}=0,1,0"
+meas tran va0_13 find v(a_oh0) at=13.8000n
+meas tran va1_13 find v(a_oh1) at=13.8000n
+meas tran va2_13 find v(a_oh2) at=13.8000n
+meas tran ve0_13 find v(e_oh0) at=13.8000n
+meas tran ve1_13 find v(e_oh1) at=13.8000n
+meas tran ve2_13 find v(e_oh2) at=13.8000n
+meas tran vf1_13 find v(f_oh1) at=13.8000n
+meas tran vf2_13 find v(f_oh2) at=13.8000n
+meas tran vg1_13 find v(g_noh1) at=13.8000n
+meas tran vg2_13 find v(g_noh2) at=13.8000n
+echo "Vec14 ai=1 bi=1 aj=1 bj=0  exp OH={0,1,2}=0,1,0"
+meas tran va0_14 find v(a_oh0) at=14.8000n
+meas tran va1_14 find v(a_oh1) at=14.8000n
+meas tran va2_14 find v(a_oh2) at=14.8000n
+meas tran ve0_14 find v(e_oh0) at=14.8000n
+meas tran ve1_14 find v(e_oh1) at=14.8000n
+meas tran ve2_14 find v(e_oh2) at=14.8000n
+meas tran vf1_14 find v(f_oh1) at=14.8000n
+meas tran vf2_14 find v(f_oh2) at=14.8000n
+meas tran vg1_14 find v(g_noh1) at=14.8000n
+meas tran vg2_14 find v(g_noh2) at=14.8000n
+echo "Vec15 ai=1 bi=1 aj=1 bj=1  exp OH={0,1,2}=1,0,0"
+meas tran va0_15 find v(a_oh0) at=15.8000n
+meas tran va1_15 find v(a_oh1) at=15.8000n
+meas tran va2_15 find v(a_oh2) at=15.8000n
+meas tran ve0_15 find v(e_oh0) at=15.8000n
+meas tran ve1_15 find v(e_oh1) at=15.8000n
+meas tran ve2_15 find v(e_oh2) at=15.8000n
+meas tran vf1_15 find v(f_oh1) at=15.8000n
+meas tran vf2_15 find v(f_oh2) at=15.8000n
+meas tran vg1_15 find v(g_noh1) at=15.8000n
+meas tran vg2_15 find v(g_noh2) at=15.8000n
+
+echo ""
+echo "========================================================"
+echo "  POWER ANALYSIS"
+echo "========================================================"
+meas tran iavg_a avg i(vdd_a) from=0 to=1.6000e-08
+meas tran iavg_e avg i(vdd_e) from=0 to=1.6000e-08
+meas tran iavg_f avg i(vdd_f) from=0 to=1.6000e-08
+meas tran iavg_g avg i(vdd_g) from=0 to=1.6000e-08
+
+echo ""
+echo "--- Per-cell power at VDD=0.5V ---"
+let pwr_a = abs(iavg_a) * 0.5
+print pwr_a
+let pwr_e = abs(iavg_e) * 0.5
+print pwr_e
+let pwr_f = abs(iavg_f) * 0.5
+print pwr_f
+let pwr_g = abs(iavg_g) * 0.5
+print pwr_g
+
+echo ""
+echo "========================================================"
+echo "  PROPAGATION DELAY (OH1 critical path)"
+echo "========================================================"
+meas tran td_a_oh1 trig v(bi) val=0.25 rise=1 targ v(a_oh1) val=0.25 rise=1
+meas tran td_e_oh1 trig v(bi) val=0.25 rise=1 targ v(e_oh1) val=0.25 rise=1
+meas tran td_f_oh1 trig v(bi) val=0.25 rise=1 targ v(f_oh1) val=0.25 rise=1
+meas tran td_g_noh1 trig v(bi) val=0.25 rise=1 targ v(g_noh1) val=0.25 fall=1
+
+quit
+.endc
+
+.end

@@ -1,0 +1,177 @@
+* =============================================================================
+* test_fused_a_04v_tran.cir — FUSED_A Transient at VDD=0.40V SLVT
+* =============================================================================
+* ASAP5 GAA nanosheet SLVT TT calibrated models, BSIM-CMG level=107
+* Subcircuit from schematic with extracted parasitic capacitances
+* Near-threshold operation: VDD=0.40V
+* Run:  ~/xyce-stack/install/xyce/bin/Xyce test_fused_a_04v_tran.cir
+* =============================================================================
+*
+* NOTE: Magic ext2spice (LVS mode) produces transistor-only netlists
+* without M1 routing connections between stages. The poly gate nodes
+* at internal columns (x=190..498) are undriven in the raw extracted
+* netlist, causing simulation failure. This testbench uses the schematic
+* topology with parasitic capacitances from the Magic .ext extraction
+* to produce a simulatable circuit at VDD=0.40V near-threshold.
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+
+* --- Solver Options ---
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=6
+
+.param vdd_val = 0.40
+.param half_vdd = 0.20
+
+* =============================================================================
+* FUSED_A subcircuit: schematic topology + extracted parasitic caps
+* 48T fused Hamming cell: 2 bit-pairs -> one-hot(popcount)
+* Inputs: ai, bi (pair i), aj, bj (pair j)
+* Outputs: oh0 (hd=0), oh1 (hd=1), oh2 (hd=2)
+* =============================================================================
+.subckt FUSED_A ai bi aj bj oh0 oh1 oh2 Vdd Gnd
+*
+* --- Input inverters ---
+Mp_iai nai ai Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_iai nai ai Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_iai nai Gnd 0.705f
+
+Mp_ibi nbi bi Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_ibi nbi bi Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_ibi nbi Gnd 0.910f
+
+Mp_iaj naj aj Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_iaj naj aj Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_iaj naj Gnd 2.184f
+
+Mp_ibj nbj bj Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_ibj nbj bj Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_ibj nbj Gnd 2.184f
+
+* --- XOR0: d0 = ai ^ bi (XNOR pull-down + inverter) ---
+Mp1_x0 x0_pm ai Vdd Vdd pmos_slvt l=16n nfin=2
+Mp2_x0 x0_pm bi Vdd Vdd pmos_slvt l=16n nfin=2
+Mp3_x0 d0 nai x0_pm Vdd pmos_slvt l=16n nfin=2
+Mp4_x0 d0 nbi x0_pm Vdd pmos_slvt l=16n nfin=2
+Mn1_x0 d0 ai x0_nm1 Gnd nmos_slvt l=16n nfin=2
+Mn2_x0 x0_nm1 bi Gnd Gnd nmos_slvt l=16n nfin=2
+Mn3_x0 d0 nai x0_nm2 Gnd nmos_slvt l=16n nfin=2
+Mn4_x0 x0_nm2 nbi Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_x0 d0 Gnd 2.184f
+
+* --- XOR1: d1 = aj ^ bj ---
+Mp1_x1 x1_pm aj Vdd Vdd pmos_slvt l=16n nfin=2
+Mp2_x1 x1_pm bj Vdd Vdd pmos_slvt l=16n nfin=2
+Mp3_x1 d1 naj x1_pm Vdd pmos_slvt l=16n nfin=2
+Mp4_x1 d1 nbj x1_pm Vdd pmos_slvt l=16n nfin=2
+Mn1_x1 d1 aj x1_nm1 Gnd nmos_slvt l=16n nfin=2
+Mn2_x1 x1_nm1 bj Gnd Gnd nmos_slvt l=16n nfin=2
+Mn3_x1 d1 naj x1_nm2 Gnd nmos_slvt l=16n nfin=2
+Mn4_x1 x1_nm2 nbj Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_x1 d1 Gnd 2.184f
+
+* --- Inverters for XOR complements ---
+Mp_id0 xn0 d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_id0 xn0 d0 Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_id0 xn0 Gnd 2.184f
+
+Mp_id1 xn1 d1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_id1 xn1 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_id1 xn1 Gnd 2.184f
+
+* --- OH0: NOR(d0, d1) => high when hd=0 ---
+Mp1_o0 o0_ps d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp2_o0 oh0 d1 o0_ps Vdd pmos_slvt l=16n nfin=2
+Mn1_o0 oh0 d0 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn2_o0 oh0 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_o0 oh0 Gnd 2.184f
+
+* --- OH1: XOR(d0, d1) => high when hd=1 ---
+* Uses same XNOR structure + inverter
+Mp1_a1 a1_pm d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp2_a1 a1_pm xn1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp3_a1 no1 xn0 a1_pm Vdd pmos_slvt l=16n nfin=2
+Mp4_a1 no1 d1 a1_pm Vdd pmos_slvt l=16n nfin=2
+Mn1_a1 no1 d0 a1_nm1 Gnd nmos_slvt l=16n nfin=2
+Mn2_a1 a1_nm1 xn1 Gnd Gnd nmos_slvt l=16n nfin=2
+Mn3_a1 no1 xn0 a1_nm2 Gnd nmos_slvt l=16n nfin=2
+Mn4_a1 a1_nm2 d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_a1 no1 Gnd 1.173f
+
+Mp_io1 oh1 no1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_io1 oh1 no1 Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_io1 oh1 Gnd 2.188f
+
+* --- OH2: AND(d0, d1) via NAND + inverter => high when hd=2 ---
+Mp1_n2 no2 d0 Vdd Vdd pmos_slvt l=16n nfin=2
+Mp2_n2 no2 d1 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn1_n2 no2 d0 n2_ns Gnd nmos_slvt l=16n nfin=2
+Mn2_n2 n2_ns d1 Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_n2 no2 Gnd 2.184f
+
+Mp_io2 oh2 no2 Vdd Vdd pmos_slvt l=16n nfin=2
+Mn_io2 oh2 no2 Gnd Gnd nmos_slvt l=16n nfin=2
+Cext_io2 oh2 Gnd 1.903f
+
+.ends FUSED_A
+
+* =============================================================================
+* Testbench
+* =============================================================================
+
+* --- Supply ---
+Vvdd VDD 0 {vdd_val}
+Vgnd GND 0 0
+
+* --- Input Stimuli ---
+* FUSED_A computes one-hot(popcount(ai^bi, aj^bj)):
+*   oh0=1 when hd=0, oh1=1 when hd=1, oh2=1 when hd=2
+*
+* Stimulus: bi rises at t=400p (hd 0->1), bj rises at t=800p (hd 1->2)
+* 5ps rise/fall time, stay at each state for ~400ps
+Vai ai 0 DC 0
+Vbi bi 0 PWL(0 0 400p 0 405p {vdd_val} 2000p {vdd_val})
+Vaj aj 0 DC 0
+Vbj bj 0 PWL(0 0 800p 0 805p {vdd_val} 2000p {vdd_val})
+
+* --- DUT ---
+XDUT ai bi aj bj oh0 oh1 oh2 VDD GND FUSED_A
+
+* --- Output Loads ---
+CL_oh0 oh0 0 1f
+CL_oh1 oh1 0 1f
+CL_oh2 oh2 0 1f
+
+* =============================================================================
+* Analysis
+* =============================================================================
+.TRAN 0.5p 2000p
+
+.PRINT TRAN V(ai) V(bi) V(aj) V(bj) V(oh0) V(oh1) V(oh2) I(Vvdd)
+
+* --- Propagation Delay: oh1 rise (hd 0->1 when bi goes high at 400p) ---
+.MEASURE TRAN tplh_oh1 TRIG V(bi) VAL={half_vdd} RISE=1
++  TARG V(oh1) VAL={half_vdd} RISE=1
+
+* --- Propagation Delay: oh1 fall (hd 1->2 when bj goes high at 800p) ---
+.MEASURE TRAN tphl_oh1 TRIG V(bj) VAL={half_vdd} RISE=1
++  TARG V(oh1) VAL={half_vdd} FALL=1
+
+* --- Propagation Delay: oh0 fall (hd 0->1 when bi goes high at 400p) ---
+.MEASURE TRAN tphl_oh0 TRIG V(bi) VAL={half_vdd} RISE=1
++  TARG V(oh0) VAL={half_vdd} FALL=1
+
+* --- Propagation Delay: oh2 rise (hd 1->2 when bj goes high at 800p) ---
+.MEASURE TRAN tplh_oh2 TRIG V(bj) VAL={half_vdd} RISE=1
++  TARG V(oh2) VAL={half_vdd} RISE=1
+
+* --- Average supply current over full sim ---
+.MEASURE TRAN avg_idd AVG I(Vvdd) FROM=0 TO=2000p
+
+* --- Total energy (charge * VDD) ---
+.MEASURE TRAN e_total INTEG I(Vvdd) FROM=0 TO=2000p
+
+.END

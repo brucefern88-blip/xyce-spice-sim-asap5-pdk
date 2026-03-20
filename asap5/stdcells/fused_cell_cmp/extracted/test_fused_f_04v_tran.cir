@@ -1,0 +1,195 @@
+* =============================================================================
+* test_fused_f_04v_tran.cir — FUSED_F Transient Characterization for Xyce
+* =============================================================================
+* ASAP5 GAA nanosheet SLVT devices at VDD=0.40V (near-threshold)
+* Cell: FUSED_F — fused Hamming cell, 42 transistors
+* Inputs: ai, bi, aj, bj (two bit-pairs)
+* Outputs: oh1 (hd=1), oh2 (hd=2) — one-hot Hamming distance
+*
+* Source: schematic netlist from fused_cell_F.sp, converted for Xyce:
+*   - Model: nmos_slvt/pmos_slvt (BSIM-CMG level=107)
+*   - Removed w= parameter (BSIM-CMG uses nfin)
+*   - Added nfin=2 to each device
+*   - Parasitic substrate caps from Magic extraction (FUSED_F.ext)
+*
+* Run:  ~/xyce-stack/install/xyce/bin/Xyce -max-warnings 5 test_fused_f_04v_tran.cir
+* =============================================================================
+
+* --- BSIM-CMG SLVT Models (level=107 for Xyce) ---
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+
+* --- Global Solver Options ---
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+* --- Supply Voltage ---
+.param vdd_val = 0.40
+
+Vvdd  VDD  0  dc {vdd_val}
+Vvss  VSS  0  dc 0
+
+* --- Current Measurement (0V source in series with VDD) ---
+Vidd  VDD_int  VDD  dc 0
+
+* =============================================================================
+* FUSED_F Subcircuit — Xyce BSIM-CMG SLVT (level=107)
+* =============================================================================
+* 42T: 4x INV + 2x OAI22 (XOR) + 2x INV + NOR2 (oh2) + AOI22+INV (oh1)
+* Converted from LVT schematic to SLVT, removed w=, added nfin=2
+
+.subckt FUSED_F ai bi aj bj oh1 oh2 VDD VSS
+
+* --- Input inverters (8T) ---
+mn_iai nai ai VSS VSS nmos_slvt l=16n nfin=2
+mp_iai nai ai VDD VDD pmos_slvt l=16n nfin=2
+mn_ibi nbi bi VSS VSS nmos_slvt l=16n nfin=2
+mp_ibi nbi bi VDD VDD pmos_slvt l=16n nfin=2
+mn_iaj naj aj VSS VSS nmos_slvt l=16n nfin=2
+mp_iaj naj aj VDD VDD pmos_slvt l=16n nfin=2
+mn_ibj nbj bj VSS VSS nmos_slvt l=16n nfin=2
+mp_ibj nbj bj VDD VDD pmos_slvt l=16n nfin=2
+
+* --- XOR0 via OAI22: x0 = ai^bi (8T) ---
+mp_q0_1 x0 nai q0pm1 VDD pmos_slvt l=16n nfin=2
+mp_q0_2 q0pm1 nbi VDD VDD pmos_slvt l=16n nfin=2
+mp_q0_3 x0 ai q0pm2 VDD pmos_slvt l=16n nfin=2
+mp_q0_4 q0pm2 bi VDD VDD pmos_slvt l=16n nfin=2
+mn_q0_1 q0nmid nai VSS VSS nmos_slvt l=16n nfin=2
+mn_q0_2 q0nmid nbi VSS VSS nmos_slvt l=16n nfin=2
+mn_q0_3 x0 ai q0nmid VSS nmos_slvt l=16n nfin=2
+mn_q0_4 x0 bi q0nmid VSS nmos_slvt l=16n nfin=2
+
+* --- XOR1 via OAI22: x1 = aj^bj (8T) ---
+mp_q1_1 x1 naj q1pm1 VDD pmos_slvt l=16n nfin=2
+mp_q1_2 q1pm1 nbj VDD VDD pmos_slvt l=16n nfin=2
+mp_q1_3 x1 aj q1pm2 VDD pmos_slvt l=16n nfin=2
+mp_q1_4 q1pm2 bj VDD VDD pmos_slvt l=16n nfin=2
+mn_q1_1 q1nmid naj VSS VSS nmos_slvt l=16n nfin=2
+mn_q1_2 q1nmid nbj VSS VSS nmos_slvt l=16n nfin=2
+mn_q1_3 x1 aj q1nmid VSS nmos_slvt l=16n nfin=2
+mn_q1_4 x1 bj q1nmid VSS nmos_slvt l=16n nfin=2
+
+* --- XOR output inverters (4T) ---
+mn_ix0 d0 x0 VSS VSS nmos_slvt l=16n nfin=2
+mp_ix0 d0 x0 VDD VDD pmos_slvt l=16n nfin=2
+mn_ix1 d1 x1 VSS VSS nmos_slvt l=16n nfin=2
+mp_ix1 d1 x1 VDD VDD pmos_slvt l=16n nfin=2
+
+* --- OH2: NOR2(x0,x1) — both XORs are 0 means hd=0 NOT hd=2 (4T) ---
+mp_o2_1 o2ps x0 VDD VDD pmos_slvt l=16n nfin=2
+mp_o2_2 oh2 x1 o2ps VDD pmos_slvt l=16n nfin=2
+mn_o2_1 oh2 x0 VSS VSS nmos_slvt l=16n nfin=2
+mn_o2_2 oh2 x1 VSS VSS nmos_slvt l=16n nfin=2
+
+* --- OH1: AOI22(d0,x1, x0,d1) + INV = XOR of XOR outputs (8T + 2T) ---
+mp_a1_1 a1pm d0 VDD VDD pmos_slvt l=16n nfin=2
+mp_a1_2 a1pm x1 VDD VDD pmos_slvt l=16n nfin=2
+mp_a1_3 no1 x0 a1pm VDD pmos_slvt l=16n nfin=2
+mp_a1_4 no1 d1 a1pm VDD pmos_slvt l=16n nfin=2
+mn_a1_1 no1 d0 a1nm1 VSS nmos_slvt l=16n nfin=2
+mn_a1_2 a1nm1 x1 VSS VSS nmos_slvt l=16n nfin=2
+mn_a1_3 no1 x0 a1nm2 VSS nmos_slvt l=16n nfin=2
+mn_a1_4 a1nm2 d1 VSS VSS nmos_slvt l=16n nfin=2
+mn_io1 oh1 no1 VSS VSS nmos_slvt l=16n nfin=2
+mp_io1 oh1 no1 VDD VDD pmos_slvt l=16n nfin=2
+
+* --- Extracted Parasitic Substrate Capacitances ---
+* From Magic extraction (FUSED_F.ext), substrate node capacitances
+* Mapped from extracted node names to schematic signal names:
+*   oh1 = 1.857 fF, oh2 = 3.001 fF (output nodes)
+*   Internal nodes estimated at 0.3-1.0 fF each (diffusion parasitics)
+Cp_oh1   oh1   0  1.857f
+Cp_oh2   oh2   0  3.001f
+Cp_x0    x0    0  1.0f
+Cp_x1    x1    0  1.0f
+Cp_d0    d0    0  0.5f
+Cp_d1    d1    0  0.5f
+Cp_no1   no1   0  0.8f
+Cp_nai   nai   0  0.3f
+Cp_nbi   nbi   0  0.3f
+Cp_naj   naj   0  0.3f
+Cp_nbj   nbj   0  0.3f
+
+.ends FUSED_F
+
+* =============================================================================
+* Testbench
+* =============================================================================
+
+* Instantiate DUT (VDD through current-sense source Vidd)
+Xdut ai bi aj bj oh1 oh2 VDD_int VSS FUSED_F
+
+* --- Output Load Capacitances (1fF each) ---
+Cload_oh1  oh1  0  1f
+Cload_oh2  oh2  0  1f
+
+* --- Input Stimulus ---
+* Toggle ai: 0->VDD, with bi=0, aj=0, bj=0
+* This makes XOR(ai,bi) toggle 0->1, XOR(aj,bj)=0 constant
+* hd goes 0->1: oh1 should go 0->1, oh2 stays low
+*
+* Pulse: rise/fall=20ps (realistic for 0.40V near-threshold)
+*        width=480ps, period=1000ps, delay=100ps
+
+Vai  ai  0  pulse(0 {vdd_val} 100p 20p 20p 480p 1000p)
+Vbi  bi  0  dc 0
+Vaj  aj  0  dc 0
+Vbj  bj  0  dc 0
+
+* --- Transient Analysis ---
+* 2ns total, max timestep 2ps
+.TRAN 1p 2000p 0 2p UIC
+
+* --- Initial Conditions ---
+* When ai=bi=aj=bj=0: nai=nbi=naj=nbj=VDD
+* OAI22 computes XNOR: x0=XNOR(ai,bi)=VDD, x1=XNOR(aj,bj)=VDD
+* d0=~x0=0, d1=~x1=0
+* OH2 = NOR(x0,x1) = NOR(VDD,VDD) = 0
+* AOI22(d0,x1,x0,d1) = ~((0*VDD)+(VDD*0)) = ~0 = VDD → no1=VDD
+* OH1 = ~no1 = 0
+* OAI22 internals: q0pm1,q0pm2,q1pm1,q1pm2 = VDD (PMOS path),
+*   q0nmid,q1nmid = 0 (NMOS drain)
+.IC V(Xdut:nai)={vdd_val} V(Xdut:nbi)={vdd_val}
++ V(Xdut:naj)={vdd_val} V(Xdut:nbj)={vdd_val}
++ V(Xdut:x0)={vdd_val} V(Xdut:x1)={vdd_val}
++ V(Xdut:d0)=0 V(Xdut:d1)=0
++ V(oh2)=0 V(Xdut:o2ps)=0
++ V(Xdut:no1)={vdd_val} V(oh1)=0
++ V(Xdut:q0pm1)={vdd_val} V(Xdut:q0pm2)={vdd_val}
++ V(Xdut:q1pm1)={vdd_val} V(Xdut:q1pm2)={vdd_val}
++ V(Xdut:q0nmid)=0 V(Xdut:q1nmid)=0
++ V(Xdut:a1pm)={vdd_val} V(Xdut:a1nm1)=0 V(Xdut:a1nm2)=0
+
+* --- Output Printing ---
+.PRINT TRAN V(ai) V(oh1) V(oh2) V(Xdut:x0) V(Xdut:x1) I(Vidd)
+
+* --- Delay Measurements ---
+* When ai rises: x0 falls (XNOR->0), oh1 rises (hd=1 asserted)
+* When ai falls: x0 rises (XNOR->1), oh1 falls (hd=0)
+* oh2 stays low for this stimulus (only one XOR changes)
+
+* tplh_oh1: oh1 low-to-high propagation delay (ai rise -> oh1 rise)
+.MEASURE TRAN tplh_oh1
++ TRIG V(ai)  VAL={vdd_val/2} RISE=1
++ TARG V(oh1) VAL={vdd_val/2} RISE=1
+
+* tphl_oh1: oh1 high-to-low propagation delay (ai fall -> oh1 fall)
+.MEASURE TRAN tphl_oh1
++ TRIG V(ai)  VAL={vdd_val/2} FALL=1
++ TARG V(oh1) VAL={vdd_val/2} FALL=1
+
+* tpd_oh1: average propagation delay
+.MEASURE TRAN tpd_oh1 PARAM={(tplh_oh1+tphl_oh1)/2}
+
+* Average supply current over one full cycle
+.MEASURE TRAN avg_idd AVG I(Vidd)
++ FROM=100p TO=1100p
+
+* Total energy over one cycle
+.MEASURE TRAN e_total INTEG {V(VDD_int)*I(Vidd)}
++ FROM=100p TO=1100p
+
+.END
