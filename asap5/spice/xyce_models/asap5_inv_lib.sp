@@ -20,33 +20,33 @@
 
 * --- INVx1: M=1, nfin=2 ---
 .subckt INVx1 A Y VDD VSS
-mn1 Y A VSS VSS nmos_lvt l=16n nfin=2
-mp1 Y A VDD VDD pmos_lvt l=16n nfin=2
+mn1 Y A VSS VSS nmos_slvt l=16n nfin=2
+mp1 Y A VDD VDD pmos_slvt l=16n nfin=2
 .ends INVx1
 
 * --- INVx2: M=2, nfin=2 (2 parallel minimum-size devices) ---
 .subckt INVx2 A Y VDD VSS
-mn1 Y A VSS VSS nmos_lvt l=16n nfin=2
-mn2 Y A VSS VSS nmos_lvt l=16n nfin=2
-mp1 Y A VDD VDD pmos_lvt l=16n nfin=2
-mp2 Y A VDD VDD pmos_lvt l=16n nfin=2
+mn1 Y A VSS VSS nmos_slvt l=16n nfin=2
+mn2 Y A VSS VSS nmos_slvt l=16n nfin=2
+mp1 Y A VDD VDD pmos_slvt l=16n nfin=2
+mp2 Y A VDD VDD pmos_slvt l=16n nfin=2
 .ends INVx2
 
 * --- INVx2_nfin4: M=1, nfin=4 (equivalent drive, single device) ---
 * For comparison: same total Weff as INVx2 but single device
 .subckt INVx2_nfin4 A Y VDD VSS
-mn1 Y A VSS VSS nmos_lvt l=16n nfin=4
-mp1 Y A VDD VDD pmos_lvt l=16n nfin=4
+mn1 Y A VSS VSS nmos_slvt l=16n nfin=4
+mp1 Y A VDD VDD pmos_slvt l=16n nfin=4
 .ends INVx2_nfin4
 
 * --- INVx4: M=4, nfin=2 (4 parallel minimum-size devices) ---
 .subckt INVx4 A Y VDD VSS
-mn1 Y A VSS VSS nmos_lvt l=16n nfin=2
-mn2 Y A VSS VSS nmos_lvt l=16n nfin=2
-mn3 Y A VSS VSS nmos_lvt l=16n nfin=2
-mn4 Y A VSS VSS nmos_lvt l=16n nfin=2
-mp1 Y A VDD VDD pmos_lvt l=16n nfin=2
-mp2 Y A VDD VDD pmos_lvt l=16n nfin=2
-mp3 Y A VDD VDD pmos_lvt l=16n nfin=2
-mp4 Y A VDD VDD pmos_lvt l=16n nfin=2
+mn1 Y A VSS VSS nmos_slvt l=16n nfin=2
+mn2 Y A VSS VSS nmos_slvt l=16n nfin=2
+mn3 Y A VSS VSS nmos_slvt l=16n nfin=2
+mn4 Y A VSS VSS nmos_slvt l=16n nfin=2
+mp1 Y A VDD VDD pmos_slvt l=16n nfin=2
+mp2 Y A VDD VDD pmos_slvt l=16n nfin=2
+mp3 Y A VDD VDD pmos_slvt l=16n nfin=2
+mp4 Y A VDD VDD pmos_slvt l=16n nfin=2
 .ends INVx4

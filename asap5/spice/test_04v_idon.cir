@@ -1,0 +1,20 @@
+* test_04v_idon.cir — NMOS/PMOS Id_on/Id_off @ VDD=0.40V
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+vin gate 0 dc 0
+vdn dn 0 dc 0.4
+vsn sn 0 dc 0
+mn1 dn gate sn sn nmos_lvt l=16n nfin=2
+vdp dp 0 dc 0
+vsp sp 0 dc 0.4
+mp1 dp gate sp sp pmos_lvt l=16n nfin=2
+.DC vin 0 0.4 0.001
+.PRINT DC I(vdn) I(vdp)
+.MEASURE DC idon_n FIND I(vdn) AT=0.4
+.MEASURE DC idoff_n FIND I(vdn) AT=0.0
+.MEASURE DC idon_p FIND I(vdp) AT=0.0
+.MEASURE DC idoff_p FIND I(vdp) AT=0.4
+.END
