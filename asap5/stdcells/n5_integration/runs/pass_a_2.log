@@ -1,0 +1,40 @@
+Pass '--accept-flake-config' to trust it
+Pass '--accept-flake-config' to trust it
+[17:43:26] WARNING  The following warnings have been generated:  __main__.py:155
+[17:43:26] WARNING  The configuration variable 'FP_WELLTAP_CELL' __main__.py:157
+                    is deprecated. Please check the docs for the                
+                    usage on the replacement variable                           
+                    'WELLTAP_CELL'.                                             
+[17:43:26] WARNING  The configuration variable 'FP_ENDCAP_CELL'  __main__.py:157
+                    is deprecated. Please check the docs for the                
+                    usage on the replacement variable                           
+                    'ENDCAP_CELL'.                                              
+[17:43:26] ERROR    Errors have occurred while loading the PDK   __main__.py:158
+                    configuration files.                                        
+[17:43:26] ERROR    Required PDK variable 'LIB' did not get a    __main__.py:160
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:43:26] ERROR    Path provided for variable                   __main__.py:160
+                    'SYNTH_EXCLUDED_CELL_FILE' is invalid: ''                   
+                    does not exist                                              
+[17:43:26] ERROR    Path provided for variable                   __main__.py:160
+                    'PNR_EXCLUDED_CELL_FILE' is invalid: '' does                
+                    not exist                                                   
+[17:43:26] ERROR    Path provided for variable 'MAGICRC' is      __main__.py:160
+                    invalid: '' does not exist                                  
+[17:43:26] ERROR    Path provided for variable 'MAGIC_TECH' is   __main__.py:160
+                    invalid: '' does not exist                                  
+[17:43:26] ERROR    Path provided for variable 'MAGIC_PDK_SETUP' __main__.py:160
+                    is invalid: '' does not exist                               
+[17:43:26] ERROR    Path provided for variable 'KLAYOUT_TECH' is __main__.py:160
+                    invalid: '' does not exist                                  
+[17:43:26] ERROR    Path provided for variable                   __main__.py:160
+                    'KLAYOUT_PROPERTIES' is invalid: '' does not                
+                    exist                                                       
+[17:43:26] ERROR    Path provided for variable                   __main__.py:160
+                    'KLAYOUT_DEF_LAYER_MAP' is invalid: '' does                 
+                    not exist                                                   
+[17:43:26] ERROR    Path provided for variable 'NETGEN_SETUP' is __main__.py:160
+                    invalid: '' does not exist                                  
+[17:43:26] ERROR    OpenLane will now quit. Please check your    __main__.py:162
+                    configuration.                                              

@@ -1,0 +1,4 @@
+# ASAP5 5nm GAA nanosheet default setup for Magic
+tech load /Users/bruce/CLAUDE/asap5/magic/asap5.tech
+ext2spice format xyce
+snap internal

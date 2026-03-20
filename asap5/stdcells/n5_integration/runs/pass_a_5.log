@@ -1,0 +1,9 @@
+Pass '--accept-flake-config' to trust it
+Pass '--accept-flake-config' to trust it
+[17:46:46] ERROR    Errors have occurred while loading the       __main__.py:158
+                    design configuration file.                                  
+[17:46:46] ERROR    Value for 'SYNTH_HIERARCHY_MODE' is invalid  __main__.py:160
+                    for 'flatten'｜'deferred_flatten'｜'keep':                  
+                    'True'                                                      
+[17:46:46] ERROR    OpenLane will now quit. Please check your    __main__.py:162
+                    configuration.                                              

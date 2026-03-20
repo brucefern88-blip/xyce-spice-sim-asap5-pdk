@@ -1,0 +1,31 @@
+* NGSPICE file created from /Users/bruce/CLAUDE/asap5/stdcells/layouts/MUX21x1.ext - technology: asap5
+
+.global Vdd 0 
+
+.subckt x/Users/bruce/CLAUDE/asap5/stdcells/layouts/MUX21x1
+M1000 a_46_10# a_30_10# VSS 0 nmos_lvt w=0.45u l=0.16u
++  ad=89.99999f pd=1.3u as=0.135p ps=1.5u
+M1001 D1 a_184_75# S w_0_65# pmos_lvt w=0.55u l=0.16u
++  ad=99f pd=1.46u as=0.198p ps=1.27u
+M1002 D1 a_184_10# S 0 nmos_lvt w=0.45u l=0.16u
++  ad=81f pd=1.26u as=0.162p ps=1.17u
+M1003 VDD a_250_75# Y w_0_65# pmos_lvt w=0.55u l=0.16u
++  ad=0.11p pd=1.5u as=0.121p ps=1.54u
+M1004 VSS a_250_10# Y 0 nmos_lvt w=0.45u l=0.16u
++  ad=89.99999f pd=1.3u as=99f ps=1.34u
+M1005 S a_96_75# D0 w_0_65# pmos_lvt w=0.55u l=0.16u
++  ad=0.198p pd=1.27u as=99f ps=1.46u
+M1006 S a_96_10# D0 0 nmos_lvt w=0.45u l=0.16u
++  ad=0.162p pd=1.17u as=81f ps=1.26u
+M1007 a_46_10# a_30_75# VDD w_0_65# pmos_lvt w=0.55u l=0.16u
++  ad=0.11p pd=1.5u as=0.165p ps=1.7u
+C0 a_46_10# D0 3.73253f
+C1 S Y 6.33276f
+C2 a_46_10# S 16.2083f
+C3 D0 S 3.58669f
+C4 VDD a_46_10# 0.01327f
+C5 S VSS 0.06155f
+C6 a_46_10# D1 0.02848f
+C7 S D1 4.82491f
+.ends
+

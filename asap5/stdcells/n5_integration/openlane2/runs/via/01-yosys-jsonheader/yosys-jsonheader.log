@@ -1,0 +1,196 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/be4cfd42bf9f4c3b870e39d5855f0695.bb.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/be4cfd42bf9f4c3b870e39d5855f0695.bb.v' to AST representation.
+Generating RTLIL representation for module `\AND2via'.
+Generating RTLIL representation for module `\AOI21x1'.
+Generating RTLIL representation for module `\BUFx1'.
+Generating RTLIL representation for module `\DECAPx2'.
+Generating RTLIL representation for module `\ENDCAP_L'.
+Generating RTLIL representation for module `\ENDCAP_R'.
+Generating RTLIL representation for module `\FILLx1'.
+Generating RTLIL representation for module `\FILLx2'.
+Generating RTLIL representation for module `\FILLx4'.
+Generating RTLIL representation for module `\FUSED_A'.
+Generating RTLIL representation for module `\FUSED_E'.
+Generating RTLIL representation for module `\FUSED_F'.
+Generating RTLIL representation for module `\FUSED_G'.
+Generating RTLIL representation for module `\INVx1'.
+Generating RTLIL representation for module `\INVx2'.
+Generating RTLIL representation for module `\INVx4'.
+Generating RTLIL representation for module `\MUX21x1'.
+Generating RTLIL representation for module `\NAND2x1'.
+Generating RTLIL representation for module `\NOR2x1'.
+Generating RTLIL representation for module `\OAI21x1'.
+Generating RTLIL representation for module `\OR2via'.
+Generating RTLIL representation for module `\TAPx1'.
+Generating RTLIL representation for module `\TIE_HI'.
+Generating RTLIL representation for module `\TIE_LO'.
+Generating RTLIL representation for module `\XNOR2x1'.
+Generating RTLIL representation for module `\XNOR2x2'.
+Generating RTLIL representation for module `\XOR2x1'.
+Generating RTLIL representation for module `\XOR2x2'.
+Successfully finished Verilog frontend.
+
+2. Executing Liberty frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib
+Imported 4 cell types from liberty file.
+
+3. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v' to AST representation.
+Storing AST representation for module `$abstract\crosspoint_sum'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/verilog/xp_via_macros.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/verilog/xp_via_macros.v' to AST representation.
+Storing AST representation for module `$abstract\XP_3x3_M2M3'.
+Storing AST representation for module `$abstract\XP_5x5_M2M3'.
+Storing AST representation for module `$abstract\XP_4x4_M4M5'.
+Storing AST representation for module `$abstract\XP_3x3_M4M5'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/verilog/hamming_64b_cuboid_r4_via.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/verilog/hamming_64b_cuboid_r4_via.v' to AST representation.
+Storing AST representation for module `$abstract\hamming_64b_cuboid_r4_via'.
+Successfully finished Verilog frontend.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+7. Executing AST frontend in derive mode using pre-parsed AST for module `\hamming_64b_cuboid_r4_via'.
+Generating RTLIL representation for module `\hamming_64b_cuboid_r4_via'.
+
+7.1. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Parameter \M = 5
+Parameter \N = 5
+
+7.2. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Generating RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+
+7.3. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+Generating RTLIL representation for module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+Found cached RTLIL representation for module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Parameter \M = 17
+Parameter \N = 7
+
+7.4. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 17
+Parameter \N = 7
+Generating RTLIL representation for module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Parameter \M = 9
+Parameter \N = 9
+
+7.5. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 9
+Parameter \N = 9
+Generating RTLIL representation for module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Parameter \M = 13
+Parameter \N = 13
+
+7.6. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 13
+Parameter \N = 13
+Generating RTLIL representation for module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+
+7.7. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+
+7.8. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+Removing unused module `$abstract\hamming_64b_cuboid_r4_via'.
+Removing unused module `$abstract\XP_3x3_M4M5'.
+Removing unused module `$abstract\XP_4x4_M4M5'.
+Removing unused module `$abstract\XP_5x5_M2M3'.
+Removing unused module `$abstract\XP_3x3_M2M3'.
+Removing unused module `$abstract\crosspoint_sum'.
+Removed 6 unused modules.
+Renaming module hamming_64b_cuboid_r4_via to hamming_64b_cuboid_r4_via.
+
+8. Executing PROC pass (convert processes to netlists).
+
+8.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+8.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+8.4. Executing PROC_INIT pass (extract init attributes).
+
+8.5. Executing PROC_ARST pass (detect async resets in processes).
+
+8.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+8.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+8.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+8.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+8.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+8.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hamming_64b_cuboid_r4_via.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+<suppressed ~2 debug messages>
+
+9. Executing FLATTEN pass (flatten design).
+Keeping hamming_64b_cuboid_r4_via.u_lo_l3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_via.u_hi_l3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_via.u_carry (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_via.xp7[0].u (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_via.xp7[1].u (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_via.xp5h[0].u (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_via.xp5h[1].u (found keep_hierarchy attribute).
+
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Removed 6 unused cells and 834 unused wires.
+<suppressed ~22 debug messages>

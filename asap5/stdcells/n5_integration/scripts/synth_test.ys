@@ -1,0 +1,19 @@
+# Test synthesis: hamming_64b_cuboid_r4 → ASAP5 stdcells
+read_verilog /Users/bruce/Desktop/hamming_64b_cuboid_r4.v
+hierarchy -check -top hamming_64b_cuboid_r4
+
+# Standard optimization passes
+proc; opt; fsm; opt; memory; opt
+
+# Technology mapping — minimal ABC script (no buffer/sizing)
+techmap
+abc -liberty /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib -script "+strash;map;topo"
+
+# Clean up
+opt_clean
+
+# Report statistics
+stat -liberty /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib
+
+# Write output
+write_verilog -noattr /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/scripts/synth_out.v

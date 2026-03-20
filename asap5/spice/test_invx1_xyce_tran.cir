@@ -1,0 +1,57 @@
+* =============================================================================
+* test_invx1_xyce_tran.cir — ASAP5 INVx1 (extracted) Transient Delay for Xyce
+* =============================================================================
+* INVx1 subcircuit with Magic-extracted parasitics
+* LVT GAA nanosheet, TT corner, VDD=0.7V
+* Run:  Xyce test_invx1_xyce_tran.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt.pm'
+
+* === Xyce Global Options for FinFET/GAA Designs ===
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+* --- INVx1 extracted subcircuit (Magic parasitics) ---
+.subckt INVx1 A Y VDD VSS
+mn1 Y A VSS VSS nmos_lvt l=16n
+mp1 Y A VDD VDD pmos_lvt l=16n
+Cext_Y Y 0 0.9653f
+Cext_A A 0 0.2206f
+.ends INVx1
+
+* --- Testbench ---
+.param vdd_val = 0.7
+
+vdd  vdd  0  dc {vdd_val}
+vss  vss  0  dc 0
+
+* Pulse: 0→0.7V, delay=50ps, rise/fall=5ps, width=95ps, period=200ps
+vin  in  0  pulse(0 {vdd_val} 50p 5p 5p 95p 200p)
+
+xinv in out vdd vss INVx1
+
+cload out 0 1.0f
+
+.TRAN 0.5p 400p
+.PRINT TRAN V(in) V(out)
+
+* --- Propagation delay ---
+.MEASURE TRAN tphl TRIG V(in) VAL={vdd_val/2} RISE=1
++                    TARG V(out) VAL={vdd_val/2} FALL=1
+.MEASURE TRAN tplh TRIG V(in) VAL={vdd_val/2} FALL=1
++                    TARG V(out) VAL={vdd_val/2} RISE=1
+
+* --- Transition times ---
+.MEASURE TRAN fall_time TRIG V(out) VAL={vdd_val*0.9} FALL=1
++                        TARG V(out) VAL={vdd_val*0.1} FALL=1
+.MEASURE TRAN rise_time TRIG V(out) VAL={vdd_val*0.1} RISE=1
++                        TARG V(out) VAL={vdd_val*0.9} RISE=1
+
+* --- Power ---
+.MEASURE TRAN avg_idd AVG I(vdd) FROM=50p TO=250p
+
+.END

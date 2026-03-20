@@ -1,0 +1,129 @@
+## SPDX-License-Identifier: BSD-3-Clause
+## Copyright (c) 2019-2026, The OpenROAD Authors
+# Assumes flow_helpers.tcl has been read.
+read_libraries
+[INFO ODB-0227] LEF file: sky130hd/sky130hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: sky130hd/sky130hd_std_cell.lef, created 437 library cells
+read_verilog $synth_verilog
+link_design $top_module
+read_sdc $sdc_file
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+set_thread_count [cpu_count]
+# Temporarily disable sta's threading due to random failures
+sta::set_thread_count 1
+utl::metric "IFP::ord_version" [ord::openroad_git_describe]
+# Note that sta::network_instance_count is not valid after tapcells are added.
+utl::metric "IFP::instance_count" [sta::network_instance_count]
+initialize_floorplan -site $site \
+  -die_area $die_area \
+  -core_area $core_area
+[WARNING IFP-0028] Core area lower left (30.000, 30.000) snapped to (30.360, 32.640).
+[INFO IFP-0001] Added 638 rows of 3781 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 2000.000 2000.000 ) um
+[INFO IFP-0101] Core BBox: ( 30.360 32.640 ) ( 1769.620 1768.000 ) um
+[INFO IFP-0102] Core area:                      3018242.234 um^2
+[INFO IFP-0103] Total instances area:            114224.550 um^2
+[INFO IFP-0104] Effective utilization:                0.038
+[INFO IFP-0105] Number of instances:                  17209
+source $tracks_file
+# remove buffers inserted by synthesis
+remove_buffers
+[INFO RSZ-0026] Removed 2471 buffers.
+if { $pre_placed_macros_file != "" } {
+  source $pre_placed_macros_file
+}
+################################################################
+# Macro Placement
+if { [have_macros] } {
+  lassign $macro_place_halo halo_x halo_y
+  set report_dir [make_result_file ${design}_${platform}_rtlmp]
+  rtl_macro_placer -halo_width $halo_x -halo_height $halo_y \
+    -report_directory $report_dir
+}
+################################################################
+# Tapcell insertion
+eval tapcell $tapcell_args ;# tclint-disable command-args
+[INFO TAP-0005] Inserted 40320 tapcells.
+################################################################
+# Power distribution network insertion
+source $pdn_cfg
+[WARNING ORD-0046] -defer_connection has been deprecated.
+[WARNING ORD-0046] -defer_connection has been deprecated.
+[WARNING ORD-0046] -defer_connection has been deprecated.
+[WARNING ORD-0046] -defer_connection has been deprecated.
+[WARNING ORD-0046] -defer_connection has been deprecated.
+[WARNING ORD-0046] -defer_connection has been deprecated.
+[WARNING ORD-0046] -defer_connection has been deprecated.
+[WARNING ORD-0046] -defer_connection has been deprecated.
+[WARNING ORD-0046] -defer_connection has been deprecated.
+pdngen
+[INFO PDN-0001] Inserting grid: grid
+################################################################
+# Global placement
+foreach layer_adjustment $global_routing_layer_adjustments {
+  lassign $layer_adjustment layer adjustment
+  set_global_routing_layer_adjustment $layer $adjustment
+}
+set_routing_layers -signal $global_routing_layers \
+  -clock $global_routing_clock_layers
+set_macro_extension 2
+# Global placement skip IOs
+global_placement -density $global_place_density \
+  -pad_left $global_place_pad -pad_right $global_place_pad -skip_io
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: ( 30.360 32.640 ) ( 1769.620 1768.000 ) um
+[INFO GPL-0036] Movable instances area:     250522.771 um^2
+[INFO GPL-0037] Total instances area:       300971.155 um^2
+[INFO GPL-0035] Pin density area adjust:     16375.532 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:             55058
+[INFO GPL-0007] Movable instances:               14738
+[INFO GPL-0008] Fixed instances:                 40320
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                  15003
+[INFO GPL-0011] Number of pins:                  60623
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 2000.000 2000.000 ) um
+[INFO GPL-0013] Core BBox: ( 30.360 32.640 ) ( 1769.620 1768.000 ) um
+[INFO GPL-0016] Core area:                  3018242.234 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                3018242.234 um^2
+[INFO GPL-0017] Fixed instances area:        50448.384 um^2
+[INFO GPL-0018] Movable instances area:     266898.304 um^2
+[INFO GPL-0019] Utilization:                     8.993 %
+[INFO GPL-0020] Standard cells area:        266898.304 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 14738	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.3000
+[INFO GPL-0024] Movable insts average area:     18.110 um^2
+[INFO GPL-0025] Ideal bin area:                 60.365 um^2
+[INFO GPL-0026] Ideal bin count:                 49999
+[INFO GPL-0027] Total bin area:             3018242.234 um^2
+[INFO GPL-0028] Bin count (X, Y):         128 ,    128
+[INFO GPL-0029] Bin size (W * H):      13.588 * 13.557 um
+[INFO GPL-0030] Number of bins:                  16384
+[INFO GPL-0007] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9991 |  3.204067e+04 |   +0.00% |  2.80e-16 |      
+       10 |   0.9990 |  1.500006e+04 |  -53.18% |  4.56e-16 |      
+       20 |   0.9988 |  1.492342e+04 |   -0.51% |  7.43e-16 |      
+       30 |   0.9985 |  1.491315e+04 |   -0.07% |  1.21e-15 |      
+       40 |   0.9985 |  1.491555e+04 |   +0.02% |  1.97e-15 |      
+       50 |   0.9985 |  1.491343e+04 |   -0.01% |  3.21e-15 |      
+       60 |   0.9986 |  1.491584e+04 |   +0.02% |  5.23e-15 |      
+       70 |   0.9985 |  1.493072e+04 |   +0.10% |  8.52e-15 |      
+       80 |   0.9985 |  1.497081e+04 |   +0.27% |  1.39e-14 |      
+       90 |   0.9983 |  1.504554e+04 |   +0.50% |  2.26e-14 |      
+      100 |   0.9983 |  1.518377e+04 |   +0.92% |  3.68e-14 |      
+      110 |   0.9983 |  1.543842e+04 |   +1.68% |  6.00e-14 |      
+      120 |   0.9983 |  1.595948e+04 |   +3.38% |  9.77e-14 |      
+      130 |   0.9980 |  1.729126e+04 |   +8.34% |  1.59e-13 |      
+      140 |   0.9963 |  2.193456e+04 |  +26.85% |  2.59e-13 |      
+      150 |   0.9923 |  3.529796e+04 |  +60.92% |  4.21e-13 |      
+      160 |   0.9835 |  5.265820e+04 |  +49.18% |  6.85e-13 |      

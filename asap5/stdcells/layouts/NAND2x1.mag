@@ -1,0 +1,81 @@
+magic
+tech asap5
+timestamp 1742300000
+<< nwell >>
+rect 0 65 132 140
+<< poly >>
+rect 36 120 52 135
+rect 36 78 52 85
+rect 36 64 38 78
+rect 50 64 52 78
+rect 36 50 52 64
+rect 36 5 52 20
+rect 80 120 96 135
+rect 80 78 96 85
+rect 80 64 82 78
+rect 94 64 96 78
+rect 80 50 96 64
+rect 80 5 96 20
+<< ndiff >>
+rect 10 44 36 50
+rect 10 30 16 44
+rect 30 30 36 44
+rect 10 20 36 30
+rect 52 20 80 50
+rect 96 44 122 50
+rect 96 30 102 44
+rect 116 30 122 44
+rect 96 20 122 30
+<< pdiff >>
+rect 10 110 36 120
+rect 10 96 16 110
+rect 30 96 36 110
+rect 10 85 36 96
+rect 52 110 80 120
+rect 52 96 58 110
+rect 72 96 80 110
+rect 52 85 80 96
+rect 96 110 122 120
+rect 96 96 102 110
+rect 116 96 122 110
+rect 96 85 122 96
+<< nfet_lvt >>
+rect 36 20 52 50
+rect 80 20 96 50
+<< pfet_lvt >>
+rect 36 85 52 120
+rect 80 85 96 120
+<< metal1 >>
+rect 0 126 132 140
+rect 56 94 74 126
+rect 0 0 132 14
+rect 100 14 118 46
+rect 14 28 32 46
+rect 14 94 32 112
+rect 100 94 118 112
+rect 36 62 52 80
+rect 80 62 96 80
+<< metal2 >>
+rect 14 28 32 112
+rect 32 94 118 112
+<< via1 >>
+rect 16 30 30 44
+rect 16 96 30 110
+rect 102 96 116 110
+<< cogc >>
+rect 38 64 50 78
+rect 82 64 94 78
+<< ndc >>
+rect 16 30 30 44
+rect 102 30 116 44
+<< pdc >>
+rect 16 96 30 110
+rect 58 96 72 110
+rect 102 96 116 110
+<< labels >>
+rlabel metal1 44 71 44 71 1 A
+rlabel metal1 88 71 88 71 1 B
+rlabel metal2 24 70 24 70 1 Y
+rlabel metal1 66 140 66 140 5 VDD
+rlabel metal1 66 0 66 0 1 VSS
+<< end >>

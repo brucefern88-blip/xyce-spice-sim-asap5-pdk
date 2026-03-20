@@ -1,0 +1,25 @@
+* cal_verify_cd.cir — Verify calibrated Cd for NMOS and PMOS
+* AC on drain only, gate DC → Cd = |II(vd)|/(2*pi*f)
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+
+* --- NMOS ---
+vgn  gn  0  dc 0.35
+vdn  dn  0  dc 0.35 ac 1
+vsn  sn  0  dc 0
+mn1 dn gn sn sn nmos_lvt l=16n nfin=1
+
+* --- PMOS ---
+vgp  gp  0  dc 0.35
+vdp  dp  0  dc 0.35 ac 1
+vsp  sp  0  dc 0.7
+mp1 dp gp sp sp pmos_lvt l=16n nfin=1
+
+.AC DEC 1 1e9 1e9
+.PRINT AC II(vdn) II(vdp)
+
+.END

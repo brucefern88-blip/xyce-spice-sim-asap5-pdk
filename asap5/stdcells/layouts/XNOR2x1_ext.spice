@@ -1,0 +1,9 @@
+* NGSPICE file created from XNOR2x1.ext - technology: asap5
+
+.global Vdd 0 
+
+
+* Top level circuit XNOR2x1
+
+.end
+

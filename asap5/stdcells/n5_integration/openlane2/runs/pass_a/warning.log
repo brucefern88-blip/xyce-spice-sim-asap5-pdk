@@ -1,0 +1,243 @@
+'PNR_SDC_FILE' is not defined. Using generic fallback SDC for OpenROAD PnR steps.
+'SIGNOFF_SDC_FILE' is not defined. Using generic fallback SDC for OpenROAD PnR steps.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+The power grid violations (as reported by OpenROAD PSM- you may ignore these if LVS passes) metric was not found. Are you sure the relevant step was run?
+[STA-0450] virtual clock vclk can not be propagated.
+[GRT-0097] No global routing found for nets.
+[STA-0450] virtual clock vclk can not be propagated.
+[DPL-0038] No 1-site fill cells detected.  To remove 1-site gaps use the -disallow_one_site_gaps flag.
+[STA-0450] virtual clock vclk can not be propagated.
+[GRT-0097] No global routing found for nets.
+[STA-0450] virtual clock vclk can not be propagated.
+[GRT-0097] No global routing found for nets.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[DRT-0225] carry\[0\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] carry\[4\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] carry\[5\] 11 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh_flat\[12\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh_flat\[15\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh_flat\[2\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh_flat\[3\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh_flat\[40\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh_flat\[44\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hi_flat\[4\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hi_flat\[8\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[11\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[13\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[3\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[6\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[7\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl1_flat\[18\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl1_flat\[2\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl1_flat\[3\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl1_flat\[5\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl2_flat\[5\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl2_flat\[8\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1_flat\[15\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1_flat\[17\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1_flat\[19\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1_flat\[20\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1_flat\[22\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1_flat\[25\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1_flat\[26\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1_flat\[9\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2_flat\[0\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2_flat\[10\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2_flat\[13\] 5 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2_flat\[17\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2_flat\[19\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2_flat\[1\] 8 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2_flat\[4\] 6 pin not visited, fall back to feedthrough mode.
+[DRT-0225] lo_flat\[10\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] lo_flat\[16\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] lo_flat\[24\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[13\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[15\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[17\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[22\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[25\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[27\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[35\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[37\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[55\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[5\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[64\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[7\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ps_flat\[9\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] r4_split\[2\].boh\[2\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] r4_split\[3\].boh\[4\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] r4_split\[4\].boh\[6\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] r4_split\[5\].boh\[6\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] r4_split\[7\].boh\[6\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] upper\[14\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] upper\[18\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp13_lo_l3/_015_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp13_lo_l3/_090_ 5 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp13_lo_l3/_173_ 7 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp13_lo_l3/_175_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp13_lo_l3/_176_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp13_lo_l3/_181_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp13_lo_l3/_208_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp17x7_carry/_059_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp17x7_carry/_103_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp17x7_carry/_110_ 7 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp17x7_carry/_127_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp9_hi_l3/_001_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp9_hi_l3/_039_ 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp9_hi_l3/_041_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp9_hi_l3/_043_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp9_hi_l3/_054_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp9_hi_l3/_074_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_xp9_hi_l3/_075_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp3_s2l1\[14\].u_xp3/_03_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp3_s2l1\[8\].u_xp3/_03_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp5_s2l2\[0\].u_xp5/_00_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp5_s2l2\[0\].u_xp5/_18_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp5_s2l2\[2\].u_xp5/_01_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp5_s2l2\[4\].u_xp5/_15_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp5_s2l2\[7\].u_xp5/_01_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp5_s2l2\[7\].u_xp5/_15_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp7_lo_l2\[1\].u_xp7/_008_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp7_lo_l2\[1\].u_xp7/_019_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp7_lo_l2\[1\].u_xp7/_030_ 3 pin not visited, fall back to feedthrough mode.
+[STA-0450] virtual clock vclk can not be propagated.
+Threshold for Threshold-surpassing long wires is not set. The checker will be skipped.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 134, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 145, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 231, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 242, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 328, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 339, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 471, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 482, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 497, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 508, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 640, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 651, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 666, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 677, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 855, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 866, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 881, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 892, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 907, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 918, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1096, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1107, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1122, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1133, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1148, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1159, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1291, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1302, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1317, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1328, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1460, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1471, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1486, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1497, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1629, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1640, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1655, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1666, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1798, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1809, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1824, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1835, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2013, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2024, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2039, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2050, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2065, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2076, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2302, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2313, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2328, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2339, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2354, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2365, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2380, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2391, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2577, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2588, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2603, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2614, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2629, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2640, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2655, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2666, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2892, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2903, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2918, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2929, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2944, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2955, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2970, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2981, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3167, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3178, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3193, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3204, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3219, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3230, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3245, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3256, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3442, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3453, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3468, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3479, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3494, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3505, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3520, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3531, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3757, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3768, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3783, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3794, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3809, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3820, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3835, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3846, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4032, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4043, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4058, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4069, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4084, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4095, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4110, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4121, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4307, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4318, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4333, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4344, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4359, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4370, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4385, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4396, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4622, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4633, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4648, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4659, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4674, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4685, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4700, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4711, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4897, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4908, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4923, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4934, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4949, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4960, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4975, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4986, table template power_5x5 not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 5041, table template scalar not found.
+[STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 5042, table template scalar not found.

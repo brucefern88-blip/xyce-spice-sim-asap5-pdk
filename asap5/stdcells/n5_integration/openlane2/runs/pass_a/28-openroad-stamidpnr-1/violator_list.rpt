@@ -1,0 +1,17 @@
+
+===========================================================================
+Violator List
+============================================================================
+[setup in-out] B[38] -> hd[3] : -0.856555
+[setup in-out] B[38] -> hd[4] : -0.856546
+[setup in-out] B[38] -> hd[2] : -0.856539
+[setup in-out] B[5] -> hd[5] : -0.848505
+[setup in-out] B[5] -> hd[6] : -0.848454
+[setup in-out] B[38] -> hd[1] : -0.658365
+[setup in-out] B[38] -> hd[0] : -0.658360
+Writing metric timing__hold_vio__count__corner:nom_tt_025C_0v50: 0
+Writing metric timing__hold_r2r__ws__corner:nom_tt_025C_0v50: 1e30
+Writing metric timing__hold_r2r_vio__count__corner:nom_tt_025C_0v50: 0
+Writing metric timing__setup_vio__count__corner:nom_tt_025C_0v50: 7
+Writing metric timing__setup_r2r__ws__corner:nom_tt_025C_0v50: 1e30
+Writing metric timing__setup_r2r_vio__count__corner:nom_tt_025C_0v50: 0

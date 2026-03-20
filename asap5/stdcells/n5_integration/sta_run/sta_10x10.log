@@ -1,0 +1,156 @@
+OpenROAD edf00dff99f6c40d67a30c0e22a8191c5d2ed9d6 
+Features included (+) or not (-): +Charts +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+
+===== DESIGN STATS =====
+Design area 35 u^2 41% utilization.
+Cell type report:                       Count       Area
+  Other                                    96       0.59
+  Buffer                                   91       1.12
+  Timing Repair Buffer                    140       1.72
+  Inverter                                467       2.88
+  Multi-Input combinational cell         1406      28.37
+  Total                                  2200      34.69
+
+===== WORST SETUP PATH =====
+Startpoint: A[41] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock vclk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0500    0.0500 ^ input external delay
+     1    0.0702    0.1000    0.0000    0.0500 ^ A[41] (in)
+                                                 A[41] (net)
+                    7.1558    2.2259    2.2759 ^ input36/A (BUFx1)
+     1    0.0002    0.2000    0.1880    2.4639 ^ input36/Y (BUFx1)
+                                                 net36 (net)
+                    0.2000    0.0021    2.4660 ^ _0761_/B (XNOR2x2)
+     2    0.0004    0.0000    0.0000    2.4660 ^ _0761_/Y (XNOR2x2)
+                                                 _0244_ (net)
+                    0.0000    0.0008    2.4668 ^ _0765_/A (NOR2x1)
+     3    0.0006    0.0000    0.0000    2.4668 v _0765_/Y (NOR2x1)
+                                                 _0247_ (net)
+                    0.0000    0.0094    2.4762 v _0767_/B (NOR2x1)
+     2    0.0006    0.0000    0.0000    2.4762 ^ _0767_/Y (NOR2x1)
+                                                 _0248_ (net)
+                    0.0000    0.0131    2.4893 ^ xp3_s2l1[10].u_xp3/_20_/A (INVx4)
+     2    0.0003    0.0000    0.0000    2.4893 v xp3_s2l1[10].u_xp3/_20_/Y (INVx4)
+                                                 xp3_s2l1[10].u_xp3/_04_ (net)
+                    0.0000    0.0074    2.4967 v xp3_s2l1[10].u_xp3/_25_/A1 (OAI21x1)
+     5    0.0011    0.0000    0.0000    2.4967 ^ xp3_s2l1[10].u_xp3/_25_/Y (OAI21x1)
+                                                 xp3_s2l1[10].u_xp3/_09_ (net)
+                    0.0000    0.0707    2.5673 ^ xp5_s2l2[5].u_xp5/_48_/A (NAND2x1)
+     1    0.0003    0.0000    0.0000    2.5673 v xp5_s2l2[5].u_xp5/_48_/Y (NAND2x1)
+                                                 xp5_s2l2[5].u_xp5/_11_ (net)
+                    0.0000    0.0099    2.5773 v xp5_s2l2[5].u_xp5/_49_/B (OAI21x1)
+     1    0.0001    0.0000    0.0000    2.5773 ^ xp5_s2l2[5].u_xp5/_49_/Y (OAI21x1)
+                                                 xp5_s2l2[5].u_xp5/_12_ (net)
+                    0.0000    0.0016    2.5789 ^ xp5_s2l2[5].u_xp5/_50_/B (AOI21x1)
+     1    0.0002    0.0000    0.0000    2.5789 v xp5_s2l2[5].u_xp5/_50_/Y (AOI21x1)
+                                                 xp5_s2l2[5].u_xp5/_13_ (net)
+                    0.0000    0.0055    2.5844 v xp5_s2l2[5].u_xp5/_51_/B (OAI21x1)
+     2    0.0006    0.0000    0.0000    2.5844 ^ xp5_s2l2[5].u_xp5/_51_/Y (OAI21x1)
+                                                 xp5_s2l2[5].u_xp5/_14_ (net)
+                    0.0000    0.0191    2.6035 ^ _1011_/A (INVx4)
+     1    0.0001    0.0000    0.0000    2.6035 v _1011_/Y (INVx4)
+                                                 _0425_ (net)
+                    0.0000    0.0005    2.6041 v _1013_/A (NAND2x1)
+     3    0.0008    0.0000    0.0000    2.6041 ^ _1013_/Y (NAND2x1)
+                                                 _0427_ (net)
+                    0.0000    0.0432    2.6472 ^ xp4_lo_l1[2].u_xp4/_49_/A (INVx4)
+     2    0.0003    0.0000    0.0000    2.6472 v xp4_lo_l1[2].u_xp4/_49_/Y (INVx4)
+                                                 xp4_lo_l1[2].u_xp4/_20_ (net)
+                    0.0000    0.0030    2.6502 v xp4_lo_l1[2].u_xp4/_55_/A (NOR2x1)
+     5    0.0013    0.0000    0.0000    2.6502 ^ xp4_lo_l1[2].u_xp4/_55_/Y (NOR2x1)
+                                                 xp4_lo_l1[2].u_xp4/_24_ (net)
+                    0.0000    0.1056    2.7558 ^ xp7_lo_l2[1].u_xp7/_148_/B (NAND2x1)
+     1    0.0003    0.0000    0.0000    2.7558 v xp7_lo_l2[1].u_xp7/_148_/Y (NAND2x1)
+                                                 xp7_lo_l2[1].u_xp7/_003_ (net)
+                    0.0000    0.0061    2.7619 v xp7_lo_l2[1].u_xp7/_149_/B (OAI21x1)
+     2    0.1404    0.0000    0.0000    2.7619 ^ xp7_lo_l2[1].u_xp7/_149_/Y (OAI21x1)
+                                                 xp7_lo_l2[1].u_xp7/_004_ (net)
+                    0.0000    6.3192    9.0811 ^ clone7/A (BUFx1)
+     5    0.0008    0.2000    0.1880    9.2691 ^ clone7/Y (BUFx1)
+                                                 net142 (net)
+                    0.2000    0.0058    9.2749 ^ u_xp13_lo_l3/_482_/A0 (AOI21x1)
+     1    0.0001    0.0000    0.0000    9.2749 v u_xp13_lo_l3/_482_/Y (AOI21x1)
+                                                 u_xp13_lo_l3/_179_ (net)
+                    0.0000    0.0012    9.2761 v u_xp13_lo_l3/_486_/A (NAND2x1)
+     2    0.0008    0.0000    0.0000    9.2761 ^ u_xp13_lo_l3/_486_/Y (NAND2x1)
+                                                 u_xp13_lo_l3/_183_ (net)
+                    0.0000    0.0544    9.3305 ^ _0473_/B (NOR2x1)
+     1    0.0001    0.0000    0.0000    9.3305 v _0473_/Y (NOR2x1)
+                                                 _0025_ (net)
+                    0.0000    0.0012    9.3317 v _0475_/A (NAND2x1)
+     2    0.1406    0.0000    0.0000    9.3317 ^ _0475_/Y (NAND2x1)
+                                                 _0027_ (net)
+                    0.0000    9.9803   19.3119 ^ clone3/A (BUFx1)
+     7    0.0019    0.2000    0.1880   19.4999 ^ clone3/Y (BUFx1)
+                                                 net138 (net)
+                    0.2000    0.0221   19.5220 ^ u_xp17x7_carry/_245_/A (NAND2x1)
+     1    0.0001    0.0000    0.0000   19.5220 v u_xp17x7_carry/_245_/Y (NAND2x1)
+                                                 u_xp17x7_carry/_014_ (net)
+                    0.0000    0.0005   19.5225 v u_xp17x7_carry/_246_/B (OAI21x1)
+     1    0.0001    0.0000    0.0000   19.5225 ^ u_xp17x7_carry/_246_/Y (OAI21x1)
+                                                 u_xp17x7_carry/_015_ (net)
+                    0.0000    0.0010   19.5235 ^ u_xp17x7_carry/_247_/A (NOR2x1)
+     1    0.0001    0.0000    0.0000   19.5235 v u_xp17x7_carry/_247_/Y (NOR2x1)
+                                                 u_xp17x7_carry/_016_ (net)
+                    0.0000    0.0017   19.5252 v u_xp17x7_carry/_252_/A (NAND2x1)
+     1    0.0005    0.0000    0.0000   19.5252 ^ u_xp17x7_carry/_252_/Y (NAND2x1)
+                                                 u_xp17x7_carry/_021_ (net)
+                    0.0000    0.0172   19.5424 ^ _0542_/A (INVx4)
+     1    0.0001    0.0000    0.0000   19.5424 v _0542_/Y (INVx4)
+                                                 _0087_ (net)
+                    0.0000    0.0012   19.5436 v _0543_/A (NAND2x1)
+     1    0.0002    0.0000    0.0000   19.5436 ^ _0543_/Y (NAND2x1)
+                                                 _0088_ (net)
+                    0.0000    0.0027   19.5463 ^ _0546_/B (NOR2x1)
+     1    0.0002    0.0000    0.0000   19.5463 v _0546_/Y (NOR2x1)
+                                                 _0091_ (net)
+                    0.0000    0.0049   19.5513 v _0548_/A (NAND2x1)
+     1    0.0701    0.0000    0.0000   19.5513 ^ _0548_/Y (NAND2x1)
+                                                 _0093_ (net)
+                    0.0000    0.8158   20.3671 ^ _0549_/A (BUFx1)
+     1    0.0702    0.2000    0.1880   20.5551 ^ _0549_/Y (BUFx1)
+                                                 net134 (net)
+                    0.2000    2.3689   22.9240 ^ output134/A (BUFx1)
+     1    0.0001    0.2000    0.1880   23.1120 ^ output134/Y (BUFx1)
+                                                 hd[5] (net)
+                    0.2000    0.0017   23.1136 ^ hd[5] (out)
+                                       23.1136   data arrival time
+
+                    0.0000    0.2000    0.2000   clock vclk (rise edge)
+                              0.0000    0.2000   clock network delay (ideal)
+                              0.0000    0.2000   clock reconvergence pessimism
+                             -0.0500    0.1500   output external delay
+                                        0.1500   data required time
+-------------------------------------------------------------------------------------
+                                        0.1500   data required time
+                                      -23.1136   data arrival time
+-------------------------------------------------------------------------------------
+                                      -22.9636   slack (VIOLATED)
+
+
+
+===== WNS / TNS =====
+wns -22.96
+tns -130.21
+
+===== POWER =====
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential           0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Combinational        0.0000e+00 3.3614e-03 2.2891e-06 3.3637e-03 100.0%
+Clock                0.0000e+00 0.0000e+00 9.6000e-10 9.6000e-10   0.0%
+Macro                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Pad                  0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+----------------------------------------------------------------
+Total                0.0000e+00 3.3614e-03 2.2901e-06 3.3637e-03 100.0%
+                           0.0%      99.9%       0.1%

@@ -1,0 +1,316 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+# ============================================================================
+# ASAP5/N5 Utility Cells for OpenLane2 P&R Flow
+# Process: ASAP5 5nm GAA Nanosheet (N5-compatible dimensions)
+# Site: asap5_site (44nm x 140nm)
+# Generated for OpenLane2 integration — fills, taps, ties, endcaps, decaps
+# ============================================================================
+
+# --- FILLx1: 1-site filler cell ---
+# Purpose: Fill empty spaces in placement rows
+# No logic, power rails only
+MACRO FILLx1
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.044 BY 0.140 ;
+  SYMMETRY X Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.044 0.140 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.044 0.014 ;
+    END
+  END VSS
+
+  OBS
+    LAYER M1 ;
+      RECT 0.000 0.014 0.044 0.126 ;
+  END
+END FILLx1
+
+# --- FILLx2: 2-site filler cell ---
+MACRO FILLx2
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.088 BY 0.140 ;
+  SYMMETRY X Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.088 0.140 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.088 0.014 ;
+    END
+  END VSS
+
+  OBS
+    LAYER M1 ;
+      RECT 0.000 0.014 0.088 0.126 ;
+  END
+END FILLx2
+
+# --- FILLx4: 4-site filler cell ---
+MACRO FILLx4
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.176 BY 0.140 ;
+  SYMMETRY X Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.176 0.140 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.176 0.014 ;
+    END
+  END VSS
+
+  OBS
+    LAYER M1 ;
+      RECT 0.000 0.014 0.176 0.126 ;
+  END
+END FILLx4
+
+# --- TAPx1: Well tap cell ---
+# Purpose: Substrate/well contacts for latch-up prevention
+# Placed at regular intervals along rows
+MACRO TAPx1
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.044 BY 0.140 ;
+  SYMMETRY X Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.044 0.140 ;
+      LAYER M1 ;
+        RECT 0.014 0.070 0.030 0.126 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.044 0.014 ;
+      LAYER M1 ;
+        RECT 0.014 0.014 0.030 0.070 ;
+    END
+  END VSS
+END TAPx1
+
+# --- TIE_HI: Tie-high cell ---
+# Purpose: Drives constant logic 1 (connected to VDD)
+MACRO TIE_HI
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.044 BY 0.140 ;
+  SYMMETRY X Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.044 0.140 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.044 0.014 ;
+    END
+  END VSS
+
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.014 0.056 0.030 0.084 ;
+    END
+  END Y
+END TIE_HI
+
+# --- TIE_LO: Tie-low cell ---
+# Purpose: Drives constant logic 0 (connected to VSS)
+MACRO TIE_LO
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.044 BY 0.140 ;
+  SYMMETRY X Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.044 0.140 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.044 0.014 ;
+    END
+  END VSS
+
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.014 0.056 0.030 0.084 ;
+    END
+  END Y
+END TIE_LO
+
+# --- ENDCAP_L: Left endcap cell ---
+# Purpose: Placed at left end of each row for DRC boundary
+MACRO ENDCAP_L
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.044 BY 0.140 ;
+  SYMMETRY Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.044 0.140 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.044 0.014 ;
+    END
+  END VSS
+
+  OBS
+    LAYER M1 ;
+      RECT 0.000 0.014 0.044 0.126 ;
+  END
+END ENDCAP_L
+
+# --- ENDCAP_R: Right endcap cell ---
+# Purpose: Placed at right end of each row for DRC boundary
+MACRO ENDCAP_R
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.044 BY 0.140 ;
+  SYMMETRY Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.044 0.140 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.044 0.014 ;
+    END
+  END VSS
+
+  OBS
+    LAYER M1 ;
+      RECT 0.000 0.014 0.044 0.126 ;
+  END
+END ENDCAP_R
+
+# --- DECAPx2: Decoupling capacitor cell ---
+# Purpose: Power supply decoupling for noise reduction
+# 2 sites wide for meaningful capacitance
+MACRO DECAPx2
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  SIZE 0.088 BY 0.140 ;
+  SYMMETRY X Y ;
+  SITE asap5_site ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.126 0.088 0.140 ;
+      LAYER M1 ;
+        RECT 0.014 0.070 0.074 0.126 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.088 0.014 ;
+      LAYER M1 ;
+        RECT 0.014 0.014 0.074 0.070 ;
+    END
+  END VSS
+END DECAPx2
+
+END LIBRARY

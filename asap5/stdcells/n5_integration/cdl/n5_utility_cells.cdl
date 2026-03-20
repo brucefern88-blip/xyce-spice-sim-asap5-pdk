@@ -1,0 +1,40 @@
+* ============================================================================
+* ASAP5/N5 Utility Cells -- CDL Netlist
+* Process: ASAP5 5nm GAA Nanosheet (N5-compatible)
+* Generated for OpenLane2 LVS integration
+* ============================================================================
+
+.SUBCKT FILLx1 VDD VSS
+.ENDS FILLx1
+
+.SUBCKT FILLx2 VDD VSS
+.ENDS FILLx2
+
+.SUBCKT FILLx4 VDD VSS
+.ENDS FILLx4
+
+.SUBCKT TAPx1 VDD VSS
+.ENDS TAPx1
+
+.SUBCKT TIE_HI Y VDD VSS
+MP0 Y VSS VDD VDD pmos_lvt W=0.49U L=0.14U
+MN0 Y VDD VSS VSS nmos_lvt W=0.49U L=0.14U
+.ENDS TIE_HI
+
+.SUBCKT TIE_LO Y VDD VSS
+MP0 net1 VSS VDD VDD pmos_lvt W=0.49U L=0.14U
+MN0 Y VDD VSS VSS nmos_lvt W=0.49U L=0.14U
+.ENDS TIE_LO
+
+.SUBCKT ENDCAP_L VDD VSS
+.ENDS ENDCAP_L
+
+.SUBCKT ENDCAP_R VDD VSS
+.ENDS ENDCAP_R
+
+.SUBCKT DECAPx2 VDD VSS
+* PMOS decap: gate tied to VSS, source/drain to VDD
+MP0 VDD VSS VDD VDD pmos_lvt W=0.49U L=0.14U
+* NMOS decap: gate tied to VDD, source/drain to VSS
+MN0 VSS VDD VSS VSS nmos_lvt W=0.49U L=0.14U
+.ENDS DECAPx2

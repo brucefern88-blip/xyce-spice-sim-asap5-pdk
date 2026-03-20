@@ -1,0 +1,46 @@
+* =============================================================================
+* test_invx1_cal_idon.cir — ASAP5 NMOS & PMOS Id_on / Id_off (nfin=2)
+* =============================================================================
+* Calibrated models, LVT TT
+* Sweep Vin 0→0.7V: NMOS turns on, PMOS turns off
+* Run:  Xyce test_invx1_cal_idon.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+
+* Shared gate sweep
+vin  gate  0  dc 0
+
+* === NMOS: drain=0.7V, source=0 ===
+vdn  dn  0  dc 0.7
+vsn  sn  0  dc 0
+mn1 dn gate sn sn nmos_lvt l=16n nfin=2
+
+* === PMOS: drain=0, source=0.7V ===
+vdp  dp  0  dc 0
+vsp  sp  0  dc 0.7
+mp1 dp gate sp sp pmos_lvt l=16n nfin=2
+
+.DC vin 0 0.7 0.001
+.PRINT DC I(vdn) I(vdp)
+
+* NMOS Id_on: Vgs=0.7V, Vds=0.7V
+.MEASURE DC idon_n FIND I(vdn) AT=0.7
+* NMOS Id_off: Vgs=0, Vds=0.7V
+.MEASURE DC idoff_n FIND I(vdn) AT=0.0
+* NMOS at 0.40V (near-threshold)
+.MEASURE DC idon_n_04 FIND I(vdn) AT=0.4
+
+* PMOS Id_on: Vgs=0V → Vsg=0.7V, Vsd=0.7V
+.MEASURE DC idon_p FIND I(vdp) AT=0.0
+* PMOS Id_off: Vgs=0.7V → Vsg=0, Vsd=0.7V
+.MEASURE DC idoff_p FIND I(vdp) AT=0.7
+* PMOS at Vgs=0.3V → Vsg=0.4V (near-threshold)
+.MEASURE DC idon_p_04 FIND I(vdp) AT=0.3
+
+.END

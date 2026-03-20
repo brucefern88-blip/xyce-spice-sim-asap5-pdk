@@ -1,0 +1,82 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+-- Running command `
+                    verilog_defines -DUSE_POWER_PINS;
+read_verilog -sv -lib /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/be4cfd42bf9f4c3b870e39d5855f0695.bb.v;
+
+                    blackbox;
+                    write_verilog -noattr -noexpr -nohex -nodec -defparam -blackboxes /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/be4cfd42bf9f4c3b870e39d5855f0695.bb.v;
+                    ' --
+
+1. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/be4cfd42bf9f4c3b870e39d5855f0695.bb.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/be4cfd42bf9f4c3b870e39d5855f0695.bb.v' to AST representation.
+Generating RTLIL representation for module `\FILLx1'.
+Generating RTLIL representation for module `\FILLx2'.
+Generating RTLIL representation for module `\FILLx4'.
+Generating RTLIL representation for module `\TAPx1'.
+Generating RTLIL representation for module `\TIE_HI'.
+Generating RTLIL representation for module `\TIE_LO'.
+Generating RTLIL representation for module `\ENDCAP_L'.
+Generating RTLIL representation for module `\ENDCAP_R'.
+Generating RTLIL representation for module `\DECAPx2'.
+Generating RTLIL representation for module `\INVx1'.
+Generating RTLIL representation for module `\INVx2'.
+Generating RTLIL representation for module `\INVx4'.
+Generating RTLIL representation for module `\NAND2x1'.
+Generating RTLIL representation for module `\NOR2x1'.
+Generating RTLIL representation for module `\AOI21x1'.
+Generating RTLIL representation for module `\OAI21x1'.
+Generating RTLIL representation for module `\XOR2x1'.
+Generating RTLIL representation for module `\XOR2x2'.
+Generating RTLIL representation for module `\XNOR2x1'.
+Generating RTLIL representation for module `\XNOR2x2'.
+Generating RTLIL representation for module `\MUX21x1'.
+Generating RTLIL representation for module `\FUSED_G'.
+Generating RTLIL representation for module `\FUSED_A'.
+Generating RTLIL representation for module `\FUSED_E'.
+Generating RTLIL representation for module `\FUSED_F'.
+Generating RTLIL representation for module `\BUFx1'.
+Generating RTLIL representation for module `\AND2via'.
+Generating RTLIL representation for module `\OR2via'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog backend.
+Dumping module `\AND2via'.
+Dumping module `\AOI21x1'.
+Dumping module `\BUFx1'.
+Dumping module `\DECAPx2'.
+Dumping module `\ENDCAP_L'.
+Dumping module `\ENDCAP_R'.
+Dumping module `\FILLx1'.
+Dumping module `\FILLx2'.
+Dumping module `\FILLx4'.
+Dumping module `\FUSED_A'.
+Dumping module `\FUSED_E'.
+Dumping module `\FUSED_F'.
+Dumping module `\FUSED_G'.
+Dumping module `\INVx1'.
+Dumping module `\INVx2'.
+Dumping module `\INVx4'.
+Dumping module `\MUX21x1'.
+Dumping module `\NAND2x1'.
+Dumping module `\NOR2x1'.
+Dumping module `\OAI21x1'.
+Dumping module `\OR2via'.
+Dumping module `\TAPx1'.
+Dumping module `\TIE_HI'.
+Dumping module `\TIE_LO'.
+Dumping module `\XNOR2x1'.
+Dumping module `\XNOR2x2'.
+Dumping module `\XOR2x1'.
+Dumping module `\XOR2x2'.
+
+End of script. Logfile hash: f11d300247, CPU: user 0.02s system 0.02s, MEM: 24.12 MB peak
+Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)
+Time spent: 71% 2x read_verilog (0 sec), 20% 2x write_verilog (0 sec), ...

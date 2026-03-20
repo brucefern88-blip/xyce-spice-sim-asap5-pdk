@@ -1,0 +1,88 @@
+'PNR_SDC_FILE' is not defined. Using generic fallback SDC for OpenROAD PnR steps.
+'SIGNOFF_SDC_FILE' is not defined. Using generic fallback SDC for OpenROAD PnR steps.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+The power grid violations (as reported by OpenROAD PSM- you may ignore these if LVS passes) metric was not found. Are you sure the relevant step was run?
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[GRT-0097] No global routing found for nets.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[DPL-0038] No 1-site fill cells detected.  To remove 1-site gaps use the -disallow_one_site_gaps flag.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[GRT-0097] No global routing found for nets.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[GRT-0097] No global routing found for nets.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+[STA-0450] virtual clock vclk can not be propagated.
+[DRT-0225] _096_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] _170_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] _176_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] _200_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] _202_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] carry\[1\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh\[21\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh\[68\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh\[72\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] cell_oh\[8\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[0\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[1\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[7\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] high_sum\[8\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl1\[11\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl1\[2\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl1\[3\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl2\[4\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] hl2\[5\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1\[15\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll1\[16\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[10\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[13\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[16\] 4 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[17\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[19\] 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[20\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[21\] 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[25\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[8\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] ll2\[9\] 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_carry/_103_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_carry/_110_ 10 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_carry/_130_ 6 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_hi_l3/_001_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_hi_l3/_038_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_hi_l3/_041_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_hi_l3/_050_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_hi_l3/_074_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_hi_l3/_086_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_hi_l3/_090_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_lo_l3/_076_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_lo_l3/_090_ 7 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_lo_l3/_172_ 7 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_lo_l3/_173_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_lo_l3/_176_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_lo_l3/_177_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_lo_l3/_188_ 2 pin not visited, fall back to feedthrough mode.
+[DRT-0225] u_lo_l3/_201_ 3 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp5h\[0\].u/_00_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp7\[0\].u/_004_ 1 pin not visited, fall back to feedthrough mode.
+[DRT-0225] xp7\[0\].u/_009_ 1 pin not visited, fall back to feedthrough mode.

@@ -1,0 +1,116 @@
+{
+    "STD_CELL_LIBRARY": "asap5_stdcells",
+    "VDD_PIN": "VDD",
+    "VDD_PIN_VOLTAGE": 0.5,
+    "GND_PIN": "VSS",
+    "WIRE_LENGTH_THRESHOLD": null,
+    "TECH_LEFS": {
+        "nom_*": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/lef/n5_tech.lef"
+    },
+    "GPIO_PADS_LEF": null,
+    "GPIO_PADS_LEF_CORE_SIDE": null,
+    "GPIO_PADS_VERILOG": null,
+    "GPIO_PAD_CELLS": null,
+    "PRIMARY_GDSII_STREAMOUT_TOOL": "magic",
+    "DEFAULT_MAX_TRAN": null,
+    "SIGNAL_WIRE_RC_LAYERS": null,
+    "CLOCK_WIRE_RC_LAYERS": null,
+    "DEFAULT_CORNER": "nom_tt_025C_0v50",
+    "STA_CORNERS": [
+        "nom_tt_025C_0v50"
+    ],
+    "FP_TRACKS_INFO": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/tracks/n5_tracks.info",
+    "FP_TAPCELL_DIST": 5,
+    "FP_IO_HLAYER": "M3",
+    "FP_IO_VLAYER": "M4",
+    "RT_MIN_LAYER": "M1",
+    "RT_MAX_LAYER": "M10",
+    "SCL_GROUND_PINS": [
+        "VSS"
+    ],
+    "SCL_POWER_PINS": [
+        "VDD"
+    ],
+    "TRISTATE_CELLS": null,
+    "FILL_CELL": [
+        "FILLx1"
+    ],
+    "DECAP_CELL": [
+        "DECAPx2"
+    ],
+    "LIB": {
+        "nom_tt_025C_0v50": [
+            "/Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib",
+            "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/lib/n5_utility_cells_tt_0p5v_25c.lib",
+            "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib"
+        ]
+    },
+    "CELL_LEFS": [
+        "/Users/bruce/CLAUDE/asap5/stdcells/lef/asap5_stdcells.lef",
+        "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/lef/n5_utility_cells.lef"
+    ],
+    "CELL_GDS": [
+        "/Users/bruce/CLAUDE/asap5/stdcells/gds/asap5_stdcells.gds"
+    ],
+    "CELL_VERILOG_MODELS": [
+        "/Users/bruce/CLAUDE/asap5/stdcells/verilog/asap5_stdcells.v",
+        "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/verilog/n5_utility_cells.v"
+    ],
+    "CELL_BB_VERILOG_MODELS": null,
+    "CELL_SPICE_MODELS": [
+        "/Users/bruce/CLAUDE/asap5/stdcells/gds/asap5_stdcells.cdl",
+        "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/cdl/n5_utility_cells.cdl"
+    ],
+    "SYNTH_EXCLUDED_CELL_FILE": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/dummy/excluded_cells.txt",
+    "PNR_EXCLUDED_CELL_FILE": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/dummy/excluded_cells.txt",
+    "OUTPUT_CAP_LOAD": 1,
+    "MAX_FANOUT_CONSTRAINT": 8,
+    "MAX_TRANSITION_CONSTRAINT": null,
+    "MAX_CAPACITANCE_CONSTRAINT": null,
+    "CLOCK_UNCERTAINTY_CONSTRAINT": 0.01,
+    "CLOCK_TRANSITION_CONSTRAINT": 0.1,
+    "TIME_DERATING_CONSTRAINT": 5,
+    "IO_DELAY_CONSTRAINT": 20,
+    "SYNTH_DRIVING_CELL": "INVx2/Y",
+    "SYNTH_CLK_DRIVING_CELL": null,
+    "SYNTH_TIEHI_CELL": "TIE_HI/Y",
+    "SYNTH_TIELO_CELL": "TIE_LO/Y",
+    "SYNTH_BUFFER_CELL": "BUFx1/A/Y",
+    "WELLTAP_CELL": "TAPx1",
+    "ENDCAP_CELL": "ENDCAP_L",
+    "PLACE_SITE": "asap5_site",
+    "CELL_PAD_EXCLUDE": [],
+    "DIODE_CELL": "/",
+    "DESIGN_DIR": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2",
+    "PDK_ROOT": "/Users/bruce/CLAUDE/asap5",
+    "DESIGN_NAME": "hamming_64b_cuboid_r4_via",
+    "PDK": "asap5PDK_r0p4",
+    "CLOCK_PERIOD": 10,
+    "CLOCK_PORT": "",
+    "CLOCK_NET": null,
+    "VDD_NETS": null,
+    "GND_NETS": null,
+    "DIE_AREA": [
+        0,
+        0,
+        10,
+        10
+    ],
+    "EXTRA_EXCLUDED_CELLS": null,
+    "MACROS": null,
+    "EXTRA_LEFS": [
+        "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lef/xp_via_macros.lef"
+    ],
+    "EXTRA_VERILOG_MODELS": null,
+    "EXTRA_SPICE_MODELS": null,
+    "EXTRA_LIBS": [
+        "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib"
+    ],
+    "EXTRA_GDS_FILES": null,
+    "FALLBACK_SDC_FILE": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/sdc/hamming_cuboid_r4.sdc",
+    "ERROR_ON_PDN_VIOLATIONS": true,
+    "meta": {
+        "openlane_version": "2.3.10",
+        "step": "Checker.PowerGridViolations"
+    }
+}

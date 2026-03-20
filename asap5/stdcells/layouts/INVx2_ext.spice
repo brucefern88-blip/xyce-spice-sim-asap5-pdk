@@ -1,0 +1,11 @@
+* NGSPICE file created from INVx2.ext - technology: asap5
+
+.global Vdd 0 
+
+.subckt INVx2
+M1000 a_30_14# a_14_78# a_0_78# w_0_65# pmos_lvt w=0.65u l=0.14u
++  ad=67.2f pd=1.24u as=75.2f ps=1.28u
+M1001 a_30_14# a_14_14# a_0_14# 0 nmos_lvt w=0.65u l=0.14u
++  ad=67.2f pd=1.24u as=75.2f ps=1.28u
+.ends
+

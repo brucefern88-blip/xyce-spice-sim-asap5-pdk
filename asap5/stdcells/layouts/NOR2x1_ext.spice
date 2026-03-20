@@ -1,0 +1,15 @@
+* NGSPICE file created from NOR2x1.ext - technology: asap5
+
+.global Vdd 0 
+
+.subckt NOR2x1
+M1000 a_52_85# a_36_85# a_10_85# w_0_65# pmos_lvt w=0.35u l=0.16u
++  ad=49f pd=0.63u as=90.99999f ps=1.22u
+M1001 VSS a_36_20# a_10_20# 0 nmos_lvt w=0.3u l=0.16u
++  ad=42f pd=0.58u as=78f ps=1.12u
+M1002 VDD a_80_85# a_52_85# w_0_65# pmos_lvt w=0.35u l=0.16u
++  ad=90.99999f pd=1.22u as=49f ps=0.63u
+M1003 a_96_20# a_80_20# VSS 0 nmos_lvt w=0.3u l=0.16u
++  ad=78f pd=1.12u as=42f ps=0.58u
+.ends
+

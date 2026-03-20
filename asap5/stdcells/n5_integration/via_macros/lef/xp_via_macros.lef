@@ -1,0 +1,644 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+# Via-Grid Crosspoint Macros — Passive Metal Crossbar
+# Zero transistors, pure metal + via structures
+
+MACRO XP_3x3_M2M3
+  CLASS CORE ;
+  SITE asap5_site ;
+  ORIGIN 0 0 ;
+  SIZE 0.132 BY 0.420 ;
+  SYMMETRY X Y ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.406 0.132 0.420 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.132 0.014 ;
+    END
+  END VSS
+
+  PIN v0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M2 ;
+        RECT 0.000 0.028 0.014 0.056 ;
+    END
+  END v0
+
+  PIN v1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M2 ;
+        RECT 0.000 0.056 0.014 0.084 ;
+    END
+  END v1
+
+  PIN v2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M2 ;
+        RECT 0.000 0.084 0.014 0.112 ;
+    END
+  END v2
+
+  PIN h0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.028 0.014 0.056 0.028 ;
+    END
+  END h0
+
+  PIN h1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.056 0.014 0.084 0.028 ;
+    END
+  END h1
+
+  PIN h2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.084 0.014 0.112 0.028 ;
+    END
+  END h2
+
+  PIN s0
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.118 0.112 0.132 0.140 ;
+    END
+  END s0
+
+  PIN s1
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.118 0.140 0.132 0.168 ;
+    END
+  END s1
+
+  PIN s2
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.118 0.168 0.132 0.196 ;
+    END
+  END s2
+
+  PIN s3
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.118 0.196 0.132 0.224 ;
+    END
+  END s3
+
+  PIN s4
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.118 0.224 0.132 0.252 ;
+    END
+  END s4
+
+  OBS
+    LAYER M2 ;
+      RECT 0.000 0.014 0.132 0.406 ;
+    LAYER M3 ;
+      RECT 0.000 0.014 0.132 0.406 ;
+  END
+END XP_3x3_M2M3
+
+MACRO XP_5x5_M2M3
+  CLASS CORE ;
+  SITE asap5_site ;
+  ORIGIN 0 0 ;
+  SIZE 0.176 BY 0.560 ;
+  SYMMETRY X Y ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.546 0.176 0.560 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.176 0.014 ;
+    END
+  END VSS
+
+  PIN v0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M2 ;
+        RECT 0.000 0.028 0.014 0.056 ;
+    END
+  END v0
+
+  PIN v1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M2 ;
+        RECT 0.000 0.056 0.014 0.084 ;
+    END
+  END v1
+
+  PIN v2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M2 ;
+        RECT 0.000 0.084 0.014 0.112 ;
+    END
+  END v2
+
+  PIN v3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M2 ;
+        RECT 0.000 0.112 0.014 0.140 ;
+    END
+  END v3
+
+  PIN v4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M2 ;
+        RECT 0.000 0.140 0.014 0.168 ;
+    END
+  END v4
+
+  PIN h0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.028 0.014 0.056 0.028 ;
+    END
+  END h0
+
+  PIN h1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.056 0.014 0.084 0.028 ;
+    END
+  END h1
+
+  PIN h2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.084 0.014 0.112 0.028 ;
+    END
+  END h2
+
+  PIN h3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.112 0.014 0.140 0.028 ;
+    END
+  END h3
+
+  PIN h4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.140 0.014 0.168 0.028 ;
+    END
+  END h4
+
+  PIN s0
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.168 0.176 0.196 ;
+    END
+  END s0
+
+  PIN s1
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.196 0.176 0.224 ;
+    END
+  END s1
+
+  PIN s2
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.224 0.176 0.252 ;
+    END
+  END s2
+
+  PIN s3
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.252 0.176 0.280 ;
+    END
+  END s3
+
+  PIN s4
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.280 0.176 0.308 ;
+    END
+  END s4
+
+  PIN s5
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.308 0.176 0.336 ;
+    END
+  END s5
+
+  PIN s6
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.336 0.176 0.364 ;
+    END
+  END s6
+
+  PIN s7
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.364 0.176 0.392 ;
+    END
+  END s7
+
+  PIN s8
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M3 ;
+        RECT 0.162 0.392 0.176 0.420 ;
+    END
+  END s8
+
+  OBS
+    LAYER M2 ;
+      RECT 0.000 0.014 0.176 0.546 ;
+    LAYER M3 ;
+      RECT 0.000 0.014 0.176 0.546 ;
+  END
+END XP_5x5_M2M3
+
+MACRO XP_4x4_M4M5
+  CLASS CORE ;
+  SITE asap5_site ;
+  ORIGIN 0 0 ;
+  SIZE 0.220 BY 0.560 ;
+  SYMMETRY X Y ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.546 0.220 0.560 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.220 0.014 ;
+    END
+  END VSS
+
+  PIN v0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M4 ;
+        RECT 0.000 0.028 0.020 0.068 ;
+    END
+  END v0
+
+  PIN v1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M4 ;
+        RECT 0.000 0.068 0.020 0.108 ;
+    END
+  END v1
+
+  PIN v2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M4 ;
+        RECT 0.000 0.108 0.020 0.148 ;
+    END
+  END v2
+
+  PIN v3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M4 ;
+        RECT 0.000 0.148 0.020 0.188 ;
+    END
+  END v3
+
+  PIN h0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.028 0.014 0.068 0.034 ;
+    END
+  END h0
+
+  PIN h1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.068 0.014 0.108 0.034 ;
+    END
+  END h1
+
+  PIN h2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.108 0.014 0.148 0.034 ;
+    END
+  END h2
+
+  PIN h3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.148 0.014 0.188 0.034 ;
+    END
+  END h3
+
+  PIN s0
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.200 0.188 0.220 0.228 ;
+    END
+  END s0
+
+  PIN s1
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.200 0.228 0.220 0.268 ;
+    END
+  END s1
+
+  PIN s2
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.200 0.268 0.220 0.308 ;
+    END
+  END s2
+
+  PIN s3
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.200 0.308 0.220 0.348 ;
+    END
+  END s3
+
+  PIN s4
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.200 0.348 0.220 0.388 ;
+    END
+  END s4
+
+  PIN s5
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.200 0.388 0.220 0.428 ;
+    END
+  END s5
+
+  PIN s6
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.200 0.428 0.220 0.468 ;
+    END
+  END s6
+
+  OBS
+    LAYER M4 ;
+      RECT 0.000 0.014 0.220 0.546 ;
+    LAYER M5 ;
+      RECT 0.000 0.014 0.220 0.546 ;
+  END
+END XP_4x4_M4M5
+
+MACRO XP_3x3_M4M5
+  CLASS CORE ;
+  SITE asap5_site ;
+  ORIGIN 0 0 ;
+  SIZE 0.176 BY 0.420 ;
+  SYMMETRY X Y ;
+
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.406 0.176 0.420 ;
+    END
+  END VDD
+
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M1 ;
+        RECT 0.000 0.000 0.176 0.014 ;
+    END
+  END VSS
+
+  PIN v0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M4 ;
+        RECT 0.000 0.028 0.020 0.068 ;
+    END
+  END v0
+
+  PIN v1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M4 ;
+        RECT 0.000 0.068 0.020 0.108 ;
+    END
+  END v1
+
+  PIN v2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M4 ;
+        RECT 0.000 0.108 0.020 0.148 ;
+    END
+  END v2
+
+  PIN h0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.028 0.014 0.068 0.034 ;
+    END
+  END h0
+
+  PIN h1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.068 0.014 0.108 0.034 ;
+    END
+  END h1
+
+  PIN h2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.108 0.014 0.148 0.034 ;
+    END
+  END h2
+
+  PIN s0
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.156 0.148 0.176 0.188 ;
+    END
+  END s0
+
+  PIN s1
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.156 0.188 0.176 0.228 ;
+    END
+  END s1
+
+  PIN s2
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.156 0.228 0.176 0.268 ;
+    END
+  END s2
+
+  PIN s3
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.156 0.268 0.176 0.308 ;
+    END
+  END s3
+
+  PIN s4
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M5 ;
+        RECT 0.156 0.308 0.176 0.348 ;
+    END
+  END s4
+
+  OBS
+    LAYER M4 ;
+      RECT 0.000 0.014 0.176 0.406 ;
+    LAYER M5 ;
+      RECT 0.000 0.014 0.176 0.406 ;
+  END
+END XP_3x3_M4M5
+
+END LIBRARY

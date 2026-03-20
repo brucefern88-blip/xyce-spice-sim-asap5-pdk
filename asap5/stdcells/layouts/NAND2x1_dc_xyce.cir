@@ -1,0 +1,51 @@
+* NAND2x1 DC VTC Test — ASAP5 5nm GAA, Magic-Extracted
+* Xyce level=1 MOSFET models calibrated to ASAP5 LVT at VDD=0.5V
+* Layout extracted by Magic 8.3.625 from NAND2x1.mag
+
+* --- Xyce Solver Options ---
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-8
+
+* --- MOSFET Models (level=1, calibrated to ASAP5 LVT) ---
+.model nmos_lvt nmos level=1 VTO=0.15 KP=200u GAMMA=0.3 LAMBDA=0.05
++  TOX=1.5n CGSO=0.2f CGDO=0.2f CJ=1e-3 CJSW=1e-10 PB=0.7
+.model pmos_lvt pmos level=1 VTO=-0.15 KP=100u GAMMA=0.3 LAMBDA=0.05
++  TOX=1.5n CGSO=0.2f CGDO=0.2f CJ=1e-3 CJSW=1e-10 PB=0.7
+
+* --- Power Supply ---
+Vvdd VDD 0 0.5
+Vvss VSS 0 0
+
+* --- DC Sweep Input (B held high, sweep A) ---
+Vin_A A 0 0.5
+Vin_B B 0 0.5
+
+* --- NAND2x1 from Magic extraction ---
+* Node mapping from extracted netlist:
+*   a_36_85#/a_36_20# = Gate A input
+*   a_80_85#/a_80_20# = Gate B input
+*   a_10_85# = PMOS-A drain = output Y (connects to a_96_85# too)
+*   a_10_20# = NMOS top of stack, also output Y
+*   a_52_20# = internal node between stacked NMOS
+* Magic extracted: PMOS w=0.35u l=0.16u, NMOS w=0.3u l=0.16u
+* Two parallel PMOS (pull-up), two series NMOS (pull-down)
+M1000 Y A VDD VDD pmos_lvt w=0.35u l=0.16u
++  ad=49f pd=0.63u as=91f ps=1.22u
+M1002 Y B VDD VDD pmos_lvt w=0.35u l=0.16u
++  ad=91f pd=1.22u as=49f ps=0.63u
+M1001 mid A Y VSS nmos_lvt w=0.3u l=0.16u
++  ad=42f pd=0.58u as=78f ps=1.12u
+M1003 VSS B mid VSS nmos_lvt w=0.3u l=0.16u
++  ad=78f pd=1.12u as=42f ps=0.58u
+
+* --- DC Sweep: B=VDD, sweep A from 0 to 0.5V ---
+.DC Vin_A 0 0.5 0.005
+
+* --- Print output ---
+.PRINT DC V(A) V(Y)
+
+* --- Measure ---
+.MEASURE DC V_trip WHEN V(Y)=V(A)
+.MEASURE DC V_oh MAX V(Y)
+.MEASURE DC V_ol MIN V(Y)
+
+.END

@@ -1,0 +1,1257 @@
+library (xp_via_macros_tt_0p5v_25c) {
+  delay_model : table_lookup ;
+  time_unit : "1ns" ;
+  voltage_unit : "1V" ;
+  current_unit : "1mA" ;
+  pulling_resistance_unit : "1kohm" ;
+  leakage_power_unit : "1nW" ;
+  capacitive_load_unit (1, pf) ;
+  nom_voltage : 0.500 ;
+  nom_temperature : 25.000 ;
+  nom_process : 1.0 ;
+  default_max_transition : 0.500 ;
+
+  slew_lower_threshold_pct_rise : 10 ;
+  slew_upper_threshold_pct_rise : 90 ;
+  slew_lower_threshold_pct_fall : 10 ;
+  slew_upper_threshold_pct_fall : 90 ;
+  input_threshold_pct_rise : 50 ;
+  input_threshold_pct_fall : 50 ;
+  output_threshold_pct_rise : 50 ;
+  output_threshold_pct_fall : 50 ;
+  operating_conditions (tt_0p5v_25c) {
+    process : 1.0 ; voltage : 0.500 ; temperature : 25.000 ;
+  }
+  default_operating_conditions : tt_0p5v_25c ;
+
+  cell (XP_3x3_M2M3) {
+    area : 7056 ;
+    cell_leakage_power : 0.00 ;
+    dont_touch : true ;
+    pg_pin (VDD) { voltage_name : VDD ; pg_type : primary_power ; }
+    pg_pin (VSS) { voltage_name : VSS ; pg_type : primary_ground ; }
+
+    pin (v0) {
+      direction : input ;
+      capacitance : 0.018480 ;
+    }
+    pin (v1) {
+      direction : input ;
+      capacitance : 0.018480 ;
+    }
+    pin (v2) {
+      direction : input ;
+      capacitance : 0.018480 ;
+    }
+    pin (h0) {
+      direction : input ;
+      capacitance : 0.018480 ;
+    }
+    pin (h1) {
+      direction : input ;
+      capacitance : 0.018480 ;
+    }
+    pin (h2) {
+      direction : input ;
+      capacitance : 0.018480 ;
+    }
+    pin (s0) {
+      direction : output ;
+      function : "(v0 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s1) {
+      direction : output ;
+      function : "(v0 & h1 | v1 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s2) {
+      direction : output ;
+      function : "(v0 & h2 | v1 & h1 | v2 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s3) {
+      direction : output ;
+      function : "(v1 & h2 | v2 & h1)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s4) {
+      direction : output ;
+      function : "(v2 & h2)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+  }
+
+  cell (XP_5x5_M2M3) {
+    area : 19600 ;
+    cell_leakage_power : 0.00 ;
+    dont_touch : true ;
+    pg_pin (VDD) { voltage_name : VDD ; pg_type : primary_power ; }
+    pg_pin (VSS) { voltage_name : VSS ; pg_type : primary_ground ; }
+
+    pin (v0) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (v1) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (v2) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (v3) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (v4) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (h0) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (h1) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (h2) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (h3) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (h4) {
+      direction : input ;
+      capacitance : 0.030800 ;
+    }
+    pin (s0) {
+      direction : output ;
+      function : "(v0 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s1) {
+      direction : output ;
+      function : "(v0 & h1 | v1 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s2) {
+      direction : output ;
+      function : "(v0 & h2 | v1 & h1 | v2 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s3) {
+      direction : output ;
+      function : "(v0 & h3 | v1 & h2 | v2 & h1 | v3 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s4) {
+      direction : output ;
+      function : "(v0 & h4 | v1 & h3 | v2 & h2 | v3 & h1 | v4 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s5) {
+      direction : output ;
+      function : "(v1 & h4 | v2 & h3 | v3 & h2 | v4 & h1)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s6) {
+      direction : output ;
+      function : "(v2 & h4 | v3 & h3 | v4 & h2)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s7) {
+      direction : output ;
+      function : "(v3 & h4 | v4 & h3)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s8) {
+      direction : output ;
+      function : "(v4 & h4)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h4" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+  }
+
+  cell (XP_4x4_M4M5) {
+    area : 25600 ;
+    cell_leakage_power : 0.00 ;
+    dont_touch : true ;
+    pg_pin (VDD) { voltage_name : VDD ; pg_type : primary_power ; }
+    pg_pin (VSS) { voltage_name : VSS ; pg_type : primary_ground ; }
+
+    pin (v0) {
+      direction : input ;
+      capacitance : 0.041600 ;
+    }
+    pin (v1) {
+      direction : input ;
+      capacitance : 0.041600 ;
+    }
+    pin (v2) {
+      direction : input ;
+      capacitance : 0.041600 ;
+    }
+    pin (v3) {
+      direction : input ;
+      capacitance : 0.041600 ;
+    }
+    pin (h0) {
+      direction : input ;
+      capacitance : 0.041600 ;
+    }
+    pin (h1) {
+      direction : input ;
+      capacitance : 0.041600 ;
+    }
+    pin (h2) {
+      direction : input ;
+      capacitance : 0.041600 ;
+    }
+    pin (h3) {
+      direction : input ;
+      capacitance : 0.041600 ;
+    }
+    pin (s0) {
+      direction : output ;
+      function : "(v0 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s1) {
+      direction : output ;
+      function : "(v0 & h1 | v1 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s2) {
+      direction : output ;
+      function : "(v0 & h2 | v1 & h1 | v2 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s3) {
+      direction : output ;
+      function : "(v0 & h3 | v1 & h2 | v2 & h1 | v3 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s4) {
+      direction : output ;
+      function : "(v1 & h3 | v2 & h2 | v3 & h1)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s5) {
+      direction : output ;
+      function : "(v2 & h3 | v3 & h2)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s6) {
+      direction : output ;
+      function : "(v3 & h3)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h3" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+  }
+
+  cell (XP_3x3_M4M5) {
+    area : 14400 ;
+    cell_leakage_power : 0.00 ;
+    dont_touch : true ;
+    pg_pin (VDD) { voltage_name : VDD ; pg_type : primary_power ; }
+    pg_pin (VSS) { voltage_name : VSS ; pg_type : primary_ground ; }
+
+    pin (v0) {
+      direction : input ;
+      capacitance : 0.031200 ;
+    }
+    pin (v1) {
+      direction : input ;
+      capacitance : 0.031200 ;
+    }
+    pin (v2) {
+      direction : input ;
+      capacitance : 0.031200 ;
+    }
+    pin (h0) {
+      direction : input ;
+      capacitance : 0.031200 ;
+    }
+    pin (h1) {
+      direction : input ;
+      capacitance : 0.031200 ;
+    }
+    pin (h2) {
+      direction : input ;
+      capacitance : 0.031200 ;
+    }
+    pin (s0) {
+      direction : output ;
+      function : "(v0 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s1) {
+      direction : output ;
+      function : "(v0 & h1 | v1 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s2) {
+      direction : output ;
+      function : "(v0 & h2 | v1 & h1 | v2 & h0)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h0" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s3) {
+      direction : output ;
+      function : "(v1 & h2 | v2 & h1)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h1" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+    pin (s4) {
+      direction : output ;
+      function : "(v2 & h2)" ;
+      max_capacitance : 0.100 ;
+      timing () {
+        related_pin : "v2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+      timing () {
+        related_pin : "h2" ;
+        timing_sense : positive_unate ;
+        cell_rise (scalar) { values ("0.0010") ; }
+        cell_fall (scalar) { values ("0.0010") ; }
+        rise_transition (scalar) { values ("0.0020") ; }
+        fall_transition (scalar) { values ("0.0020") ; }
+      }
+    }
+  }
+
+}

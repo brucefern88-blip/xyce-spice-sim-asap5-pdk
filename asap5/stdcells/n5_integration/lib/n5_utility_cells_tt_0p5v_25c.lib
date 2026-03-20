@@ -1,0 +1,240 @@
+library (n5_utility_cells_tt_0p5v_25c) {
+
+  /* ====================================================================== */
+  /* ASAP5/N5 Utility Cells -- Liberty Timing Library                       */
+  /* Process: ASAP5 5nm GAA Nanosheet (N5-compatible)                       */
+  /* Corner: TT (typical-typical)                                           */
+  /* VDD: 0.5V                                                              */
+  /* Temperature: 25C                                                       */
+  /* Generated for OpenLane2 integration                                    */
+  /* ====================================================================== */
+
+  comment : "Utility cells for ASAP5/N5 OpenLane2 flow" ;
+  delay_model : table_lookup ;
+  time_unit : "1ns" ;
+  voltage_unit : "1V" ;
+  current_unit : "1mA" ;
+  pulling_resistance_unit : "1kohm" ;
+  leakage_power_unit : "1nW" ;
+  capacitive_load_unit (1, pf) ;
+
+  nom_voltage : 0.500 ;
+  nom_temperature : 25.000 ;
+  nom_process : 1.0 ;
+
+  slew_lower_threshold_pct_rise : 10 ;
+  slew_upper_threshold_pct_rise : 90 ;
+  slew_lower_threshold_pct_fall : 10 ;
+  slew_upper_threshold_pct_fall : 90 ;
+  input_threshold_pct_rise : 50 ;
+  input_threshold_pct_fall : 50 ;
+  output_threshold_pct_rise : 50 ;
+  output_threshold_pct_fall : 50 ;
+
+  default_max_transition : 0.500 ;
+
+  operating_conditions (tt_0p5v_25c) {
+    process : 1.0 ;
+    voltage : 0.500 ;
+    temperature : 25.000 ;
+  }
+  default_operating_conditions : tt_0p5v_25c ;
+
+  /* ------------------------------------------------------------------ */
+  /* FILLx1: 1-site filler                                              */
+  /* ------------------------------------------------------------------ */
+  cell (FILLx1) {
+    area : 6160 ;
+    cell_leakage_power : 0.01 ;
+    dont_use : true ;
+    dont_touch : true ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* FILLx2: 2-site filler                                              */
+  /* ------------------------------------------------------------------ */
+  cell (FILLx2) {
+    area : 12320 ;
+    cell_leakage_power : 0.02 ;
+    dont_use : true ;
+    dont_touch : true ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* FILLx4: 4-site filler                                              */
+  /* ------------------------------------------------------------------ */
+  cell (FILLx4) {
+    area : 24640 ;
+    cell_leakage_power : 0.04 ;
+    dont_use : true ;
+    dont_touch : true ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* TAPx1: Well tap cell                                               */
+  /* ------------------------------------------------------------------ */
+  cell (TAPx1) {
+    area : 6160 ;
+    cell_leakage_power : 0.01 ;
+    dont_use : true ;
+    dont_touch : true ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* TIE_HI: Tie-high cell (output = VDD)                               */
+  /* ------------------------------------------------------------------ */
+  cell (TIE_HI) {
+    area : 6160 ;
+    cell_leakage_power : 0.10 ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+
+    pin (Y) {
+      direction : output ;
+      function : "1" ;
+      max_capacitance : 0.500 ;
+
+      timing () {
+        timing_sense : positive_unate ;
+        timing_type : min_pulse_width ;
+        cell_rise (scalar) { values ("0.000") ; }
+        cell_fall (scalar) { values ("0.000") ; }
+        rise_transition (scalar) { values ("0.000") ; }
+        fall_transition (scalar) { values ("0.000") ; }
+      }
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* TIE_LO: Tie-low cell (output = VSS)                                */
+  /* ------------------------------------------------------------------ */
+  cell (TIE_LO) {
+    area : 6160 ;
+    cell_leakage_power : 0.10 ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+
+    pin (Y) {
+      direction : output ;
+      function : "0" ;
+      max_capacitance : 0.500 ;
+
+      timing () {
+        timing_sense : positive_unate ;
+        timing_type : min_pulse_width ;
+        cell_rise (scalar) { values ("0.000") ; }
+        cell_fall (scalar) { values ("0.000") ; }
+        rise_transition (scalar) { values ("0.000") ; }
+        fall_transition (scalar) { values ("0.000") ; }
+      }
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* ENDCAP_L: Left row endcap                                          */
+  /* ------------------------------------------------------------------ */
+  cell (ENDCAP_L) {
+    area : 6160 ;
+    cell_leakage_power : 0.01 ;
+    dont_use : true ;
+    dont_touch : true ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* ENDCAP_R: Right row endcap                                         */
+  /* ------------------------------------------------------------------ */
+  cell (ENDCAP_R) {
+    area : 6160 ;
+    cell_leakage_power : 0.01 ;
+    dont_use : true ;
+    dont_touch : true ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* DECAPx2: Decoupling capacitor (2 sites)                            */
+  /* ------------------------------------------------------------------ */
+  cell (DECAPx2) {
+    area : 12320 ;
+    cell_leakage_power : 0.05 ;
+    dont_use : true ;
+    dont_touch : true ;
+
+    pg_pin (VDD) {
+      voltage_name : VDD ;
+      pg_type : primary_power ;
+    }
+    pg_pin (VSS) {
+      voltage_name : VSS ;
+      pg_type : primary_ground ;
+    }
+  }
+
+}

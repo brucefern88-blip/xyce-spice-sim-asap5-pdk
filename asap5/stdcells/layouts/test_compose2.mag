@@ -1,0 +1,24 @@
+magic
+tech asap5
+timestamp 1773865854
+<< checkpaint >>
+rect -20000 -20000 20100 20140
+rect -19970 -20010 20046 -20000
+<< nwell >>
+rect 0 65 100 140
+<< poly >>
+rect 30 130 46 140
+rect 30 65 46 75
+rect 30 50 46 60
+rect 30 -10 46 0
+<< nsd >>
+rect 0 0 30 50
+rect 46 0 100 50
+<< psd >>
+rect 0 75 30 130
+rect 46 75 100 130
+<< nfet_lvt >>
+rect 30 0 46 50
+<< pfet_lvt >>
+rect 30 75 46 130
+<< end >>

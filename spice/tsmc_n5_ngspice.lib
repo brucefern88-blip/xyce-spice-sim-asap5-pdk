@@ -1,0 +1,236 @@
+* =============================================================================
+* TSMC N5 (CLN5FF) 5nm FinFET — ngspice-Native Level-1 Model Library
+* =============================================================================
+*
+* Parallel to tsmc_n5_bsimcmg.lib — uses Shichman-Hodges (level=1) models
+* wrapped in subcircuits for per-fin encapsulation. No OSDI or BSIM-CMG
+* dependency — runs on any ngspice version.
+*
+* Calibrated targets (per fin, LVT, TT, 25C):
+*   Cg  = ~0.05 fF/fin     Cd = ~0.02 fF/fin     Cs = ~0.02 fF/fin
+*   NMOS Id_on  @0.75V = ~65 uA/fin    @0.40V = ~8 uA/fin (level=1: no subVt)
+*   PMOS Id_on  @0.75V = ~47 uA/fin    @0.40V = ~5 uA/fin (level=1: no subVt)
+*
+* Process geometry:
+*   Fin pitch  = 25-27 nm      Fin height (hfin) = 46 nm
+*   CPP        = 48 nm         Fin width  = ~6.5 nm
+*   Weff/fin   = 2*hfin = 92 nm
+*   Lg         = 16 nm
+*
+* Usage:
+*   .lib 'tsmc_n5_ngspice.lib' tt
+*   xn1 d g s b nfet_5nm          $ single-fin NMOS
+*   xp1 d g s b pfet_5nm m=2      $ 2-fin PMOS
+*
+* NOTE: x-prefix required (subcircuit instances). Use m=N for multi-fin.
+*
+* Limitations vs BSIM-CMG:
+*   - No subthreshold current (Id=0 for Vgs<Vt) — use BSIM-CMG for 0.40V sims
+*   - No velocity saturation, DIBL, or short-channel effects
+*   - No self-heating, no gate tunneling
+*   - Adequate for: gate capacitance extraction, buffer chain delay estimation,
+*     quick FO4 characterization, power estimation, Liberty table generation
+*
+* Corners: tt, ff, ss, sf, fs
+* =============================================================================
+
+
+* =============================================================================
+* TYPICAL-TYPICAL CORNER
+* =============================================================================
+.lib tt
+
+* ── Internal NMOS model ────────────────────────────────────────────────────
+* kp calibrated: Id = kp*W/(2L)*(Vgs-Vt)^2*(1+lambda*Vds)
+*   65uA = 92.6u * 92n/(2*16n) * (0.48)^2 * (1.06) = 92.6u * 0.7024
+.model _nfet_n5_tt nmos level=1
++ vto    = 0.27
++ kp     = 92.6u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+* ── Internal PMOS model ────────────────────────────────────────────────────
+* 47uA = 70u * 92n/(2*16n) * (0.47)^2 * (1.06) = 70u * 0.6731
+.model _pfet_n5_tt pmos level=1
++ vto    = -0.28
++ kp     = 70.0u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+* ── NMOS subcircuit (per-fin) ──────────────────────────────────────────────
+.subckt nfet_5nm d g s b
+mn1 d g s b _nfet_n5_tt w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nfet_5nm
+
+* ── PMOS subcircuit (per-fin) ──────────────────────────────────────────────
+.subckt pfet_5nm d g s b
+mp1 d g s b _pfet_n5_tt w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pfet_5nm
+
+.endl tt
+
+
+* =============================================================================
+* FAST-FAST CORNER (Vt low, mobility high)
+* =============================================================================
+.lib ff
+
+.model _nfet_n5_ff nmos level=1
++ vto    = 0.245
++ kp     = 101.9u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+.model _pfet_n5_ff pmos level=1
++ vto    = -0.255
++ kp     = 77.0u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+.subckt nfet_5nm d g s b
+mn1 d g s b _nfet_n5_ff w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nfet_5nm
+
+.subckt pfet_5nm d g s b
+mp1 d g s b _pfet_n5_ff w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pfet_5nm
+
+.endl ff
+
+
+* =============================================================================
+* SLOW-SLOW CORNER (Vt high, mobility low)
+* =============================================================================
+.lib ss
+
+.model _nfet_n5_ss nmos level=1
++ vto    = 0.295
++ kp     = 83.3u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+.model _pfet_n5_ss pmos level=1
++ vto    = -0.305
++ kp     = 63.0u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+.subckt nfet_5nm d g s b
+mn1 d g s b _nfet_n5_ss w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nfet_5nm
+
+.subckt pfet_5nm d g s b
+mp1 d g s b _pfet_n5_ss w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pfet_5nm
+
+.endl ss
+
+
+* =============================================================================
+* SLOW-N FAST-P CORNER
+* =============================================================================
+.lib sf
+
+.model _nfet_n5_sf nmos level=1
++ vto    = 0.295
++ kp     = 83.3u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+.model _pfet_n5_sf pmos level=1
++ vto    = -0.255
++ kp     = 77.0u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+.subckt nfet_5nm d g s b
+mn1 d g s b _nfet_n5_sf w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nfet_5nm
+
+.subckt pfet_5nm d g s b
+mp1 d g s b _pfet_n5_sf w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pfet_5nm
+
+.endl sf
+
+
+* =============================================================================
+* FAST-N SLOW-P CORNER
+* =============================================================================
+.lib fs
+
+.model _nfet_n5_fs nmos level=1
++ vto    = 0.245
++ kp     = 101.9u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+.model _pfet_n5_fs pmos level=1
++ vto    = -0.305
++ kp     = 63.0u
++ lambda = 0.08
++ tox    = 1.0n
++ cgso   = 8.7e-11
++ cgdo   = 8.7e-11
++ tnom   = 25
+
+.subckt nfet_5nm d g s b
+mn1 d g s b _nfet_n5_fs w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nfet_5nm
+
+.subckt pfet_5nm d g s b
+mp1 d g s b _pfet_n5_fs w=92n l=16n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pfet_5nm
+
+.endl fs
+
+* =============================================================================
+* END OF LIBRARY
+* =============================================================================

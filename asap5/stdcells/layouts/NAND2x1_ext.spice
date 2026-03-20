@@ -1,0 +1,15 @@
+* NGSPICE file created from NAND2x1.ext - technology: asap5
+
+.global Vdd Gnd 
+
+.subckt NAND2x1
+M1000 VDD a_36_85# a_10_85# w_0_65# pmos_lvt w=0.35u l=0.16u
++  ad=49f pd=0.63u as=90.99999f ps=1.22u
+M1001 a_52_20# a_36_20# a_10_20# Gnd nmos_lvt w=0.3u l=0.16u
++  ad=42f pd=0.58u as=78f ps=1.12u
+M1002 a_96_85# a_80_85# VDD w_0_65# pmos_lvt w=0.35u l=0.16u
++  ad=90.99999f pd=1.22u as=49f ps=0.63u
+M1003 VSS a_80_20# a_52_20# Gnd nmos_lvt w=0.3u l=0.16u
++  ad=78f pd=1.12u as=42f ps=0.58u
+.ends
+

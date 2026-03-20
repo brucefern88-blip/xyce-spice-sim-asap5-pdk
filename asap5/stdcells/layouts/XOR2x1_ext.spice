@@ -1,0 +1,9 @@
+* NGSPICE file created from XOR2x1.ext - technology: asap5
+
+.global Vdd 0 
+
+
+* Top level circuit XOR2x1
+
+.end
+

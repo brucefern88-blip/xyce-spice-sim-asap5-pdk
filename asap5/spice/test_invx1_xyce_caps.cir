@@ -1,0 +1,38 @@
+* =============================================================================
+* test_invx1_xyce_caps.cir — ASAP5 Per-Device Gate & Drain Caps via AC
+* =============================================================================
+* Separate NMOS and PMOS cap extraction at mid-rail bias
+* nfin=2, LVT TT, VDD=0.7V, Vin=VDD/2 (both devices active)
+* Run:  Xyce test_invx1_xyce_caps.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt.pm'
+
+* === Xyce Global Options ===
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.7
+
+vdd  vdd  0  dc {vdd_val}
+vss  vss  0  dc 0
+
+* Mid-rail bias: both devices in saturation
+vin  in   0  dc {vdd_val/2} ac 1
+
+* Force output to mid-rail (matches trip point) + AC for Cout
+vout out  0  dc 0.34 ac 1
+
+mp1  out in  vdd vdd pmos_lvt l=16n nfin=2
+mn1  out in  vss vss nmos_lvt l=16n nfin=2
+
+.AC DEC 10 1e8 1e11
+
+* Gate currents (Cin per device)
+.PRINT AC IG(mp1) IG(mn1)
++ ID(mp1) ID(mn1)
++ IS(mp1) IS(mn1)
+
+.END

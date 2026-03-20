@@ -1,0 +1,720 @@
+Pass '--accept-flake-config' to trust it
+Pass '--accept-flake-config' to trust it
+OpenROAD edf00dff99f6c40d67a30c0e22a8191c5d2ed9d6 
+Features included (+) or not (-): +Charts +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 134, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 145, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 231, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 242, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 339, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 471, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 482, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 497, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 508, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 651, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 677, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 855, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 866, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 881, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 892, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 907, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 918, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1096, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1107, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1122, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1133, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1148, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1159, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1291, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1302, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1317, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1460, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1471, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1486, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1497, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1629, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1655, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1798, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1809, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1824, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1835, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2013, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2024, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2039, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2050, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2065, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2076, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2302, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2313, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2339, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2354, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2365, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2380, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2391, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2577, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2588, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2603, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2614, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2629, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2655, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2892, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2903, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2918, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2929, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2944, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2955, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2970, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2981, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3167, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3178, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3193, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3204, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3219, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3230, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3245, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3256, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3442, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3453, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3468, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3479, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3494, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3505, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3520, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3531, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3757, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3768, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3783, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3794, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3809, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3820, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3835, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3846, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4032, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4043, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4058, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4069, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4084, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4095, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4110, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4121, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4307, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4318, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4333, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4344, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4359, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4370, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4385, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4396, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4622, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4633, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4648, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4659, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4674, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4685, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4700, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4711, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4897, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4908, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4923, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4934, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4949, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4960, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4975, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4986, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 5041, table template scalar not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 5042, table template scalar not found.
+[INFO RCX-0134] Can't execute write_spef command. There's no extraction data.
+
+===== CELL USAGE =====
+Cell type report:                       Count       Area
+  Other                                   201       1.24
+  Buffer                                   89       1.10
+  Timing Repair Buffer                    140       1.72
+  Inverter                                467       2.88
+  Multi-Input combinational cell         1406      28.37
+  Total                                  2303      35.31
+Design area 35 u^2 17% utilization.
+
+===== WORST SETUP PATH (max delay) =====
+Startpoint: A[55] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock vclk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0500    0.0500 ^ input external delay
+     1    0.0704    0.1000    0.0000    0.0500 ^ A[55] (in)
+                                                 A[55] (net)
+                   18.6333    5.8466    5.8966 ^ input51/A (BUFx1)
+     1    0.0003    0.2000    0.1880    6.0846 ^ input51/Y (BUFx1)
+                                                 net51 (net)
+                    0.2000    0.0105    6.0951 ^ _0831_/B (XNOR2x2)
+     2    0.0005    0.0000    0.0000    6.0951 v _0831_/Y (XNOR2x2)
+                                                 _0293_ (net)
+                    0.0000    0.0154    6.1106 v _0835_/A (NOR2x1)
+     3    0.0009    0.0000    0.0000    6.1106 ^ _0835_/Y (NOR2x1)
+                                                 _0296_ (net)
+                    0.0000    0.0703    6.1808 ^ xp3_s2l1[13].u_xp3/_27_/A (INVx4)
+     2    0.0003    0.0000    0.0000    6.1808 v xp3_s2l1[13].u_xp3/_27_/Y (INVx4)
+                                                 xp3_s2l1[13].u_xp3/_10_ (net)
+                    0.0000    0.0051    6.1859 v xp3_s2l1[13].u_xp3/_29_/A0 (OAI21x1)
+     5    0.0012    0.0000    0.0000    6.1859 ^ xp3_s2l1[13].u_xp3/_29_/Y (OAI21x1)
+                                                 xp3_s2l1[13].u_xp3/_12_ (net)
+                    0.0000    0.1543    6.3402 ^ xp5_s2l2[6].u_xp5/_50_/A1 (AOI21x1)
+     1    0.0002    0.0000    0.0000    6.3402 v xp5_s2l2[6].u_xp5/_50_/Y (AOI21x1)
+                                                 xp5_s2l2[6].u_xp5/_13_ (net)
+                    0.0000    0.0062    6.3464 v xp5_s2l2[6].u_xp5/_51_/B (OAI21x1)
+     2    0.0010    0.0000    0.0000    6.3464 ^ xp5_s2l2[6].u_xp5/_51_/Y (OAI21x1)
+                                                 xp5_s2l2[6].u_xp5/_14_ (net)
+                    0.0000    0.1125    6.4589 ^ _1035_/A (INVx4)
+     1    0.0001    0.0000    0.0000    6.4589 v _1035_/Y (INVx4)
+                                                 _0443_ (net)
+                    0.0000    0.0020    6.4609 v _1037_/A (NAND2x1)
+     2    0.0013    0.0000    0.0000    6.4609 ^ _1037_/Y (NAND2x1)
+                                                 _0445_ (net)
+                    0.0000    0.2318    6.6927 ^ xp4_lo_l1[3].u_xp4/_40_/A (INVx4)
+     3    0.0008    0.0000    0.0000    6.6927 v xp4_lo_l1[3].u_xp4/_40_/Y (INVx4)
+                                                 xp4_lo_l1[3].u_xp4/_13_ (net)
+                    0.0000    0.0289    6.7216 v xp4_lo_l1[3].u_xp4/_55_/B (NOR2x1)
+     4    0.0018    0.0000    0.0000    6.7216 ^ xp4_lo_l1[3].u_xp4/_55_/Y (NOR2x1)
+                                                 xp4_lo_l1[3].u_xp4/_24_ (net)
+                    0.0000    0.2864    7.0080 ^ xp7_lo_l2[1].u_xp7/_108_/A (INVx4)
+     4    0.0008    0.0000    0.0000    7.0080 v xp7_lo_l2[1].u_xp7/_108_/Y (INVx4)
+                                                 xp7_lo_l2[1].u_xp7/_039_ (net)
+                    0.0000    0.0352    7.0432 v xp7_lo_l2[1].u_xp7/_149_/A0 (OAI21x1)
+     2    0.1410    0.0000    0.0000    7.0432 ^ xp7_lo_l2[1].u_xp7/_149_/Y (OAI21x1)
+                                                 xp7_lo_l2[1].u_xp7/_004_ (net)
+                    0.0000   22.7524   29.7955 ^ clone5/A (BUFx1)
+     5    0.0013    0.2000    0.1880   29.9835 ^ clone5/Y (BUFx1)
+                                                 net140 (net)
+                    0.2000    0.0274   30.0109 ^ u_xp13_lo_l3/_482_/A0 (AOI21x1)
+     1    0.0002    0.0000    0.0000   30.0109 v u_xp13_lo_l3/_482_/Y (AOI21x1)
+                                                 u_xp13_lo_l3/_179_ (net)
+                    0.0000    0.0065   30.0174 v u_xp13_lo_l3/_486_/A (NAND2x1)
+     2    0.0012    0.0000    0.0000   30.0174 ^ u_xp13_lo_l3/_486_/Y (NAND2x1)
+                                                 u_xp13_lo_l3/_183_ (net)
+                    0.0000    0.2136   30.2310 ^ _0473_/B (NOR2x1)
+     1    0.0001    0.0000    0.0000   30.2310 v _0473_/Y (NOR2x1)
+                                                 _0025_ (net)
+                    0.0000    0.0020   30.2330 v _0475_/A (NAND2x1)
+     2    0.1417    0.0000    0.0000   30.2330 ^ _0475_/Y (NAND2x1)
+                                                 _0027_ (net)
+                    0.0000   54.4170   84.6500 ^ clone3/A (BUFx1)
+     7    0.0027    0.2000    0.1880   84.8380 ^ clone3/Y (BUFx1)
+                                                 net138 (net)
+                    0.2000    0.0973   84.9353 ^ u_xp17x7_carry/_245_/A (NAND2x1)
+     1    0.0001    0.0000    0.0000   84.9353 v u_xp17x7_carry/_245_/Y (NAND2x1)
+                                                 u_xp17x7_carry/_014_ (net)
+                    0.0000    0.0023   84.9376 v u_xp17x7_carry/_246_/B (OAI21x1)
+     1    0.0002    0.0000    0.0000   84.9376 ^ u_xp17x7_carry/_246_/Y (OAI21x1)
+                                                 u_xp17x7_carry/_015_ (net)
+                    0.0000    0.0027   84.9403 ^ u_xp17x7_carry/_247_/A (NOR2x1)
+     1    0.0004    0.0000    0.0000   84.9403 v u_xp17x7_carry/_247_/Y (NOR2x1)
+                                                 u_xp17x7_carry/_016_ (net)
+                    0.0000    0.0221   84.9624 v u_xp17x7_carry/_252_/A (NAND2x1)
+     1    0.0007    0.0000    0.0000   84.9624 ^ u_xp17x7_carry/_252_/Y (NAND2x1)
+                                                 u_xp17x7_carry/_021_ (net)
+                    0.0000    0.0524   85.0148 ^ _0542_/A (INVx4)
+     1    0.0001    0.0000    0.0000   85.0148 v _0542_/Y (INVx4)
+                                                 _0087_ (net)
+                    0.0000    0.0023   85.0171 v _0543_/A (NAND2x1)
+     1    0.0005    0.0000    0.0000   85.0171 ^ _0543_/Y (NAND2x1)
+                                                 _0088_ (net)
+                    0.0000    0.0396   85.0567 ^ _0546_/B (NOR2x1)
+     1    0.0002    0.0000    0.0000   85.0567 v _0546_/Y (NOR2x1)
+                                                 _0091_ (net)
+                    0.0000    0.0056   85.0622 v _0548_/A (NAND2x1)
+     1    0.0700    0.0000    0.0000   85.0622 ^ _0548_/Y (NAND2x1)
+                                                 _0093_ (net)
+                    0.0000    0.9689   86.0312 ^ _0549_/A (BUFx1)
+     1    0.0701    0.2000    0.1880   86.2192 ^ _0549_/Y (BUFx1)
+                                                 net134 (net)
+                    0.2000    2.8378   89.0570 ^ output134/A (BUFx1)
+     1    0.0001    0.2000    0.1880   89.2450 ^ output134/Y (BUFx1)
+                                                 hd[5] (net)
+                    0.2000    0.0022   89.2472 ^ hd[5] (out)
+                                       89.2472   data arrival time
+
+                    0.0000    0.2000    0.2000   clock vclk (rise edge)
+                              0.0000    0.2000   clock network delay (ideal)
+                              0.0000    0.2000   clock reconvergence pessimism
+                             -0.0500    0.1500   output external delay
+                                        0.1500   data required time
+-------------------------------------------------------------------------------------
+                                        0.1500   data required time
+                                      -89.2472   data arrival time
+-------------------------------------------------------------------------------------
+                                      -89.0972   slack (VIOLATED)
+
+
+
+===== WORST HOLD PATH (min delay) =====
+Startpoint: B[38] (input port clocked by vclk)
+Endpoint: hd[3] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock vclk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0500    0.0500 v input external delay
+     1    0.0701    0.1000    0.0000    0.0500 v B[38] (in)
+                                                 B[38] (net)
+                    3.7704    1.1579    1.2079 v input96/A (BUFx1)
+     1    0.0001    0.1800    0.1460    1.3539 v input96/Y (BUFx1)
+                                                 net96 (net)
+                    0.1800    0.0022    1.3560 v _0749_/B (XNOR2x1)
+     2    0.0003    0.0000    0.0000    1.3560 v _0749_/Y (XNOR2x1)
+                                                 _0235_ (net)
+                    0.0000    0.0051    1.3612 v _0750_/A (INVx1)
+     1    0.0001    0.0000    0.0000    1.3612 ^ _0750_/Y (INVx1)
+                                                 _0236_ (net)
+                    0.0000    0.0019    1.3631 ^ _0753_/B (NOR2x1)
+     3    0.0005    0.0000    0.0000    1.3631 v _0753_/Y (NOR2x1)
+                                                 _0239_ (net)
+                    0.0000    0.0230    1.3861 v xp3_s2l1[9].u_xp3/_17_/A (NAND2x1)
+     1    0.0002    0.0000    0.0000    1.3861 ^ xp3_s2l1[9].u_xp3/_17_/Y (NAND2x1)
+                                                 xp3_s2l1[9].u_xp3/_02_ (net)
+                    0.0000    0.0038    1.3899 ^ xp3_s2l1[9].u_xp3/_18_/B (OAI21x1)
+     2    0.0006    0.0000    0.0000    1.3899 v xp3_s2l1[9].u_xp3/_18_/Y (OAI21x1)
+                                                 xp3_s2l1[9].u_xp3/_03_ (net)
+                    0.0000    0.0534    1.4433 v xp5_s2l2[4].u_xp5/_48_/B (NAND2x1)
+     1    0.0002    0.0000    0.0000    1.4433 ^ xp5_s2l2[4].u_xp5/_48_/Y (NAND2x1)
+                                                 xp5_s2l2[4].u_xp5/_11_ (net)
+                    0.0000    0.0026    1.4460 ^ xp5_s2l2[4].u_xp5/_49_/B (OAI21x1)
+     1    0.0003    0.0000    0.0000    1.4460 v xp5_s2l2[4].u_xp5/_49_/Y (OAI21x1)
+                                                 xp5_s2l2[4].u_xp5/_12_ (net)
+                    0.0000    0.0120    1.4580 v xp5_s2l2[4].u_xp5/_50_/B (AOI21x1)
+     1    0.0002    0.0000    0.0000    1.4580 ^ xp5_s2l2[4].u_xp5/_50_/Y (AOI21x1)
+                                                 xp5_s2l2[4].u_xp5/_13_ (net)
+                    0.0000    0.0074    1.4653 ^ xp5_s2l2[4].u_xp5/_51_/B (OAI21x1)
+     2    0.0006    0.0000    0.0000    1.4653 v xp5_s2l2[4].u_xp5/_51_/Y (OAI21x1)
+                                                 xp5_s2l2[4].u_xp5/_14_ (net)
+                    0.0000    0.0329    1.4982 v _0987_/A (INVx4)
+     1    0.0002    0.0000    0.0000    1.4982 ^ _0987_/Y (INVx4)
+                                                 _0407_ (net)
+                    0.0000    0.0035    1.5017 ^ _0989_/A (NAND2x1)
+     2    0.0006    0.0000    0.0000    1.5017 v _0989_/Y (NAND2x1)
+                                                 _0409_ (net)
+                    0.0000    0.0314    1.5331 v xp4_lo_l1[2].u_xp4/_50_/B (NAND2x1)
+     1    0.0002    0.0000    0.0000    1.5331 ^ xp4_lo_l1[2].u_xp4/_50_/Y (NAND2x1)
+                                                 xp4_lo_l1[2].u_xp4/_21_ (net)
+                    0.0000    0.0035    1.5367 ^ xp4_lo_l1[2].u_xp4/_51_/B (OAI21x1)
+     3    0.0009    0.0000    0.0000    1.5367 v xp4_lo_l1[2].u_xp4/_51_/Y (OAI21x1)
+                                                 xp4_lo_l1[2].u_xp4/_22_ (net)
+                    0.0000    0.0945    1.6312 v xp7_lo_l2[1].u_xp7/_116_/A (NAND2x1)
+     1    0.0002    0.0000    0.0000    1.6312 ^ xp7_lo_l2[1].u_xp7/_116_/Y (NAND2x1)
+                                                 xp7_lo_l2[1].u_xp7/_047_ (net)
+                    0.0000    0.0068    1.6380 ^ xp7_lo_l2[1].u_xp7/_117_/B (OAI21x1)
+     1    0.0003    0.0000    0.0000    1.6380 v xp7_lo_l2[1].u_xp7/_117_/Y (OAI21x1)
+                                                 xp7_lo_l2[1].u_xp7/_048_ (net)
+                    0.0000    0.0135    1.6515 v xp7_lo_l2[1].u_xp7/_118_/B (AOI21x1)
+     1    0.0002    0.0000    0.0000    1.6515 ^ xp7_lo_l2[1].u_xp7/_118_/Y (AOI21x1)
+                                                 xp7_lo_l2[1].u_xp7/_049_ (net)
+                    0.0000    0.0075    1.6590 ^ xp7_lo_l2[1].u_xp7/_119_/B (NAND2x1)
+     9    0.0036    0.0000    0.0000    1.6590 v xp7_lo_l2[1].u_xp7/_119_/Y (NAND2x1)
+                                                 xp7_lo_l2[1].u_xp7/_050_ (net)
+                    0.0000    0.3026    1.9616 v u_xp13_lo_l3/_419_/A1 (AOI21x1)
+     1    0.0001    0.0000    0.0000    1.9616 ^ u_xp13_lo_l3/_419_/Y (AOI21x1)
+                                                 u_xp13_lo_l3/_121_ (net)
+                    0.0000    0.0013    1.9629 ^ u_xp13_lo_l3/_420_/B (NAND2x1)
+     1    0.0001    0.0000    0.0000    1.9629 v u_xp13_lo_l3/_420_/Y (NAND2x1)
+                                                 u_xp13_lo_l3/_122_ (net)
+                    0.0000    0.0019    1.9648 v u_xp13_lo_l3/_426_/B (NOR2x1)
+     1    0.0006    0.0000    0.0000    1.9648 ^ u_xp13_lo_l3/_426_/Y (NOR2x1)
+                                                 u_xp13_lo_l3/_128_ (net)
+                    0.0000    0.0611    2.0260 ^ u_xp13_lo_l3/_430_/A (NAND2x1)
+     2    0.0008    0.0000    0.0000    2.0260 v u_xp13_lo_l3/_430_/Y (NAND2x1)
+                                                 u_xp13_lo_l3/_132_ (net)
+                    0.0000    0.0977    2.1237 v _0469_/A (NOR2x1)
+     1    0.0002    0.0000    0.0000    2.1237 ^ _0469_/Y (NOR2x1)
+                                                 _0022_ (net)
+                    0.0000    0.0062    2.1299 ^ _0471_/A (NAND2x1)
+     4    0.0021    0.0000    0.0000    2.1299 v _0471_/Y (NAND2x1)
+                                                 _0024_ (net)
+                    0.0000    0.5753    2.7052 v u_xp17x7_carry/_361_/B (NAND2x1)
+     1    0.0002    0.0000    0.0000    2.7052 ^ u_xp17x7_carry/_361_/Y (NAND2x1)
+                                                 u_xp17x7_carry/_119_ (net)
+                    0.0000    0.0041    2.7093 ^ u_xp17x7_carry/_362_/B (OAI21x1)
+     1    0.0003    0.0000    0.0000    2.7093 v u_xp17x7_carry/_362_/Y (OAI21x1)
+                                                 u_xp17x7_carry/_120_ (net)
+                    0.0000    0.0110    2.7203 v u_xp17x7_carry/_363_/B (AOI21x1)
+     1    0.0002    0.0000    0.0000    2.7203 ^ u_xp17x7_carry/_363_/Y (AOI21x1)
+                                                 u_xp17x7_carry/_121_ (net)
+                    0.0000    0.0032    2.7235 ^ u_xp17x7_carry/_364_/B (OAI21x1)
+     2    0.0011    0.0000    0.0000    2.7235 v u_xp17x7_carry/_364_/Y (OAI21x1)
+                                                 u_xp17x7_carry/_122_ (net)
+                    0.0000    0.1616    2.8851 v _0522_/A (NOR2x1)
+     1    0.0001    0.0000    0.0000    2.8851 ^ _0522_/Y (NOR2x1)
+                                                 _0069_ (net)
+                    0.0000    0.0023    2.8874 ^ _0524_/A (NAND2x1)
+     1    0.0002    0.0000    0.0000    2.8874 v _0524_/Y (NAND2x1)
+                                                 _0071_ (net)
+                    0.0000    0.0068    2.8942 v _0525_/A (NOR2x1)
+     1    0.0002    0.0000    0.0000    2.8942 ^ _0525_/Y (NOR2x1)
+                                                 _0072_ (net)
+                    0.0000    0.0031    2.8973 ^ _0530_/A (NAND2x1)
+     1    0.0701    0.0000    0.0000    2.8973 v _0530_/Y (NAND2x1)
+                                                 _0077_ (net)
+                    0.0000    1.3473    4.2446 v _0531_/A (BUFx1)
+     1    0.0700    0.1800    0.1460    4.3906 v _0531_/Y (BUFx1)
+                                                 net132 (net)
+                    0.1800    0.6932    5.0837 v output132/A (BUFx1)
+     1    0.0001    0.1800    0.1460    5.2297 v output132/Y (BUFx1)
+                                                 hd[3] (net)
+                    0.1800    0.0020    5.2318 v hd[3] (out)
+                                        5.2318   data arrival time
+
+                    0.0000    0.0000    0.0000   clock vclk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0000    0.0000   clock reconvergence pessimism
+                             -0.0500   -0.0500   output external delay
+                                       -0.0500   data required time
+-------------------------------------------------------------------------------------
+                                       -0.0500   data required time
+                                       -5.2318   data arrival time
+-------------------------------------------------------------------------------------
+                                        5.2818   slack (MET)
+
+
+
+===== TOP 5 CRITICAL PATHS =====
+Startpoint: A[55] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock vclk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0500    0.0500 ^ input external delay
+   0.0000    0.0500 ^ A[55] (in)
+   6.0346    6.0846 ^ input51/Y (BUFx1)
+   0.0105    6.0951 v _0831_/Y (XNOR2x2)
+   0.0154    6.1106 ^ _0835_/Y (NOR2x1)
+   0.0703    6.1808 v xp3_s2l1[13].u_xp3/_27_/Y (INVx4)
+   0.0051    6.1859 ^ xp3_s2l1[13].u_xp3/_29_/Y (OAI21x1)
+   0.1543    6.3402 v xp5_s2l2[6].u_xp5/_50_/Y (AOI21x1)
+   0.0062    6.3464 ^ xp5_s2l2[6].u_xp5/_51_/Y (OAI21x1)
+   0.1125    6.4589 v _1035_/Y (INVx4)
+   0.0020    6.4609 ^ _1037_/Y (NAND2x1)
+   0.2318    6.6927 v xp4_lo_l1[3].u_xp4/_40_/Y (INVx4)
+   0.0289    6.7216 ^ xp4_lo_l1[3].u_xp4/_55_/Y (NOR2x1)
+   0.2864    7.0080 v xp7_lo_l2[1].u_xp7/_108_/Y (INVx4)
+   0.0352    7.0432 ^ xp7_lo_l2[1].u_xp7/_149_/Y (OAI21x1)
+  22.9404   29.9835 ^ clone5/Y (BUFx1)
+   0.0274   30.0109 v u_xp13_lo_l3/_482_/Y (AOI21x1)
+   0.0065   30.0174 ^ u_xp13_lo_l3/_486_/Y (NAND2x1)
+   0.2136   30.2310 v _0473_/Y (NOR2x1)
+   0.0020   30.2330 ^ _0475_/Y (NAND2x1)
+  54.6050   84.8380 ^ clone3/Y (BUFx1)
+   0.0973   84.9353 v u_xp17x7_carry/_245_/Y (NAND2x1)
+   0.0023   84.9376 ^ u_xp17x7_carry/_246_/Y (OAI21x1)
+   0.0027   84.9403 v u_xp17x7_carry/_247_/Y (NOR2x1)
+   0.0221   84.9624 ^ u_xp17x7_carry/_252_/Y (NAND2x1)
+   0.0524   85.0148 v _0542_/Y (INVx4)
+   0.0023   85.0171 ^ _0543_/Y (NAND2x1)
+   0.0396   85.0567 v _0546_/Y (NOR2x1)
+   0.0056   85.0622 ^ _0548_/Y (NAND2x1)
+   1.1569   86.2192 ^ _0549_/Y (BUFx1)
+   3.0258   89.2450 ^ output134/Y (BUFx1)
+   0.0022   89.2472 ^ hd[5] (out)
+            89.2472   data arrival time
+
+   0.2000    0.2000   clock vclk (rise edge)
+   0.0000    0.2000   clock network delay (ideal)
+   0.0000    0.2000   clock reconvergence pessimism
+  -0.0500    0.1500   output external delay
+             0.1500   data required time
+-------------------------------------------------------------
+             0.1500   data required time
+           -89.2472   data arrival time
+-------------------------------------------------------------
+           -89.0972   slack (VIOLATED)
+
+
+Startpoint: A[55] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock vclk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0500    0.0500 ^ input external delay
+   0.0000    0.0500 ^ A[55] (in)
+   6.0346    6.0846 ^ input51/Y (BUFx1)
+   0.0105    6.0951 ^ _0831_/Y (XNOR2x2)
+   0.0175    6.1127 v _0832_/Y (INVx4)
+   0.0031    6.1158 ^ _0833_/Y (NOR2x1)
+   0.0339    6.1497 v xp3_s2l1[13].u_xp3/_22_/Y (INVx1)
+   0.0125    6.1622 ^ xp3_s2l1[13].u_xp3/_31_/Y (NOR2x1)
+   0.1634    6.3256 v xp5_s2l2[6].u_xp5/_47_/Y (INVx4)
+   0.0080    6.3336 ^ xp5_s2l2[6].u_xp5/_49_/Y (OAI21x1)
+   0.0038    6.3374 v xp5_s2l2[6].u_xp5/_50_/Y (AOI21x1)
+   0.0062    6.3436 ^ xp5_s2l2[6].u_xp5/_51_/Y (OAI21x1)
+   0.1125    6.4561 v _1035_/Y (INVx4)
+   0.0020    6.4581 ^ _1037_/Y (NAND2x1)
+   0.2318    6.6900 v xp4_lo_l1[3].u_xp4/_40_/Y (INVx4)
+   0.0289    6.7189 ^ xp4_lo_l1[3].u_xp4/_55_/Y (NOR2x1)
+   0.2864    7.0052 v xp7_lo_l2[1].u_xp7/_108_/Y (INVx4)
+   0.0352    7.0404 ^ xp7_lo_l2[1].u_xp7/_149_/Y (OAI21x1)
+  22.9404   29.9808 ^ clone5/Y (BUFx1)
+   0.0274   30.0082 v u_xp13_lo_l3/_482_/Y (AOI21x1)
+   0.0065   30.0147 ^ u_xp13_lo_l3/_486_/Y (NAND2x1)
+   0.2136   30.2283 v _0473_/Y (NOR2x1)
+   0.0020   30.2303 ^ _0475_/Y (NAND2x1)
+  54.6050   84.8353 ^ clone3/Y (BUFx1)
+   0.0973   84.9326 v u_xp17x7_carry/_245_/Y (NAND2x1)
+   0.0023   84.9348 ^ u_xp17x7_carry/_246_/Y (OAI21x1)
+   0.0027   84.9376 v u_xp17x7_carry/_247_/Y (NOR2x1)
+   0.0221   84.9597 ^ u_xp17x7_carry/_252_/Y (NAND2x1)
+   0.0524   85.0120 v _0542_/Y (INVx4)
+   0.0023   85.0143 ^ _0543_/Y (NAND2x1)
+   0.0396   85.0539 v _0546_/Y (NOR2x1)
+   0.0056   85.0595 ^ _0548_/Y (NAND2x1)
+   1.1569   86.2165 ^ _0549_/Y (BUFx1)
+   3.0258   89.2422 ^ output134/Y (BUFx1)
+   0.0022   89.2445 ^ hd[5] (out)
+            89.2445   data arrival time
+
+   0.2000    0.2000   clock vclk (rise edge)
+   0.0000    0.2000   clock network delay (ideal)
+   0.0000    0.2000   clock reconvergence pessimism
+  -0.0500    0.1500   output external delay
+             0.1500   data required time
+-------------------------------------------------------------
+             0.1500   data required time
+           -89.2445   data arrival time
+-------------------------------------------------------------
+           -89.0945   slack (VIOLATED)
+
+
+Startpoint: A[55] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock vclk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0500    0.0500 ^ input external delay
+   0.0000    0.0500 ^ A[55] (in)
+   6.0346    6.0846 ^ input51/Y (BUFx1)
+   0.0105    6.0951 v _0831_/Y (XNOR2x2)
+   0.0154    6.1106 ^ _0835_/Y (NOR2x1)
+   0.0703    6.1808 v xp3_s2l1[13].u_xp3/_27_/Y (INVx4)
+   0.0051    6.1859 ^ xp3_s2l1[13].u_xp3/_29_/Y (OAI21x1)
+   0.1543    6.3402 v xp5_s2l2[6].u_xp5/_50_/Y (AOI21x1)
+   0.0062    6.3464 ^ xp5_s2l2[6].u_xp5/_51_/Y (OAI21x1)
+   0.1125    6.4589 v _1035_/Y (INVx4)
+   0.0020    6.4609 ^ _1037_/Y (NAND2x1)
+   0.2318    6.6927 v xp4_lo_l1[3].u_xp4/_40_/Y (INVx4)
+   0.0289    6.7216 ^ xp4_lo_l1[3].u_xp4/_55_/Y (NOR2x1)
+   0.2864    7.0080 v xp7_lo_l2[1].u_xp7/_108_/Y (INVx4)
+   0.0352    7.0432 ^ xp7_lo_l2[1].u_xp7/_149_/Y (OAI21x1)
+  22.9404   29.9835 ^ clone5/Y (BUFx1)
+   0.0274   30.0109 v u_xp13_lo_l3/_482_/Y (AOI21x1)
+   0.0065   30.0174 ^ u_xp13_lo_l3/_486_/Y (NAND2x1)
+   0.2136   30.2310 v _0473_/Y (NOR2x1)
+   0.0020   30.2330 ^ _0475_/Y (NAND2x1)
+  54.6050   84.8380 ^ clone3/Y (BUFx1)
+   0.0776   84.9156 v u_xp17x7_carry/_256_/Y (NAND2x1)
+   0.0011   84.9166 ^ u_xp17x7_carry/_257_/Y (OAI21x1)
+   0.0019   84.9186 v u_xp17x7_carry/_258_/Y (NOR2x1)
+   0.0951   85.0136 ^ u_xp17x7_carry/_263_/Y (NAND2x1)
+   0.0102   85.0239 v _0510_/Y (NOR2x1)
+   0.0043   85.0282 ^ _0512_/Y (NAND2x1)
+   0.0270   85.0552 v _0547_/Y (INVx4)
+   0.0024   85.0576 ^ _0548_/Y (NAND2x1)
+   1.1569   86.2145 ^ _0549_/Y (BUFx1)
+   3.0258   89.2403 ^ output134/Y (BUFx1)
+   0.0022   89.2425 ^ hd[5] (out)
+            89.2425   data arrival time
+
+   0.2000    0.2000   clock vclk (rise edge)
+   0.0000    0.2000   clock network delay (ideal)
+   0.0000    0.2000   clock reconvergence pessimism
+  -0.0500    0.1500   output external delay
+             0.1500   data required time
+-------------------------------------------------------------
+             0.1500   data required time
+           -89.2425   data arrival time
+-------------------------------------------------------------
+           -89.0925   slack (VIOLATED)
+
+
+Startpoint: A[55] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock vclk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0500    0.0500 ^ input external delay
+   0.0000    0.0500 ^ A[55] (in)
+   6.0346    6.0846 ^ input51/Y (BUFx1)
+   0.0105    6.0951 ^ _0831_/Y (XNOR2x2)
+   0.0175    6.1127 v _0832_/Y (INVx4)
+   0.0031    6.1158 ^ _0833_/Y (NOR2x1)
+   0.0339    6.1497 v xp3_s2l1[13].u_xp3/_22_/Y (INVx1)
+   0.0125    6.1622 ^ xp3_s2l1[13].u_xp3/_31_/Y (NOR2x1)
+   0.1634    6.3256 v xp5_s2l2[6].u_xp5/_47_/Y (INVx4)
+   0.0080    6.3336 ^ xp5_s2l2[6].u_xp5/_49_/Y (OAI21x1)
+   0.0038    6.3374 v xp5_s2l2[6].u_xp5/_50_/Y (AOI21x1)
+   0.0062    6.3436 ^ xp5_s2l2[6].u_xp5/_51_/Y (OAI21x1)
+   0.1125    6.4561 v _1035_/Y (INVx4)
+   0.0020    6.4581 ^ _1037_/Y (NAND2x1)
+   0.2318    6.6900 v xp4_lo_l1[3].u_xp4/_40_/Y (INVx4)
+   0.0289    6.7189 ^ xp4_lo_l1[3].u_xp4/_55_/Y (NOR2x1)
+   0.2864    7.0052 v xp7_lo_l2[1].u_xp7/_108_/Y (INVx4)
+   0.0352    7.0404 ^ xp7_lo_l2[1].u_xp7/_149_/Y (OAI21x1)
+  22.9404   29.9808 ^ clone5/Y (BUFx1)
+   0.0274   30.0082 v u_xp13_lo_l3/_482_/Y (AOI21x1)
+   0.0065   30.0147 ^ u_xp13_lo_l3/_486_/Y (NAND2x1)
+   0.2136   30.2283 v _0473_/Y (NOR2x1)
+   0.0020   30.2303 ^ _0475_/Y (NAND2x1)
+  54.6050   84.8353 ^ clone3/Y (BUFx1)
+   0.0776   84.9128 v u_xp17x7_carry/_256_/Y (NAND2x1)
+   0.0011   84.9139 ^ u_xp17x7_carry/_257_/Y (OAI21x1)
+   0.0019   84.9158 v u_xp17x7_carry/_258_/Y (NOR2x1)
+   0.0951   85.0109 ^ u_xp17x7_carry/_263_/Y (NAND2x1)
+   0.0102   85.0211 v _0510_/Y (NOR2x1)
+   0.0043   85.0255 ^ _0512_/Y (NAND2x1)
+   0.0270   85.0525 v _0547_/Y (INVx4)
+   0.0024   85.0548 ^ _0548_/Y (NAND2x1)
+   1.1569   86.2118 ^ _0549_/Y (BUFx1)
+   3.0258   89.2376 ^ output134/Y (BUFx1)
+   0.0022   89.2398 ^ hd[5] (out)
+            89.2398   data arrival time
+
+   0.2000    0.2000   clock vclk (rise edge)
+   0.0000    0.2000   clock network delay (ideal)
+   0.0000    0.2000   clock reconvergence pessimism
+  -0.0500    0.1500   output external delay
+             0.1500   data required time
+-------------------------------------------------------------
+             0.1500   data required time
+           -89.2398   data arrival time
+-------------------------------------------------------------
+           -89.0898   slack (VIOLATED)
+
+
+Startpoint: A[55] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock vclk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0500    0.0500 ^ input external delay
+   0.0000    0.0500 ^ A[55] (in)
+   6.0346    6.0846 ^ input51/Y (BUFx1)
+   0.0105    6.0951 ^ _0831_/Y (XNOR2x2)
+   0.0154    6.1106 v _0835_/Y (NOR2x1)
+   0.0422    6.1528 ^ _0837_/Y (NOR2x1)
+   0.0123    6.1651 v xp3_s2l1[13].u_xp3/_28_/Y (NAND2x1)
+   0.0032    6.1683 ^ xp3_s2l1[13].u_xp3/_29_/Y (OAI21x1)
+   0.1543    6.3226 v xp5_s2l2[6].u_xp5/_50_/Y (AOI21x1)
+   0.0062    6.3288 ^ xp5_s2l2[6].u_xp5/_51_/Y (OAI21x1)
+   0.1125    6.4413 v _1035_/Y (INVx4)
+   0.0020    6.4433 ^ _1037_/Y (NAND2x1)
+   0.2318    6.6751 v xp4_lo_l1[3].u_xp4/_40_/Y (INVx4)
+   0.0289    6.7040 ^ xp4_lo_l1[3].u_xp4/_55_/Y (NOR2x1)
+   0.2864    6.9904 v xp7_lo_l2[1].u_xp7/_108_/Y (INVx4)
+   0.0352    7.0256 ^ xp7_lo_l2[1].u_xp7/_149_/Y (OAI21x1)
+  22.9404   29.9660 ^ clone5/Y (BUFx1)
+   0.0274   29.9933 v u_xp13_lo_l3/_482_/Y (AOI21x1)
+   0.0065   29.9999 ^ u_xp13_lo_l3/_486_/Y (NAND2x1)
+   0.2136   30.2134 v _0473_/Y (NOR2x1)
+   0.0020   30.2154 ^ _0475_/Y (NAND2x1)
+  54.6050   84.8204 ^ clone3/Y (BUFx1)
+   0.0973   84.9177 v u_xp17x7_carry/_245_/Y (NAND2x1)
+   0.0023   84.9200 ^ u_xp17x7_carry/_246_/Y (OAI21x1)
+   0.0027   84.9227 v u_xp17x7_carry/_247_/Y (NOR2x1)
+   0.0221   84.9448 ^ u_xp17x7_carry/_252_/Y (NAND2x1)
+   0.0524   84.9972 v _0542_/Y (INVx4)
+   0.0023   84.9995 ^ _0543_/Y (NAND2x1)
+   0.0396   85.0391 v _0546_/Y (NOR2x1)
+   0.0056   85.0446 ^ _0548_/Y (NAND2x1)
+   1.1569   86.2016 ^ _0549_/Y (BUFx1)
+   3.0258   89.2274 ^ output134/Y (BUFx1)
+   0.0022   89.2296 ^ hd[5] (out)
+            89.2296   data arrival time
+
+   0.2000    0.2000   clock vclk (rise edge)
+   0.0000    0.2000   clock network delay (ideal)
+   0.0000    0.2000   clock reconvergence pessimism
+  -0.0500    0.1500   output external delay
+             0.1500   data required time
+-------------------------------------------------------------
+             0.1500   data required time
+           -89.2296   data arrival time
+-------------------------------------------------------------
+           -89.0796   slack (VIOLATED)
+
+
+
+===== WNS / TNS =====
+wns -89.10
+tns -575.15
+
+===== POWER REPORT =====
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential           0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Combinational        0.0000e+00 3.4618e-03 2.2911e-06 3.4641e-03 100.0%
+Clock                0.0000e+00 0.0000e+00 2.0100e-09 2.0100e-09   0.0%
+Macro                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Pad                  0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+----------------------------------------------------------------
+Total                0.0000e+00 3.4618e-03 2.2931e-06 3.4641e-03 100.0%
+                           0.0%      99.9%       0.1%
+
+===== CLOCK SKEW =====
+Clock vclk
+No launch/capture paths found.
+
+
+===== CHECK SETUP/HOLD VIOLATIONS =====
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+input51/A                               0.50   18.63  -18.13 (VIOLATED)
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+_0457_/Y                                  8      0      8 (MET)
+
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+_0463_/Y                                0.01    0.14   -0.13 (VIOLATED)
+

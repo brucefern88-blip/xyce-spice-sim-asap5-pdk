@@ -1,0 +1,325 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/pass_a/tmp/2ea51c543b5e42abbaa7b611e29d2d63.bb.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/pass_a/tmp/2ea51c543b5e42abbaa7b611e29d2d63.bb.v' to AST representation.
+Generating RTLIL representation for module `\AOI21x1'.
+Generating RTLIL representation for module `\BUFx1'.
+Generating RTLIL representation for module `\DECAPx2'.
+Generating RTLIL representation for module `\ENDCAP_L'.
+Generating RTLIL representation for module `\ENDCAP_R'.
+Generating RTLIL representation for module `\FILLx1'.
+Generating RTLIL representation for module `\FILLx2'.
+Generating RTLIL representation for module `\FILLx4'.
+Generating RTLIL representation for module `\FUSED_A'.
+Generating RTLIL representation for module `\FUSED_E'.
+Generating RTLIL representation for module `\FUSED_F'.
+Generating RTLIL representation for module `\FUSED_G'.
+Generating RTLIL representation for module `\INVx1'.
+Generating RTLIL representation for module `\INVx2'.
+Generating RTLIL representation for module `\INVx4'.
+Generating RTLIL representation for module `\MUX21x1'.
+Generating RTLIL representation for module `\NAND2x1'.
+Generating RTLIL representation for module `\NOR2x1'.
+Generating RTLIL representation for module `\OAI21x1'.
+Generating RTLIL representation for module `\TAPx1'.
+Generating RTLIL representation for module `\TIE_HI'.
+Generating RTLIL representation for module `\TIE_LO'.
+Generating RTLIL representation for module `\XNOR2x1'.
+Generating RTLIL representation for module `\XNOR2x2'.
+Generating RTLIL representation for module `\XOR2x1'.
+Generating RTLIL representation for module `\XOR2x2'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v' to AST representation.
+Storing AST representation for module `$abstract\crosspoint_sum'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/hamming_64b_cuboid_r4_xp.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/hamming_64b_cuboid_r4_xp.v' to AST representation.
+Storing AST representation for module `$abstract\hamming_64b_cuboid_r4_xp'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+5. Executing AST frontend in derive mode using pre-parsed AST for module `\hamming_64b_cuboid_r4_xp'.
+Generating RTLIL representation for module `\hamming_64b_cuboid_r4_xp'.
+
+5.1. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_xp
+Parameter \M = 5
+Parameter \N = 5
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Generating RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+
+5.3. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Generating RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+
+5.4. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+Generating RTLIL representation for module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+Found cached RTLIL representation for module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Parameter \M = 4
+Parameter \N = 4
+
+5.5. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 4
+Parameter \N = 4
+Generating RTLIL representation for module `$paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum'.
+Parameter \M = 4
+Parameter \N = 4
+Found cached RTLIL representation for module `$paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum'.
+Parameter \M = 4
+Parameter \N = 4
+Found cached RTLIL representation for module `$paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum'.
+Parameter \M = 4
+Parameter \N = 4
+Found cached RTLIL representation for module `$paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 3
+Parameter \N = 3
+Found cached RTLIL representation for module `$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum'.
+Parameter \M = 17
+Parameter \N = 7
+
+5.6. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 17
+Parameter \N = 7
+Generating RTLIL representation for module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Parameter \M = 9
+Parameter \N = 9
+
+5.7. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 9
+Parameter \N = 9
+Generating RTLIL representation for module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Parameter \M = 13
+Parameter \N = 13
+
+5.8. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 13
+Parameter \N = 13
+Generating RTLIL representation for module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+
+5.9. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_xp
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Used module:     $paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+
+5.10. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_xp
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Used module:     $paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+Removing unused module `$abstract\hamming_64b_cuboid_r4_xp'.
+Removing unused module `$abstract\crosspoint_sum'.
+Removed 2 unused modules.
+Renaming module hamming_64b_cuboid_r4_xp to hamming_64b_cuboid_r4_xp.
+
+6. Executing PROC pass (convert processes to netlists).
+
+6.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+6.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+6.4. Executing PROC_INIT pass (extract init attributes).
+
+6.5. Executing PROC_ARST pass (detect async resets in processes).
+
+6.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+6.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+6.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+6.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+6.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hamming_64b_cuboid_r4_xp.
+Optimizing module $paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+<suppressed ~2 debug messages>
+
+7. Executing FLATTEN pass (flatten design).
+Keeping hamming_64b_cuboid_r4_xp.u_xp13_lo_l3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.u_xp9_hi_l3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.u_xp17x7_carry (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[0].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[1].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[2].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[3].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[4].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[5].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[6].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[7].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[8].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[9].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[10].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[11].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[12].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[13].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[14].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_s2l1[15].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_s2l2[0].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_s2l2[1].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_s2l2[2].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_s2l2[3].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_s2l2[4].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_s2l2[5].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_s2l2[6].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_s2l2[7].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp4_lo_l1[0].u_xp4 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp4_lo_l1[1].u_xp4 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp4_lo_l1[2].u_xp4 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp4_lo_l1[3].u_xp4 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp7_lo_l2[0].u_xp7 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp7_lo_l2[1].u_xp7 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_hi_l1[0].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_hi_l1[1].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_hi_l1[2].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp3_hi_l1[3].u_xp3 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_hi_l2[0].u_xp5 (found keep_hierarchy attribute).
+Keeping hamming_64b_cuboid_r4_xp.xp5_hi_l2[1].u_xp5 (found keep_hierarchy attribute).
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_xp..
+Finding unused cells or wires in module $paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum..
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Removed 6 unused cells and 876 unused wires.
+<suppressed ~29 debug messages>

@@ -1,0 +1,39 @@
+* =============================================================================
+* test_asap5_inv_xyce_tran.cir — ASAP5 Inverter Transient Delay for Xyce
+* =============================================================================
+* LVT nanosheet GAA devices at VDD=0.7V
+* Run:  Xyce test_asap5_inv_xyce_tran.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt.pm'
+
+* --- High-Precision Solver Options ---
+* Tight nonlinear convergence for sub-mV accuracy on FinFET/GAA
+.OPTIONS NONLIN RELTOL=1e-6 ABSTOL=1e-12
+* LTE control: TRTOL=1.0 forces strict adaptive time-stepping
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-6 ABSTOL=1e-15 TRTOL=1.0
+* Precise charge conservation and nanovolt node resolution
+.OPTIONS DEVICE VNTOL=1e-9 CHGTOL=1e-16 GMIN=1e-15
+
+.param vdd_val = 0.7
+
+vdd  vdd  0  dc {vdd_val}
+vss  vss  0  dc 0
+
+* Pulse input: 0→0.7V, delay=50ps, rise/fall=5ps, width=95ps, period=200ps
+vin  in  0  pulse(0 0.7 50p 5p 5p 95p 200p)
+
+mp1  out in  vdd vdd pmos_lvt
+mn1  out in  vss vss nmos_lvt
+
+cload out 0 1.6f
+
+* DTMAX=1p prevents aliasing of fast transitions
+.TRAN 0.5p 400p 0 1p
+.PRINT TRAN V(in) V(out)
+
+.MEASURE TRAN tphl TRIG V(in) VAL=0.35 RISE=1 TARG V(out) VAL=0.35 FALL=1
+.MEASURE TRAN tplh TRIG V(in) VAL=0.35 FALL=1 TARG V(out) VAL=0.35 RISE=1
+
+.END

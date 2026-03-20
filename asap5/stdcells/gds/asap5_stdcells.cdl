@@ -1,0 +1,382 @@
+* CDL Netlist for ASAP5 Standard Cell Library
+* Generated from Magic layout extraction
+* Technology: ASAP5 FinFET (LVT)
+* 12 cells: INVx1 INVx2 INVx4 NAND2x1 NOR2x1 AOI21x1 OAI21x1
+*           XOR2x1 XOR2x2 XNOR2x1 XNOR2x2 MUX21x1
+
+*.SCALE MICRON
+
+************************************************************************
+* INVx1 - Inverter, 1x drive
+* Function: Y = ~A
+************************************************************************
+.SUBCKT INVx1 A Y VDD VSS
+MP0 Y A VDD VDD pmos_lvt W=0.49U L=0.14U
+MN0 Y A VSS VSS nmos_lvt W=0.49U L=0.14U
+.ENDS INVx1
+
+************************************************************************
+* INVx2 - Inverter, 2x drive
+* Function: Y = ~A
+************************************************************************
+.SUBCKT INVx2 A Y VDD VSS
+MP0 Y A VDD VDD pmos_lvt W=0.65U L=0.14U
+MN0 Y A VSS VSS nmos_lvt W=0.65U L=0.14U
+.ENDS INVx2
+
+************************************************************************
+* INVx4 - Inverter, 4x drive
+* Function: Y = ~A
+************************************************************************
+.SUBCKT INVx4 A Y VDD VSS
+MP0 Y A VDD VDD pmos_lvt W=0.67U L=0.14U
+MN0 Y A VSS VSS nmos_lvt W=0.67U L=0.14U
+.ENDS INVx4
+
+************************************************************************
+* NAND2x1 - 2-input NAND, 1x drive
+* Function: Y = ~(A & B)
+************************************************************************
+.SUBCKT NAND2x1 A B Y VDD VSS
+MP0 Y A VDD VDD pmos_lvt W=0.35U L=0.16U
+MP1 Y B VDD VDD pmos_lvt W=0.35U L=0.16U
+MN0 Y A mid VSS nmos_lvt W=0.30U L=0.16U
+MN1 mid B VSS VSS nmos_lvt W=0.30U L=0.16U
+.ENDS NAND2x1
+
+************************************************************************
+* NOR2x1 - 2-input NOR, 1x drive
+* Function: Y = ~(A | B)
+************************************************************************
+.SUBCKT NOR2x1 A B Y VDD VSS
+MP0 VDD A mid VDD pmos_lvt W=0.35U L=0.16U
+MP1 mid B Y VDD pmos_lvt W=0.35U L=0.16U
+MN0 Y A VSS VSS nmos_lvt W=0.30U L=0.16U
+MN1 Y B VSS VSS nmos_lvt W=0.30U L=0.16U
+.ENDS NOR2x1
+
+************************************************************************
+* AOI21x1 - 2-1 AND-OR-Invert
+* Function: Y = ~((A0 & A1) | B)
+************************************************************************
+.SUBCKT AOI21x1 A0 A1 B Y VDD VSS
+MP0 VDD A0 net1 VDD pmos_lvt W=0.35U L=0.16U
+MP1 net1 A1 net2 VDD pmos_lvt W=0.35U L=0.16U
+MP2 net2 B Y VDD pmos_lvt W=0.35U L=0.16U
+MN0 Y A0 mid VSS nmos_lvt W=0.30U L=0.16U
+MN1 mid A1 VSS VSS nmos_lvt W=0.30U L=0.16U
+MN2 Y B VSS VSS nmos_lvt W=0.30U L=0.16U
+.ENDS AOI21x1
+
+************************************************************************
+* OAI21x1 - 2-1 OR-AND-Invert
+* Function: Y = ~((A0 | A1) & B)
+************************************************************************
+.SUBCKT OAI21x1 A0 A1 B Y VDD VSS
+MP0 VDD A0 net1 VDD pmos_lvt W=0.35U L=0.16U
+MP1 VDD A1 net1 VDD pmos_lvt W=0.35U L=0.16U
+MP2 net1 B Y VDD pmos_lvt W=0.35U L=0.16U
+MN0 Y A0 mid VSS nmos_lvt W=0.30U L=0.16U
+MN1 Y A1 mid VSS nmos_lvt W=0.30U L=0.16U
+MN2 mid B VSS VSS nmos_lvt W=0.30U L=0.16U
+.ENDS OAI21x1
+
+************************************************************************
+* XOR2x1 - 2-input XOR, 1x drive (transmission-gate style)
+* Function: Y = A ^ B
+* 4 NMOS + 4 PMOS transmission-gate topology
+************************************************************************
+.SUBCKT XOR2x1 A B Y VDD VSS
+* Inverter for A -> Abar
+MP0 Abar A VDD VDD pmos_lvt W=0.35U L=0.16U
+MN0 Abar A VSS VSS nmos_lvt W=0.30U L=0.16U
+* Inverter for B -> Bbar
+MP1 Bbar B VDD VDD pmos_lvt W=0.35U L=0.16U
+MN1 Bbar B VSS VSS nmos_lvt W=0.30U L=0.16U
+* TG1: pass B when A=0 (Abar=1)
+MP2 B Abar Y VDD pmos_lvt W=0.35U L=0.16U
+MN2 B A Y VSS nmos_lvt W=0.30U L=0.16U
+* TG2: pass Bbar when A=1 (Abar=0)
+MP3 Bbar A Y VDD pmos_lvt W=0.35U L=0.16U
+MN3 Bbar Abar Y VSS nmos_lvt W=0.30U L=0.16U
+.ENDS XOR2x1
+
+************************************************************************
+* XOR2x2 - 2-input XOR, 2x drive (transmission-gate style)
+* Function: Y = A ^ B
+* Same topology as XOR2x1 with wider devices
+************************************************************************
+.SUBCKT XOR2x2 A B Y VDD VSS
+* Inverter for A -> Abar
+MP0 Abar A VDD VDD pmos_lvt W=0.55U L=0.16U
+MN0 Abar A VSS VSS nmos_lvt W=0.45U L=0.16U
+* Inverter for B -> Bbar
+MP1 Bbar B VDD VDD pmos_lvt W=0.55U L=0.16U
+MN1 Bbar B VSS VSS nmos_lvt W=0.45U L=0.16U
+* TG1: pass B when A=0
+MP2 B Abar Y VDD pmos_lvt W=0.55U L=0.16U
+MN2 B A Y VSS nmos_lvt W=0.45U L=0.16U
+* TG2: pass Bbar when A=1
+MP3 Bbar A Y VDD pmos_lvt W=0.55U L=0.16U
+MN3 Bbar Abar Y VSS nmos_lvt W=0.45U L=0.16U
+.ENDS XOR2x2
+
+************************************************************************
+* XNOR2x1 - 2-input XNOR, 1x drive (transmission-gate style)
+* Function: Y = ~(A ^ B)
+************************************************************************
+.SUBCKT XNOR2x1 A B Y VDD VSS
+* Inverter for A -> Abar
+MP0 Abar A VDD VDD pmos_lvt W=0.35U L=0.16U
+MN0 Abar A VSS VSS nmos_lvt W=0.30U L=0.16U
+* Inverter for B -> Bbar
+MP1 Bbar B VDD VDD pmos_lvt W=0.35U L=0.16U
+MN1 Bbar B VSS VSS nmos_lvt W=0.30U L=0.16U
+* TG1: pass Bbar when A=0 (Abar=1)
+MP2 Bbar Abar Y VDD pmos_lvt W=0.35U L=0.16U
+MN2 Bbar A Y VSS nmos_lvt W=0.30U L=0.16U
+* TG2: pass B when A=1 (Abar=0)
+MP3 B A Y VDD pmos_lvt W=0.35U L=0.16U
+MN3 B Abar Y VSS nmos_lvt W=0.30U L=0.16U
+.ENDS XNOR2x1
+
+************************************************************************
+* XNOR2x2 - 2-input XNOR, 2x drive (transmission-gate style)
+* Function: Y = ~(A ^ B)
+************************************************************************
+.SUBCKT XNOR2x2 A B Y VDD VSS
+* Inverter for A -> Abar
+MP0 Abar A VDD VDD pmos_lvt W=0.55U L=0.16U
+MN0 Abar A VSS VSS nmos_lvt W=0.45U L=0.16U
+* Inverter for B -> Bbar
+MP1 Bbar B VDD VDD pmos_lvt W=0.55U L=0.16U
+MN1 Bbar B VSS VSS nmos_lvt W=0.45U L=0.16U
+* TG1: pass Bbar when A=0
+MP2 Bbar Abar Y VDD pmos_lvt W=0.55U L=0.16U
+MN2 Bbar A Y VSS nmos_lvt W=0.45U L=0.16U
+* TG2: pass B when A=1
+MP3 B A Y VDD pmos_lvt W=0.55U L=0.16U
+MN3 B Abar Y VSS nmos_lvt W=0.45U L=0.16U
+.ENDS XNOR2x2
+
+************************************************************************
+* MUX21x1 - 2:1 Multiplexer, 1x drive
+* Function: Y = S ? D1 : D0
+* Transmission-gate mux with output inverter
+************************************************************************
+.SUBCKT MUX21x1 D0 D1 S Y VDD VSS
+* Inverter for S -> Sbar
+MP0 Sbar S VDD VDD pmos_lvt W=0.55U L=0.16U
+MN0 Sbar S VSS VSS nmos_lvt W=0.45U L=0.16U
+* TG0: pass D0 when S=0 (Sbar=1)
+MP1 D0 Sbar mid VDD pmos_lvt W=0.55U L=0.16U
+MN1 D0 S mid VSS nmos_lvt W=0.45U L=0.16U
+* TG1: pass D1 when S=1 (Sbar=0)
+MP2 D1 S mid VDD pmos_lvt W=0.55U L=0.16U
+MN2 D1 Sbar mid VSS nmos_lvt W=0.45U L=0.16U
+* Output inverter
+MP3 Y mid VDD VDD pmos_lvt W=0.55U L=0.16U
+MN3 Y mid VSS VSS nmos_lvt W=0.45U L=0.16U
+.ENDS MUX21x1
+
+************************************************************************
+* FUSED_G - Fused Hamming Cell Variant G (Active-Low, 40T)
+* Function: noh1 = ~((ai^bi) ^ (aj^bj)), noh2 = ~((ai^bi) & (aj^bj))
+************************************************************************
+.SUBCKT FUSED_G ai bi aj bj noh1 noh2 VDD VSS
+MP_IAI nai ai VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IAI nai ai VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IBI nbi bi VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IBI nbi bi VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IAJ naj aj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IAJ naj aj VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IBJ nbj bj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IBJ nbj bj VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_Q0_1 x0 nai q0pm1 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_2 q0pm1 nbi VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_3 x0 ai q0pm2 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_4 q0pm2 bi VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_Q0_1 q0nmid nai VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_2 q0nmid nbi VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_3 x0 ai q0nmid VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_4 x0 bi q0nmid VSS nmos_lvt W=0.10U L=0.016U
+MP_Q1_1 x1 naj q1pm1 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_2 q1pm1 nbj VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_3 x1 aj q1pm2 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_4 q1pm2 bj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_Q1_1 q1nmid naj VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_2 q1nmid nbj VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_3 x1 aj q1nmid VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_4 x1 bj q1nmid VSS nmos_lvt W=0.10U L=0.016U
+MN_IX0 d0 x0 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IX0 d0 x0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IX1 d1 x1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IX1 d1 x1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_1 a1pm d0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_2 a1pm x1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_3 noh1 x0 a1pm VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_4 noh1 d1 a1pm VDD pmos_lvt W=0.10U L=0.016U
+MN_A1_1 noh1 d0 a1nm1 VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_2 a1nm1 x1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_3 noh1 x0 a1nm2 VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_4 a1nm2 d1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_N2_1 noh2 d0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_N2_2 noh2 d1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_N2_1 noh2 d0 n2ns VSS nmos_lvt W=0.10U L=0.016U
+MN_N2_2 n2ns d1 VSS VSS nmos_lvt W=0.10U L=0.016U
+.ENDS FUSED_G
+
+************************************************************************
+* FUSED_A - Fused Hamming Cell Variant A (Canonical, 48T)
+************************************************************************
+.SUBCKT FUSED_A ai bi aj bj oh0 oh1 oh2 VDD VSS
+MP_IAI nai ai VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IAI nai ai VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IBI nbi bi VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IBI nbi bi VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IAJ naj aj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IAJ naj aj VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IBJ nbj bj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IBJ nbj bj VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_X0_1 x0pm ai VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_X0_2 x0pm bi VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_X0_3 d0 nai x0pm VDD pmos_lvt W=0.10U L=0.016U
+MP_X0_4 d0 nbi x0pm VDD pmos_lvt W=0.10U L=0.016U
+MN_X0_1 d0 ai x0nm1 VSS nmos_lvt W=0.10U L=0.016U
+MN_X0_2 x0nm1 bi VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_X0_3 d0 nai x0nm2 VSS nmos_lvt W=0.10U L=0.016U
+MN_X0_4 x0nm2 nbi VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_X1_1 x1pm aj VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_X1_2 x1pm bj VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_X1_3 d1 naj x1pm VDD pmos_lvt W=0.10U L=0.016U
+MP_X1_4 d1 nbj x1pm VDD pmos_lvt W=0.10U L=0.016U
+MN_X1_1 d1 aj x1nm1 VSS nmos_lvt W=0.10U L=0.016U
+MN_X1_2 x1nm1 bj VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_X1_3 d1 naj x1nm2 VSS nmos_lvt W=0.10U L=0.016U
+MN_X1_4 x1nm2 nbj VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_ID0 xn0 d0 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_ID0 xn0 d0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_ID1 xn1 d1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_ID1 xn1 d1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_O0_1 o0ps d0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_O0_2 oh0 d1 o0ps VDD pmos_lvt W=0.10U L=0.016U
+MN_O0_1 oh0 d0 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_O0_2 oh0 d1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_A1_1 a1pm d0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_2 a1pm xn1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_3 no1 xn0 a1pm VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_4 no1 d1 a1pm VDD pmos_lvt W=0.10U L=0.016U
+MN_A1_1 no1 d0 a1nm1 VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_2 a1nm1 xn1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_3 no1 xn0 a1nm2 VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_4 a1nm2 d1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_IO1 oh1 no1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IO1 oh1 no1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_N2_1 no2 d0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_N2_2 no2 d1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_N2_1 no2 d0 n2ns VSS nmos_lvt W=0.10U L=0.016U
+MN_N2_2 n2ns d1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_IO2 oh2 no2 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IO2 oh2 no2 VDD VDD pmos_lvt W=0.10U L=0.016U
+.ENDS FUSED_A
+
+************************************************************************
+* FUSED_E - Fused Hamming Cell Variant E (OAI22+NOR, 38T)
+************************************************************************
+.SUBCKT FUSED_E ai bi aj bj oh0 oh1 oh2 VDD VSS
+MP_IAI nai ai VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IAI nai ai VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IBI nbi bi VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IBI nbi bi VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IAJ naj aj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IAJ naj aj VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IBJ nbj bj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IBJ nbj bj VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_Q0_1 x0 nai q0pm1 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_2 q0pm1 nbi VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_3 x0 ai q0pm2 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_4 q0pm2 bi VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_Q0_1 q0nmid nai VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_2 q0nmid nbi VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_3 x0 ai q0nmid VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_4 x0 bi q0nmid VSS nmos_lvt W=0.10U L=0.016U
+MP_Q1_1 x1 naj q1pm1 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_2 q1pm1 nbj VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_3 x1 aj q1pm2 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_4 q1pm2 bj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_Q1_1 q1nmid naj VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_2 q1nmid nbj VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_3 x1 aj q1nmid VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_4 x1 bj q1nmid VSS nmos_lvt W=0.10U L=0.016U
+MP_O2_1 o2ps x0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_O2_2 oh2 x1 o2ps VDD pmos_lvt W=0.10U L=0.016U
+MN_O2_1 oh2 x0 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_O2_2 oh2 x1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_N0_1 no0 x0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_N0_2 no0 x1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_N0_1 no0 x0 n0ns VSS nmos_lvt W=0.10U L=0.016U
+MN_N0_2 n0ns x1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_IO0 oh0 no0 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IO0 oh0 no0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_O1_1 o1ps oh0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_O1_2 oh1 oh2 o1ps VDD pmos_lvt W=0.10U L=0.016U
+MN_O1_1 oh1 oh0 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_O1_2 oh1 oh2 VSS VSS nmos_lvt W=0.10U L=0.016U
+.ENDS FUSED_E
+
+************************************************************************
+* FUSED_F - Fused Hamming Cell Variant F (Hybrid, 42T)
+************************************************************************
+.SUBCKT FUSED_F ai bi aj bj oh1 oh2 VDD VSS
+MP_IAI nai ai VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IAI nai ai VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IBI nbi bi VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IBI nbi bi VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IAJ naj aj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IAJ naj aj VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IBJ nbj bj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IBJ nbj bj VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_Q0_1 x0 nai q0pm1 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_2 q0pm1 nbi VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_3 x0 ai q0pm2 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q0_4 q0pm2 bi VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_Q0_1 q0nmid nai VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_2 q0nmid nbi VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_3 x0 ai q0nmid VSS nmos_lvt W=0.10U L=0.016U
+MN_Q0_4 x0 bi q0nmid VSS nmos_lvt W=0.10U L=0.016U
+MP_Q1_1 x1 naj q1pm1 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_2 q1pm1 nbj VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_3 x1 aj q1pm2 VDD pmos_lvt W=0.10U L=0.016U
+MP_Q1_4 q1pm2 bj VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_Q1_1 q1nmid naj VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_2 q1nmid nbj VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_3 x1 aj q1nmid VSS nmos_lvt W=0.10U L=0.016U
+MN_Q1_4 x1 bj q1nmid VSS nmos_lvt W=0.10U L=0.016U
+MN_IX0 d0 x0 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IX0 d0 x0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MN_IX1 d1 x1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IX1 d1 x1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_O2_1 o2ps x0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_O2_2 oh2 x1 o2ps VDD pmos_lvt W=0.10U L=0.016U
+MN_O2_1 oh2 x0 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_O2_2 oh2 x1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_A1_1 a1pm d0 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_2 a1pm x1 VDD VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_3 no1 x0 a1pm VDD pmos_lvt W=0.10U L=0.016U
+MP_A1_4 no1 d1 a1pm VDD pmos_lvt W=0.10U L=0.016U
+MN_A1_1 no1 d0 a1nm1 VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_2 a1nm1 x1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_3 no1 x0 a1nm2 VSS nmos_lvt W=0.10U L=0.016U
+MN_A1_4 a1nm2 d1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MN_IO1 oh1 no1 VSS VSS nmos_lvt W=0.10U L=0.016U
+MP_IO1 oh1 no1 VDD VDD pmos_lvt W=0.10U L=0.016U
+.ENDS FUSED_F
+
+.END
+
+.SUBCKT BUFx1 A Y VDD VSS
+MP0 net1 A VDD VDD pmos_lvt W=0.49U L=0.14U
+MN0 net1 A VSS VSS nmos_lvt W=0.49U L=0.14U
+MP1 Y net1 VDD VDD pmos_lvt W=0.49U L=0.14U
+MN1 Y net1 VSS VSS nmos_lvt W=0.49U L=0.14U
+.ENDS BUFx1

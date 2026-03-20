@@ -1,0 +1,420 @@
+OpenROAD edf00dff99f6c40d67a30c0e22a8191c5d2ed9d6 
+Features included (+) or not (-): +Charts +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING GRT-0026] Missing route to pin _0561_/Y.
+[WARNING GRT-0026] Missing route to pin _0571_/Y.
+[WARNING GRT-0026] Missing route to pin _0579_/Y.
+[WARNING GRT-0026] Missing route to pin _0589_/Y.
+[WARNING GRT-0026] Missing route to pin _0591_/Y.
+[WARNING GRT-0026] Missing route to pin _0601_/Y.
+[WARNING GRT-0026] Missing route to pin _0609_/Y.
+[WARNING GRT-0026] Missing route to pin _0619_/Y.
+[WARNING GRT-0026] Missing route to pin _0631_/Y.
+[WARNING GRT-0026] Missing route to pin xp3_s2l1\[7\].u_xp3/_17_/B.
+[WARNING GRT-0026] Missing route to pin _0719_/Y.
+[WARNING GRT-0026] Missing route to pin _0729_/Y.
+[WARNING GRT-0026] Missing route to pin _0731_/Y.
+[WARNING GRT-0026] Missing route to pin _0739_/Y.
+[WARNING GRT-0026] Missing route to pin _0751_/Y.
+[WARNING GRT-0026] Missing route to pin _0849_/Y.
+[WARNING GRT-0026] Missing route to pin _0851_/Y.
+[WARNING GRT-0026] Missing route to pin _0859_/Y.
+[WARNING GRT-0026] Missing route to pin _0861_/Y.
+[WARNING GRT-0026] Missing route to pin _0871_/Y.
+[WARNING GRT-0026] Missing route to pin _0952_/A.
+[WARNING GRT-0026] Missing route to pin xp3_hi_l1\[1\].u_xp3/_30_/Y.
+[WARNING GRT-0026] Missing route to pin u_xp9_hi_l3/_186_/Y.
+[WARNING GRT-0026] Missing route to pin u_xp9_hi_l3/_187_/Y.
+[WARNING GRT-0026] Missing route to pin u_xp9_hi_l3/_220_/Y.
+[WARNING GRT-0026] Missing route to pin u_xp9_hi_l3/_227_/Y.
+[WARNING GRT-0026] Missing route to pin u_xp9_hi_l3/_119_/Y.
+[WARNING GRT-0026] Missing route to pin u_xp9_hi_l3/_162_/A.
+[WARNING GRT-0026] Missing route to pin xp3_hi_l1\[1\].u_xp3/_28_/Y.
+[WARNING GRT-0026] Missing route to pin xp5_hi_l2\[0\].u_xp5/_59_/B.
+[WARNING GRT-0026] Missing route to pin xp7_lo_l2\[1\].u_xp7/_144_/Y.
+[WARNING GRT-0026] Missing route to pin xp7_lo_l2\[1\].u_xp7/_134_/A.
+[WARNING GRT-0026] Missing route to pin xp7_lo_l2\[1\].u_xp7/_096_/A.
+[WARNING GRT-0026] Missing route to pin xp7_lo_l2\[1\].u_xp7/_099_/Y.
+[WARNING GRT-0026] Missing route to pin xp7_lo_l2\[1\].u_xp7/_102_/B.
+[INFO RCX-0134] Can't execute write_spef command. There's no extraction data.
+
+=========================================================
+  OpenSTA REPORT — hamming_64b_cuboid_r4_xp  10x10 um
+  Corner: TT / 0.5V / 25C (ASAP5)
+=========================================================
+
+===== DESIGN AREA =====
+Design area 35 u^2 41% utilization.
+
+===== CELL USAGE =====
+Cell type report:                       Count       Area
+  Other                                    96       0.59
+  Buffer                                   91       1.12
+  Timing Repair Buffer                    140       1.72
+  Inverter                                467       2.88
+  Multi-Input combinational cell         1406      28.37
+  Total                                  2200      34.69
+
+===== WORST SETUP PATH (critical path) =====
+Startpoint: A[32] (input port clocked by vclk)
+Endpoint: hd[4] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock vclk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0500    0.0500 ^ input external delay
+     1    0.0703    0.1000    0.0000    0.0500 ^ A[32] (in)
+                                                 A[32] (net)
+                    0.1334    0.0105    0.0605 ^ input26/A (BUFx1)
+     1    0.0005    0.2000    0.1880    0.2485 ^ input26/Y (BUFx1)
+                                                 net26 (net)
+                    0.2000    0.0001    0.2486 ^ _0719_/B (XNOR2x2)
+     2    0.0003    0.0000    0.0000    0.2486 ^ _0719_/Y (XNOR2x2)
+                                                 _0214_ (net)
+                    0.0000    0.0000    0.2486 ^ _0720_/A (INVx4)
+     1    0.0003    0.0000    0.0000    0.2486 v _0720_/Y (INVx4)
+                                                 _0215_ (net)
+                    0.0000    0.0000    0.2486 v _0723_/B (NOR2x1)
+     3    0.0010    0.0000    0.0000    0.2486 ^ _0723_/Y (NOR2x1)
+                                                 _0218_ (net)
+                    0.0000    0.0001    0.2487 ^ _0727_/A (NOR2x1)
+     2    0.0008    0.0000    0.0000    0.2487 v _0727_/Y (NOR2x1)
+                                                 _0220_ (net)
+                    0.0000    0.0001    0.2488 v xp3_s2l1[8].u_xp3/_20_/A (INVx4)
+     2    0.0004    0.0000    0.0000    0.2488 ^ xp3_s2l1[8].u_xp3/_20_/Y (INVx4)
+                                                 xp3_s2l1[8].u_xp3/_04_ (net)
+                    0.0000    0.0000    0.2488 ^ xp3_s2l1[8].u_xp3/_29_/A0 (OAI21x1)
+     3    0.0010    0.0000    0.0000    0.2488 v xp3_s2l1[8].u_xp3/_29_/Y (OAI21x1)
+                                                 xp3_s2l1[8].u_xp3/_12_ (net)
+                    0.0000    0.0001    0.2489 v xp5_s2l2[4].u_xp5/_46_/A (INVx4)
+     3    0.0008    0.0000    0.0000    0.2489 ^ xp5_s2l2[4].u_xp5/_46_/Y (INVx4)
+                                                 xp5_s2l2[4].u_xp5/_09_ (net)
+                    0.0000    0.0000    0.2489 ^ xp5_s2l2[4].u_xp5/_73_/A1 (OAI21x1)
+     2    0.0009    0.0000    0.0000    0.2489 v xp5_s2l2[4].u_xp5/_73_/Y (OAI21x1)
+                                                 xp5_s2l2[4].u_xp5/_32_ (net)
+                    0.0000    0.0002    0.2491 v _0988_/A (INVx4)
+     1    0.0003    0.0000    0.0000    0.2491 ^ _0988_/Y (INVx4)
+                                                 _0408_ (net)
+                    0.0000    0.0000    0.2491 ^ _0989_/B (NAND2x1)
+     2    0.0007    0.0000    0.0000    0.2491 v _0989_/Y (NAND2x1)
+                                                 _0409_ (net)
+                    0.0000    0.0001    0.2492 v xp4_lo_l1[2].u_xp4/_40_/A (INVx4)
+     3    0.0008    0.0000    0.0000    0.2492 ^ xp4_lo_l1[2].u_xp4/_40_/Y (INVx4)
+                                                 xp4_lo_l1[2].u_xp4/_13_ (net)
+                    0.0000    0.0000    0.2492 ^ xp4_lo_l1[2].u_xp4/_55_/B (NOR2x1)
+     5    0.0016    0.0000    0.0000    0.2492 v xp4_lo_l1[2].u_xp4/_55_/Y (NOR2x1)
+                                                 xp4_lo_l1[2].u_xp4/_24_ (net)
+                    0.0000    0.0003    0.2495 v xp7_lo_l2[1].u_xp7/_138_/A (INVx4)
+     3    0.0008    0.0000    0.0000    0.2495 ^ xp7_lo_l2[1].u_xp7/_138_/Y (INVx4)
+                                                 xp7_lo_l2[1].u_xp7/_066_ (net)
+                    0.0000    0.0001    0.2496 ^ xp7_lo_l2[1].u_xp7/_153_/B (NOR2x1)
+     5    0.0020    0.0000    0.0000    0.2496 v xp7_lo_l2[1].u_xp7/_153_/Y (NOR2x1)
+                                                 xp7_lo_l2[1].u_xp7/_006_ (net)
+                    0.0000    0.0004    0.2499 v u_xp13_lo_l3/_401_/A (INVx4)
+     1    0.0701    0.0000    0.0000    0.2499 ^ u_xp13_lo_l3/_401_/Y (INVx4)
+                                                 u_xp13_lo_l3/_104_ (net)
+                    0.0000    0.0068    0.2567 ^ u_xp13_lo_l3/_402_/A (BUFx1)
+     2    0.0702    0.2000    0.1880    0.4447 ^ u_xp13_lo_l3/_402_/Y (BUFx1)
+                                                 u_xp13_lo_l3/_105_ (net)
+                    0.2000    0.0043    0.4491 ^ u_xp13_lo_l3/_403_/A (BUFx1)
+     8    0.0022    0.2000    0.1880    0.6371 ^ u_xp13_lo_l3/_403_/Y (BUFx1)
+                                                 u_xp13_lo_l3/_106_ (net)
+                    0.2000    0.0004    0.6374 ^ u_xp13_lo_l3/_509_/A (NOR2x1)
+     4    0.0015    0.0000    0.0000    0.6374 v u_xp13_lo_l3/_509_/Y (NOR2x1)
+                                                 u_xp13_lo_l3/_200_ (net)
+                    0.0000    0.0004    0.6379 v u_xp17x7_carry/_219_/A (INVx4)
+     1    0.0702    0.0000    0.0000    0.6379 ^ u_xp17x7_carry/_219_/Y (INVx4)
+                                                 u_xp17x7_carry/_167_ (net)
+                    0.0000    0.0020    0.6399 ^ u_xp17x7_carry/_220_/A (BUFx1)
+     7    0.0721    0.2000    0.1880    0.8279 ^ u_xp17x7_carry/_220_/Y (BUFx1)
+                                                 u_xp17x7_carry/_168_ (net)
+                    0.2000    0.0198    0.8477 ^ u_xp17x7_carry/_221_/A (BUFx1)
+     8    0.0025    0.2000    0.1880    1.0357 ^ u_xp17x7_carry/_221_/Y (BUFx1)
+                                                 u_xp17x7_carry/_169_ (net)
+                    0.2000    0.0006    1.0362 ^ u_xp17x7_carry/_288_/A1 (OAI21x1)
+     1    0.0005    0.0000    0.0000    1.0362 v u_xp17x7_carry/_288_/Y (OAI21x1)
+                                                 u_xp17x7_carry/_053_ (net)
+                    0.0000    0.0001    1.0363 v u_xp17x7_carry/_291_/A (NOR2x1)
+     1    0.0001    0.0000    0.0000    1.0363 ^ u_xp17x7_carry/_291_/Y (NOR2x1)
+                                                 u_xp17x7_carry/_056_ (net)
+                    0.0000    0.0000    1.0363 ^ u_xp17x7_carry/_296_/A (NAND2x1)
+     1    0.0008    0.0000    0.0000    1.0363 v u_xp17x7_carry/_296_/Y (NAND2x1)
+                                                 u_xp17x7_carry/_061_ (net)
+                    0.0000    0.0001    1.0364 v _0536_/A (INVx4)
+     2    0.0005    0.0000    0.0000    1.0364 ^ _0536_/Y (INVx4)
+                                                 _0082_ (net)
+                    0.0000    0.0001    1.0365 ^ _0538_/A (NAND2x1)
+     1    0.0004    0.0000    0.0000    1.0365 v _0538_/Y (NAND2x1)
+                                                 _0084_ (net)
+                    0.0000    0.0000    1.0365 v _0539_/A (NOR2x1)
+     1    0.0002    0.0000    0.0000    1.0365 ^ _0539_/Y (NOR2x1)
+                                                 _0085_ (net)
+                    0.0000    0.0000    1.0365 ^ _0540_/B (NAND2x1)
+     1    0.0702    0.0000    0.0000    1.0365 v _0540_/Y (NAND2x1)
+                                                 _0086_ (net)
+                    0.0000    0.0097    1.0462 v _0541_/A (BUFx1)
+     1    0.0703    0.1800    0.1460    1.1922 v _0541_/Y (BUFx1)
+                                                 net133 (net)
+                    0.1800    0.0201    1.2123 v output133/A (BUFx1)
+     1    0.0002    0.1800    0.1460    1.3583 v output133/Y (BUFx1)
+                                                 hd[4] (net)
+                    0.1800    0.0000    1.3583 v hd[4] (out)
+                                        1.3583   data arrival time
+
+                    0.0000    0.2000    0.2000   clock vclk (rise edge)
+                              0.0000    0.2000   clock network delay (ideal)
+                              0.0000    0.2000   clock reconvergence pessimism
+                             -0.0500    0.1500   output external delay
+                                        0.1500   data required time
+-------------------------------------------------------------------------------------
+                                        0.1500   data required time
+                                       -1.3583   data arrival time
+-------------------------------------------------------------------------------------
+                                       -1.2083   slack (VIOLATED)
+
+
+
+===== WORST HOLD PATH =====
+Startpoint: A[34] (input port clocked by vclk)
+Endpoint: hd[1] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock vclk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0500    0.0500 v input external delay
+     1    0.0701    0.1000    0.0000    0.0500 v A[34] (in)
+                                                 A[34] (net)
+                    0.1052    0.0016    0.0516 v input28/A (BUFx1)
+     1    0.0001    0.1800    0.1460    0.1976 v input28/Y (BUFx1)
+                                                 net28 (net)
+                    0.1800    0.0000    0.1976 v _0729_/A (XNOR2x1)
+     2    0.0001    0.0000    0.0000    0.1976 ^ _0729_/Y (XNOR2x1)
+                                                 _0221_ (net)
+                    0.0000    0.0000    0.1976 ^ _0735_/B (NOR2x1)
+     3    0.0007    0.0000    0.0000    0.1976 v _0735_/Y (NOR2x1)
+                                                 _0226_ (net)
+                    0.0000    0.0001    0.1977 v xp3_s2l1[8].u_xp3/_24_/A0 (AOI21x1)
+     1    0.0001    0.0000    0.0000    0.1977 ^ xp3_s2l1[8].u_xp3/_24_/Y (AOI21x1)
+                                                 xp3_s2l1[8].u_xp3/_08_ (net)
+                    0.0000    0.0000    0.1977 ^ xp3_s2l1[8].u_xp3/_25_/B (OAI21x1)
+     5    0.0015    0.0000    0.0000    0.1977 v xp3_s2l1[8].u_xp3/_25_/Y (OAI21x1)
+                                                 xp3_s2l1[8].u_xp3/_09_ (net)
+                    0.0000    0.0001    0.1978 v xp5_s2l2[4].u_xp5/_43_/A1 (AOI21x1)
+     1    0.0002    0.0000    0.0000    0.1978 ^ xp5_s2l2[4].u_xp5/_43_/Y (AOI21x1)
+                                                 xp5_s2l2[4].u_xp5/_07_ (net)
+                    0.0000    0.0000    0.1978 ^ xp5_s2l2[4].u_xp5/_44_/B (OAI21x1)
+     2    0.0006    0.0000    0.0000    0.1978 v xp5_s2l2[4].u_xp5/_44_/Y (OAI21x1)
+                                                 xp5_s2l2[4].u_xp5/_08_ (net)
+                    0.0000    0.0000    0.1979 v _0983_/A (INVx4)
+     1    0.0001    0.0000    0.0000    0.1979 ^ _0983_/Y (INVx4)
+                                                 _0404_ (net)
+                    0.0000    0.0000    0.1979 ^ _0985_/A (NAND2x1)
+     2    0.0008    0.0000    0.0000    0.1979 v _0985_/Y (NAND2x1)
+                                                 _0406_ (net)
+                    0.0000    0.0000    0.1979 v xp4_lo_l1[2].u_xp4/_31_/A (INVx4)
+     3    0.0006    0.0000    0.0000    0.1979 ^ xp4_lo_l1[2].u_xp4/_31_/Y (INVx4)
+                                                 xp4_lo_l1[2].u_xp4/_05_ (net)
+                    0.0000    0.0000    0.1980 ^ xp4_lo_l1[2].u_xp4/_51_/A0 (OAI21x1)
+     3    0.0012    0.0000    0.0000    0.1980 v xp4_lo_l1[2].u_xp4/_51_/Y (OAI21x1)
+                                                 xp4_lo_l1[2].u_xp4/_22_ (net)
+                    0.0000    0.0003    0.1982 v xp7_lo_l2[1].u_xp7/_098_/A (INVx4)
+     5    0.0011    0.0000    0.0000    0.1982 ^ xp7_lo_l2[1].u_xp7/_098_/Y (INVx4)
+                                                 xp7_lo_l2[1].u_xp7/_030_ (net)
+                    0.0000    0.0001    0.1983 ^ xp7_lo_l2[1].u_xp7/_100_/A0 (OAI21x1)
+     1    0.0002    0.0000    0.0000    0.1983 v xp7_lo_l2[1].u_xp7/_100_/Y (OAI21x1)
+                                                 xp7_lo_l2[1].u_xp7/_032_ (net)
+                    0.0000    0.0000    0.1983 v xp7_lo_l2[1].u_xp7/_103_/B (NOR2x1)
+     2    0.0008    0.0000    0.0000    0.1983 ^ xp7_lo_l2[1].u_xp7/_103_/Y (NOR2x1)
+                                                 xp7_lo_l2[1].u_xp7/_035_ (net)
+                    0.0000    0.0001    0.1984 ^ clone5/A (NAND2x1)
+     4    0.0016    0.0000    0.0000    0.1984 v clone5/Y (NAND2x1)
+                                                 net140 (net)
+                    0.0000    0.0001    0.1985 v u_xp13_lo_l3/_288_/A0 (AOI21x1)
+     1    0.0002    0.0000    0.0000    0.1985 ^ u_xp13_lo_l3/_288_/Y (AOI21x1)
+                                                 u_xp13_lo_l3/_241_ (net)
+                    0.0000    0.0000    0.1985 ^ u_xp13_lo_l3/_289_/B (NAND2x1)
+     2    0.0008    0.0000    0.0000    0.1985 v u_xp13_lo_l3/_289_/Y (NAND2x1)
+                                                 u_xp13_lo_l3/_242_ (net)
+                    0.0000    0.0002    0.1987 v _0500_/A (INVx1)
+     1    0.0002    0.0000    0.0000    0.1987 ^ _0500_/Y (INVx1)
+                                                 _0049_ (net)
+                    0.0000    0.0000    0.1987 ^ _0502_/A (NAND2x1)
+     1    0.0002    0.0000    0.0000    0.1987 v _0502_/Y (NAND2x1)
+                                                 _0051_ (net)
+                    0.0000    0.0000    0.1987 v _0503_/B (NOR2x1)
+     1    0.0003    0.0000    0.0000    0.1987 ^ _0503_/Y (NOR2x1)
+                                                 _0052_ (net)
+                    0.0000    0.0000    0.1988 ^ _0504_/A (NAND2x1)
+     1    0.0702    0.0000    0.0000    0.1988 v _0504_/Y (NAND2x1)
+                                                 _0053_ (net)
+                    0.0000    0.0074    0.2062 v _0505_/A (BUFx1)
+     1    0.0701    0.1800    0.1460    0.3522 v _0505_/Y (BUFx1)
+                                                 net130 (net)
+                    0.1800    0.0044    0.3565 v output130/A (BUFx1)
+     1    0.0001    0.1800    0.1460    0.5025 v output130/Y (BUFx1)
+                                                 hd[1] (net)
+                    0.1800    0.0000    0.5026 v hd[1] (out)
+                                        0.5026   data arrival time
+
+                    0.0000    0.0000    0.0000   clock vclk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0000    0.0000   clock reconvergence pessimism
+                             -0.0500   -0.0500   output external delay
+                                       -0.0500   data required time
+-------------------------------------------------------------------------------------
+                                       -0.0500   data required time
+                                       -0.5026   data arrival time
+-------------------------------------------------------------------------------------
+                                        0.5526   slack (MET)
+
+
+
+===== TOP 5 SETUP-CRITICAL ENDPOINTS =====
+Startpoint: A[32] (input port clocked by vclk)
+Endpoint: hd[4] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+
+Startpoint: A[32] (input port clocked by vclk)
+Endpoint: hd[4] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+
+Startpoint: A[32] (input port clocked by vclk)
+Endpoint: hd[4] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+
+Startpoint: A[32] (input port clocked by vclk)
+Endpoint: hd[4] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+
+Startpoint: A[32] (input port clocked by vclk)
+Endpoint: hd[4] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+
+
+===== WNS / TNS =====
+wns -1.21
+tns -7.58
+
+===== POWER =====
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential           0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Combinational        0.0000e+00 3.4349e-03 2.2891e-06 3.4372e-03 100.0%
+Clock                0.0000e+00 0.0000e+00 9.6000e-10 9.6000e-10   0.0%
+Macro                0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+Pad                  0.0000e+00 0.0000e+00 0.0000e+00 0.0000e+00   0.0%
+----------------------------------------------------------------
+Total                0.0000e+00 3.4349e-03 2.2901e-06 3.4372e-03 100.0%
+                           0.0%      99.9%       0.1%
+
+===== MAX SLEW / MAX CAP / MAX FANOUT =====
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+_0463_/Y                                0.01    0.14   -0.13 (VIOLATED)
+_0475_/Y                                0.01    0.14   -0.13 (VIOLATED)
+_0479_/Y                                0.01    0.14   -0.13 (VIOLATED)
+_0459_/Y                                0.01    0.14   -0.13 (VIOLATED)
+xp7_lo_l2[1].u_xp7/_149_/Y              0.01    0.14   -0.13 (VIOLATED)
+xp3_hi_l1[3].u_xp3/_29_/Y               0.01    0.07   -0.06 (VIOLATED)
+xp3_hi_l1[3].u_xp3/_33_/Y               0.01    0.07   -0.06 (VIOLATED)
+_0949_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0945_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0969_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[7].u_xp5/_75_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[7].u_xp5/_38_/Y                0.01    0.07   -0.06 (VIOLATED)
+_1021_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[5].u_xp5/_65_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[6].u_xp5/_75_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp3_hi_l1[0].u_xp3/_29_/Y               0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[5].u_xp5/_59_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[0].u_xp5/_75_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[5].u_xp5/_38_/Y                0.01    0.07   -0.06 (VIOLATED)
+_1041_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp3_hi_l1[0].u_xp3/_33_/Y               0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[1].u_xp5/_38_/Y                0.01    0.07   -0.06 (VIOLATED)
+_0921_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0925_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp3_hi_l1[1].u_xp3/_33_/Y               0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[6].u_xp5/_77_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[5].u_xp5/_75_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[4].u_xp5/_59_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[5].u_xp5/_77_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[1].u_xp5/_65_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[2].u_xp5/_75_/Y                0.01    0.07   -0.06 (VIOLATED)
+_1045_/Y                                0.01    0.07   -0.06 (VIOLATED)
+u_xp13_lo_l3/_357_/Y                    0.01    0.07   -0.06 (VIOLATED)
+xp3_hi_l1[2].u_xp3/_29_/Y               0.01    0.07   -0.06 (VIOLATED)
+_1065_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp5_hi_l2[0].u_xp5/_77_/Y               0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[3].u_xp5/_59_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[4].u_xp5/_38_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[0].u_xp5/_59_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[4].u_xp5/_65_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[2].u_xp5/_59_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[6].u_xp5/_59_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[7].u_xp5/_77_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp3_hi_l1[1].u_xp3/_29_/Y               0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[3].u_xp5/_65_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[7].u_xp5/_65_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[0].u_xp5/_65_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[3].u_xp5/_38_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[0].u_xp5/_38_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[1].u_xp5/_77_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[3].u_xp5/_75_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[6].u_xp5/_65_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[2].u_xp5/_65_/Y                0.01    0.07   -0.06 (VIOLATED)
+u_xp17x7_carry/_212_/Y                  0.01    0.07   -0.06 (VIOLATED)
+u_xp17x7_carry/_219_/Y                  0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[6].u_xp5/_38_/Y                0.01    0.07   -0.06 (VIOLATED)
+_0540_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp3_hi_l1[2].u_xp3/_33_/Y               0.01    0.07   -0.06 (VIOLATED)
+_1017_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[0].u_xp5/_77_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[4].u_xp5/_75_/Y                0.01    0.07   -0.06 (VIOLATED)
+_0504_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0517_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[4].u_xp5/_77_/Y                0.01    0.07   -0.06 (VIOLATED)
+u_xp17x7_carry/_373_/Y                  0.01    0.07   -0.06 (VIOLATED)
+_0993_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0557_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_1069_/Y                                0.01    0.07   -0.06 (VIOLATED)
+u_xp13_lo_l3/_401_/Y                    0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[1].u_xp5/_75_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[1].u_xp5/_59_/Y                0.01    0.07   -0.06 (VIOLATED)
+_0901_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0897_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0548_/Y                                0.01    0.07   -0.06 (VIOLATED)
+xp5_hi_l2[1].u_xp5/_77_/Y               0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[2].u_xp5/_77_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[7].u_xp5/_59_/Y                0.01    0.07   -0.06 (VIOLATED)
+_0997_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0530_/Y                                0.01    0.07   -0.06 (VIOLATED)
+_0495_/Y                                0.01    0.07   -0.06 (VIOLATED)
+u_xp17x7_carry/_189_/Y                  0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[3].u_xp5/_77_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp5_s2l2[2].u_xp5/_38_/Y                0.01    0.07   -0.06 (VIOLATED)
+xp7_lo_l2[0].u_xp7/_153_/Y              0.01    0.07   -0.06 (VIOLATED)
+_0973_/Y                                0.01    0.07   -0.06 (VIOLATED)
+
+
+===== DONE =====

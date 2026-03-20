@@ -1,0 +1,172 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * ===========================================================================
+
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  1.05775e-08
+No. of Data Rows : 3404
+
+  Measurements for Transient Analysis
+
+ia_avg              =  1.560007e-06 from=  2.000000e-10 to=  1.600050e-08
+ie_avg              =  1.284167e-06 from=  2.000000e-10 to=  1.600050e-08
+if_avg              =  1.335642e-06 from=  2.000000e-10 to=  1.600050e-08
+ig_avg              =  1.245347e-06 from=  2.000000e-10 to=  1.600050e-08
+itot_avg            =  -5.425163e-06 from=  2.000000e-10 to=  1.600050e-08
+pa_avg              =  -7.80004e-07
+pe_avg              =  -6.42084e-07
+pf_avg              =  -6.67821e-07
+pg_avg              =  -6.22673e-07
+ia_leak             =  1.824689e-09 from=  2.000000e-10 to=  9.048000e-10
+ie_leak             =  2.420619e-09 from=  2.000000e-10 to=  9.048000e-10
+if_leak             =  1.943272e-09 from=  2.000000e-10 to=  9.048000e-10
+ig_leak             =  2.015399e-09 from=  2.000000e-10 to=  9.048000e-10
+pa_leak             =  -9.12344e-10
+pe_leak             =  -1.21031e-09
+pf_leak             =  -9.71636e-10
+pg_leak             =  -1.00770e-09
+tpd_a_oh0_f_bj      =  8.309440e-11 targ=  1.108094e-09 trig=  1.025000e-09
+tpd_a_oh1_r_bj      =  1.093372e-10 targ=  1.134337e-09 trig=  1.025000e-09
+tpd_a_oh1_r_bi      =  1.175032e-10 targ=  4.142503e-09 trig=  4.025000e-09
+tpd_a_oh2_f_bi      =  3.082903e-09 targ=  7.107903e-09 trig=  4.025000e-09
+tpd_a_oh2_r_bj      =  1.033481e-10 targ=  5.128348e-09 trig=  5.025000e-09
+tpd_e_oh0_f_bj      =  7.147109e-11 targ=  1.096471e-09 trig=  1.025000e-09
+tpd_e_oh1_r_bj      =  -9.916619e-10 targ=  3.333807e-11 trig=  1.025000e-09
+tpd_e_oh1_r_bi      =  -2.889167e-09 targ=  1.135833e-09 trig=  4.025000e-09
+tpd_e_oh2_r_bj      =  7.459875e-11 targ=  5.099599e-09 trig=  5.025000e-09
+tpd_f_oh1_r_bj      =  9.522280e-11 targ=  1.120223e-09 trig=  1.025000e-09
+tpd_f_oh1_r_bi      =  1.013068e-10 targ=  4.126307e-09 trig=  4.025000e-09
+tpd_f_oh2_r_bj      =  7.552448e-11 targ=  5.100524e-09 trig=  5.025000e-09
+tpd_g_noh1_f_bj     =  7.990664e-11 targ=  1.104907e-09 trig=  1.025000e-09
+tpd_g_noh1_f_bi     =  8.391029e-11 targ=  4.108910e-09 trig=  4.025000e-09
+tpd_g_noh2_f_bj     =  7.663336e-11 targ=  5.101633e-09 trig=  5.025000e-09
+trise_a_oh1         =  2.568665e-11 targ=  1.147460e-09 trig=  1.121774e-09
+trise_e_oh1         =  5.206968e-11 targ=  1.165816e-09 trig=  1.113746e-09
+trise_f_oh1         =  2.548659e-11 targ=  1.133529e-09 trig=  1.108042e-09
+tfall_g_noh1        =  4.068928e-11 targ=  1.128897e-09 trig=  1.088208e-09
+ea_total            =   2.46066e-14 from=  2.00000e-10 to=  1.60000e-08
+ee_total            =   2.02717e-14 from=  2.00000e-10 to=  1.60000e-08
+ef_total            =   2.10833e-14 from=  2.00000e-10 to=  1.60000e-08
+eg_total            =   1.96488e-14 from=  2.00000e-10 to=  1.60000e-08
+qa_leak             =   1.60765e-18 from=  2.00000e-10 to=  9.00000e-10
+qe_leak             =   1.22580e-18 from=  2.00000e-10 to=  9.00000e-10
+qf_leak             =   -3.95411e-19 from=  2.00000e-10 to=  9.00000e-10
+qg_leak             =   1.45641e-18 from=  2.00000e-10 to=  9.00000e-10
+a_oh0_v0            =  5.000000e-01
+a_oh1_v0            =  2.291440e-09
+a_oh2_v0            =  1.350056e-09
+a_oh0_v5            =  1.211582e-09
+a_oh1_v5            =  2.681992e-09
+a_oh2_v5            =  5.000000e-01
+a_oh2_v3            =  1.350554e-09
+a_oh1_v4            =  5.000000e-01
+g_noh1_v1           =  5.401001e-09
+g_noh2_v1           =  5.000000e-01
+
+binary raw file "char_fused_all.raw"
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  6.02750e-09
+No. of Data Rows : 3404
+
+  Measurements for Transient Analysis
+
+ia_avg              =  1.560007e-06 from=  2.000000e-10 to=  1.600050e-08
+ie_avg              =  1.284167e-06 from=  2.000000e-10 to=  1.600050e-08
+if_avg              =  1.335642e-06 from=  2.000000e-10 to=  1.600050e-08
+ig_avg              =  1.245347e-06 from=  2.000000e-10 to=  1.600050e-08
+itot_avg            =  -5.425163e-06 from=  2.000000e-10 to=  1.600050e-08
+pa_avg              =   failed
+pe_avg              =   failed
+pf_avg              =   failed
+pg_avg              =   failed
+ia_leak             =  1.824689e-09 from=  2.000000e-10 to=  9.048000e-10
+ie_leak             =  2.420619e-09 from=  2.000000e-10 to=  9.048000e-10
+if_leak             =  1.943272e-09 from=  2.000000e-10 to=  9.048000e-10
+ig_leak             =  2.015399e-09 from=  2.000000e-10 to=  9.048000e-10
+pa_leak             =   failed
+pe_leak             =   failed
+pf_leak             =   failed
+pg_leak             =   failed
+tpd_a_oh0_f_bj      =  8.309440e-11 targ=  1.108094e-09 trig=  1.025000e-09
+tpd_a_oh1_r_bj      =  1.093372e-10 targ=  1.134337e-09 trig=  1.025000e-09
+tpd_a_oh1_r_bi      =  1.175032e-10 targ=  4.142503e-09 trig=  4.025000e-09
+tpd_a_oh2_f_bi      =  3.082903e-09 targ=  7.107903e-09 trig=  4.025000e-09
+tpd_a_oh2_r_bj      =  1.033481e-10 targ=  5.128348e-09 trig=  5.025000e-09
+tpd_e_oh0_f_bj      =  7.147109e-11 targ=  1.096471e-09 trig=  1.025000e-09
+tpd_e_oh1_r_bj      =  -9.916619e-10 targ=  3.333807e-11 trig=  1.025000e-09
+tpd_e_oh1_r_bi      =  -2.889167e-09 targ=  1.135833e-09 trig=  4.025000e-09
+tpd_e_oh2_r_bj      =  7.459875e-11 targ=  5.099599e-09 trig=  5.025000e-09
+tpd_f_oh1_r_bj      =  9.522280e-11 targ=  1.120223e-09 trig=  1.025000e-09
+tpd_f_oh1_r_bi      =  1.013068e-10 targ=  4.126307e-09 trig=  4.025000e-09
+tpd_f_oh2_r_bj      =  7.552448e-11 targ=  5.100524e-09 trig=  5.025000e-09
+tpd_g_noh1_f_bj     =  7.990664e-11 targ=  1.104907e-09 trig=  1.025000e-09
+tpd_g_noh1_f_bi     =  8.391029e-11 targ=  4.108910e-09 trig=  4.025000e-09
+tpd_g_noh2_f_bj     =  7.663336e-11 targ=  5.101633e-09 trig=  5.025000e-09
+trise_a_oh1         =  2.568665e-11 targ=  1.147460e-09 trig=  1.121774e-09
+trise_e_oh1         =  5.206968e-11 targ=  1.165816e-09 trig=  1.113746e-09
+trise_f_oh1         =  2.548659e-11 targ=  1.133529e-09 trig=  1.108042e-09
+tfall_g_noh1        =  4.068928e-11 targ=  1.128897e-09 trig=  1.088208e-09
+ea_total            =   2.46066e-14 from=  2.00000e-10 to=  1.60000e-08
+ee_total            =   2.02717e-14 from=  2.00000e-10 to=  1.60000e-08
+ef_total            =   2.10833e-14 from=  2.00000e-10 to=  1.60000e-08
+eg_total            =   1.96488e-14 from=  2.00000e-10 to=  1.60000e-08
+qa_leak             =   1.60765e-18 from=  2.00000e-10 to=  9.00000e-10
+qe_leak             =   1.22580e-18 from=  2.00000e-10 to=  9.00000e-10
+qf_leak             =   -3.95411e-19 from=  2.00000e-10 to=  9.00000e-10
+qg_leak             =   1.45641e-18 from=  2.00000e-10 to=  9.00000e-10
+a_oh0_v0            =  5.000000e-01
+a_oh1_v0            =  2.291440e-09
+a_oh2_v0            =  1.350056e-09
+a_oh0_v5            =  1.211582e-09
+a_oh1_v5            =  2.681992e-09
+a_oh2_v5            =  5.000000e-01
+a_oh2_v3            =  1.350554e-09
+a_oh1_v4            =  5.000000e-01
+g_noh1_v1           =  5.401001e-09
+g_noh2_v1           =  5.000000e-01
+
+
+Total analysis time (seconds) = 0.675768
+
+Total elapsed time (seconds) = 0.758 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available =  550.453 MB.
+Maximum ngspice program size =   19.219 MB.
+Current ngspice program size =   19.219 MB.
+
+
+Netlist line no. 123:
+insertnumber: fails.
+  s = ".meas tran pa_avg param=   -7.800035014517257e-07   " u=" -7.800035014517257e-07  " id=0
+Netlist line no. 124:
+insertnumber: fails.
+  s = ".meas tran pe_avg param=   -6.420835951715544e-07   " u=" -6.420835951715544e-07  " id=0
+Netlist line no. 125:
+insertnumber: fails.
+  s = ".meas tran pf_avg param=   -6.678208042596937e-07   " u=" -6.678208042596937e-07  " id=0
+Netlist line no. 126:
+insertnumber: fails.
+  s = ".meas tran pg_avg param=   -6.226734032304240e-07   " u=" -6.226734032304240e-07  " id=0
+Netlist line no. 136:
+insertnumber: fails.
+  s = ".meas tran pa_leak param=   -9.123444028683922e-10   " u=" -9.123444028683922e-10  " id=0
+Netlist line no. 137:
+insertnumber: fails.
+  s = ".meas tran pe_leak param=   -1.210309564140543e-09   " u=" -1.210309564140543e-09  " id=0
+Netlist line no. 138:
+insertnumber: fails.
+  s = ".meas tran pf_leak param=   -9.716361617306428e-10   " u=" -9.716361617306428e-10  " id=0
+Netlist line no. 139:
+insertnumber: fails.
+  s = ".meas tran pg_leak param=   -1.007699714977902e-09   " u=" -1.007699714977902e-09  " id=0

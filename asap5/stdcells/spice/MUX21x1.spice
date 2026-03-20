@@ -1,0 +1,35 @@
+* MUX21x1 — 8T Transmission-Gate MUX (ASAP5 5nm GAA Nanosheet)
+*
+* Topology: INV_S (2T) + TG0 (2T) + TG1 (2T) + INV_Y (2T) = 8T
+* Function: Y = S ? D1 : D0 (active-low output from output inverter)
+*
+* Layout: 288nm x 140nm, ASAP5 5nm GAA nanosheet
+* Magic VLSI extracted (30 DRC violations from tight M2 routing)
+*
+.subckt MUX21x1 D0 D1 S Y VDD VSS
+*
+* Select inverter: SB = ~S
+mn_invs SB  S   VSS VSS nmos_lvt l=16n w=45n
+mp_invs SB  S   VDD VDD pmos_lvt l=16n w=55n
+*
+* TG0: pass D0 when S=0 (N-gate=SB, P-gate=S)
+mn_tg0  int SB  D0  VSS nmos_lvt l=16n w=45n
+mp_tg0  int S   D0  VDD pmos_lvt l=16n w=55n
+*
+* TG1: pass D1 when S=1 (N-gate=S, P-gate=SB)
+mn_tg1  int S   D1  VSS nmos_lvt l=16n w=45n
+mp_tg1  int SB  D1  VDD pmos_lvt l=16n w=55n
+*
+* Output inverter: Y = ~int
+mn_invy Y   int VSS VSS nmos_lvt l=16n w=45n
+mp_invy Y   int VDD VDD pmos_lvt l=16n w=55n
+*
+* Parasitic capacitances (from layout extraction, aF)
+* C_S_D0   S   D0   14.9fF
+* C_S_D1   S   D1    7.8fF
+* C_D0_D1  D0  D1    7.9fF
+* C_S_Y    S   Y     6.3fF
+* C_SB_D0  SB  D0    3.7fF
+* C_S_VSS  S   VSS   0.06fF
+*
+.ends MUX21x1

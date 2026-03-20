@@ -1,0 +1,27 @@
+{
+    "nl": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/pass_a/02-yosys-synthesis/hamming_64b_cuboid_r4_xp.nl.v",
+    "pnl": null,
+    "pnl-sdf-friendly": null,
+    "pnl-npc": null,
+    "def": null,
+    "lef": null,
+    "openroad-lef": null,
+    "odb": null,
+    "sdc": null,
+    "sdf": null,
+    "spef": null,
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": null,
+    "klayout_gds": null,
+    "json_h": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/pass_a/01-yosys-jsonheader/hamming_64b_cuboid_r4_xp.h.json",
+    "vh": null,
+    "metrics": {
+        "design__instance__count": 1910,
+        "design__instance__area": 67347000,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 0
+    }
+}

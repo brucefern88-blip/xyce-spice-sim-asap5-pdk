@@ -1,0 +1,151 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * ===========================================================================
+
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+
+No. of Data Rows : 3404
+
+  Measurements for Transient Analysis
+
+ia_avg              =  1.560007e-06 from=  2.000000e-10 to=  1.600050e-08
+ie_avg              =  1.284167e-06 from=  2.000000e-10 to=  1.600050e-08
+if_avg              =  1.335642e-06 from=  2.000000e-10 to=  1.600050e-08
+ig_avg              =  1.245347e-06 from=  2.000000e-10 to=  1.600050e-08
+ia_leak             =  1.171469e-09 from=  3.000000e-10 to=  9.048000e-10
+ie_leak             =  1.545384e-09 from=  3.000000e-10 to=  9.048000e-10
+if_leak             =  1.225597e-09 from=  3.000000e-10 to=  9.048000e-10
+ig_leak             =  1.233182e-09 from=  3.000000e-10 to=  9.048000e-10
+tpd_a_oh0_f_bj      =  8.309440e-11 targ=  1.108094e-09 trig=  1.025000e-09
+tpd_a_oh1_r_bj      =  1.093372e-10 targ=  1.134337e-09 trig=  1.025000e-09
+tpd_a_oh1_r_bi      =  1.175032e-10 targ=  4.142503e-09 trig=  4.025000e-09
+tpd_a_oh2_r_bj      =  1.033481e-10 targ=  5.128348e-09 trig=  5.025000e-09
+tpd_a_oh1_f_bj      =  1.314010e-10 targ=  5.156401e-09 trig=  5.025000e-09
+tpd_e_oh0_f_bj      =  7.147109e-11 targ=  1.096471e-09 trig=  1.025000e-09
+tpd_e_oh1_r_bi      =  1.069858e-10 targ=  4.131986e-09 trig=  4.025000e-09
+tpd_e_oh2_r_bj      =  7.459875e-11 targ=  5.099599e-09 trig=  5.025000e-09
+tpd_e_oh1_r_bj      =  1.259599e-10 targ=  7.150960e-09 trig=  7.025000e-09
+tpd_f_oh1_r_bj      =  9.522280e-11 targ=  1.120223e-09 trig=  1.025000e-09
+tpd_f_oh1_r_bi      =  1.013068e-10 targ=  4.126307e-09 trig=  4.025000e-09
+tpd_f_oh2_r_bj      =  7.552448e-11 targ=  5.100524e-09 trig=  5.025000e-09
+tpd_f_oh1_f_bj      =  1.007122e-10 targ=  5.125712e-09 trig=  5.025000e-09
+tpd_g_noh1_f_bj     =  7.990664e-11 targ=  1.104907e-09 trig=  1.025000e-09
+tpd_g_noh1_f_bi     =  8.391029e-11 targ=  4.108910e-09 trig=  4.025000e-09
+tpd_g_noh2_f_bj     =  7.663336e-11 targ=  5.101633e-09 trig=  5.025000e-09
+tpd_g_noh1_r_bj     =  8.792398e-11 targ=  5.112924e-09 trig=  5.025000e-09
+trise_a_oh1         =  2.568665e-11 targ=  1.147460e-09 trig=  1.121774e-09
+trise_e_oh1         =  5.206968e-11 targ=  1.165816e-09 trig=  1.113746e-09
+trise_f_oh1         =  2.548659e-11 targ=  1.133529e-09 trig=  1.108042e-09
+tfall_g_noh1        =  4.068928e-11 targ=  1.128897e-09 trig=  1.088208e-09
+qa_total            =   2.46066e-14 from=  2.00000e-10 to=  1.60000e-08
+qe_total            =   2.02717e-14 from=  2.00000e-10 to=  1.60000e-08
+qf_total            =   2.10833e-14 from=  2.00000e-10 to=  1.60000e-08
+qg_total            =   1.96488e-14 from=  2.00000e-10 to=  1.60000e-08
+qa_leak_q           =   1.00864e-18 from=  3.00000e-10 to=  9.00000e-10
+qe_leak_q           =   4.27762e-19 from=  3.00000e-10 to=  9.00000e-10
+qf_leak_q           =   -1.04646e-18 from=  3.00000e-10 to=  9.00000e-10
+qg_leak_q           =   7.47728e-19 from=  3.00000e-10 to=  9.00000e-10
+a_oh0_v0            =  5.000000e-01
+a_oh1_v0            =  2.291440e-09
+a_oh2_v0            =  1.350056e-09
+a_oh0_v1            =  2.457201e-09
+a_oh1_v1            =  5.000000e-01
+a_oh2_v1            =  1.349846e-09
+a_oh0_v5            =  1.211582e-09
+a_oh1_v5            =  2.681992e-09
+a_oh2_v5            =  5.000000e-01
+e_oh0_v0            =  5.000000e-01
+e_oh1_v0            =  1.448220e-06
+e_oh1_v1            =  5.000000e-01
+e_oh2_v5            =  5.000000e-01
+f_oh1_v1            =  5.000000e-01
+f_oh2_v5            =  5.000000e-01
+g_noh1_v0           =  4.999968e-01
+g_noh1_v1           =  5.401001e-09
+g_noh2_v1           =  5.000000e-01
+g_noh2_v5           =  5.231626e-09
+
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  1.84800e-10
+No. of Data Rows : 3404
+
+  Measurements for Transient Analysis
+
+ia_avg              =  1.560007e-06 from=  2.000000e-10 to=  1.600050e-08
+ie_avg              =  1.284167e-06 from=  2.000000e-10 to=  1.600050e-08
+if_avg              =  1.335642e-06 from=  2.000000e-10 to=  1.600050e-08
+ig_avg              =  1.245347e-06 from=  2.000000e-10 to=  1.600050e-08
+ia_leak             =  1.171469e-09 from=  3.000000e-10 to=  9.048000e-10
+ie_leak             =  1.545384e-09 from=  3.000000e-10 to=  9.048000e-10
+if_leak             =  1.225597e-09 from=  3.000000e-10 to=  9.048000e-10
+ig_leak             =  1.233182e-09 from=  3.000000e-10 to=  9.048000e-10
+tpd_a_oh0_f_bj      =  8.309440e-11 targ=  1.108094e-09 trig=  1.025000e-09
+tpd_a_oh1_r_bj      =  1.093372e-10 targ=  1.134337e-09 trig=  1.025000e-09
+tpd_a_oh1_r_bi      =  1.175032e-10 targ=  4.142503e-09 trig=  4.025000e-09
+tpd_a_oh2_r_bj      =  1.033481e-10 targ=  5.128348e-09 trig=  5.025000e-09
+tpd_a_oh1_f_bj      =  1.314010e-10 targ=  5.156401e-09 trig=  5.025000e-09
+tpd_e_oh0_f_bj      =  7.147109e-11 targ=  1.096471e-09 trig=  1.025000e-09
+tpd_e_oh1_r_bi      =  1.069858e-10 targ=  4.131986e-09 trig=  4.025000e-09
+tpd_e_oh2_r_bj      =  7.459875e-11 targ=  5.099599e-09 trig=  5.025000e-09
+tpd_e_oh1_r_bj      =  1.259599e-10 targ=  7.150960e-09 trig=  7.025000e-09
+tpd_f_oh1_r_bj      =  9.522280e-11 targ=  1.120223e-09 trig=  1.025000e-09
+tpd_f_oh1_r_bi      =  1.013068e-10 targ=  4.126307e-09 trig=  4.025000e-09
+tpd_f_oh2_r_bj      =  7.552448e-11 targ=  5.100524e-09 trig=  5.025000e-09
+tpd_f_oh1_f_bj      =  1.007122e-10 targ=  5.125712e-09 trig=  5.025000e-09
+tpd_g_noh1_f_bj     =  7.990664e-11 targ=  1.104907e-09 trig=  1.025000e-09
+tpd_g_noh1_f_bi     =  8.391029e-11 targ=  4.108910e-09 trig=  4.025000e-09
+tpd_g_noh2_f_bj     =  7.663336e-11 targ=  5.101633e-09 trig=  5.025000e-09
+tpd_g_noh1_r_bj     =  8.792398e-11 targ=  5.112924e-09 trig=  5.025000e-09
+trise_a_oh1         =  2.568665e-11 targ=  1.147460e-09 trig=  1.121774e-09
+trise_e_oh1         =  5.206968e-11 targ=  1.165816e-09 trig=  1.113746e-09
+trise_f_oh1         =  2.548659e-11 targ=  1.133529e-09 trig=  1.108042e-09
+tfall_g_noh1        =  4.068928e-11 targ=  1.128897e-09 trig=  1.088208e-09
+qa_total            =   2.46066e-14 from=  2.00000e-10 to=  1.60000e-08
+qe_total            =   2.02717e-14 from=  2.00000e-10 to=  1.60000e-08
+qf_total            =   2.10833e-14 from=  2.00000e-10 to=  1.60000e-08
+qg_total            =   1.96488e-14 from=  2.00000e-10 to=  1.60000e-08
+qa_leak_q           =   1.00864e-18 from=  3.00000e-10 to=  9.00000e-10
+qe_leak_q           =   4.27762e-19 from=  3.00000e-10 to=  9.00000e-10
+qf_leak_q           =   -1.04646e-18 from=  3.00000e-10 to=  9.00000e-10
+qg_leak_q           =   7.47728e-19 from=  3.00000e-10 to=  9.00000e-10
+a_oh0_v0            =  5.000000e-01
+a_oh1_v0            =  2.291440e-09
+a_oh2_v0            =  1.350056e-09
+a_oh0_v1            =  2.457201e-09
+a_oh1_v1            =  5.000000e-01
+a_oh2_v1            =  1.349846e-09
+a_oh0_v5            =  1.211582e-09
+a_oh1_v5            =  2.681992e-09
+a_oh2_v5            =  5.000000e-01
+e_oh0_v0            =  5.000000e-01
+e_oh1_v0            =  1.448220e-06
+e_oh1_v1            =  5.000000e-01
+e_oh2_v5            =  5.000000e-01
+f_oh1_v1            =  5.000000e-01
+f_oh2_v5            =  5.000000e-01
+g_noh1_v0           =  4.999968e-01
+g_noh1_v1           =  5.401001e-09
+g_noh2_v1           =  5.000000e-01
+g_noh2_v5           =  5.231626e-09
+
+
+Total analysis time (seconds) = 0.469929
+
+Total elapsed time (seconds) = 0.489 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available =  122.266 MB.
+Maximum ngspice program size =   14.172 MB.
+Current ngspice program size =   14.172 MB.
+
+

@@ -1,0 +1,49 @@
+magic
+tech asap5
+timestamp 1773863902
+<< checkpaint >>
+rect -20000 -20000 20044 20140
+<< nwell >>
+rect 0 65 44 140
+<< poly >>
+rect 14 74 30 76
+rect 14 66 16 74
+rect 28 66 30 74
+rect 14 64 30 66
+<< ndiff >>
+rect 0 60 14 64
+rect 30 60 44 64
+rect 0 18 2 60
+rect 30 18 32 60
+rect 0 14 14 18
+rect 30 14 44 18
+<< pdiff >>
+rect 0 122 14 126
+rect 30 122 44 126
+rect 0 80 2 122
+rect 30 80 32 122
+rect 0 76 14 80
+rect 30 76 44 80
+<< nfet_lvt >>
+rect 14 60 30 64
+rect 16 18 30 60
+rect 14 14 30 18
+<< pfet_lvt >>
+rect 14 122 30 126
+rect 16 80 30 122
+rect 14 76 30 80
+<< metal1 >>
+rect 0 126 44 140
+rect 2 122 16 126
+rect 32 60 44 80
+rect 2 14 16 18
+rect 0 0 44 14
+<< cogc >>
+rect 16 66 28 74
+<< ndc >>
+rect 2 18 16 60
+rect 32 18 44 60
+<< pdc >>
+rect 2 80 16 122
+rect 32 80 44 122
+<< end >>

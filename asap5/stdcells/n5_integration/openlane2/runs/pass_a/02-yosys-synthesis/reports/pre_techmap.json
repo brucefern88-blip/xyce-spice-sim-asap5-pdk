@@ -1,0 +1,164 @@
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/pass_a/tmp/26b21aa0358344ae9f4f9afb5753485b.lib -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/pass_a/tmp/b8c8a076041d427aaf603672ffab633f.lib ",
+   "modules": {
+      "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": {
+         "num_wires":         76,
+         "num_wire_bits":     100,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 28,
+         "num_ports":         3,
+         "num_port_bits":     27,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         85,
+         "num_cells_by_type": {
+            "$_AND_": 49,
+            "$_OR_": 36
+         }
+      },
+      "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": {
+         "num_wires":         132,
+         "num_wire_bits":     164,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 36,
+         "num_ports":         3,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         145,
+         "num_cells_by_type": {
+            "$_AND_": 81,
+            "$_OR_": 64
+         }
+      },
+      "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": {
+         "num_wires":         36,
+         "num_wire_bits":     52,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 20,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         41,
+         "num_cells_by_type": {
+            "$_AND_": 25,
+            "$_OR_": 16
+         }
+      },
+      "$paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\\crosspoint_sum": {
+         "num_wires":         22,
+         "num_wire_bits":     34,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 16,
+         "num_ports":         3,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         25,
+         "num_cells_by_type": {
+            "$_AND_": 16,
+            "$_OR_": 9
+         }
+      },
+      "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": {
+         "num_wires":         292,
+         "num_wire_bits":     340,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 52,
+         "num_ports":         3,
+         "num_port_bits":     51,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         313,
+         "num_cells_by_type": {
+            "$_AND_": 169,
+            "$_OR_": 144
+         }
+      },
+      "$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\\crosspoint_sum": {
+         "num_wires":         12,
+         "num_wire_bits":     20,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 12,
+         "num_ports":         3,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         13,
+         "num_cells_by_type": {
+            "$_AND_": 9,
+            "$_OR_": 4
+         }
+      },
+      "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": {
+         "num_wires":         196,
+         "num_wire_bits":     240,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 48,
+         "num_ports":         3,
+         "num_port_bits":     47,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         215,
+         "num_cells_by_type": {
+            "$_AND_": 119,
+            "$_OR_": 96
+         }
+      },
+      "\\hamming_64b_cuboid_r4_xp": {
+         "num_wires":         192,
+         "num_wire_bits":     772,
+         "num_pub_wires":     23,
+         "num_pub_wire_bits": 603,
+         "num_ports":         3,
+         "num_port_bits":     135,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         365,
+         "num_cells_by_type": {
+            "$_AND_": 32,
+            "$_NOR_": 32,
+            "$_OR_": 166,
+            "$_XNOR_": 64,
+            "$_XOR_": 32,
+            "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": 2,
+            "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": 1,
+            "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": 10,
+            "$paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\\crosspoint_sum": 4,
+            "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": 1,
+            "$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\\crosspoint_sum": 20,
+            "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1652,
+         "num_wire_bits":     2772,
+         "num_pub_wires":     179,
+         "num_pub_wire_bits": 1299,
+         "num_ports":         120,
+         "num_port_bits":     792,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1939,
+         "num_cells_by_type": {
+            "$_AND_": 993,
+            "$_NOR_": 32,
+            "$_OR_": 818,
+            "$_XNOR_": 64,
+            "$_XOR_": 32
+         }
+      }
+}
+

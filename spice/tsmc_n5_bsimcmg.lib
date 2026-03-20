@@ -1,0 +1,286 @@
+* =============================================================================
+* TSMC N5 (CLN5FF) 5nm FinFET — BSIM-CMG Compact Model Library for ngspice
+* =============================================================================
+*
+* Calibrated to match the device parameters embedded in:
+*   iverilog/hamming_distance_64_n5_floorplan.v
+*   iverilog/hamming_distance_64_4d_n5_floorplan.v
+*
+* Target metrics (per fin, LVT, TT, 25C):
+*   Cg  = ~0.05 fF/fin        Cd = ~0.02 fF/fin       Cs = ~0.02 fF/fin
+*   NMOS Id_on  @0.75V = ~65 uA/fin    @0.40V = ~8 uA/fin
+*   NMOS Id_off @0.75V = ~15 nA/fin    @0.40V = ~13 nA/fin
+*   PMOS Id_on  @0.75V = ~47 uA/fin    @0.40V = ~5 uA/fin
+*   PMOS Id_off @0.75V = ~10 nA/fin    @0.40V = ~8 nA/fin
+*
+* Process geometry:
+*   Fin pitch  = 25-27 nm      Fin height = 45-48 nm
+*   CPP        = 48 nm         Fin width  = ~6-7 nm
+*   M1 pitch   = 28 nm         5T cell    = ~130 nm
+*
+* Usage in ngspice:
+*   .lib 'tsmc_n5_bsimcmg.lib' tt
+*   mn1 d g s b nfet_5nm nfin=1   $ single-fin NMOS
+*   mp1 d g s b pfet_5nm nfin=1   $ single-fin PMOS
+*
+* Multi-fin: nfin=2 for X2, nfin=4 for X4, nfin=8 for X8, etc.
+*
+* Corner library: tt (typical-typical)
+*                 ff (fast-fast)
+*                 ss (slow-slow)
+*                 sf (slow-n fast-p)
+*                 fs (fast-n slow-p)
+*
+* =============================================================================
+
+* -----------------------------------------------------------------------------
+* TYPICAL-TYPICAL CORNER
+* -----------------------------------------------------------------------------
+.lib tt
+
+.param vdd_nom = 0.75
+.param vdd_ulv = 0.40
+.param tnom_c  = 25
+
+* ── NMOS FinFET (LVT) ──────────────────────────────────────────────────────
+.model nfet_5nm nmos level=72 version=107
+
+* ── Geometry ──
++ tfin   = 6.5e-9          $ fin thickness (body width) [m]
++ hfin   = 46e-9           $ fin height [m]
++ fpitch = 26e-9           $ fin pitch [m]
++ lg     = 16e-9           $ physical gate length [m]
++ nbody  = 1e17            $ fin body doping [cm^-3]
++ nsd    = 2e20            $ source/drain doping [cm^-3]
+
+* ── Threshold voltage ──
++ phig   = 4.55            $ gate workfunction [eV] — tuned for Vt(LVT) ~ 0.27V
++ vth0   = 0.27            $ threshold voltage [V] at Vds=50mV
++ dvt0   = 0.0             $ Vt roll-off coefficient
++ dvt1   = 0.0             $ Vt roll-off coefficient
++ k1     = 0.45            $ body effect coefficient
++ k2     = -0.05           $ body effect 2nd order
+
+* ── Mobility & transport ──
++ u0     = 0.030           $ low-field mobility [m^2/V-s] — ~300 cm^2/Vs
++ ua     = 0.4e-9          $ mobility degradation (vertical field) [m/V]
++ ub     = 1.1e-18         $ mobility degradation (2nd order) [m^2/V^2]
++ eu     = 1.2             $ mobility exponent
++ etamob = 2.0             $ mobility temperature exponent
+
+* ── Saturation velocity ──
++ vsat   = 1.1e5           $ saturation velocity [m/s]
++ deltavsat = 0.7          $ velocity overshoot factor
++ ksativ = 1.0             $ Vsat modulation
+
+* ── Subthreshold ──
++ cit    = 1.5e-3          $ interface trap capacitance [F/m^2]
++ cdsc   = 2.0e-3          $ drain-induced barrier lowering (DIBL) capacitance
++ eta0   = 0.035           $ DIBL coefficient — calibrated for Id_off ~15 nA
++ dsub   = 0.6             $ DIBL exponent
++ nfactor = 1.8            $ subthreshold swing factor (SS ~ nfactor*60mV/dec)
++ cdscd  = 1.0e-3          $ DIBL Vds dependence
+
+* ── Output conductance / CLM ──
++ pclm   = 0.15            $ channel length modulation
++ pdiblc0 = 0.12           $ DIBL effect on Rout
++ pdiblc1 = 0.04
++ pscbe1 = 4.0e8           $ substrate current body effect
++ pscbe2 = 1.0e-5
+
+* ── Capacitance (calibrated: Cg~0.05fF, Cd~0.02fF, Cs~0.02fF per fin) ──
++ eot    = 8.25e-9         $ equivalent oxide thickness [m] — tuned for Cg target
++ epsrox = 12.0            $ high-k dielectric constant (HfO2-based)
++ cgso   = 3.6e-12         $ gate-source overlap cap [F/m] — contributes to Cs
++ cgdo   = 3.6e-12         $ gate-drain overlap cap [F/m] — contributes to Cd
++ cgbo   = 0               $ gate-body overlap capacitance [F/m]
++ cfs    = 0               $ fringing cap, source side
++ cfd    = 0               $ fringing cap, drain side
+
+* ── Junction (source/drain) ──
++ cjs    = 4.4e-4          $ source junction cap [F/m^2]
++ cjd    = 4.4e-4          $ drain junction cap [F/m^2]
++ pbs    = 0.95            $ source junction built-in potential [V]
++ pbd    = 0.95            $ drain junction built-in potential [V]
++ mjs    = 0.40            $ source junction grading
++ mjd    = 0.40            $ drain junction grading
+
+* ── Parasitic resistance ──
++ rdsw   = 150             $ S/D series resistance [ohm-um]
++ rsw    = 75              $ source resistance [ohm-um]
++ rdw    = 75              $ drain resistance [ohm-um]
++ rshg   = 0.5             $ gate sheet resistance [ohm/sq]
+
+* ── Self-heating (disabled for typical sims) ──
++ shmod  = 0               $ 0=off, 1=on
++ rth0   = 0.05            $ thermal resistance [K/W]
++ cth0   = 1e-11           $ thermal capacitance [J/K]
+
+* ── Temperature ──
++ tnom   = 25              $ nominal temperature [C]
++ ute    = -1.6            $ mobility temp exponent
++ kt1    = -0.14           $ Vt temperature coefficient [V]
++ kt2    = -0.01           $ Vt temp 2nd order
++ prt    = 50              $ Rds temperature coefficient
+
+
+* ── PMOS FinFET (LVT) ──────────────────────────────────────────────────────
+.model pfet_5nm pmos level=72 version=107
+
+* ── Geometry (same fin structure) ──
++ tfin   = 6.5e-9
++ hfin   = 46e-9
++ fpitch = 26e-9
++ lg     = 16e-9
++ nbody  = 1e17
++ nsd    = 2e20
+
+* ── Threshold voltage ──
++ phig   = 4.77            $ gate workfunction — tuned for |Vt(LVT)| ~ 0.28V
++ vth0   = -0.28
++ dvt0   = 0.0
++ dvt1   = 0.0
++ k1     = 0.45
++ k2     = -0.05
+
+* ── Mobility & transport (hole mobility ~40-50% of electron) ──
++ u0     = 0.014           $ low-field mobility [m^2/V-s] — ~140 cm^2/Vs
++ ua     = 0.5e-9
++ ub     = 1.4e-18
++ eu     = 1.0
++ etamob = 2.0
+
+* ── Saturation velocity ──
++ vsat   = 0.7e5           $ lower Vsat for holes
++ deltavsat = 0.6
++ ksativ = 1.0
+
+* ── Subthreshold ──
++ cit    = 1.5e-3
++ cdsc   = 2.0e-3
++ eta0   = 0.030           $ slightly less DIBL than NMOS
++ dsub   = 0.5
++ nfactor = 1.9            $ SS slightly worse for PMOS
++ cdscd  = 1.0e-3
+
+* ── Output conductance ──
++ pclm   = 0.15
++ pdiblc0 = 0.10
++ pdiblc1 = 0.04
++ pscbe1 = 4.0e8
++ pscbe2 = 1.0e-5
+
+* ── Capacitance (same targets: Cg~0.05fF, Cd~0.02fF, Cs~0.02fF) ──
++ eot    = 8.25e-9
++ epsrox = 12.0
++ cgso   = 3.6e-12
++ cgdo   = 3.6e-12
++ cgbo   = 0
++ cfs    = 0
++ cfd    = 0
+
+* ── Junction ──
++ cjs    = 4.4e-4
++ cjd    = 4.4e-4
++ pbs    = 0.90
++ pbd    = 0.90
++ mjs    = 0.38
++ mjd    = 0.38
+
+* ── Parasitic resistance (PMOS typically higher) ──
++ rdsw   = 180
++ rsw    = 90
++ rdw    = 90
++ rshg   = 0.5
+
+* ── Self-heating ──
++ shmod  = 0
++ rth0   = 0.05
++ cth0   = 1e-11
+
+* ── Temperature ──
++ tnom   = 25
++ ute    = -1.4
++ kt1    = -0.12
++ kt2    = -0.01
++ prt    = 60
+
+.endl tt
+
+
+* -----------------------------------------------------------------------------
+* FAST-FAST CORNER (Vt low, mobility high)
+* -----------------------------------------------------------------------------
+.lib ff
+
+.lib tt
+.param dvt_ff = -0.025     $ Vt shift [V] — faster
+
+.model nfet_5nm nmos level=72 version=107
++ vth0   = 0.245           $ 0.27 - 0.025
++ u0     = 0.033           $ +10% mobility
+
+.model pfet_5nm pmos level=72 version=107
++ vth0   = -0.255          $ -0.28 + 0.025
++ u0     = 0.0154          $ +10% mobility
+
+.endl ff
+
+
+* -----------------------------------------------------------------------------
+* SLOW-SLOW CORNER (Vt high, mobility low)
+* -----------------------------------------------------------------------------
+.lib ss
+
+.lib tt
+.param dvt_ss = 0.025
+
+.model nfet_5nm nmos level=72 version=107
++ vth0   = 0.295           $ 0.27 + 0.025
++ u0     = 0.027           $ -10% mobility
+
+.model pfet_5nm pmos level=72 version=107
++ vth0   = -0.305          $ -0.28 - 0.025
++ u0     = 0.0126          $ -10% mobility
+
+.endl ss
+
+
+* -----------------------------------------------------------------------------
+* SLOW-N FAST-P CORNER
+* -----------------------------------------------------------------------------
+.lib sf
+
+.lib tt
+
+.model nfet_5nm nmos level=72 version=107
++ vth0   = 0.295
++ u0     = 0.027
+
+.model pfet_5nm pmos level=72 version=107
++ vth0   = -0.255
++ u0     = 0.0154
+
+.endl sf
+
+
+* -----------------------------------------------------------------------------
+* FAST-N SLOW-P CORNER
+* -----------------------------------------------------------------------------
+.lib fs
+
+.lib tt
+
+.model nfet_5nm nmos level=72 version=107
++ vth0   = 0.245
++ u0     = 0.033
+
+.model pfet_5nm pmos level=72 version=107
++ vth0   = -0.305
++ u0     = 0.0126
+
+.endl fs
+
+* =============================================================================
+* END OF LIBRARY
+* =============================================================================

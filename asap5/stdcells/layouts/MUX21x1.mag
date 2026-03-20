@@ -1,0 +1,210 @@
+magic
+tech asap5
+timestamp 1773866236
+<< checkpaint >>
+rect -20000 -20000 20288 20140
+<< nwell >>
+rect 0 65 288 140
+<< pwell >>
+rect 0 0 288 65
+<< poly >>
+rect 30 130 46 135
+rect 96 130 112 135
+rect 184 130 200 135
+rect 250 130 266 135
+rect 30 70 46 75
+rect 96 72 105 75
+rect 111 72 112 75
+rect 184 72 193 75
+rect 194 75 199 78
+rect 194 74 200 75
+rect 199 72 200 74
+rect 30 62 34 70
+rect 42 62 46 70
+rect 250 70 266 75
+rect 250 62 254 70
+rect 262 62 266 70
+rect 30 55 46 62
+rect 96 58 112 62
+rect 96 55 97 58
+rect 103 55 112 58
+rect 184 55 200 62
+rect 250 55 266 62
+rect 185 52 191 55
+rect 30 5 46 10
+rect 96 5 112 10
+rect 184 5 200 10
+rect 250 5 266 10
+<< ndiff >>
+rect 0 45 30 55
+rect 0 20 4 45
+rect 26 20 30 45
+rect 0 10 30 20
+rect 46 45 66 55
+rect 46 20 50 45
+rect 46 10 66 20
+rect 78 45 96 55
+rect 78 20 82 45
+rect 94 20 96 45
+rect 78 10 96 20
+rect 112 45 184 55
+rect 112 20 138 45
+rect 150 44 158 45
+rect 162 20 184 45
+rect 112 10 184 20
+rect 200 45 218 55
+rect 200 20 204 45
+rect 216 20 218 45
+rect 200 10 218 20
+rect 228 45 250 55
+rect 228 20 232 45
+rect 248 20 250 45
+rect 228 10 250 20
+rect 266 45 286 55
+rect 266 20 270 45
+rect 284 20 286 45
+rect 266 10 286 20
+<< pdiff >>
+rect 0 120 30 130
+rect 0 85 4 120
+rect 26 85 30 120
+rect 0 75 30 85
+rect 46 120 66 130
+rect 46 85 50 120
+rect 46 75 66 85
+rect 78 120 96 130
+rect 78 85 82 120
+rect 94 85 96 120
+rect 78 75 96 85
+rect 112 120 184 130
+rect 112 85 138 120
+rect 162 85 184 120
+rect 112 75 184 85
+rect 200 120 218 130
+rect 200 85 204 120
+rect 216 85 218 120
+rect 200 75 218 85
+rect 228 120 250 130
+rect 228 85 232 120
+rect 248 85 250 120
+rect 228 75 250 85
+rect 266 120 286 130
+rect 266 85 270 120
+rect 284 85 286 120
+rect 266 75 286 85
+<< nfet_lvt >>
+rect 30 10 46 55
+rect 96 52 97 55
+rect 103 52 112 55
+rect 96 10 112 52
+rect 184 52 185 55
+rect 191 52 200 55
+rect 184 10 200 52
+rect 250 10 266 55
+<< pfet_lvt >>
+rect 30 75 46 130
+rect 96 78 112 130
+rect 96 75 105 78
+rect 111 75 112 78
+rect 184 78 200 130
+rect 184 75 193 78
+rect 199 75 200 78
+rect 250 75 266 130
+<< metal1 >>
+rect 0 126 288 140
+rect 4 120 26 126
+rect 270 120 284 126
+rect 54 80 64 85
+rect 54 74 56 80
+rect 62 74 64 80
+rect 34 70 44 72
+rect 42 62 44 70
+rect 34 58 44 62
+rect 34 52 36 58
+rect 42 52 44 58
+rect 34 50 44 52
+rect 54 45 64 74
+rect 84 45 92 85
+rect 96 74 97 80
+rect 96 58 103 74
+rect 96 52 97 58
+rect 96 50 103 52
+rect 105 78 112 80
+rect 111 72 112 78
+rect 105 58 112 72
+rect 105 52 106 58
+rect 105 50 112 52
+rect 148 50 158 85
+rect 184 58 191 80
+rect 184 52 185 58
+rect 184 50 191 52
+rect 193 78 194 80
+rect 199 72 200 74
+rect 193 50 200 72
+rect 148 45 150 50
+rect 206 45 214 85
+rect 236 45 246 85
+rect 254 70 264 72
+rect 262 62 264 70
+rect 254 50 264 62
+rect 4 14 26 20
+rect 270 14 284 20
+rect 0 0 288 14
+<< cogc >>
+rect 34 62 42 70
+rect 97 52 103 58
+rect 105 72 111 78
+rect 193 74 194 78
+rect 193 72 199 74
+rect 254 62 262 70
+<< ndc >>
+rect 4 20 26 45
+rect 50 20 66 45
+rect 82 20 94 45
+rect 138 44 150 45
+rect 158 44 162 45
+rect 138 20 162 44
+rect 204 20 216 45
+rect 232 20 248 45
+rect 270 20 284 45
+<< pdc >>
+rect 4 85 26 120
+rect 50 85 66 120
+rect 82 85 94 120
+rect 138 85 162 120
+rect 204 85 216 120
+rect 232 85 248 120
+rect 270 85 284 120
+<< metal2 >>
+rect 55 80 201 84
+rect 55 74 56 80
+rect 62 74 97 80
+rect 103 74 194 80
+rect 200 74 201 80
+rect 35 58 192 60
+rect 35 52 36 58
+rect 42 52 106 58
+rect 112 52 185 58
+rect 191 52 192 58
+rect 35 50 192 52
+rect 148 44 150 48
+rect 158 44 256 48
+rect 262 44 264 48
+rect 148 38 264 44
+<< via1 >>
+rect 56 74 62 80
+rect 97 74 103 80
+rect 194 74 200 80
+rect 36 52 42 58
+rect 106 52 112 58
+rect 185 52 191 58
+rect 150 44 158 50
+rect 256 44 262 50
+<< labels >>
+flabel cogc 38 66 38 66 1 FreeSerif 1 0 0 0 S
+flabel metal1 88 65 88 65 1 FreeSerif 1 0 0 0 D0
+flabel metal1 210 65 210 65 1 FreeSerif 1 0 0 0 D1
+flabel metal1 241 65 241 65 1 FreeSerif 1 0 0 0 Y
+flabel metal1 144 0 144 0 1 FreeSerif 1 0 0 0 VSS
+rlabel metal1 144 140 144 140 5 VDD
+<< end >>

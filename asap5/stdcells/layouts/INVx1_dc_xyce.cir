@@ -1,0 +1,51 @@
+* INVx1 DC VTC Test — ASAP5 5nm GAA, Magic-Extracted
+* Xyce level=1 MOSFET models calibrated to ASAP5 LVT at VDD=0.5V
+* Layout extracted by Magic 8.3.625 from INVx1.mag
+
+* --- Xyce Solver Options ---
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-8
+
+* --- MOSFET Models (level=1, calibrated to ASAP5 LVT) ---
+* Vt from ASAP5 Id-Vgs: NMOS Vt~0.15V, PMOS Vt~-0.15V
+.model nmos_lvt nmos level=1 VTO=0.15 KP=200u GAMMA=0.3 LAMBDA=0.05
++  TOX=1.5n CGSO=0.2f CGDO=0.2f CJ=1e-3 CJSW=1e-10 PB=0.7
+.model pmos_lvt pmos level=1 VTO=-0.15 KP=100u GAMMA=0.3 LAMBDA=0.05
++  TOX=1.5n CGSO=0.2f CGDO=0.2f CJ=1e-3 CJSW=1e-10 PB=0.7
+
+* --- Power Supply ---
+Vvdd VDD 0 0.5
+Vvss VSS 0 0
+
+* --- DC Sweep Input ---
+Vin A 0 0.5
+
+* --- INVx1 from Magic extraction ---
+* Magic extracted: w=0.49u l=0.14u (internal scale 10nm)
+* Node mapping: a_30_18# = Y (output), a_14_18#/a_14_90# = A (gate)
+*              a_0_18# = VSS (NMOS source), a_0_90# = VDD (PMOS source)
+*              w_0_65# = nwell = VDD
+* Note: Magic extracted two gate nodes (poly split at nwell boundary)
+*       We connect both gates to input A
+M1000 Y A VDD VDD pmos_lvt w=0.49u l=0.14u
++  ad=44.8f pd=0.92u as=49.6f ps=0.96u
+M1001 Y A VSS VSS nmos_lvt w=0.49u l=0.14u
++  ad=44.8f pd=0.92u as=49.6f ps=0.96u
+
+* --- Extracted parasitic capacitances (from Magic) ---
+C_VSS VSS 0 0.11131p
+C_poly_mid A 0 48.4f
+C_Y Y 0 0.16786p
+C_VDD VDD 0 0.11093p
+
+* --- DC Sweep: VIN from 0 to 0.5V ---
+.DC Vin 0 0.5 0.005
+
+* --- Print output ---
+.PRINT DC V(A) V(Y)
+
+* --- Measure trip point ---
+.MEASURE DC V_trip WHEN V(Y)=V(A)
+.MEASURE DC V_oh MAX V(Y)
+.MEASURE DC V_ol MIN V(Y)
+
+.END

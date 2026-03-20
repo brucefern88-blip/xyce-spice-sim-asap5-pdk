@@ -1,0 +1,2798 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Liberty frontend: /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib
+Imported 19 cell types from liberty file.
+
+2. Executing Liberty frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/lib/n5_utility_cells_tt_0p5v_25c.lib
+Imported 9 cell types from liberty file.
+
+3. Executing Liberty frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib
+Imported 4 cell types from liberty file.
+
+4. Executing Liberty frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib
+Replacing existing blackbox module XP_3x3_M2M3.
+Replacing existing blackbox module XP_5x5_M2M3.
+Replacing existing blackbox module XP_4x4_M4M5.
+Replacing existing blackbox module XP_3x3_M4M5.
+Imported 4 cell types from liberty file.
+[INFO] Using SDC file '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+5. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v' to AST representation.
+Storing AST representation for module `$abstract\crosspoint_sum'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/verilog/xp_via_macros.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/verilog/xp_via_macros.v' to AST representation.
+Storing AST representation for module `$abstract\XP_3x3_M2M3'.
+Storing AST representation for module `$abstract\XP_5x5_M2M3'.
+Storing AST representation for module `$abstract\XP_4x4_M4M5'.
+Storing AST representation for module `$abstract\XP_3x3_M4M5'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/verilog/hamming_64b_cuboid_r4_via.v
+Parsing SystemVerilog input from `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/verilog/hamming_64b_cuboid_r4_via.v' to AST representation.
+Storing AST representation for module `$abstract\hamming_64b_cuboid_r4_via'.
+Successfully finished Verilog frontend.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\hamming_64b_cuboid_r4_via'.
+Generating RTLIL representation for module `\hamming_64b_cuboid_r4_via'.
+
+9.1. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Parameter \M = 5
+Parameter \N = 5
+
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Generating RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 5
+Parameter \N = 5
+Found cached RTLIL representation for module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+
+9.3. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+Generating RTLIL representation for module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Parameter \M = 7
+Parameter \N = 7
+Found cached RTLIL representation for module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Parameter \M = 17
+Parameter \N = 7
+
+9.4. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 17
+Parameter \N = 7
+Generating RTLIL representation for module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Parameter \M = 9
+Parameter \N = 9
+
+9.5. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 9
+Parameter \N = 9
+Generating RTLIL representation for module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Parameter \M = 13
+Parameter \N = 13
+
+9.6. Executing AST frontend in derive mode using pre-parsed AST for module `\crosspoint_sum'.
+Parameter \M = 13
+Parameter \N = 13
+Generating RTLIL representation for module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+
+9.7. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+
+9.8. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+Removing unused module `$abstract\hamming_64b_cuboid_r4_via'.
+Removing unused module `$abstract\XP_3x3_M4M5'.
+Removing unused module `$abstract\XP_4x4_M4M5'.
+Removing unused module `$abstract\XP_5x5_M2M3'.
+Removing unused module `$abstract\XP_3x3_M2M3'.
+Removing unused module `$abstract\crosspoint_sum'.
+Removed 6 unused modules.
+Renaming module hamming_64b_cuboid_r4_via to hamming_64b_cuboid_r4_via.
+
+10. Generating Graphviz representation of design.
+Writing dot description to `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/hierarchy.dot'.
+Dumping module hamming_64b_cuboid_r4_via to page 1.
+
+11. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+
+11.2. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+Removed 0 unused modules.
+
+12. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+13. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+14. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+15. Executing PROC_INIT pass (extract init attributes).
+
+16. Executing PROC_ARST pass (detect async resets in processes).
+
+17. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+18. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+19. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+20. Executing PROC_DFF pass (convert process syncs to FFs).
+
+21. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+22. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+23. Executing CHECK pass (checking for obvious problems).
+Checking module hamming_64b_cuboid_r4_via...
+Checking module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum...
+Checking module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum...
+Checking module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum...
+Checking module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum...
+Checking module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum...
+Found and reported 0 problems.
+
+24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hamming_64b_cuboid_r4_via.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+<suppressed ~2 debug messages>
+
+25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hamming_64b_cuboid_r4_via.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+
+26. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Removed 6 unused cells and 824 unused wires.
+<suppressed ~12 debug messages>
+
+27. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+28. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+29. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \hamming_64b_cuboid_r4_via..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+30. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$490: \sum_bit[11].grid_and [6:5]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$487: \sum_bit[10].grid_and [6:4]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$483: \sum_bit[9].grid_and [6:3]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$478: \sum_bit[8].grid_and [6:2]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$472: \sum_bit[7].grid_and [6:1]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$457: \sum_bit[5].grid_and [5:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$450: \sum_bit[4].grid_and [4:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$444: \sum_bit[3].grid_and [3:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$439: \sum_bit[2].grid_and [2:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$435: \sum_bit[1].grid_and [1:0]
+  Optimizing cells in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+  Optimizing cells in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$730: \sum_bit[15].grid_and [8:7]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$727: \sum_bit[14].grid_and [8:6]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$723: \sum_bit[13].grid_and [8:5]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$718: \sum_bit[12].grid_and [8:4]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$712: \sum_bit[11].grid_and [8:3]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$705: \sum_bit[10].grid_and [8:2]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$697: \sum_bit[9].grid_and [8:1]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$678: \sum_bit[7].grid_and [7:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$669: \sum_bit[6].grid_and [6:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$661: \sum_bit[5].grid_and [5:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$654: \sum_bit[4].grid_and [4:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$648: \sum_bit[3].grid_and [3:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$643: \sum_bit[2].grid_and [2:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$639: \sum_bit[1].grid_and [1:0]
+  Optimizing cells in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+  Optimizing cells in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$428: \sum_bit[7].grid_and [4:3]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$425: \sum_bit[6].grid_and [4:2]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$421: \sum_bit[5].grid_and [4:1]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$410: \sum_bit[3].grid_and [3:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$405: \sum_bit[2].grid_and [2:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$401: \sum_bit[1].grid_and [1:0]
+  Optimizing cells in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+  Optimizing cells in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$924: \sum_bit[23].grid_and [12:11]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$921: \sum_bit[22].grid_and [12:10]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$917: \sum_bit[21].grid_and [12:9]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$912: \sum_bit[20].grid_and [12:8]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$906: \sum_bit[19].grid_and [12:7]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$899: \sum_bit[18].grid_and [12:6]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$891: \sum_bit[17].grid_and [12:5]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$882: \sum_bit[16].grid_and [12:4]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$872: \sum_bit[15].grid_and [12:3]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$861: \sum_bit[14].grid_and [12:2]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$849: \sum_bit[13].grid_and [12:1]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$822: \sum_bit[11].grid_and [11:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$809: \sum_bit[10].grid_and [10:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$797: \sum_bit[9].grid_and [9:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$786: \sum_bit[8].grid_and [8:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$776: \sum_bit[7].grid_and [7:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$767: \sum_bit[6].grid_and [6:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$759: \sum_bit[5].grid_and [5:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$752: \sum_bit[4].grid_and [4:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$746: \sum_bit[3].grid_and [3:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$741: \sum_bit[2].grid_and [2:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$737: \sum_bit[1].grid_and [1:0]
+  Optimizing cells in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+  Optimizing cells in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$632: \sum_bit[21].grid_and [16:15]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$629: \sum_bit[20].grid_and [16:14]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$625: \sum_bit[19].grid_and [16:13]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$620: \sum_bit[18].grid_and [16:12]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$614: \sum_bit[17].grid_and [16:11]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$607: \sum_bit[16].grid_and [16:10]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$599: \sum_bit[15].grid_and [15:9]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$591: \sum_bit[14].grid_and [14:8]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$583: \sum_bit[13].grid_and [13:7]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$575: \sum_bit[12].grid_and [12:6]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$567: \sum_bit[11].grid_and [11:5]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$559: \sum_bit[10].grid_and [10:4]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$551: \sum_bit[9].grid_and [9:3]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$543: \sum_bit[8].grid_and [8:2]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$535: \sum_bit[7].grid_and [7:1]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$527: \sum_bit[6].grid_and [6:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$519: \sum_bit[5].grid_and [5:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$512: \sum_bit[4].grid_and [4:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$506: \sum_bit[3].grid_and [3:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$501: \sum_bit[2].grid_and [2:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/rtl/crosspoint_sum.v:44$497: \sum_bit[1].grid_and [1:0]
+  Optimizing cells in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+  Optimizing cells in module \hamming_64b_cuboid_r4_via.
+Performed a total of 73 changes.
+
+31. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+32. Executing OPT_DFF pass (perform DFF optimizations).
+
+33. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+34. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+35. Rerunning OPT passes. (Maybe there is more to do…)
+
+36. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \hamming_64b_cuboid_r4_via..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+37. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+  Optimizing cells in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+  Optimizing cells in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+  Optimizing cells in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+  Optimizing cells in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+  Optimizing cells in module \hamming_64b_cuboid_r4_via.
+Performed a total of 0 changes.
+
+38. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+39. Executing OPT_DFF pass (perform DFF optimizations).
+
+40. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+41. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+42. Executing FSM pass (extract and optimize FSM).
+
+42.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+42.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+42.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+42.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+42.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+42.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+42.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+42.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+43. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+44. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+45. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \hamming_64b_cuboid_r4_via..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+46. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+  Optimizing cells in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+  Optimizing cells in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+  Optimizing cells in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+  Optimizing cells in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+  Optimizing cells in module \hamming_64b_cuboid_r4_via.
+Performed a total of 0 changes.
+
+47. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+48. Executing OPT_DFF pass (perform DFF optimizations).
+
+49. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+50. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+51. Executing WREDUCE pass (reducing word size of cells).
+Removed top 6 bits (of 7) from wire $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.sum_bit[0].grid_and.
+Removed top 5 bits (of 7) from wire $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.sum_bit[1].grid_and.
+Removed top 4 bits (of 7) from wire $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.sum_bit[2].grid_and.
+Removed top 2 bits (of 7) from wire $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.sum_bit[4].grid_and.
+Removed top 8 bits (of 9) from wire $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.sum_bit[0].grid_and.
+Removed top 7 bits (of 9) from wire $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.sum_bit[1].grid_and.
+Removed top 6 bits (of 9) from wire $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.sum_bit[2].grid_and.
+Removed top 5 bits (of 9) from wire $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.sum_bit[3].grid_and.
+Removed top 2 bits (of 9) from wire $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.sum_bit[6].grid_and.
+Removed top 4 bits (of 5) from wire $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.sum_bit[0].grid_and.
+Removed top 3 bits (of 5) from wire $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.sum_bit[1].grid_and.
+Removed top 2 bits (of 5) from wire $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.sum_bit[2].grid_and.
+Removed top 12 bits (of 13) from wire $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.sum_bit[0].grid_and.
+Removed top 2 bits (of 13) from wire $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.sum_bit[10].grid_and.
+Removed top 1 bits (of 13) from wire $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.sum_bit[11].grid_and.
+Removed top 11 bits (of 13) from wire $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.sum_bit[1].grid_and.
+Removed top 10 bits (of 13) from wire $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.sum_bit[2].grid_and.
+Removed top 8 bits (of 13) from wire $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.sum_bit[4].grid_and.
+Removed top 6 bits (of 13) from wire $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.sum_bit[6].grid_and.
+Removed top 16 bits (of 17) from wire $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.sum_bit[0].grid_and.
+Removed top 6 bits (of 17) from wire $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.sum_bit[10].grid_and.
+Removed top 5 bits (of 17) from wire $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.sum_bit[11].grid_and.
+Removed top 15 bits (of 17) from wire $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.sum_bit[1].grid_and.
+Removed top 14 bits (of 17) from wire $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.sum_bit[2].grid_and.
+Removed top 12 bits (of 17) from wire $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.sum_bit[4].grid_and.
+Removed top 10 bits (of 17) from wire $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.sum_bit[6].grid_and.
+
+52. Executing PEEPOPT pass (run peephole optimizers).
+
+53. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+Removed 0 unused cells and 26 unused wires.
+<suppressed ~5 debug messages>
+
+54. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module hamming_64b_cuboid_r4_via:
+  created 0 $alu and 0 $macc cells.
+
+55. Executing SHARE pass (SAT-based resource sharing).
+
+56. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+57. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+58. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \hamming_64b_cuboid_r4_via..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+59. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+  Optimizing cells in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+  Optimizing cells in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+  Optimizing cells in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+  Optimizing cells in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+  Optimizing cells in module \hamming_64b_cuboid_r4_via.
+Performed a total of 0 changes.
+
+60. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+61. Executing OPT_DFF pass (perform DFF optimizations).
+
+62. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+63. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+64. Executing MEMORY pass.
+
+64.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+64.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+64.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+64.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+64.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+64.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+64.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+64.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+64.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+64.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+65. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+66. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+<suppressed ~1 debug messages>
+
+67. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+68. Executing OPT_DFF pass (perform DFF optimizations).
+
+69. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+70. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+71. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+72. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+73. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \hamming_64b_cuboid_r4_via..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+74. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+  Optimizing cells in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+  Optimizing cells in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+  Optimizing cells in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+  Optimizing cells in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+  Optimizing cells in module \hamming_64b_cuboid_r4_via.
+Performed a total of 0 changes.
+
+75. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+76. Executing OPT_SHARE pass.
+
+77. Executing OPT_DFF pass (perform DFF optimizations).
+
+78. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+79. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+80. Executing TECHMAP pass (map to technology primitives).
+
+80.1. Executing Verilog-2005 frontend: /nix/store/zxzmb2hdyjahy1lq6yglcx6sxy6zrddi-yosys-with-plugins/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/zxzmb2hdyjahy1lq6yglcx6sxy6zrddi-yosys-with-plugins/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+80.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_or.
+No more expansions possible.
+<suppressed ~983 debug messages>
+
+81. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+82. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+83. Executing OPT_DFF pass (perform DFF optimizations).
+
+84. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+Removed 0 unused cells and 77 unused wires.
+<suppressed ~5 debug messages>
+
+85. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+86. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+87. Executing OPT_DFF pass (perform DFF optimizations).
+
+88. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+89. Executing ABC pass (technology mapping using ABC).
+
+89.1. Extracting gate netlist of module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum' to `<abc-temp-dir>/input.blif'..
+Extracted 85 gates and 99 wires to a netlist network with 14 inputs and 13 outputs.
+
+89.1.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+89.1.2. Re-integrating ABC results.
+ABC RESULTS:                OR cells:       36
+ABC RESULTS:               AND cells:       49
+ABC RESULTS:        internal signals:       72
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+
+89.2. Extracting gate netlist of module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum' to `<abc-temp-dir>/input.blif'..
+Extracted 145 gates and 163 wires to a netlist network with 18 inputs and 17 outputs.
+
+89.2.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+89.2.2. Re-integrating ABC results.
+ABC RESULTS:                OR cells:       64
+ABC RESULTS:               AND cells:       81
+ABC RESULTS:        internal signals:      128
+ABC RESULTS:           input signals:       18
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+89.3. Extracting gate netlist of module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum' to `<abc-temp-dir>/input.blif'..
+Extracted 41 gates and 51 wires to a netlist network with 10 inputs and 9 outputs.
+
+89.3.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+89.3.2. Re-integrating ABC results.
+ABC RESULTS:                OR cells:       16
+ABC RESULTS:               AND cells:       25
+ABC RESULTS:        internal signals:       32
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        9
+Removing temp directory.
+
+89.4. Extracting gate netlist of module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum' to `<abc-temp-dir>/input.blif'..
+Extracted 313 gates and 339 wires to a netlist network with 26 inputs and 25 outputs.
+
+89.4.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+89.4.2. Re-integrating ABC results.
+ABC RESULTS:                OR cells:      144
+ABC RESULTS:               AND cells:      169
+ABC RESULTS:        internal signals:      288
+ABC RESULTS:           input signals:       26
+ABC RESULTS:          output signals:       25
+Removing temp directory.
+
+89.5. Extracting gate netlist of module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum' to `<abc-temp-dir>/input.blif'..
+Extracted 215 gates and 239 wires to a netlist network with 24 inputs and 23 outputs.
+
+89.5.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+89.5.2. Re-integrating ABC results.
+ABC RESULTS:                OR cells:       96
+ABC RESULTS:               AND cells:      119
+ABC RESULTS:        internal signals:      192
+ABC RESULTS:           input signals:       24
+ABC RESULTS:          output signals:       23
+Removing temp directory.
+
+89.6. Extracting gate netlist of module `\hamming_64b_cuboid_r4_via' to `<abc-temp-dir>/input.blif'..
+Extracted 390 gates and 636 wires to a netlist network with 246 inputs and 157 outputs.
+
+89.6.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+89.6.2. Re-integrating ABC results.
+ABC RESULTS:              XNOR cells:       64
+ABC RESULTS:               AND cells:       32
+ABC RESULTS:               XOR cells:       32
+ABC RESULTS:               NOR cells:       32
+ABC RESULTS:                OR cells:      166
+ABC RESULTS:        internal signals:      233
+ABC RESULTS:           input signals:      246
+ABC RESULTS:          output signals:      157
+Removing temp directory.
+
+90. Executing OPT pass (performing simple optimizations).
+
+90.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+90.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+90.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+90.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+Removed 0 unused cells and 833 unused wires.
+<suppressed ~31 debug messages>
+
+90.5. Finished fast OPT passes.
+
+91. Executing HIERARCHY pass (managing design hierarchy).
+
+91.1. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+
+91.2. Analyzing design hierarchy..
+Top module:  \hamming_64b_cuboid_r4_via
+Used module:     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum
+Used module:     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum
+Used module:     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum
+Used module:     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum
+Used module:     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum
+Removed 0 unused modules.
+
+92. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum...
+Checking module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum...
+Checking module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum...
+Checking module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum...
+Checking module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum...
+Checking module hamming_64b_cuboid_r4_via...
+Found and reported 0 problems.
+
+93. Printing statistics.
+
+=== $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum ===
+
+   Number of wires:                 84
+   Number of wire bits:            156
+   Number of public wires:          12
+   Number of public wire bits:      84
+   Number of ports:                  3
+   Number of port bits:             27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 85
+     $_AND_                         49
+     $_OR_                          36
+
+=== $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum ===
+
+   Number of wires:                143
+   Number of wire bits:            263
+   Number of public wires:          15
+   Number of public wire bits:     135
+   Number of ports:                  3
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                145
+     $_AND_                         81
+     $_OR_                          64
+
+=== $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum ===
+
+   Number of wires:                 41
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      45
+   Number of ports:                  3
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 41
+     $_AND_                         25
+     $_OR_                          16
+
+=== $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum ===
+
+   Number of wires:                309
+   Number of wire bits:            561
+   Number of public wires:          21
+   Number of public wire bits:     273
+   Number of ports:                  3
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                313
+     $_AND_                        169
+     $_OR_                         144
+
+=== $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum ===
+
+   Number of wires:                214
+   Number of wire bits:            535
+   Number of public wires:          22
+   Number of public wire bits:     343
+   Number of ports:                  3
+   Number of port bits:             47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                215
+     $_AND_                        119
+     $_OR_                          96
+
+=== hamming_64b_cuboid_r4_via ===
+
+   Number of wires:                186
+   Number of wire bits:            776
+   Number of public wires:          17
+   Number of public wire bits:     607
+   Number of ports:                  3
+   Number of port bits:            135
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                365
+     $_AND_                         32
+     $_NOR_                         32
+     $_OR_                         166
+     $_XNOR_                        64
+     $_XOR_                         32
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+=== design hierarchy ===
+
+   hamming_64b_cuboid_r4_via         1
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+
+   Number of wires:               1102
+   Number of wire bits:           2601
+   Number of public wires:         117
+   Number of public wire bits:    1616
+   Number of ports:                 24
+   Number of port bits:            360
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1283
+     $_AND_                        549
+     $_NOR_                         32
+     $_OR_                         574
+     $_XNOR_                        64
+     $_XOR_                         32
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+94. Generating Graphviz representation of design.
+Writing dot description to `/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/primitive_techmap.dot'.
+Dumping module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum to page 1.
+Dumping module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum to page 2.
+Dumping module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum to page 3.
+Dumping module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum to page 4.
+Dumping module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum to page 5.
+Dumping module hamming_64b_cuboid_r4_via to page 6.
+
+95. Executing OPT pass (performing simple optimizations).
+
+95.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+95.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+95.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \hamming_64b_cuboid_r4_via..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+95.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+  Optimizing cells in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+  Optimizing cells in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+  Optimizing cells in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+  Optimizing cells in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+  Optimizing cells in module \hamming_64b_cuboid_r4_via.
+Performed a total of 0 changes.
+
+95.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Finding identical cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Finding identical cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Finding identical cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Finding identical cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Finding identical cells in module `\hamming_64b_cuboid_r4_via'.
+Removed a total of 0 cells.
+
+95.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+95.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+
+95.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum.
+Optimizing module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum.
+Optimizing module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum.
+Optimizing module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum.
+Optimizing module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum.
+Optimizing module hamming_64b_cuboid_r4_via.
+
+95.9. Finished OPT passes. (There is nothing left to do.)
+
+96. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+Removed 0 unused cells and 60 unused wires.
+<suppressed ~60 debug messages>
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib ",
+   "modules": {
+      "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": {
+         "num_wires":         76,
+         "num_wire_bits":     100,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 28,
+         "num_ports":         3,
+         "num_port_bits":     27,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         85,
+         "num_cells_by_type": {
+            "$_AND_": 49,
+            "$_OR_": 36
+         }
+      },
+      "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": {
+         "num_wires":         132,
+         "num_wire_bits":     164,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 36,
+         "num_ports":         3,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         145,
+         "num_cells_by_type": {
+            "$_AND_": 81,
+            "$_OR_": 64
+         }
+      },
+      "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": {
+         "num_wires":         36,
+         "num_wire_bits":     52,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 20,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         41,
+         "num_cells_by_type": {
+            "$_AND_": 25,
+            "$_OR_": 16
+         }
+      },
+      "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": {
+         "num_wires":         292,
+         "num_wire_bits":     340,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 52,
+         "num_ports":         3,
+         "num_port_bits":     51,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         313,
+         "num_cells_by_type": {
+            "$_AND_": 169,
+            "$_OR_": 144
+         }
+      },
+      "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": {
+         "num_wires":         196,
+         "num_wire_bits":     240,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 48,
+         "num_ports":         3,
+         "num_port_bits":     47,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         215,
+         "num_cells_by_type": {
+            "$_AND_": 119,
+            "$_OR_": 96
+         }
+      },
+      "\\hamming_64b_cuboid_r4_via": {
+         "num_wires":         185,
+         "num_wire_bits":     772,
+         "num_pub_wires":     16,
+         "num_pub_wire_bits": 603,
+         "num_ports":         3,
+         "num_port_bits":     135,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         365,
+         "area":              429696.000000,
+         "num_cells_by_type": {
+            "$_AND_": 32,
+            "$_NOR_": 32,
+            "$_OR_": 166,
+            "$_XNOR_": 64,
+            "$_XOR_": 32,
+            "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": 2,
+            "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": 1,
+            "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": 2,
+            "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": 1,
+            "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": 1,
+            "XP_3x3_M2M3": 16,
+            "XP_3x3_M4M5": 4,
+            "XP_4x4_M4M5": 4,
+            "XP_5x5_M2M3": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1029,
+         "num_wire_bits":     1820,
+         "num_pub_wires":     44,
+         "num_pub_wire_bits": 835,
+         "num_ports":         24,
+         "num_port_bits":     360,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1283,
+         "area":              429696.000000,
+         "num_cells_by_type": {
+            "$_AND_": 549,
+            "$_NOR_": 32,
+            "$_OR_": 574,
+            "$_XNOR_": 64,
+            "$_XOR_": 32,
+            "XP_3x3_M2M3": 16,
+            "XP_3x3_M4M5": 4,
+            "XP_4x4_M4M5": 4,
+            "XP_5x5_M2M3": 8
+         }
+      }
+}
+
+97. Printing statistics.
+
+=== $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum ===
+
+   Number of wires:                 76
+   Number of wire bits:            100
+   Number of public wires:           4
+   Number of public wire bits:      28
+   Number of ports:                  3
+   Number of port bits:             27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 85
+     $_AND_                         49
+     $_OR_                          36
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum ===
+
+   Number of wires:                132
+   Number of wire bits:            164
+   Number of public wires:           4
+   Number of public wire bits:      36
+   Number of ports:                  3
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                145
+     $_AND_                         81
+     $_OR_                          64
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum ===
+
+   Number of wires:                 36
+   Number of wire bits:             52
+   Number of public wires:           4
+   Number of public wire bits:      20
+   Number of ports:                  3
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 41
+     $_AND_                         25
+     $_OR_                          16
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum ===
+
+   Number of wires:                292
+   Number of wire bits:            340
+   Number of public wires:           4
+   Number of public wire bits:      52
+   Number of ports:                  3
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                313
+     $_AND_                        169
+     $_OR_                         144
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum ===
+
+   Number of wires:                196
+   Number of wire bits:            240
+   Number of public wires:           4
+   Number of public wire bits:      48
+   Number of ports:                  3
+   Number of port bits:             47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                215
+     $_AND_                        119
+     $_OR_                          96
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== hamming_64b_cuboid_r4_via ===
+
+   Number of wires:                185
+   Number of wire bits:            772
+   Number of public wires:          16
+   Number of public wire bits:     603
+   Number of ports:                  3
+   Number of port bits:            135
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                365
+     $_AND_                         32
+     $_NOR_                         32
+     $_OR_                         166
+     $_XNOR_                        64
+     $_XOR_                         32
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum is unknown!
+   Area for cell type $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum is unknown!
+   Area for cell type $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum is unknown!
+   Area for cell type $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum is unknown!
+   Area for cell type $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum is unknown!
+
+   Chip area for module '\hamming_64b_cuboid_r4_via': 429696.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+   hamming_64b_cuboid_r4_via         1
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+
+   Number of wires:               1029
+   Number of wire bits:           1820
+   Number of public wires:          44
+   Number of public wire bits:     835
+   Number of ports:                 24
+   Number of port bits:            360
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1283
+     $_AND_                        549
+     $_NOR_                         32
+     $_OR_                         574
+     $_XNOR_                        64
+     $_XOR_                         32
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+   Chip area for top module '\hamming_64b_cuboid_r4_via': 429696.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+98. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    unmapped dff cell: $_DFF_P_
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    unmapped dff cell: $_DFF_PN0_
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+98.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum':
+Mapping DFF cells in module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum':
+Mapping DFF cells in module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum':
+Mapping DFF cells in module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum':
+Mapping DFF cells in module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum':
+Mapping DFF cells in module `\hamming_64b_cuboid_r4_via':
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib ",
+   "modules": {
+      "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": {
+         "num_wires":         76,
+         "num_wire_bits":     100,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 28,
+         "num_ports":         3,
+         "num_port_bits":     27,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         85,
+         "num_cells_by_type": {
+            "$_AND_": 49,
+            "$_OR_": 36
+         }
+      },
+      "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": {
+         "num_wires":         132,
+         "num_wire_bits":     164,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 36,
+         "num_ports":         3,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         145,
+         "num_cells_by_type": {
+            "$_AND_": 81,
+            "$_OR_": 64
+         }
+      },
+      "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": {
+         "num_wires":         36,
+         "num_wire_bits":     52,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 20,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         41,
+         "num_cells_by_type": {
+            "$_AND_": 25,
+            "$_OR_": 16
+         }
+      },
+      "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": {
+         "num_wires":         292,
+         "num_wire_bits":     340,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 52,
+         "num_ports":         3,
+         "num_port_bits":     51,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         313,
+         "num_cells_by_type": {
+            "$_AND_": 169,
+            "$_OR_": 144
+         }
+      },
+      "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": {
+         "num_wires":         196,
+         "num_wire_bits":     240,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 48,
+         "num_ports":         3,
+         "num_port_bits":     47,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         215,
+         "num_cells_by_type": {
+            "$_AND_": 119,
+            "$_OR_": 96
+         }
+      },
+      "\\hamming_64b_cuboid_r4_via": {
+         "num_wires":         185,
+         "num_wire_bits":     772,
+         "num_pub_wires":     16,
+         "num_pub_wire_bits": 603,
+         "num_ports":         3,
+         "num_port_bits":     135,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         365,
+         "area":              429696.000000,
+         "num_cells_by_type": {
+            "$_AND_": 32,
+            "$_NOR_": 32,
+            "$_OR_": 166,
+            "$_XNOR_": 64,
+            "$_XOR_": 32,
+            "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": 2,
+            "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": 1,
+            "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": 2,
+            "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": 1,
+            "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": 1,
+            "XP_3x3_M2M3": 16,
+            "XP_3x3_M4M5": 4,
+            "XP_4x4_M4M5": 4,
+            "XP_5x5_M2M3": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1029,
+         "num_wire_bits":     1820,
+         "num_pub_wires":     44,
+         "num_pub_wire_bits": 835,
+         "num_ports":         24,
+         "num_port_bits":     360,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1283,
+         "area":              429696.000000,
+         "num_cells_by_type": {
+            "$_AND_": 549,
+            "$_NOR_": 32,
+            "$_OR_": 574,
+            "$_XNOR_": 64,
+            "$_XOR_": 32,
+            "XP_3x3_M2M3": 16,
+            "XP_3x3_M4M5": 4,
+            "XP_4x4_M4M5": 4,
+            "XP_5x5_M2M3": 8
+         }
+      }
+}
+
+99. Printing statistics.
+
+=== $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum ===
+
+   Number of wires:                 76
+   Number of wire bits:            100
+   Number of public wires:           4
+   Number of public wire bits:      28
+   Number of ports:                  3
+   Number of port bits:             27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 85
+     $_AND_                         49
+     $_OR_                          36
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum ===
+
+   Number of wires:                132
+   Number of wire bits:            164
+   Number of public wires:           4
+   Number of public wire bits:      36
+   Number of ports:                  3
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                145
+     $_AND_                         81
+     $_OR_                          64
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum ===
+
+   Number of wires:                 36
+   Number of wire bits:             52
+   Number of public wires:           4
+   Number of public wire bits:      20
+   Number of ports:                  3
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 41
+     $_AND_                         25
+     $_OR_                          16
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum ===
+
+   Number of wires:                292
+   Number of wire bits:            340
+   Number of public wires:           4
+   Number of public wire bits:      52
+   Number of ports:                  3
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                313
+     $_AND_                        169
+     $_OR_                         144
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum ===
+
+   Number of wires:                196
+   Number of wire bits:            240
+   Number of public wires:           4
+   Number of public wire bits:      48
+   Number of ports:                  3
+   Number of port bits:             47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                215
+     $_AND_                        119
+     $_OR_                          96
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== hamming_64b_cuboid_r4_via ===
+
+   Number of wires:                185
+   Number of wire bits:            772
+   Number of public wires:          16
+   Number of public wire bits:     603
+   Number of ports:                  3
+   Number of port bits:            135
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                365
+     $_AND_                         32
+     $_NOR_                         32
+     $_OR_                         166
+     $_XNOR_                        64
+     $_XOR_                         32
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum is unknown!
+   Area for cell type $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum is unknown!
+   Area for cell type $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum is unknown!
+   Area for cell type $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum is unknown!
+   Area for cell type $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum is unknown!
+
+   Chip area for module '\hamming_64b_cuboid_r4_via': 429696.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+   hamming_64b_cuboid_r4_via         1
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+
+   Number of wires:               1029
+   Number of wire bits:           1820
+   Number of public wires:          44
+   Number of public wire bits:     835
+   Number of ports:                 24
+   Number of port bits:            360
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1283
+     $_AND_                        549
+     $_NOR_                         32
+     $_OR_                         574
+     $_XNOR_                        64
+     $_XOR_                         32
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+   Chip area for top module '\hamming_64b_cuboid_r4_via': 429696.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+[INFO] Using generated ABC script '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/AREA_3.abc'…
+
+100. Executing ABC pass (technology mapping using ABC).
+
+100.1. Extracting gate netlist of module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum' to `/tmp/yosys-abc-11g5Ml/input.blif'..
+Extracted 85 gates and 99 wires to a netlist network with 14 inputs and 13 outputs.
+
+100.1.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-11g5Ml/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-11g5Ml/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-11g5Ml/input.blif 
+ABC: + read_lib -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib 
+ABC: Library with only 2 cell classes cannot be used.
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TAPx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_L" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_R" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "DECAPx2" due to dont_use attribute.
+ABC: Library "n5_utility_cells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib" has 2 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 7 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.02 MB. Time =     0.00 sec
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Library "xp_via_macros_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib" has 4 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.16 MB. Time =     0.00 sec
+ABC: Warnings: genlib library reader cannot detect the buffer gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the invertor gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the AND2, NAND2, OR2, and NOR2 gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_G" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_A" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_E" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_F" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "AND2via" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "OR2via" due to dont_use attribute.
+ABC: Library "asap5_stdcells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib" has 13 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 6 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.36 MB. Time =     0.00 sec
+ABC: Updated library "xp_via_macros_tt_0p5v_25c" with additional 13 cells from library "asap5_stdcells_tt_0p5v_25c".
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_constr -v /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "INVx2/Y".
+ABC: Setting output load to be 1.000000.
+ABC: + source /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/AREA_3.abc 
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: Cannot find the default PI driving cell (INVx2/Y) in the library.
+ABC: WireLoad = "none"  Gates =     71 ( 19.7 %)   Cap =  0.3 ff (  0.0 %)   Area =  2583000.00 (100.0 %)   Delay =     0.00 ps  ( 16.9 %)               
+ABC: Path  0 --       6 : 0    5 pi      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   0.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      40 : 2    1 NAND2x1 A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  2 --      41 : 3    1 OAI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  3 --      42 : 3    1 AOI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  4 --      43 : 3    1 OAI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   1.0 ff  Cmax =  10.0 ff  G = 1428  
+ABC: Start-point = pi5 (\v [2]).  End-point = po2 (\s [3]).
+ABC: netlist                       : i/o =   14/   13  lat =    0  nd =    71  edge =    156  area =2583000.00  delay = 0.00  lev = 4
+ABC: + write_blif /tmp/yosys-abc-11g5Ml/output.blif 
+
+100.1.2. Re-integrating ABC results.
+ABC RESULTS:             INVx1 cells:       14
+ABC RESULTS:           AOI21x1 cells:       11
+ABC RESULTS:           NAND2x1 cells:       18
+ABC RESULTS:           OAI21x1 cells:       17
+ABC RESULTS:            NOR2x1 cells:       11
+ABC RESULTS:        internal signals:       72
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+
+100.2. Extracting gate netlist of module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum' to `/tmp/yosys-abc-9ijibI/input.blif'..
+Extracted 145 gates and 163 wires to a netlist network with 18 inputs and 17 outputs.
+
+100.2.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-9ijibI/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-9ijibI/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-9ijibI/input.blif 
+ABC: + read_lib -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib 
+ABC: Library with only 2 cell classes cannot be used.
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TAPx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_L" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_R" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "DECAPx2" due to dont_use attribute.
+ABC: Library "n5_utility_cells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib" has 2 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 7 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.02 MB. Time =     0.00 sec
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Library "xp_via_macros_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib" has 4 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.16 MB. Time =     0.00 sec
+ABC: Warnings: genlib library reader cannot detect the buffer gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the invertor gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the AND2, NAND2, OR2, and NOR2 gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_G" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_A" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_E" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_F" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "AND2via" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "OR2via" due to dont_use attribute.
+ABC: Library "asap5_stdcells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib" has 13 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 6 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.36 MB. Time =     0.00 sec
+ABC: Updated library "xp_via_macros_tt_0p5v_25c" with additional 13 cells from library "asap5_stdcells_tt_0p5v_25c".
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_constr -v /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "INVx2/Y".
+ABC: Setting output load to be 1.000000.
+ABC: + source /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/AREA_3.abc 
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: Cannot find the default PI driving cell (INVx2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    112 ( 16.1 %)   Cap =  0.3 ff (  0.0 %)   Area =  4151000.00 (100.0 %)   Delay =     0.00 ps  ( 22.3 %)               
+ABC: Path  0 --      10 : 0    4 pi      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   0.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      59 : 1    6 INVx1   A =28000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.4 ff  Cmax =  10.0 ff  G =  599  
+ABC: Path  2 --     116 : 2    1 NOR2x1  A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  3 --     117 : 3    1 AOI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  4 --     118 : 3    1 OAI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  5 --     119 : 3    1 AOI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  6 --     123 : 2    1 NAND2x1 A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   1.0 ff  Cmax =  10.0 ff  G = 1428  
+ABC: Start-point = pi9 (\v [4]).  End-point = po9 (\s [10]).
+ABC: netlist                       : i/o =   18/   17  lat =    0  nd =   112  edge =    257  area =4151000.00  delay = 0.00  lev = 6
+ABC: + write_blif /tmp/yosys-abc-9ijibI/output.blif 
+
+100.2.2. Re-integrating ABC results.
+ABC RESULTS:             INVx1 cells:       18
+ABC RESULTS:           AOI21x1 cells:       23
+ABC RESULTS:           NAND2x1 cells:       28
+ABC RESULTS:           OAI21x1 cells:       28
+ABC RESULTS:            NOR2x1 cells:       15
+ABC RESULTS:        internal signals:      128
+ABC RESULTS:           input signals:       18
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+100.3. Extracting gate netlist of module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum' to `/tmp/yosys-abc-uzFDWr/input.blif'..
+Extracted 41 gates and 51 wires to a netlist network with 10 inputs and 9 outputs.
+
+100.3.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-uzFDWr/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-uzFDWr/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-uzFDWr/input.blif 
+ABC: + read_lib -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib 
+ABC: Library with only 2 cell classes cannot be used.
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TAPx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_L" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_R" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "DECAPx2" due to dont_use attribute.
+ABC: Library "n5_utility_cells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib" has 2 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 7 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.02 MB. Time =     0.00 sec
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Library "xp_via_macros_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib" has 4 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.16 MB. Time =     0.00 sec
+ABC: Warnings: genlib library reader cannot detect the buffer gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the invertor gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the AND2, NAND2, OR2, and NOR2 gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_G" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_A" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_E" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_F" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "AND2via" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "OR2via" due to dont_use attribute.
+ABC: Library "asap5_stdcells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib" has 13 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 6 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.36 MB. Time =     0.00 sec
+ABC: Updated library "xp_via_macros_tt_0p5v_25c" with additional 13 cells from library "asap5_stdcells_tt_0p5v_25c".
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_constr -v /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "INVx2/Y".
+ABC: Setting output load to be 1.000000.
+ABC: + source /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/AREA_3.abc 
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: Cannot find the default PI driving cell (INVx2/Y) in the library.
+ABC: WireLoad = "none"  Gates =     35 ( 22.9 %)   Cap =  0.3 ff (  0.0 %)   Area =  1267000.00 (100.0 %)   Delay =     0.00 ps  ( 34.3 %)               
+ABC: Path  0 --       6 : 0    5 pi      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   0.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      31 : 2    1 NAND2x1 A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  2 --      32 : 3    1 OAI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  3 --      33 : 3    1 AOI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  4 --      34 : 3    1 OAI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   1.0 ff  Cmax =  10.0 ff  G = 1428  
+ABC: Start-point = pi5 (\v [2]).  End-point = po2 (\s [3]).
+ABC: netlist                       : i/o =   10/    9  lat =    0  nd =    35  edge =     76  area =1267000.00  delay = 0.00  lev = 4
+ABC: + write_blif /tmp/yosys-abc-uzFDWr/output.blif 
+
+100.3.2. Re-integrating ABC results.
+ABC RESULTS:             INVx1 cells:        8
+ABC RESULTS:           AOI21x1 cells:        6
+ABC RESULTS:           NAND2x1 cells:        8
+ABC RESULTS:           OAI21x1 cells:        8
+ABC RESULTS:            NOR2x1 cells:        5
+ABC RESULTS:        internal signals:       32
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        9
+Removing temp directory.
+
+100.4. Extracting gate netlist of module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum' to `/tmp/yosys-abc-eGKPfm/input.blif'..
+Extracted 313 gates and 339 wires to a netlist network with 26 inputs and 25 outputs.
+
+100.4.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-eGKPfm/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-eGKPfm/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-eGKPfm/input.blif 
+ABC: + read_lib -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib 
+ABC: Library with only 2 cell classes cannot be used.
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TAPx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_L" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_R" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "DECAPx2" due to dont_use attribute.
+ABC: Library "n5_utility_cells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib" has 2 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 7 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.02 MB. Time =     0.00 sec
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Library "xp_via_macros_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib" has 4 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.16 MB. Time =     0.00 sec
+ABC: Warnings: genlib library reader cannot detect the buffer gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the invertor gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the AND2, NAND2, OR2, and NOR2 gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_G" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_A" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_E" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_F" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "AND2via" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "OR2via" due to dont_use attribute.
+ABC: Library "asap5_stdcells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib" has 13 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 6 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.36 MB. Time =     0.00 sec
+ABC: Updated library "xp_via_macros_tt_0p5v_25c" with additional 13 cells from library "asap5_stdcells_tt_0p5v_25c".
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_constr -v /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "INVx2/Y".
+ABC: Setting output load to be 1.000000.
+ABC: + source /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/AREA_3.abc 
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: Cannot find the default PI driving cell (INVx2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    239 ( 10.9 %)   Cap =  0.2 ff (  0.0 %)   Area =  8883000.00 (100.0 %)   Delay =     0.00 ps  (  7.9 %)               
+ABC: Path  0 --      25 : 0    5 pi      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   0.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     196 : 1    9 INVx1   A =28000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.6 ff  Cmax =  10.0 ff  G =  899  
+ABC: Path  2 --     259 : 2    1 NOR2x1  A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  3 --     260 : 3    1 AOI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  4 --     261 : 3    1 OAI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  5 --     262 : 3    1 AOI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  6 --     266 : 2    1 NAND2x1 A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   1.0 ff  Cmax =  10.0 ff  G = 1428  
+ABC: Start-point = pi24 (\h [12]).  End-point = po17 (\s [18]).
+ABC: netlist                       : i/o =   26/   25  lat =    0  nd =   239  edge =    552  area =8883000.00  delay = 0.00  lev = 6
+ABC: + write_blif /tmp/yosys-abc-eGKPfm/output.blif 
+
+100.4.2. Re-integrating ABC results.
+ABC RESULTS:             INVx1 cells:       26
+ABC RESULTS:           AOI21x1 cells:       57
+ABC RESULTS:           NAND2x1 cells:       58
+ABC RESULTS:           OAI21x1 cells:       43
+ABC RESULTS:            NOR2x1 cells:       55
+ABC RESULTS:        internal signals:      288
+ABC RESULTS:           input signals:       26
+ABC RESULTS:          output signals:       25
+Removing temp directory.
+
+100.5. Extracting gate netlist of module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum' to `/tmp/yosys-abc-qRCtk9/input.blif'..
+Extracted 215 gates and 239 wires to a netlist network with 24 inputs and 23 outputs.
+
+100.5.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-qRCtk9/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-qRCtk9/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-qRCtk9/input.blif 
+ABC: + read_lib -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib 
+ABC: Library with only 2 cell classes cannot be used.
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TAPx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_L" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_R" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "DECAPx2" due to dont_use attribute.
+ABC: Library "n5_utility_cells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib" has 2 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 7 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.02 MB. Time =     0.00 sec
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Library "xp_via_macros_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib" has 4 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.16 MB. Time =     0.00 sec
+ABC: Warnings: genlib library reader cannot detect the buffer gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the invertor gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the AND2, NAND2, OR2, and NOR2 gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_G" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_A" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_E" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_F" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "AND2via" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "OR2via" due to dont_use attribute.
+ABC: Library "asap5_stdcells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib" has 13 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 6 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.36 MB. Time =     0.00 sec
+ABC: Updated library "xp_via_macros_tt_0p5v_25c" with additional 13 cells from library "asap5_stdcells_tt_0p5v_25c".
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_constr -v /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "INVx2/Y".
+ABC: Setting output load to be 1.000000.
+ABC: + source /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/AREA_3.abc 
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: Cannot find the default PI driving cell (INVx2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    171 ( 14.0 %)   Cap =  0.3 ff (  0.0 %)   Area =  6293000.00 (100.0 %)   Delay =     0.00 ps  (  7.0 %)               
+ABC: Path  0 --       8 : 0    4 pi      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   0.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      59 : 2    1 NAND2x1 A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  2 --      60 : 3    1 OAI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  3 --      61 : 3    1 AOI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  4 --      62 : 3    1 OAI21x1 A =42000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   1.0 ff  Cmax =  10.0 ff  G = 1428  
+ABC: Start-point = pi7 (\v [3]).  End-point = po2 (\s [3]).
+ABC: netlist                       : i/o =   24/   23  lat =    0  nd =   171  edge =    386  area =6293000.00  delay = 0.00  lev = 4
+ABC: + write_blif /tmp/yosys-abc-qRCtk9/output.blif 
+
+100.5.2. Re-integrating ABC results.
+ABC RESULTS:             INVx1 cells:       24
+ABC RESULTS:           AOI21x1 cells:       21
+ABC RESULTS:           NAND2x1 cells:       58
+ABC RESULTS:           OAI21x1 cells:       47
+ABC RESULTS:            NOR2x1 cells:       21
+ABC RESULTS:        internal signals:      192
+ABC RESULTS:           input signals:       24
+ABC RESULTS:          output signals:       23
+Removing temp directory.
+
+100.6. Extracting gate netlist of module `\hamming_64b_cuboid_r4_via' to `/tmp/yosys-abc-gBuj6n/input.blif'..
+Extracted 326 gates and 572 wires to a netlist network with 246 inputs and 157 outputs.
+
+100.6.1. Executing ABC.
+Running ABC command: "/nix/store/0lcxf72vg49zlzrv7vlsnv0ibna09hwx-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-gBuj6n/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-gBuj6n/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-gBuj6n/input.blif 
+ABC: + read_lib -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib 
+ABC: Library with only 2 cell classes cannot be used.
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLx4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TAPx1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_L" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "ENDCAP_R" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "DECAPx2" due to dont_use attribute.
+ABC: Library "n5_utility_cells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib" has 2 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 7 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.02 MB. Time =     0.00 sec
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Library "xp_via_macros_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib" has 4 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.16 MB. Time =     0.00 sec
+ABC: Warnings: genlib library reader cannot detect the buffer gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the invertor gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warnings: genlib library reader cannot detect the AND2, NAND2, OR2, and NOR2 gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_lib -m -w /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_G" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_A" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_E" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FUSED_F" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "AND2via" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "OR2via" due to dont_use attribute.
+ABC: Library "asap5_stdcells_tt_0p5v_25c" from "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib" has 13 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 6 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.36 MB. Time =     0.00 sec
+ABC: Updated library "xp_via_macros_tt_0p5v_25c" with additional 13 cells from library "asap5_stdcells_tt_0p5v_25c".
+ABC: Warning: Detected 22 multi-output gates (for example, "XP_3x3_M2M3").
+ABC: + read_constr -v /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "INVx2/Y".
+ABC: Setting output load to be 1.000000.
+ABC: + source /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/02-yosys-synthesis/AREA_3.abc 
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: Cannot find the default PI driving cell (INVx2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    457 ( 30.4 %)   Cap =  0.3 ff (  0.0 %)   Area = 15918000.00 (100.0 %)   Delay =     0.00 ps  (  1.5 %)               
+ABC: Path  0 --       8 : 0    2 pi      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   0.1 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     429 : 2    1 NOR2x1  A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  2 --     431 : 2    1 NAND2x1 A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  3 --     432 : 2    1 NOR2x1  A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  4 --     434 : 2    1 NAND2x1 A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  100  
+ABC: Path  5 --     435 : 2    2 NOR2x1  A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   0.1 ff  Cmax =  10.0 ff  G =  200  
+ABC: Path  6 --     436 : 2    1 NAND2x1 A =35000.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.1 ff  Cout =   1.0 ff  Cmax =  10.0 ff  G = 1428  
+ABC: Start-point = pi7 (\low_sum [7]).  End-point = po6 (\hd [0]).
+ABC: netlist                       : i/o =  246/  157  lat =    0  nd =   457  edge =    775  area =15918000.00  delay = 0.00  lev = 6
+ABC: + write_blif /tmp/yosys-abc-gBuj6n/output.blif 
+
+100.6.2. Re-integrating ABC results.
+ABC RESULTS:           XNOR2x1 cells:       64
+ABC RESULTS:             INVx1 cells:      139
+ABC RESULTS:            NOR2x1 cells:      174
+ABC RESULTS:           NAND2x1 cells:       80
+ABC RESULTS:        internal signals:      169
+ABC RESULTS:           input signals:      246
+ABC RESULTS:          output signals:      157
+Removing temp directory.
+
+101. Executing SETUNDEF pass (replace undef values with defined constants).
+
+102. Executing HILOMAP pass (mapping to constant drivers).
+
+103. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+104. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum..
+Finding unused cells or wires in module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum..
+Finding unused cells or wires in module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum..
+Finding unused cells or wires in module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum..
+Finding unused cells or wires in module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum..
+Finding unused cells or wires in module \hamming_64b_cuboid_r4_via..
+Removed 0 unused cells and 1472 unused wires.
+<suppressed ~15 debug messages>
+
+105. Executing INSBUF pass (insert buffer cells for connected wires).
+Add $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum/$auto$insbuf.cc:97:execute$4642: \sum_bit[0].grid_and -> \s [0]
+Add $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum/$auto$insbuf.cc:97:execute$4643: \sum_bit[0].grid_and -> \s [0]
+Add $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum/$auto$insbuf.cc:97:execute$4644: \sum_bit[0].grid_and -> \s [0]
+Add $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum/$auto$insbuf.cc:97:execute$4645: \sum_bit[0].grid_and -> \s [0]
+Add $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum/$auto$insbuf.cc:97:execute$4646: \sum_bit[0].grid_and -> \s [0]
+
+106. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum...
+Checking module $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum...
+Checking module $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum...
+Checking module $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum...
+Checking module $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum...
+Checking module hamming_64b_cuboid_r4_via...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/8398f4ea356e4570894ac9b052bcd652.lib -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/1f45d881ea0b4a4c9db9cea04c1bb122.lib -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/tmp/3e68974a1bc34f889805fc0a9afe3307.lib ",
+   "modules": {
+      "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": {
+         "num_wires":         62,
+         "num_wire_bits":     86,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 28,
+         "num_ports":         3,
+         "num_port_bits":     27,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         72,
+         "area":              2597000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 11,
+            "BUFx1": 1,
+            "INVx1": 14,
+            "NAND2x1": 18,
+            "NOR2x1": 11,
+            "OAI21x1": 17
+         }
+      },
+      "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": {
+         "num_wires":         99,
+         "num_wire_bits":     131,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 36,
+         "num_ports":         3,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         113,
+         "area":              4165000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 23,
+            "BUFx1": 1,
+            "INVx1": 18,
+            "NAND2x1": 28,
+            "NOR2x1": 15,
+            "OAI21x1": 28
+         }
+      },
+      "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": {
+         "num_wires":         30,
+         "num_wire_bits":     46,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 20,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         36,
+         "area":              1281000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 6,
+            "BUFx1": 1,
+            "INVx1": 8,
+            "NAND2x1": 8,
+            "NOR2x1": 5,
+            "OAI21x1": 8
+         }
+      },
+      "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": {
+         "num_wires":         218,
+         "num_wire_bits":     266,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 52,
+         "num_ports":         3,
+         "num_port_bits":     51,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         240,
+         "area":              8897000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 57,
+            "BUFx1": 1,
+            "INVx1": 26,
+            "NAND2x1": 58,
+            "NOR2x1": 55,
+            "OAI21x1": 43
+         }
+      },
+      "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": {
+         "num_wires":         152,
+         "num_wire_bits":     196,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 48,
+         "num_ports":         3,
+         "num_port_bits":     47,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         172,
+         "area":              6307000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 21,
+            "BUFx1": 1,
+            "INVx1": 24,
+            "NAND2x1": 58,
+            "NOR2x1": 21,
+            "OAI21x1": 47
+         }
+      },
+      "\\hamming_64b_cuboid_r4_via": {
+         "num_wires":         762,
+         "num_wire_bits":     894,
+         "num_pub_wires":     462,
+         "num_pub_wire_bits": 594,
+         "num_ports":         3,
+         "num_port_bits":     135,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         496,
+         "area":              16347696.000000,
+         "num_cells_by_type": {
+            "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": 2,
+            "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": 1,
+            "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": 2,
+            "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": 1,
+            "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": 1,
+            "INVx1": 139,
+            "NAND2x1": 80,
+            "NOR2x1": 174,
+            "XNOR2x1": 64,
+            "XP_3x3_M2M3": 16,
+            "XP_3x3_M4M5": 4,
+            "XP_4x4_M4M5": 4,
+            "XP_5x5_M2M3": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1415,
+         "num_wire_bits":     1751,
+         "num_pub_wires":     490,
+         "num_pub_wire_bits": 826,
+         "num_ports":         24,
+         "num_port_bits":     360,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1230,
+         "area":              43472696.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 135,
+            "BUFx1": 7,
+            "INVx1": 251,
+            "NAND2x1": 276,
+            "NOR2x1": 297,
+            "OAI21x1": 168,
+            "XNOR2x1": 64,
+            "XP_3x3_M2M3": 16,
+            "XP_3x3_M4M5": 4,
+            "XP_4x4_M4M5": 4,
+            "XP_5x5_M2M3": 8
+         }
+      }
+}
+
+107. Printing statistics.
+
+=== $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum ===
+
+   Number of wires:                 62
+   Number of wire bits:             86
+   Number of public wires:           4
+   Number of public wire bits:      28
+   Number of ports:                  3
+   Number of port bits:             27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 72
+     AOI21x1                        11
+     BUFx1                           1
+     INVx1                          14
+     NAND2x1                        18
+     NOR2x1                         11
+     OAI21x1                        17
+
+   Chip area for module '$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum': 2597000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum ===
+
+   Number of wires:                 99
+   Number of wire bits:            131
+   Number of public wires:           4
+   Number of public wire bits:      36
+   Number of ports:                  3
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                113
+     AOI21x1                        23
+     BUFx1                           1
+     INVx1                          18
+     NAND2x1                        28
+     NOR2x1                         15
+     OAI21x1                        28
+
+   Chip area for module '$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum': 4165000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum ===
+
+   Number of wires:                 30
+   Number of wire bits:             46
+   Number of public wires:           4
+   Number of public wire bits:      20
+   Number of ports:                  3
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 36
+     AOI21x1                         6
+     BUFx1                           1
+     INVx1                           8
+     NAND2x1                         8
+     NOR2x1                          5
+     OAI21x1                         8
+
+   Chip area for module '$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum': 1281000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum ===
+
+   Number of wires:                218
+   Number of wire bits:            266
+   Number of public wires:           4
+   Number of public wire bits:      52
+   Number of ports:                  3
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                240
+     AOI21x1                        57
+     BUFx1                           1
+     INVx1                          26
+     NAND2x1                        58
+     NOR2x1                         55
+     OAI21x1                        43
+
+   Chip area for module '$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum': 8897000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum ===
+
+   Number of wires:                152
+   Number of wire bits:            196
+   Number of public wires:           4
+   Number of public wire bits:      48
+   Number of ports:                  3
+   Number of port bits:             47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                172
+     AOI21x1                        21
+     BUFx1                           1
+     INVx1                          24
+     NAND2x1                        58
+     NOR2x1                         21
+     OAI21x1                        47
+
+   Chip area for module '$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum': 6307000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== hamming_64b_cuboid_r4_via ===
+
+   Number of wires:                762
+   Number of wire bits:            894
+   Number of public wires:         462
+   Number of public wire bits:     594
+   Number of ports:                  3
+   Number of port bits:            135
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                496
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+     INVx1                         139
+     NAND2x1                        80
+     NOR2x1                        174
+     XNOR2x1                        64
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+   Area for cell type $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum is unknown!
+   Area for cell type $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum is unknown!
+   Area for cell type $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum is unknown!
+   Area for cell type $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum is unknown!
+   Area for cell type $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum is unknown!
+
+   Chip area for module '\hamming_64b_cuboid_r4_via': 16347696.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+   hamming_64b_cuboid_r4_via         1
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+
+   Number of wires:               1415
+   Number of wire bits:           1751
+   Number of public wires:         490
+   Number of public wire bits:     826
+   Number of ports:                 24
+   Number of port bits:            360
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1230
+     AOI21x1                       135
+     BUFx1                           7
+     INVx1                         251
+     NAND2x1                       276
+     NOR2x1                        297
+     OAI21x1                       168
+     XNOR2x1                        64
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+   Chip area for top module '\hamming_64b_cuboid_r4_via': 43472696.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+108. Executing Verilog backend.
+Dumping module `$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum'.
+Dumping module `$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum'.
+Dumping module `$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum'.
+Dumping module `$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum'.
+Dumping module `$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum'.
+Dumping module `\hamming_64b_cuboid_r4_via'.
+
+109. Executing JSON backend.

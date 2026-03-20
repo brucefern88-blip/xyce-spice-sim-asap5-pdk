@@ -1,0 +1,115 @@
+* =============================================================================
+* ASAP5 PDK — ngspice-Compatible BSIM-CMG Model Wrapper Library
+* =============================================================================
+*
+* Wraps the Arizona State ASAP5 nanosheet (GAA) BSIM-CMG models for use
+* with ngspice. Original models target HSPICE; this wrapper resolves
+* include paths and provides .lib/.endl corner sections.
+*
+* Device geometry (geomod=3, nanosheet/nanowire):
+*   Lg = 16 nm, Leff = 14 nm, CGP = 44 nm
+*   Nanosheet width (d) = 8 nm, height (hfin) = 32 nm
+*   Sheet pitch = 24 nm, VDD = 0.7 V
+*
+* Model names (ASAP5 native — use directly):
+*   NMOS: nmos_lvt, nmos_rvt, nmos_slvt, nmos_sram
+*   PMOS: pmos_lvt, pmos_rvt, pmos_slvt, pmos_sram
+*
+* Multi-sheet instantiation: use m=N on the instance line.
+*   Example: mn1 d g s b nmos_lvt m=2    $ 2 nanosheets
+*
+* Usage:
+*   .lib '/Users/bruce/CLAUDE/asap5/spice/asap5_ngspice.lib' tt
+*
+* Corners: tt, ff, ss, sf, fs
+* =============================================================================
+
+.param asap5_vdd = 0.7
+
+* --- Model base path ---
+* All .include paths are absolute to avoid working-directory issues.
+
+
+* =============================================================================
+* TYPICAL-TYPICAL CORNER
+* =============================================================================
+.lib tt
+
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_lvt_tt_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_rvt_tt_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_slvt_tt_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_sram_tt_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_lvt_tt_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_rvt_tt_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_slvt_tt_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_sram_tt_hc_nwfet_asap5.pm'
+
+.endl tt
+
+
+* =============================================================================
+* FAST-FAST CORNER
+* =============================================================================
+.lib ff
+
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_lvt_ff_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_rvt_ff_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_slvt_ff_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_sram_ff_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_lvt_ff_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_rvt_ff_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_slvt_ff_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_sram_ff_hc_nwfet_asap5.pm'
+
+.endl ff
+
+
+* =============================================================================
+* SLOW-SLOW CORNER
+* =============================================================================
+.lib ss
+
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_lvt_ss_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_rvt_ss_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_slvt_ss_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_sram_ss_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_lvt_ss_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_rvt_ss_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_slvt_ss_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_sram_ss_hc_nwfet_asap5.pm'
+
+.endl ss
+
+
+* =============================================================================
+* SLOW-N FAST-P CORNER
+* =============================================================================
+.lib sf
+
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_lvt_sf_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_rvt_sf_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_slvt_sf_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_sram_sf_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_lvt_sf_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_rvt_sf_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_slvt_sf_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_sram_sf_hc_nwfet_asap5.pm'
+
+.endl sf
+
+
+* =============================================================================
+* FAST-N SLOW-P CORNER
+* =============================================================================
+.lib fs
+
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_lvt_fs_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_rvt_fs_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_slvt_fs_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/nmos_sram_fs_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_lvt_fs_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_rvt_fs_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_slvt_fs_hc_nwfet_asap5.pm'
+.include '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/models/hspice/allvt_cgp44_210623a/nwfet/pmos_sram_fs_hc_nwfet_asap5.pm'
+
+.endl fs

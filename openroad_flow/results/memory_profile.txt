@@ -1,0 +1,81 @@
+=================================================================
+  OpenROAD Memory Profile - Counter PnR Flow
+  Started: 2026-03-18 15:19:51
+=================================================================
+
+00-BASELINE: before_any_load              RSS:    49392 KB  (  48.2 MB)  @ 2026-03-18 15:19:52
+01-READ_LIBS: before                      RSS:    49168 KB  (  48.0 MB)  @ 2026-03-18 15:19:52
+01-READ_LIBS: after_lef                   RSS:    51120 KB  (  49.9 MB)  @ 2026-03-18 15:19:52
+01-READ_LIBS: after_liberty               RSS:    57296 KB  (  56.0 MB)  @ 2026-03-18 15:19:53
+01-READ_LIBS: after_verilog_link          RSS:    58976 KB  (  57.6 MB)  @ 2026-03-18 15:19:53
+01-READ_LIBS: after_sdc                   RSS:    59712 KB  (  58.3 MB)  @ 2026-03-18 15:19:53
+02-FLOORPLAN: before                      RSS:    56112 KB  (  54.8 MB)  @ 2026-03-18 15:19:53
+02-FLOORPLAN: after                       RSS:    55440 KB  (  54.1 MB)  @ 2026-03-18 15:19:53
+03-TAPCELL: before                        RSS:    55184 KB  (  53.9 MB)  @ 2026-03-18 15:19:53
+03-TAPCELL: after                         RSS:    54320 KB  (  53.0 MB)  @ 2026-03-18 15:19:53
+04-PDN: before                            RSS:    54320 KB  (  53.0 MB)  @ 2026-03-18 15:19:53
+04-PDN: after                             RSS:    56368 KB  (  55.0 MB)  @ 2026-03-18 15:19:53
+05-GLOBAL_PLACE: before                   RSS:    56368 KB  (  55.0 MB)  @ 2026-03-18 15:19:53
+05-GLOBAL_PLACE: after                    RSS:   184096 KB  ( 179.8 MB)  @ 2026-03-18 15:19:54
+06-REPAIR_DESIGN: before                  RSS:   184112 KB  ( 179.8 MB)  @ 2026-03-18 15:19:54
+06-REPAIR_DESIGN: after                   RSS:   215216 KB  ( 210.2 MB)  @ 2026-03-18 15:19:54
+07-DETAIL_PLACE: before                   RSS:   215216 KB  ( 210.2 MB)  @ 2026-03-18 15:19:54
+07-DETAIL_PLACE: after                    RSS:   216736 KB  ( 211.7 MB)  @ 2026-03-18 15:19:54
+08-CTS: before                            RSS:   216752 KB  ( 211.7 MB)  @ 2026-03-18 15:19:54
+08-CTS: after                             RSS:    89744 KB  (  87.6 MB)  @ 2026-03-18 15:19:57
+09-TIMING_REPAIR: before                  RSS:    85248 KB  (  83.2 MB)  @ 2026-03-18 15:19:57
+09-TIMING_REPAIR: after                   RSS:    85968 KB  (  84.0 MB)  @ 2026-03-18 15:19:57
+10-FINAL_DPLACE: before                   RSS:    85984 KB  (  84.0 MB)  @ 2026-03-18 15:19:57
+10-FINAL_DPLACE: after                    RSS:    82896 KB  (  81.0 MB)  @ 2026-03-18 15:19:57
+11-GLOBAL_ROUTE: before                   RSS:    82848 KB  (  80.9 MB)  @ 2026-03-18 15:19:57
+11-GLOBAL_ROUTE: after                    RSS:   235696 KB  ( 230.2 MB)  @ 2026-03-18 15:20:10
+12-ANTENNA: before                        RSS:   235504 KB  ( 230.0 MB)  @ 2026-03-18 15:20:10
+12-ANTENNA: after                         RSS:   236256 KB  ( 230.7 MB)  @ 2026-03-18 15:20:10
+13-DETAIL_ROUTE: before                   RSS:   236256 KB  ( 230.7 MB)  @ 2026-03-18 15:20:10
+13-DETAIL_ROUTE: after                    RSS:   485856 KB  ( 474.5 MB)  @ 2026-03-18 15:20:21
+14-FILLER: before                         RSS:   488640 KB  ( 477.2 MB)  @ 2026-03-18 15:20:21
+14-FILLER: after                          RSS:   492272 KB  ( 480.7 MB)  @ 2026-03-18 15:20:21
+15-EXTRACTION: before                     RSS:   490432 KB  ( 478.9 MB)  @ 2026-03-18 15:20:21
+15-EXTRACTION: after                      RSS:   497776 KB  ( 486.1 MB)  @ 2026-03-18 15:20:22
+16-FINAL_STA: before                      RSS:   482592 KB  ( 471.3 MB)  @ 2026-03-18 15:20:22
+16-FINAL_STA: after                       RSS:   463040 KB  ( 452.2 MB)  @ 2026-03-18 15:20:22
+
+=================================================================
+  MEMORY PROFILE SUMMARY
+=================================================================
+
+Stage                     Before(KB)  After(KB)  Delta(KB)  Delta(MB)
+----------------------------------------------------------------------
+01-READ_LIBS                   49168      59712      10544       10.3
+02-FLOORPLAN                   56112      55440       -672       -0.7
+03-TAPCELL                     55184      54320       -864       -0.8
+04-PDN                         54320      56368       2048        2.0
+05-GLOBAL_PLACE                56368     184096     127728      124.7
+06-REPAIR_DESIGN              184112     215216      31104       30.4
+07-DETAIL_PLACE               215216     216736       1520        1.5
+08-CTS                        216752      89744    -127008     -124.0
+09-TIMING_REPAIR               85248      85968        720        0.7
+10-FINAL_DPLACE                85984      82896      -3088       -3.0
+11-GLOBAL_ROUTE                82848     235696     152848      149.3
+12-ANTENNA                    235504     236256        752        0.7
+13-DETAIL_ROUTE               236256     485856     249600      243.8
+14-FILLER                     488640     492272       3632        3.5
+15-EXTRACTION                 490432     497776       7344        7.2
+16-FINAL_STA                  482592     463040     -19552      -19.1
+
+Peak RSS:             497776 KB (486.1 MB) at 15-EXTRACTION (after)
+Baseline RSS:         49392 KB (48.2 MB)
+Total growth:         448384 KB (437.9 MB)
+
+RSS is NOT monotonically increasing - some stages released memory.
+
+Stages with memory increase: 11 / 16
+
+--- Largest memory consumers (by delta) ---
+  #1: 13-DETAIL_ROUTE  +249600 KB (+243.8 MB)
+  #2: 11-GLOBAL_ROUTE  +152848 KB (+149.3 MB)
+  #3: 05-GLOBAL_PLACE  +127728 KB (+124.7 MB)
+  #4: 06-REPAIR_DESIGN  +31104 KB (+30.4 MB)
+  #5: 01-READ_LIBS  +10544 KB (+10.3 MB)
+
+Completed: 2026-03-18 15:20:22

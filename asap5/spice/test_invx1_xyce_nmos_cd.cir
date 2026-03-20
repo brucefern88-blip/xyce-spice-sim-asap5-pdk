@@ -1,0 +1,23 @@
+* =============================================================================
+* test_invx1_xyce_nmos_cd.cir — ASAP5 NMOS Cd (nfin=2)
+* =============================================================================
+* Cd = Cds + Cdg: AC on drain only, gate DC
+* Bias: Vgs=0.35V, Vds=0.35V (saturation)
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+
+vg  gate   0  dc 0.35
+vd  drain  0  dc 0.35 ac 1
+vs  source 0  dc 0
+
+mn1 drain gate source source nmos_lvt l=16n nfin=2
+
+.AC DEC 10 1e8 1e11
+.PRINT AC II(vd) IR(vd)
+
+.END

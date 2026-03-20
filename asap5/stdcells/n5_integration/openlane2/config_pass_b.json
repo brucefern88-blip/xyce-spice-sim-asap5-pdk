@@ -1,0 +1,53 @@
+{
+    "meta": { "version": 2 },
+
+    "DESIGN_NAME": "hamming_64b_cuboid_r4",
+    "VERILOG_FILES": [
+        "/Users/bruce/Desktop/hamming_64b_cuboid_r4.v"
+    ],
+
+    "CLOCK_PORT": "",
+    "CLOCK_PERIOD": 0.200,
+    "BASE_SDC_FILE": "/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/sdc/hamming_cuboid_r4.sdc",
+
+    "LIB": {
+        "nom_tt_025C_0v50": [
+            "/Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib"
+        ]
+    },
+    "STA_CORNERS": ["nom_tt_025C_0v50"],
+    "DEFAULT_CORNER": "nom_tt_025C_0v50",
+    "TIMING_VIOLATION_CORNERS": ["nom_tt_025C_0v50"],
+
+    "FP_SIZING": "absolute",
+    "DIE_AREA": [0, 0, 15, 15],
+    "FP_CORE_UTIL": 35,
+    "BOTTOM_MARGIN_MULT": 4,
+    "TOP_MARGIN_MULT": 4,
+    "LEFT_MARGIN_MULT": 4,
+    "RIGHT_MARGIN_MULT": 4,
+
+    "PL_TARGET_DENSITY_PCT": 35,
+    "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 2,
+
+    "RT_MIN_LAYER": "M1",
+    "RT_MAX_LAYER": "M10",
+
+    "SYNTH_STRATEGY": "DELAY 3",
+    "SYNTH_MAX_FANOUT": 8,
+    "SYNTH_NO_FLAT": false,
+    "SYNTH_BUFFERING": true,
+    "SYNTH_SIZING": true,
+
+    "RUN_CTS": false,
+    "RUN_FILL_INSERTION": false,
+    "RUN_MAGIC_DRC": false,
+    "RUN_KLAYOUT_DRC": false,
+    "RUN_LVS": false,
+    "RUN_MAGIC_STREAMOUT": false,
+    "RUN_KLAYOUT_STREAMOUT": false,
+    "RUN_LINTER": false,
+
+    "STA_REPORT_POWER": true,
+    "GRT_ALLOW_CONGESTION": true
+}

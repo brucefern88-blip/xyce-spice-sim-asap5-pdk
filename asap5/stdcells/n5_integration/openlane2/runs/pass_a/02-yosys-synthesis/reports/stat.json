@@ -1,0 +1,202 @@
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 16.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/pass_a/tmp/26b21aa0358344ae9f4f9afb5753485b.lib -liberty /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/pass_a/tmp/b8c8a076041d427aaf603672ffab633f.lib ",
+   "modules": {
+      "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": {
+         "num_wires":         62,
+         "num_wire_bits":     86,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 28,
+         "num_ports":         3,
+         "num_port_bits":     27,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         72,
+         "area":              2597000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 11,
+            "BUFx1": 1,
+            "INVx1": 14,
+            "NAND2x1": 18,
+            "NOR2x1": 11,
+            "OAI21x1": 17
+         }
+      },
+      "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": {
+         "num_wires":         99,
+         "num_wire_bits":     131,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 36,
+         "num_ports":         3,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         113,
+         "area":              4165000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 23,
+            "BUFx1": 1,
+            "INVx1": 18,
+            "NAND2x1": 28,
+            "NOR2x1": 15,
+            "OAI21x1": 28
+         }
+      },
+      "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": {
+         "num_wires":         30,
+         "num_wire_bits":     46,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 20,
+         "num_ports":         3,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         36,
+         "area":              1281000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 6,
+            "BUFx1": 1,
+            "INVx1": 8,
+            "NAND2x1": 8,
+            "NOR2x1": 5,
+            "OAI21x1": 8
+         }
+      },
+      "$paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\\crosspoint_sum": {
+         "num_wires":         22,
+         "num_wire_bits":     34,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 16,
+         "num_ports":         3,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         26,
+         "area":              889000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 4,
+            "BUFx1": 1,
+            "INVx1": 8,
+            "NAND2x1": 3,
+            "NOR2x1": 6,
+            "OAI21x1": 4
+         }
+      },
+      "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": {
+         "num_wires":         218,
+         "num_wire_bits":     266,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 52,
+         "num_ports":         3,
+         "num_port_bits":     51,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         240,
+         "area":              8897000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 57,
+            "BUFx1": 1,
+            "INVx1": 26,
+            "NAND2x1": 58,
+            "NOR2x1": 55,
+            "OAI21x1": 43
+         }
+      },
+      "$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\\crosspoint_sum": {
+         "num_wires":         14,
+         "num_wire_bits":     22,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 12,
+         "num_ports":         3,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         16,
+         "area":              525000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 1,
+            "BUFx1": 1,
+            "INVx1": 6,
+            "NAND2x1": 2,
+            "NOR2x1": 3,
+            "OAI21x1": 3
+         }
+      },
+      "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": {
+         "num_wires":         152,
+         "num_wire_bits":     196,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 48,
+         "num_ports":         3,
+         "num_port_bits":     47,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         172,
+         "area":              6307000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 21,
+            "BUFx1": 1,
+            "INVx1": 24,
+            "NAND2x1": 58,
+            "NOR2x1": 21,
+            "OAI21x1": 47
+         }
+      },
+      "\\hamming_64b_cuboid_r4_xp": {
+         "num_wires":         762,
+         "num_wire_bits":     894,
+         "num_pub_wires":     462,
+         "num_pub_wire_bits": 594,
+         "num_ports":         3,
+         "num_port_bits":     135,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         496,
+         "area":              15918000.000000,
+         "num_cells_by_type": {
+            "$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\\crosspoint_sum": 2,
+            "$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\\crosspoint_sum": 1,
+            "$paramod$8edda239f4d2df5686186831f84415ebef22b7be\\crosspoint_sum": 10,
+            "$paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\\crosspoint_sum": 4,
+            "$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\\crosspoint_sum": 1,
+            "$paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\\crosspoint_sum": 20,
+            "$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\\crosspoint_sum": 1,
+            "INVx1": 139,
+            "NAND2x1": 80,
+            "NOR2x1": 174,
+            "XNOR2x1": 64
+         }
+      }
+   },
+      "design": {
+         "num_wires":         2023,
+         "num_wire_bits":     2695,
+         "num_pub_wires":     618,
+         "num_pub_wire_bits": 1290,
+         "num_ports":         120,
+         "num_port_bits":     792,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1910,
+         "area":              67347000.000000,
+         "num_cells_by_type": {
+            "AOI21x1": 219,
+            "BUFx1": 39,
+            "INVx1": 467,
+            "NAND2x1": 392,
+            "NOR2x1": 421,
+            "OAI21x1": 308,
+            "XNOR2x1": 64
+         }
+      }
+}
+

@@ -1,0 +1,181 @@
+107. Printing statistics.
+
+=== $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum ===
+
+   Number of wires:                 62
+   Number of wire bits:             86
+   Number of public wires:           4
+   Number of public wire bits:      28
+   Number of ports:                  3
+   Number of port bits:             27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 72
+     AOI21x1                        11
+     BUFx1                           1
+     INVx1                          14
+     NAND2x1                        18
+     NOR2x1                         11
+     OAI21x1                        17
+
+   Chip area for module '$paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum': 2597000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum ===
+
+   Number of wires:                 99
+   Number of wire bits:            131
+   Number of public wires:           4
+   Number of public wire bits:      36
+   Number of ports:                  3
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                113
+     AOI21x1                        23
+     BUFx1                           1
+     INVx1                          18
+     NAND2x1                        28
+     NOR2x1                         15
+     OAI21x1                        28
+
+   Chip area for module '$paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum': 4165000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum ===
+
+   Number of wires:                 30
+   Number of wire bits:             46
+   Number of public wires:           4
+   Number of public wire bits:      20
+   Number of ports:                  3
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 36
+     AOI21x1                         6
+     BUFx1                           1
+     INVx1                           8
+     NAND2x1                         8
+     NOR2x1                          5
+     OAI21x1                         8
+
+   Chip area for module '$paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum': 1281000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum ===
+
+   Number of wires:                218
+   Number of wire bits:            266
+   Number of public wires:           4
+   Number of public wire bits:      52
+   Number of ports:                  3
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                240
+     AOI21x1                        57
+     BUFx1                           1
+     INVx1                          26
+     NAND2x1                        58
+     NOR2x1                         55
+     OAI21x1                        43
+
+   Chip area for module '$paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum': 8897000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum ===
+
+   Number of wires:                152
+   Number of wire bits:            196
+   Number of public wires:           4
+   Number of public wire bits:      48
+   Number of ports:                  3
+   Number of port bits:             47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                172
+     AOI21x1                        21
+     BUFx1                           1
+     INVx1                          24
+     NAND2x1                        58
+     NOR2x1                         21
+     OAI21x1                        47
+
+   Chip area for module '$paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum': 6307000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== hamming_64b_cuboid_r4_via ===
+
+   Number of wires:                762
+   Number of wire bits:            894
+   Number of public wires:         462
+   Number of public wire bits:     594
+   Number of ports:                  3
+   Number of port bits:            135
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                496
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+     INVx1                         139
+     NAND2x1                        80
+     NOR2x1                        174
+     XNOR2x1                        64
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+   Area for cell type $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum is unknown!
+   Area for cell type $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum is unknown!
+   Area for cell type $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum is unknown!
+   Area for cell type $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum is unknown!
+   Area for cell type $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum is unknown!
+
+   Chip area for module '\hamming_64b_cuboid_r4_via': 16347696.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+   hamming_64b_cuboid_r4_via         1
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum      2
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+
+   Number of wires:               1415
+   Number of wire bits:           1751
+   Number of public wires:         490
+   Number of public wire bits:     826
+   Number of ports:                 24
+   Number of port bits:            360
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1230
+     AOI21x1                       135
+     BUFx1                           7
+     INVx1                         251
+     NAND2x1                       276
+     NOR2x1                        297
+     OAI21x1                       168
+     XNOR2x1                        64
+     XP_3x3_M2M3                    16
+     XP_3x3_M4M5                     4
+     XP_4x4_M4M5                     4
+     XP_5x5_M2M3                     8
+
+   Chip area for top module '\hamming_64b_cuboid_r4_via': 43472696.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+

@@ -1,0 +1,2276 @@
+Reading OpenROAD database at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/30-openroad-globalrouting/hamming_64b_cuboid_r4_via.odb'…
+Reading library file at '/Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib'…
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 134, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 145, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 231, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 242, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 339, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 471, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 482, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 497, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 508, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 651, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 677, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 855, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 866, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 881, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 892, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 907, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 918, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1096, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1107, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1122, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1133, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1148, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1159, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1291, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1302, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1317, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1460, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1471, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1486, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1497, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1629, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1655, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1798, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1809, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1824, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1835, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2013, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2024, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2039, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2050, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2065, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2076, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2302, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2313, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2339, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2354, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2365, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2380, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2391, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2577, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2588, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2603, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2614, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2629, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2655, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2892, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2903, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2918, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2929, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2944, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2955, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2970, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2981, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3167, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3178, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3193, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3204, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3219, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3230, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3245, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3256, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3442, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3453, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3468, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3479, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3494, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3505, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3520, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3531, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3757, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3768, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3783, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3794, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3809, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3820, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3835, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3846, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4032, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4043, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4058, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4069, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4084, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4095, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4110, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4121, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4307, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4318, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4333, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4344, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4359, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4370, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4385, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4396, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4622, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4633, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4648, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4659, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4674, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4685, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4700, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4711, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4897, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4908, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4923, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4934, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4949, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4960, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4975, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4986, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 5041, table template scalar not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 5042, table template scalar not found.
+Reading library file at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/lib/n5_utility_cells_tt_0p5v_25c.lib'…
+Reading library file at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib'…
+Reading extra library file at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib'…
+[WARNING STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+Reading design constraints file at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/sdc/hamming_cuboid_r4.sdc'…
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[WARNING STA-0450] virtual clock vclk can not be propagated.
+[INFO ORD-0030] Using 10 thread(s).
+[INFO DRT-0149] Reading tech and libs.
+
+Units:                1000
+Number of layers:     25
+Number of macros:     32
+Number of vias:       11
+Number of viarulegen: 11
+
+[INFO DRT-0150] Reading design.
+
+Design:                   hamming_64b_cuboid_r4_via
+Die area:                 ( 0 0 ) ( 10000 10000 )
+Number of track patterns: 24
+Number of DEF vias:       0
+Number of components:     1326
+Number of terminals:      135
+Number of snets:          2
+Number of nets:           1526
+
+[INFO DRT-0167] List of default vias:
+  Layer V1
+    default via: V1_1x1
+  Layer V2
+    default via: V2_1x1
+  Layer V3
+    default via: V3_1x1
+  Layer V4
+    default via: V4_1x1
+  Layer V5
+    default via: V5_1x1
+  Layer V6
+    default via: V6_1x1
+  Layer V7
+    default via: V7_1x1
+  Layer V8
+    default via: V8_1x1
+  Layer V9
+    default via: V9_1x1
+  Layer V10
+    default via: V10_1x1
+  Layer V11
+    default via: V11_1x1
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 197.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete M1.
+[INFO DRT-0024]   Complete V1.
+[INFO DRT-0024]   Complete M2.
+[INFO DRT-0024]   Complete V2.
+[INFO DRT-0024]   Complete M3.
+[INFO DRT-0024]   Complete V3.
+[INFO DRT-0024]   Complete M4.
+[INFO DRT-0024]   Complete V4.
+[INFO DRT-0024]   Complete M5.
+[INFO DRT-0024]   Complete V5.
+[INFO DRT-0024]   Complete M6.
+[INFO DRT-0024]   Complete V6.
+[INFO DRT-0024]   Complete M7.
+[INFO DRT-0024]   Complete V7.
+[INFO DRT-0024]   Complete M8.
+[INFO DRT-0024]   Complete V8.
+[INFO DRT-0024]   Complete M9.
+[INFO DRT-0024]   Complete V9.
+[INFO DRT-0024]   Complete M10.
+[INFO DRT-0024]   Complete V10.
+[INFO DRT-0024]   Complete M11.
+[INFO DRT-0024]   Complete V11.
+[INFO DRT-0024]   Complete M12.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] M1 shape region query size = 5536.
+[INFO DRT-0033] V1 shape region query size = 0.
+[INFO DRT-0033] M2 shape region query size = 1059.
+[INFO DRT-0033] V2 shape region query size = 0.
+[INFO DRT-0033] M3 shape region query size = 355.
+[INFO DRT-0033] V3 shape region query size = 0.
+[INFO DRT-0033] M4 shape region query size = 80.
+[INFO DRT-0033] V4 shape region query size = 0.
+[INFO DRT-0033] M5 shape region query size = 84.
+[INFO DRT-0033] V5 shape region query size = 0.
+[INFO DRT-0033] M6 shape region query size = 0.
+[INFO DRT-0033] V6 shape region query size = 0.
+[INFO DRT-0033] M7 shape region query size = 0.
+[INFO DRT-0033] V7 shape region query size = 0.
+[INFO DRT-0033] M8 shape region query size = 0.
+[INFO DRT-0033] V8 shape region query size = 0.
+[INFO DRT-0033] M9 shape region query size = 0.
+[INFO DRT-0033] V9 shape region query size = 0.
+[INFO DRT-0033] M10 shape region query size = 0.
+[INFO DRT-0033] V10 shape region query size = 0.
+[INFO DRT-0033] M11 shape region query size = 0.
+[INFO DRT-0033] V11 shape region query size = 0.
+[INFO DRT-0033] M12 shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 912 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 196 unique inst patterns.
+[INFO DRT-0084]   Complete 1084 groups.
+#scanned instances     = 1326
+#unique  instances     = 196
+#stdCellGenAp          = 9846
+#stdCellValidPlanarAp  = 3120
+#stdCellValidViaAp     = 3314
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 4071
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:07, elapsed time = 00:00:00, memory = 110.98 (MB), peak = 110.98 (MB)
+
+[INFO DRT-0157] Number of guides:     7135
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 23 STEP 420 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 23 STEP 420 ;
+[INFO DRT-0028]   Complete FR_MASTERSLICE.
+[INFO DRT-0028]   Complete Fr_VIA.
+[INFO DRT-0028]   Complete M1.
+[INFO DRT-0028]   Complete V1.
+[INFO DRT-0028]   Complete M2.
+[INFO DRT-0028]   Complete V2.
+[INFO DRT-0028]   Complete M3.
+[INFO DRT-0028]   Complete V3.
+[INFO DRT-0028]   Complete M4.
+[INFO DRT-0028]   Complete V4.
+[INFO DRT-0028]   Complete M5.
+[INFO DRT-0028]   Complete V5.
+[INFO DRT-0028]   Complete M6.
+[INFO DRT-0028]   Complete V6.
+[INFO DRT-0028]   Complete M7.
+[INFO DRT-0028]   Complete V7.
+[INFO DRT-0028]   Complete M8.
+[INFO DRT-0028]   Complete V8.
+[INFO DRT-0028]   Complete M9.
+[INFO DRT-0028]   Complete V9.
+[INFO DRT-0028]   Complete M10.
+[INFO DRT-0028]   Complete V10.
+[INFO DRT-0028]   Complete M11.
+[INFO DRT-0028]   Complete V11.
+[INFO DRT-0028]   Complete M12.
+[INFO DRT-1000] Pin _300_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _309_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _312_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _313_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _316_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _320_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _331_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _335_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _339_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _348_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _354_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _365_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _371_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _375_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] _096_ 1 pin not visited, fall back to feedthrough mode.
+[WARNING DRT-0225] _170_ 1 pin not visited, fall back to feedthrough mode.
+[WARNING DRT-0225] _176_ 1 pin not visited, fall back to feedthrough mode.
+[WARNING DRT-0225] _200_ 1 pin not visited, fall back to feedthrough mode.
+[WARNING DRT-0225] _202_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin _613_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _643_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _662_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _664_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _679_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _680_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _682_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _685_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _698_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _752_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_1/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_1/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_0/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_2/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_2/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_2/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_2/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_2/s6 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_2/s7 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_1/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_3/s0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_3/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_3/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_3/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_1/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_4/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_4/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_4/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_4/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_4/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_4/s6 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_2/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_5/s0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_5/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_5/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_5/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_5/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_5/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_5/s6 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_5/s7 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_2/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_6/s0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_6/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_6/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_0/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_6/s8 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_3/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_7/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_7/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_7/s6 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_0/s6 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_7/s7 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_3/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_0/s7 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_0/s8 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_0/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5_s2l2_1/s0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] carry\[1\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin _311_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _393_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_2/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _428_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_2/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _429_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_3/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _442_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] cell_oh\[21\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp3_s2l1_3/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _443_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_4/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _449_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_4/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _450_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_5/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _463_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_5/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _464_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_6/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _477_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_6/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _484_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_0/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_7/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _491_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_7/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _492_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_8/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_0/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _520_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_9/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_9/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_9/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_0/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_10/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _534_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_11/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _548_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] cell_oh\[68\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp3_s2l1_11/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_1/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _407_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_11/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_12/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _561_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] cell_oh\[72\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp3_s2l1_12/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _562_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_12/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_12/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_12/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_13/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _575_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_13/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_14/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _589_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_14/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _590_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_14/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_1/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _408_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] cell_oh\[8\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp3_s2l1_15/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _603_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_15/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin _604_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_15/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_15/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_0/v0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_2/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_3/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_1/v1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_207_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] high_sum\[0\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_098_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] high_sum\[1\] 3 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_109_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_117_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_125_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_136_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] high_sum\[7\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_164_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] high_sum\[8\] 3 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp3_hi_l1_2/s0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] hl1\[11\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp3_hi_l1_2/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_2/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_2/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_3/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_3/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_3/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] hl1\[2\] 2 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp3_hi_l1_0/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] hl1\[3\] 2 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp3_hi_l1_1/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_1/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_1/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_hi_l1_1/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[0\].u/_61_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] hl2\[4\] 2 pin not visited, fall back to feedthrough mode.
+[WARNING DRT-0225] hl2\[5\] 4 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp5h\[1\].u/_61_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_1/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_1/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_1/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_2/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll1\[15\] 4 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp4_lo_l1_2/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll1\[16\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp4_lo_l1_2/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_2/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_2/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_2/s6 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/s0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/s6 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/s3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/s4 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/s5 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/s6 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_1/s1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_1/s2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[10\] 4 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[1\].u/_129_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[13\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[1\].u/_067_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[16\] 4 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[1\].u/_080_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[17\] 2 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[1\].u/_089_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_101_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[19\] 2 pin not visited, fall back to feedthrough mode.
+[WARNING DRT-0225] ll2\[20\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[1\].u/_116_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[21\] 3 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[1\].u/_121_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_124_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_126_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[25\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[0\].u/_110_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[8\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[0\].u/_121_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] ll2\[9\] 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp4_lo_l1_1/v3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_1/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_1/h3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_2/v3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/v1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_2/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_2/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/v2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_3/h3 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/h0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/h1 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp4_lo_l1_0/h2 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_315_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_333_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_352_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_369_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_420_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_428_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_448_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_450_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_236_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_282_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_298_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_4/s0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp3_s2l1_6/s0 not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_230_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_311_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_314_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_316_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_191_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_210_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_201_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_203_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_207_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_222_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_225_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_228_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_231_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_232_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_239_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_242_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_244_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_255_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_262_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_271_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_273_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_274_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_278_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_283_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_284_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_293_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_297_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_298_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_299_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_303_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_308_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_309_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_310_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_carry/_103_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_carry/_155_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_carry/_110_ 10 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_carry/_161_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_165_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_166_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_172_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_175_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_carry/_130_ 6 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_carry/_186_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_188_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_195_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_carry/_198_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_hi_l3/_001_ 3 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_161_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_163_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_166_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_168_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_175_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_180_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_184_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_190_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_192_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_194_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_198_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_201_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_203_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_hi_l3/_038_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_097_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_hi_l3/_041_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_108_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_hi_l3/_050_ 2 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_121_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_128_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_133_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_hi_l3/_074_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_139_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_141_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_146_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_hi_l3/_086_ 2 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_151_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_hi_l3/_153_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_hi_l3/_090_ 2 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_hi_l3/_158_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_275_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_276_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_277_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_280_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_287_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_296_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_297_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_305_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_308_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_309_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_314_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_319_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_321_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_324_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_327_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_328_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_342_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_lo_l3/_076_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_lo_l3/_344_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_349_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_356_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_lo_l3/_090_ 7 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_lo_l3/_361_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_363_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_374_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_375_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_381_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_385_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_390_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_391_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_392_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_396_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_400_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_401_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_403_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_405_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_407_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_411_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_413_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_417_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_419_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_422_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_429_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_431_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_432_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_438_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_443_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_446_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_447_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_lo_l3/_172_ 7 pin not visited, fall back to feedthrough mode.
+[WARNING DRT-0225] u_lo_l3/_173_ 3 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_lo_l3/_216_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_lo_l3/_176_ 3 pin not visited, fall back to feedthrough mode.
+[WARNING DRT-0225] u_lo_l3/_177_ 3 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_lo_l3/_231_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_lo_l3/_188_ 2 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_lo_l3/_235_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_238_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_240_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_243_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] u_lo_l3/_201_ 3 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin u_lo_l3/_250_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_259_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin u_lo_l3/_261_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] xp5h\[0\].u/_00_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp5h\[0\].u/_33_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[0\].u/_42_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[0\].u/_53_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[0\].u/_57_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[0\].u/_59_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_33_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_37_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_38_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_45_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_46_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_49_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_50_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_51_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_53_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_55_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp5h\[1\].u/_57_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] xp7\[0\].u/_004_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[0\].u/_066_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[WARNING DRT-0225] xp7\[0\].u/_009_ 1 pin not visited, fall back to feedthrough mode.
+[INFO DRT-1000] Pin xp7\[0\].u/_070_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_075_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_076_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_079_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_082_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_084_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_086_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_088_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_092_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_094_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_099_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_103_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_104_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_105_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_107_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_108_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_109_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_111_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_113_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_120_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_122_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[0\].u/_125_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_060_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_066_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_070_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_076_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_078_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_079_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_082_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_086_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_087_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_088_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_092_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_095_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_098_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_100_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_107_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_118_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-1000] Pin xp7\[1\].u/_122_/Y not in any guide. Attempting to patch guides to cover (at least part of) the pin.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete FR_MASTERSLICE (guide).
+[INFO DRT-0035]   Complete Fr_VIA (guide).
+[INFO DRT-0035]   Complete M1 (guide).
+[INFO DRT-0035]   Complete V1 (guide).
+[INFO DRT-0035]   Complete M2 (guide).
+[INFO DRT-0035]   Complete V2 (guide).
+[INFO DRT-0035]   Complete M3 (guide).
+[INFO DRT-0035]   Complete V3 (guide).
+[INFO DRT-0035]   Complete M4 (guide).
+[INFO DRT-0035]   Complete V4 (guide).
+[INFO DRT-0035]   Complete M5 (guide).
+[INFO DRT-0035]   Complete V5 (guide).
+[INFO DRT-0035]   Complete M6 (guide).
+[INFO DRT-0035]   Complete V6 (guide).
+[INFO DRT-0035]   Complete M7 (guide).
+[INFO DRT-0035]   Complete V7 (guide).
+[INFO DRT-0035]   Complete M8 (guide).
+[INFO DRT-0035]   Complete V8 (guide).
+[INFO DRT-0035]   Complete M9 (guide).
+[INFO DRT-0035]   Complete V9 (guide).
+[INFO DRT-0035]   Complete M10 (guide).
+[INFO DRT-0035]   Complete V10 (guide).
+[INFO DRT-0035]   Complete M11 (guide).
+[INFO DRT-0035]   Complete V11 (guide).
+[INFO DRT-0035]   Complete M12 (guide).
+[INFO DRT-0036] FR_MASTERSLICE guide region query size = 0.
+[INFO DRT-0036] FR_VIA guide region query size = 0.
+[INFO DRT-0036] M1 guide region query size = 2121.
+[INFO DRT-0036] V1 guide region query size = 0.
+[INFO DRT-0036] M2 guide region query size = 1876.
+[INFO DRT-0036] V2 guide region query size = 0.
+[INFO DRT-0036] M3 guide region query size = 679.
+[INFO DRT-0036] V3 guide region query size = 0.
+[INFO DRT-0036] M4 guide region query size = 227.
+[INFO DRT-0036] V4 guide region query size = 0.
+[INFO DRT-0036] M5 guide region query size = 89.
+[INFO DRT-0036] V5 guide region query size = 0.
+[INFO DRT-0036] M6 guide region query size = 3.
+[INFO DRT-0036] V6 guide region query size = 0.
+[INFO DRT-0036] M7 guide region query size = 0.
+[INFO DRT-0036] V7 guide region query size = 0.
+[INFO DRT-0036] M8 guide region query size = 0.
+[INFO DRT-0036] V8 guide region query size = 0.
+[INFO DRT-0036] M9 guide region query size = 0.
+[INFO DRT-0036] V9 guide region query size = 0.
+[INFO DRT-0036] M10 guide region query size = 0.
+[INFO DRT-0036] V10 guide region query size = 0.
+[INFO DRT-0036] M11 guide region query size = 0.
+[INFO DRT-0036] V11 guide region query size = 0.
+[INFO DRT-0036] M12 guide region query size = 0.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0185] Post process initialize RPin region query.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 2106 vertical wires in 1 frboxes and 2889 horizontal wires in 1 frboxes.
+[INFO DRT-0186] Done with 575 vertical wires in 1 frboxes and 1085 horizontal wires in 1 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 117.39 (MB), peak = 118.48 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 117.56 (MB), peak = 118.48 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:01, memory = 439.12 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:00:07, memory = 441.47 (MB).
+    Completing 30% with 357 violations.
+    elapsed time = 00:00:07, memory = 696.67 (MB).
+    Completing 40% with 357 violations.
+    elapsed time = 00:00:14, memory = 606.23 (MB).
+    Completing 50% with 357 violations.
+    elapsed time = 00:00:22, memory = 606.30 (MB).
+    Completing 60% with 629 violations.
+    elapsed time = 00:00:22, memory = 910.08 (MB).
+    Completing 70% with 629 violations.
+    elapsed time = 00:00:28, memory = 630.59 (MB).
+    Completing 80% with 949 violations.
+    elapsed time = 00:00:28, memory = 625.06 (MB).
+    Completing 90% with 949 violations.
+    elapsed time = 00:00:29, memory = 876.78 (MB).
+    Completing 100% with 1161 violations.
+    elapsed time = 00:00:47, memory = 642.14 (MB).
+[INFO DRT-0199]   Number of violations = 1242.
+Viol/Layer          M1     V1     M2     V2     M3     M4     M5
+Cut Spacing          0      1      0      0      0      0      0
+Metal Spacing      166      0    137      0     26     12     29
+NS Metal             0      0      6      0      0      0      0
+Recheck             35      0     37      0      8      1      0
+Short               93      7    501      6    154     16      7
+[INFO DRT-0267] cpu time = 00:01:04, elapsed time = 00:00:47, memory = 654.50 (MB), peak = 1104.44 (MB)
+Total wire length = 1468 um.
+Total wire length on LAYER M1 = 163 um.
+Total wire length on LAYER M2 = 591 um.
+Total wire length on LAYER M3 = 539 um.
+Total wire length on LAYER M4 = 138 um.
+Total wire length on LAYER M5 = 27 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7055.
+Up-via summary (total 7055):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3662
+             M2    2726
+             M3     516
+             M4     109
+             M5      42
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7055
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 10% with 1242 violations.
+    elapsed time = 00:00:00, memory = 973.64 (MB).
+    Completing 20% with 1242 violations.
+    elapsed time = 00:00:07, memory = 695.47 (MB).
+    Completing 30% with 1247 violations.
+    elapsed time = 00:00:07, memory = 1028.42 (MB).
+    Completing 40% with 1247 violations.
+    elapsed time = 00:00:10, memory = 895.05 (MB).
+    Completing 50% with 1247 violations.
+    elapsed time = 00:00:18, memory = 698.08 (MB).
+    Completing 60% with 1123 violations.
+    elapsed time = 00:00:18, memory = 915.89 (MB).
+    Completing 70% with 1123 violations.
+    elapsed time = 00:00:32, memory = 697.72 (MB).
+    Completing 80% with 942 violations.
+    elapsed time = 00:00:32, memory = 947.95 (MB).
+    Completing 90% with 942 violations.
+    elapsed time = 00:00:38, memory = 961.69 (MB).
+    Completing 100% with 802 violations.
+    elapsed time = 00:00:45, memory = 703.38 (MB).
+[INFO DRT-0199]   Number of violations = 802.
+Viol/Layer          M1     M2     V2     M3     M4     M5
+Cut Spacing          0      0      1      0      0      0
+Metal Spacing        4    247      0     38     14     17
+NS Metal             0     17      0      0      0      0
+Short                7    296      3    153      2      3
+[INFO DRT-0267] cpu time = 00:01:06, elapsed time = 00:00:45, memory = 709.45 (MB), peak = 1156.33 (MB)
+Total wire length = 1436 um.
+Total wire length on LAYER M1 = 123 um.
+Total wire length on LAYER M2 = 568 um.
+Total wire length on LAYER M3 = 564 um.
+Total wire length on LAYER M4 = 144 um.
+Total wire length on LAYER M5 = 27 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 6803.
+Up-via summary (total 6803):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3448
+             M2    2691
+             M3     521
+             M4     103
+             M5      40
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   6803
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 10% with 802 violations.
+    elapsed time = 00:00:00, memory = 931.75 (MB).
+    Completing 20% with 802 violations.
+    elapsed time = 00:00:16, memory = 711.27 (MB).
+    Completing 30% with 800 violations.
+    elapsed time = 00:00:16, memory = 906.78 (MB).
+    Completing 40% with 800 violations.
+    elapsed time = 00:00:17, memory = 908.73 (MB).
+    Completing 50% with 800 violations.
+    elapsed time = 00:00:23, memory = 713.81 (MB).
+    Completing 60% with 1043 violations.
+    elapsed time = 00:00:23, memory = 1080.53 (MB).
+    Completing 70% with 1043 violations.
+    elapsed time = 00:00:31, memory = 711.83 (MB).
+    Completing 80% with 1041 violations.
+    elapsed time = 00:00:31, memory = 1021.09 (MB).
+    Completing 90% with 1041 violations.
+    elapsed time = 00:00:34, memory = 1025.31 (MB).
+    Completing 100% with 1033 violations.
+    elapsed time = 00:00:39, memory = 836.86 (MB).
+[INFO DRT-0199]   Number of violations = 1033.
+Viol/Layer          M1     V1     M2     V2     M3     M4     M5
+Cut Spacing          0      2      0      2      0      0      0
+Metal Spacing       16      0    202      0     36     20     15
+NS Metal             0      0     21      0      0      0      0
+Short                5      0    579      4    117      3     11
+[INFO DRT-0267] cpu time = 00:00:54, elapsed time = 00:00:39, memory = 840.86 (MB), peak = 1288.86 (MB)
+Total wire length = 1430 um.
+Total wire length on LAYER M1 = 122 um.
+Total wire length on LAYER M2 = 564 um.
+Total wire length on LAYER M3 = 564 um.
+Total wire length on LAYER M4 = 147 um.
+Total wire length on LAYER M5 = 26 um.
+Total wire length on LAYER M6 = 6 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 6791.
+Up-via summary (total 6791):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3448
+             M2    2672
+             M3     532
+             M4     103
+             M5      36
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   6791
+
+
+[INFO DRT-0195] Start 3rd optimization iteration.
+    Completing 10% with 1033 violations.
+    elapsed time = 00:00:02, memory = 993.45 (MB).
+    Completing 20% with 1033 violations.
+    elapsed time = 00:00:30, memory = 845.25 (MB).
+    Completing 30% with 937 violations.
+    elapsed time = 00:00:30, memory = 840.00 (MB).
+    Completing 40% with 937 violations.
+    elapsed time = 00:00:33, memory = 1064.39 (MB).
+    Completing 50% with 937 violations.
+    elapsed time = 00:00:43, memory = 854.64 (MB).
+    Completing 60% with 799 violations.
+    elapsed time = 00:00:43, memory = 1192.75 (MB).
+    Completing 70% with 799 violations.
+    elapsed time = 00:01:10, memory = 855.66 (MB).
+    Completing 80% with 671 violations.
+    elapsed time = 00:01:10, memory = 855.19 (MB).
+    Completing 90% with 671 violations.
+    elapsed time = 00:01:10, memory = 1102.88 (MB).
+    Completing 100% with 564 violations.
+    elapsed time = 00:01:14, memory = 855.22 (MB).
+[INFO DRT-0199]   Number of violations = 564.
+Viol/Layer          M1     M2     V2     M3     M4     M5
+Cut Spacing          0      0      1      0      0      0
+Metal Spacing        1     90      0     27      5      2
+NS Metal             0      5      0      0      0      0
+Short                0    259      3    171      0      0
+[INFO DRT-0267] cpu time = 00:01:27, elapsed time = 00:01:14, memory = 855.22 (MB), peak = 1300.94 (MB)
+Total wire length = 1427 um.
+Total wire length on LAYER M1 = 98 um.
+Total wire length on LAYER M2 = 505 um.
+Total wire length on LAYER M3 = 588 um.
+Total wire length on LAYER M4 = 197 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7061.
+Up-via summary (total 7061):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3292
+             M2    2870
+             M3     738
+             M4     117
+             M5      44
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7061
+
+
+[INFO DRT-0195] Start 4th optimization iteration.
+    Completing 10% with 564 violations.
+    elapsed time = 00:00:00, memory = 1144.86 (MB).
+    Completing 20% with 564 violations.
+    elapsed time = 00:00:31, memory = 855.78 (MB).
+    Completing 30% with 549 violations.
+    elapsed time = 00:00:31, memory = 855.31 (MB).
+    Completing 40% with 549 violations.
+    elapsed time = 00:00:31, memory = 855.31 (MB).
+    Completing 50% with 549 violations.
+    elapsed time = 00:00:43, memory = 855.31 (MB).
+    Completing 60% with 549 violations.
+    elapsed time = 00:00:43, memory = 855.31 (MB).
+    Completing 70% with 549 violations.
+    elapsed time = 00:01:03, memory = 855.31 (MB).
+    Completing 80% with 549 violations.
+    elapsed time = 00:01:03, memory = 855.31 (MB).
+    Completing 90% with 549 violations.
+    elapsed time = 00:01:03, memory = 855.31 (MB).
+    Completing 100% with 548 violations.
+    elapsed time = 00:01:04, memory = 855.31 (MB).
+[INFO DRT-0199]   Number of violations = 548.
+Viol/Layer          M1     M2     V2     M3     M4     M5
+Cut Spacing          0      0      1      0      0      0
+Metal Spacing        1     78      0     26      5      2
+NS Metal             0      4      0      0      0      0
+Short                0    257      3    171      0      0
+[INFO DRT-0267] cpu time = 00:01:06, elapsed time = 00:01:04, memory = 856.31 (MB), peak = 1303.31 (MB)
+Total wire length = 1426 um.
+Total wire length on LAYER M1 = 96 um.
+Total wire length on LAYER M2 = 504 um.
+Total wire length on LAYER M3 = 591 um.
+Total wire length on LAYER M4 = 198 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7065.
+Up-via summary (total 7065):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3285
+             M2    2878
+             M3     741
+             M4     117
+             M5      44
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7065
+
+
+[INFO DRT-0195] Start 5th optimization iteration.
+    Completing 10% with 548 violations.
+    elapsed time = 00:00:00, memory = 1000.69 (MB).
+    Completing 20% with 548 violations.
+    elapsed time = 00:00:23, memory = 856.31 (MB).
+    Completing 30% with 548 violations.
+    elapsed time = 00:00:23, memory = 856.31 (MB).
+    Completing 40% with 548 violations.
+    elapsed time = 00:00:23, memory = 999.17 (MB).
+    Completing 50% with 548 violations.
+    elapsed time = 00:00:31, memory = 856.31 (MB).
+    Completing 60% with 546 violations.
+    elapsed time = 00:00:31, memory = 856.31 (MB).
+    Completing 70% with 546 violations.
+    elapsed time = 00:00:48, memory = 856.31 (MB).
+    Completing 80% with 546 violations.
+    elapsed time = 00:00:48, memory = 856.31 (MB).
+    Completing 90% with 546 violations.
+    elapsed time = 00:00:48, memory = 856.31 (MB).
+    Completing 100% with 543 violations.
+    elapsed time = 00:00:53, memory = 856.34 (MB).
+[INFO DRT-0199]   Number of violations = 543.
+Viol/Layer          M1     M2     V2     M3     M4
+Cut Spacing          0      0      1      0      0
+Metal Spacing        1     78      0     26      5
+NS Metal             0      3      0      0      0
+Short                0    256      3    170      0
+[INFO DRT-0267] cpu time = 00:00:54, elapsed time = 00:00:53, memory = 839.47 (MB), peak = 1312.80 (MB)
+Total wire length = 1427 um.
+Total wire length on LAYER M1 = 96 um.
+Total wire length on LAYER M2 = 503 um.
+Total wire length on LAYER M3 = 591 um.
+Total wire length on LAYER M4 = 198 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7073.
+Up-via summary (total 7073):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3283
+             M2    2884
+             M3     743
+             M4     117
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7073
+
+
+[INFO DRT-0195] Start 6th optimization iteration.
+    Completing 10% with 543 violations.
+    elapsed time = 00:00:00, memory = 839.47 (MB).
+    Completing 20% with 543 violations.
+    elapsed time = 00:00:08, memory = 840.69 (MB).
+    Completing 30% with 538 violations.
+    elapsed time = 00:00:08, memory = 840.69 (MB).
+    Completing 40% with 538 violations.
+    elapsed time = 00:00:12, memory = 845.02 (MB).
+    Completing 50% with 538 violations.
+    elapsed time = 00:00:14, memory = 845.02 (MB).
+    Completing 60% with 483 violations.
+    elapsed time = 00:00:14, memory = 843.50 (MB).
+    Completing 70% with 483 violations.
+    elapsed time = 00:00:23, memory = 843.50 (MB).
+    Completing 80% with 461 violations.
+    elapsed time = 00:00:23, memory = 843.50 (MB).
+    Completing 90% with 461 violations.
+    elapsed time = 00:00:23, memory = 1080.30 (MB).
+    Completing 100% with 461 violations.
+    elapsed time = 00:00:33, memory = 850.50 (MB).
+[INFO DRT-0199]   Number of violations = 461.
+Viol/Layer          M1     M2     V2     M3     M4
+Metal Spacing        1     60      0     17      5
+NS Metal             0      2      0      0      0
+Short                0    249      5    122      0
+[INFO DRT-0267] cpu time = 00:00:41, elapsed time = 00:00:34, memory = 851.41 (MB), peak = 1312.80 (MB)
+Total wire length = 1427 um.
+Total wire length on LAYER M1 = 96 um.
+Total wire length on LAYER M2 = 503 um.
+Total wire length on LAYER M3 = 591 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7078.
+Up-via summary (total 7078):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3283
+             M2    2885
+             M3     747
+             M4     117
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7078
+
+
+[INFO DRT-0195] Start 7th optimization iteration.
+    Completing 10% with 461 violations.
+    elapsed time = 00:00:00, memory = 851.41 (MB).
+    Completing 20% with 461 violations.
+    elapsed time = 00:00:01, memory = 851.41 (MB).
+    Completing 30% with 461 violations.
+    elapsed time = 00:00:01, memory = 851.41 (MB).
+    Completing 40% with 461 violations.
+    elapsed time = 00:00:01, memory = 1046.36 (MB).
+    Completing 50% with 461 violations.
+    elapsed time = 00:00:17, memory = 852.22 (MB).
+    Completing 60% with 458 violations.
+    elapsed time = 00:00:17, memory = 852.22 (MB).
+    Completing 70% with 458 violations.
+    elapsed time = 00:00:24, memory = 781.39 (MB).
+    Completing 80% with 417 violations.
+    elapsed time = 00:00:24, memory = 781.39 (MB).
+    Completing 90% with 417 violations.
+    elapsed time = 00:00:31, memory = 996.17 (MB).
+    Completing 100% with 400 violations.
+    elapsed time = 00:00:43, memory = 781.47 (MB).
+[INFO DRT-0199]   Number of violations = 400.
+Viol/Layer          M1     M2     V2     M3     M4
+Cut Spacing          0      0      2      0      0
+Metal Spacing        1     43      0     16      5
+NS Metal             0      2      0      0      0
+Short                0    228      2    101      0
+[INFO DRT-0267] cpu time = 00:00:53, elapsed time = 00:00:43, memory = 719.69 (MB), peak = 1312.80 (MB)
+Total wire length = 1427 um.
+Total wire length on LAYER M1 = 96 um.
+Total wire length on LAYER M2 = 502 um.
+Total wire length on LAYER M3 = 592 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7081.
+Up-via summary (total 7081):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3283
+             M2    2888
+             M3     747
+             M4     117
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7081
+
+
+[INFO DRT-0195] Start 8th optimization iteration.
+    Completing 10% with 400 violations.
+    elapsed time = 00:00:00, memory = 719.69 (MB).
+    Completing 20% with 400 violations.
+    elapsed time = 00:00:00, memory = 760.45 (MB).
+    Completing 30% with 400 violations.
+    elapsed time = 00:00:00, memory = 760.45 (MB).
+    Completing 40% with 400 violations.
+    elapsed time = 00:00:00, memory = 760.45 (MB).
+    Completing 50% with 400 violations.
+    elapsed time = 00:00:21, memory = 762.81 (MB).
+    Completing 60% with 400 violations.
+    elapsed time = 00:00:21, memory = 762.81 (MB).
+    Completing 70% with 400 violations.
+    elapsed time = 00:00:27, memory = 776.22 (MB).
+    Completing 80% with 400 violations.
+    elapsed time = 00:00:27, memory = 776.22 (MB).
+    Completing 90% with 400 violations.
+    elapsed time = 00:00:43, memory = 959.58 (MB).
+    Completing 100% with 400 violations.
+    elapsed time = 00:00:44, memory = 776.23 (MB).
+[INFO DRT-0199]   Number of violations = 400.
+Viol/Layer          M1     M2     V2     M3     M4
+Cut Spacing          0      0      2      0      0
+Metal Spacing        1     43      0     16      5
+NS Metal             0      2      0      0      0
+Short                0    228      2    101      0
+[INFO DRT-0267] cpu time = 00:01:00, elapsed time = 00:00:44, memory = 785.72 (MB), peak = 1312.80 (MB)
+Total wire length = 1427 um.
+Total wire length on LAYER M1 = 96 um.
+Total wire length on LAYER M2 = 502 um.
+Total wire length on LAYER M3 = 592 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7081.
+Up-via summary (total 7081):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3283
+             M2    2888
+             M3     747
+             M4     117
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7081
+
+
+[INFO DRT-0195] Start 9th optimization iteration.
+    Completing 10% with 400 violations.
+    elapsed time = 00:00:00, memory = 785.72 (MB).
+    Completing 20% with 400 violations.
+    elapsed time = 00:00:00, memory = 785.72 (MB).
+    Completing 30% with 400 violations.
+    elapsed time = 00:00:00, memory = 785.72 (MB).
+    Completing 40% with 400 violations.
+    elapsed time = 00:00:00, memory = 793.45 (MB).
+    Completing 50% with 400 violations.
+    elapsed time = 00:00:00, memory = 793.45 (MB).
+    Completing 60% with 400 violations.
+    elapsed time = 00:00:26, memory = 793.64 (MB).
+    Completing 70% with 400 violations.
+    elapsed time = 00:00:26, memory = 793.64 (MB).
+    Completing 80% with 400 violations.
+    elapsed time = 00:00:26, memory = 793.64 (MB).
+    Completing 90% with 400 violations.
+    elapsed time = 00:00:31, memory = 793.64 (MB).
+    Completing 100% with 400 violations.
+    elapsed time = 00:00:57, memory = 793.64 (MB).
+[INFO DRT-0199]   Number of violations = 400.
+Viol/Layer          M1     M2     V2     M3     M4
+Cut Spacing          0      0      2      0      0
+Metal Spacing        1     43      0     16      5
+NS Metal             0      2      0      0      0
+Short                0    228      2    101      0
+[INFO DRT-0267] cpu time = 00:01:10, elapsed time = 00:00:57, memory = 694.27 (MB), peak = 1312.80 (MB)
+Total wire length = 1427 um.
+Total wire length on LAYER M1 = 96 um.
+Total wire length on LAYER M2 = 502 um.
+Total wire length on LAYER M3 = 592 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7081.
+Up-via summary (total 7081):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3283
+             M2    2888
+             M3     747
+             M4     117
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7081
+
+
+[INFO DRT-0195] Start 10th optimization iteration.
+    Completing 10% with 400 violations.
+    elapsed time = 00:00:00, memory = 694.27 (MB).
+    Completing 20% with 400 violations.
+    elapsed time = 00:00:44, memory = 787.98 (MB).
+    Completing 30% with 400 violations.
+    elapsed time = 00:00:44, memory = 787.98 (MB).
+    Completing 40% with 400 violations.
+    elapsed time = 00:00:44, memory = 787.98 (MB).
+    Completing 50% with 400 violations.
+    elapsed time = 00:00:58, memory = 787.98 (MB).
+    Completing 60% with 397 violations.
+    elapsed time = 00:00:58, memory = 787.98 (MB).
+    Completing 70% with 397 violations.
+    elapsed time = 00:01:25, memory = 787.98 (MB).
+    Completing 80% with 365 violations.
+    elapsed time = 00:01:25, memory = 787.98 (MB).
+    Completing 90% with 365 violations.
+    elapsed time = 00:01:25, memory = 787.98 (MB).
+    Completing 100% with 365 violations.
+    elapsed time = 00:01:26, memory = 788.16 (MB).
+[INFO DRT-0199]   Number of violations = 365.
+Viol/Layer          M2     V2     M3     M4
+Cut Spacing          0      2      0      0
+Metal Spacing       44      0     15      3
+NS Metal             2      0      0      0
+Short              197      2    100      0
+[INFO DRT-0267] cpu time = 00:01:36, elapsed time = 00:01:26, memory = 775.84 (MB), peak = 1312.80 (MB)
+Total wire length = 1426 um.
+Total wire length on LAYER M1 = 95 um.
+Total wire length on LAYER M2 = 502 um.
+Total wire length on LAYER M3 = 591 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7080.
+Up-via summary (total 7080):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3279
+             M2    2885
+             M3     751
+             M4     119
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7080
+
+
+[INFO DRT-0195] Start 11th optimization iteration.
+    Completing 10% with 365 violations.
+    elapsed time = 00:00:00, memory = 775.84 (MB).
+    Completing 20% with 365 violations.
+    elapsed time = 00:00:44, memory = 776.12 (MB).
+    Completing 30% with 365 violations.
+    elapsed time = 00:00:44, memory = 776.12 (MB).
+    Completing 40% with 365 violations.
+    elapsed time = 00:00:44, memory = 776.12 (MB).
+    Completing 50% with 365 violations.
+    elapsed time = 00:01:01, memory = 776.17 (MB).
+    Completing 60% with 359 violations.
+    elapsed time = 00:01:01, memory = 776.17 (MB).
+    Completing 70% with 359 violations.
+    elapsed time = 00:01:23, memory = 680.80 (MB).
+    Completing 80% with 359 violations.
+    elapsed time = 00:01:23, memory = 680.80 (MB).
+    Completing 90% with 359 violations.
+    elapsed time = 00:01:23, memory = 680.80 (MB).
+    Completing 100% with 358 violations.
+    elapsed time = 00:01:24, memory = 688.36 (MB).
+[INFO DRT-0199]   Number of violations = 358.
+Viol/Layer          M2     V2     M3     M4
+Cut Spacing          0      2      0      0
+Metal Spacing       41      0     15      3
+NS Metal             2      0      0      0
+Short              194      2     99      0
+[INFO DRT-0267] cpu time = 00:01:24, elapsed time = 00:01:24, memory = 627.83 (MB), peak = 1312.80 (MB)
+Total wire length = 1427 um.
+Total wire length on LAYER M1 = 95 um.
+Total wire length on LAYER M2 = 503 um.
+Total wire length on LAYER M3 = 592 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7080.
+Up-via summary (total 7080):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3279
+             M2    2883
+             M3     751
+             M4     121
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7080
+
+
+[INFO DRT-0195] Start 12th optimization iteration.
+    Completing 10% with 358 violations.
+    elapsed time = 00:00:00, memory = 833.98 (MB).
+    Completing 20% with 358 violations.
+    elapsed time = 00:00:38, memory = 694.97 (MB).
+    Completing 30% with 358 violations.
+    elapsed time = 00:00:38, memory = 694.97 (MB).
+    Completing 40% with 358 violations.
+    elapsed time = 00:00:38, memory = 837.39 (MB).
+    Completing 50% with 358 violations.
+    elapsed time = 00:00:46, memory = 696.81 (MB).
+    Completing 60% with 358 violations.
+    elapsed time = 00:00:46, memory = 696.81 (MB).
+    Completing 70% with 358 violations.
+    elapsed time = 00:01:06, memory = 730.08 (MB).
+    Completing 80% with 358 violations.
+    elapsed time = 00:01:06, memory = 730.08 (MB).
+    Completing 90% with 358 violations.
+    elapsed time = 00:01:06, memory = 730.08 (MB).
+    Completing 100% with 357 violations.
+    elapsed time = 00:01:10, memory = 736.30 (MB).
+[INFO DRT-0199]   Number of violations = 357.
+Viol/Layer          M2     V2     M3     M4
+Cut Spacing          0      2      0      0
+Metal Spacing       40      0     15      3
+NS Metal             2      0      0      0
+Short              194      2     99      0
+[INFO DRT-0267] cpu time = 00:01:11, elapsed time = 00:01:10, memory = 584.31 (MB), peak = 1312.80 (MB)
+Total wire length = 1427 um.
+Total wire length on LAYER M1 = 95 um.
+Total wire length on LAYER M2 = 503 um.
+Total wire length on LAYER M3 = 592 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7076.
+Up-via summary (total 7076):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3277
+             M2    2883
+             M3     751
+             M4     119
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7076
+
+
+[INFO DRT-0195] Start 13th optimization iteration.
+    Completing 10% with 357 violations.
+    elapsed time = 00:00:00, memory = 584.31 (MB).
+    Completing 20% with 357 violations.
+    elapsed time = 00:00:11, memory = 597.72 (MB).
+    Completing 30% with 349 violations.
+    elapsed time = 00:00:11, memory = 597.72 (MB).
+    Completing 40% with 349 violations.
+    elapsed time = 00:00:16, memory = 650.98 (MB).
+    Completing 50% with 349 violations.
+    elapsed time = 00:00:17, memory = 650.98 (MB).
+    Completing 60% with 348 violations.
+    elapsed time = 00:00:17, memory = 650.00 (MB).
+    Completing 70% with 348 violations.
+    elapsed time = 00:00:28, memory = 657.34 (MB).
+    Completing 80% with 348 violations.
+    elapsed time = 00:00:28, memory = 657.34 (MB).
+    Completing 90% with 348 violations.
+    elapsed time = 00:00:28, memory = 893.28 (MB).
+    Completing 100% with 348 violations.
+    elapsed time = 00:00:43, memory = 659.92 (MB).
+[INFO DRT-0199]   Number of violations = 348.
+Viol/Layer          M2     V2     M3     M4
+Cut Spacing          0      2      0      0
+Metal Spacing       31      0     15      3
+NS Metal             2      0      0      0
+Short              209      2     84      0
+[INFO DRT-0267] cpu time = 00:00:52, elapsed time = 00:00:43, memory = 640.73 (MB), peak = 1312.80 (MB)
+Total wire length = 1426 um.
+Total wire length on LAYER M1 = 95 um.
+Total wire length on LAYER M2 = 503 um.
+Total wire length on LAYER M3 = 591 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7075.
+Up-via summary (total 7075):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3277
+             M2    2882
+             M3     751
+             M4     119
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7075
+
+
+[INFO DRT-0195] Start 14th optimization iteration.
+    Completing 10% with 348 violations.
+    elapsed time = 00:00:00, memory = 640.73 (MB).
+    Completing 20% with 348 violations.
+    elapsed time = 00:00:02, memory = 643.89 (MB).
+    Completing 30% with 341 violations.
+    elapsed time = 00:00:02, memory = 643.89 (MB).
+    Completing 40% with 341 violations.
+    elapsed time = 00:00:02, memory = 863.62 (MB).
+    Completing 50% with 341 violations.
+    elapsed time = 00:00:15, memory = 672.62 (MB).
+    Completing 60% with 341 violations.
+    elapsed time = 00:00:15, memory = 672.62 (MB).
+    Completing 70% with 341 violations.
+    elapsed time = 00:00:26, memory = 672.62 (MB).
+    Completing 80% with 341 violations.
+    elapsed time = 00:00:26, memory = 672.62 (MB).
+    Completing 90% with 341 violations.
+    elapsed time = 00:00:36, memory = 887.50 (MB).
+    Completing 100% with 341 violations.
+    elapsed time = 00:00:52, memory = 672.62 (MB).
+[INFO DRT-0199]   Number of violations = 341.
+Viol/Layer          M2     V2     M3     M4
+Cut Spacing          0      2      0      0
+Metal Spacing       40      0     15      3
+NS Metal             2      0      0      0
+Short              193      2     84      0
+[INFO DRT-0267] cpu time = 00:01:07, elapsed time = 00:00:52, memory = 624.44 (MB), peak = 1312.80 (MB)
+Total wire length = 1426 um.
+Total wire length on LAYER M1 = 95 um.
+Total wire length on LAYER M2 = 503 um.
+Total wire length on LAYER M3 = 591 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7075.
+Up-via summary (total 7075):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3277
+             M2    2882
+             M3     751
+             M4     119
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7075
+
+
+[INFO DRT-0195] Start 15th optimization iteration.
+    Completing 10% with 341 violations.
+    elapsed time = 00:00:00, memory = 624.44 (MB).
+    Completing 20% with 341 violations.
+    elapsed time = 00:00:00, memory = 641.19 (MB).
+    Completing 30% with 339 violations.
+    elapsed time = 00:00:00, memory = 641.19 (MB).
+    Completing 40% with 339 violations.
+    elapsed time = 00:00:00, memory = 641.19 (MB).
+    Completing 50% with 339 violations.
+    elapsed time = 00:00:21, memory = 651.80 (MB).
+    Completing 60% with 339 violations.
+    elapsed time = 00:00:21, memory = 651.80 (MB).
+    Completing 70% with 339 violations.
+    elapsed time = 00:00:34, memory = 657.17 (MB).
+    Completing 80% with 339 violations.
+    elapsed time = 00:00:34, memory = 657.17 (MB).
+    Completing 90% with 339 violations.
+    elapsed time = 00:00:57, memory = 956.44 (MB).
+    Completing 100% with 339 violations.
+    elapsed time = 00:01:06, memory = 772.58 (MB).
+[INFO DRT-0199]   Number of violations = 339.
+Viol/Layer          M2     V2     M3     M4
+Cut Spacing          0      2      0      0
+Metal Spacing       38      0     15      3
+NS Metal             2      0      0      0
+Short              193      2     84      0
+[INFO DRT-0267] cpu time = 00:01:29, elapsed time = 00:01:06, memory = 748.70 (MB), peak = 1312.80 (MB)
+Total wire length = 1426 um.
+Total wire length on LAYER M1 = 95 um.
+Total wire length on LAYER M2 = 503 um.
+Total wire length on LAYER M3 = 591 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7076.
+Up-via summary (total 7076):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3277
+             M2    2883
+             M3     751
+             M4     119
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7076
+
+
+[INFO DRT-0195] Start 16th optimization iteration.
+    Completing 10% with 339 violations.
+    elapsed time = 00:00:00, memory = 748.70 (MB).
+    Completing 20% with 339 violations.
+    elapsed time = 00:00:00, memory = 748.70 (MB).
+    Completing 30% with 339 violations.
+    elapsed time = 00:00:00, memory = 748.70 (MB).
+    Completing 40% with 339 violations.
+    elapsed time = 00:00:00, memory = 752.12 (MB).
+    Completing 50% with 339 violations.
+    elapsed time = 00:00:00, memory = 752.14 (MB).
+    Completing 60% with 339 violations.
+    elapsed time = 00:00:27, memory = 756.88 (MB).
+    Completing 70% with 339 violations.
+    elapsed time = 00:00:27, memory = 756.88 (MB).
+    Completing 80% with 339 violations.
+    elapsed time = 00:00:27, memory = 756.88 (MB).
+    Completing 90% with 339 violations.
+    elapsed time = 00:00:34, memory = 758.52 (MB).
+    Completing 100% with 339 violations.
+    elapsed time = 00:01:13, memory = 760.33 (MB).
+[INFO DRT-0199]   Number of violations = 339.
+Viol/Layer          M2     V2     M3     M4
+Cut Spacing          0      2      0      0
+Metal Spacing       38      0     15      3
+NS Metal             2      0      0      0
+Short              193      2     84      0
+[INFO DRT-0267] cpu time = 00:01:36, elapsed time = 00:01:13, memory = 726.69 (MB), peak = 1312.80 (MB)
+Total wire length = 1426 um.
+Total wire length on LAYER M1 = 95 um.
+Total wire length on LAYER M2 = 503 um.
+Total wire length on LAYER M3 = 591 um.
+Total wire length on LAYER M4 = 199 um.
+Total wire length on LAYER M5 = 29 um.
+Total wire length on LAYER M6 = 7 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7076.
+Up-via summary (total 7076):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    3277
+             M2    2883
+             M3     751
+             M4     119
+             M5      46
+             M6       0
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7076
+
+
+[INFO DRT-0195] Start 17th optimization iteration.
+    Completing 10% with 339 violations.
+    elapsed time = 00:00:00, memory = 726.69 (MB).
+    Completing 20% with 339 violations.
+    elapsed time = 00:00:14, memory = 756.03 (MB).
+    Completing 30% with 502 violations.
+    elapsed time = 00:00:14, memory = 756.06 (MB).
+    Completing 40% with 502 violations.
+    elapsed time = 00:00:18, memory = 761.80 (MB).
+    Completing 50% with 502 violations.
+    elapsed time = 00:00:24, memory = 761.81 (MB).
+    Completing 60% with 449 violations.
+    elapsed time = 00:00:24, memory = 760.91 (MB).
+    Completing 70% with 449 violations.
+    elapsed time = 00:00:35, memory = 761.08 (MB).
+    Completing 80% with 398 violations.
+    elapsed time = 00:00:35, memory = 761.08 (MB).
+    Completing 90% with 398 violations.
+    elapsed time = 00:00:36, memory = 1001.47 (MB).
+    Completing 100% with 428 violations.
+    elapsed time = 00:00:53, memory = 765.77 (MB).
+[INFO DRT-0199]   Number of violations = 428.
+Viol/Layer          M1     M2     V2     M3     M4
+Metal Spacing        1     61      0     84     14
+NS Metal             0      1      0      4      0
+Short                0     64      1    198      0
+[INFO DRT-0267] cpu time = 00:01:10, elapsed time = 00:00:53, memory = 743.58 (MB), peak = 1312.80 (MB)
+Total wire length = 1417 um.
+Total wire length on LAYER M1 = 52 um.
+Total wire length on LAYER M2 = 451 um.
+Total wire length on LAYER M3 = 635 um.
+Total wire length on LAYER M4 = 230 um.
+Total wire length on LAYER M5 = 33 um.
+Total wire length on LAYER M6 = 11 um.
+Total wire length on LAYER M7 = 2 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7166.
+Up-via summary (total 7166):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    2999
+             M2    3120
+             M3     804
+             M4     137
+             M5      96
+             M6      10
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7166
+
+
+[INFO DRT-0195] Start 18th optimization iteration.
+    Completing 10% with 428 violations.
+    elapsed time = 00:00:00, memory = 743.58 (MB).
+    Completing 20% with 428 violations.
+    elapsed time = 00:00:53, memory = 765.34 (MB).
+    Completing 30% with 428 violations.
+    elapsed time = 00:00:53, memory = 765.34 (MB).
+    Completing 40% with 428 violations.
+    elapsed time = 00:00:53, memory = 765.34 (MB).
+    Completing 50% with 428 violations.
+    elapsed time = 00:01:16, memory = 766.39 (MB).
+    Completing 60% with 365 violations.
+    elapsed time = 00:01:16, memory = 766.39 (MB).
+    Completing 70% with 365 violations.
+    elapsed time = 00:01:53, memory = 766.39 (MB).
+    Completing 80% with 359 violations.
+    elapsed time = 00:01:53, memory = 766.39 (MB).
+    Completing 90% with 359 violations.
+    elapsed time = 00:01:53, memory = 766.39 (MB).
+    Completing 100% with 356 violations.
+    elapsed time = 00:01:54, memory = 766.39 (MB).
+[INFO DRT-0199]   Number of violations = 356.
+Viol/Layer          M2     V2     M3     M4
+Metal Spacing       46      0     44     10
+NS Metal             4      0      0      0
+Short               75      1    176      0
+[INFO DRT-0267] cpu time = 00:02:11, elapsed time = 00:01:54, memory = 748.23 (MB), peak = 1312.80 (MB)
+Total wire length = 1417 um.
+Total wire length on LAYER M1 = 52 um.
+Total wire length on LAYER M2 = 451 um.
+Total wire length on LAYER M3 = 634 um.
+Total wire length on LAYER M4 = 232 um.
+Total wire length on LAYER M5 = 32 um.
+Total wire length on LAYER M6 = 11 um.
+Total wire length on LAYER M7 = 2 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7174.
+Up-via summary (total 7174):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    2996
+             M2    3129
+             M3     810
+             M4     133
+             M5      96
+             M6      10
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7174
+
+
+[INFO DRT-0195] Start 19th optimization iteration.
+    Completing 10% with 356 violations.
+    elapsed time = 00:00:00, memory = 748.23 (MB).
+    Completing 20% with 356 violations.
+    elapsed time = 00:00:58, memory = 748.53 (MB).
+    Completing 30% with 349 violations.
+    elapsed time = 00:00:58, memory = 748.53 (MB).
+    Completing 40% with 349 violations.
+    elapsed time = 00:00:58, memory = 748.53 (MB).
+    Completing 50% with 349 violations.
+    elapsed time = 00:01:14, memory = 749.66 (MB).
+    Completing 60% with 348 violations.
+    elapsed time = 00:01:14, memory = 749.66 (MB).
+    Completing 70% with 348 violations.
+    elapsed time = 00:01:47, memory = 752.44 (MB).
+    Completing 80% with 348 violations.
+    elapsed time = 00:01:47, memory = 752.44 (MB).
+    Completing 90% with 348 violations.
+    elapsed time = 00:01:47, memory = 752.44 (MB).
+    Completing 100% with 346 violations.
+    elapsed time = 00:01:52, memory = 752.52 (MB).
+[INFO DRT-0199]   Number of violations = 346.
+Viol/Layer          M2     V2     M3     M4
+Metal Spacing       42      0     17      5
+NS Metal             4      0      0      0
+Short              139      4    135      0
+[INFO DRT-0267] cpu time = 00:01:53, elapsed time = 00:01:52, memory = 728.75 (MB), peak = 1312.80 (MB)
+Total wire length = 1416 um.
+Total wire length on LAYER M1 = 51 um.
+Total wire length on LAYER M2 = 451 um.
+Total wire length on LAYER M3 = 634 um.
+Total wire length on LAYER M4 = 232 um.
+Total wire length on LAYER M5 = 32 um.
+Total wire length on LAYER M6 = 11 um.
+Total wire length on LAYER M7 = 2 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7159.
+Up-via summary (total 7159):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    2992
+             M2    3130
+             M3     804
+             M4     127
+             M5      96
+             M6      10
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7159
+
+
+[INFO DRT-0195] Start 20th optimization iteration.
+    Completing 10% with 346 violations.
+    elapsed time = 00:00:00, memory = 876.58 (MB).
+    Completing 20% with 346 violations.
+    elapsed time = 00:00:59, memory = 734.61 (MB).
+    Completing 30% with 346 violations.
+    elapsed time = 00:00:59, memory = 734.61 (MB).
+    Completing 40% with 346 violations.
+    elapsed time = 00:00:59, memory = 874.94 (MB).
+    Completing 50% with 346 violations.
+    elapsed time = 00:01:07, memory = 734.61 (MB).
+    Completing 60% with 346 violations.
+    elapsed time = 00:01:07, memory = 734.61 (MB).
+    Completing 70% with 346 violations.
+    elapsed time = 00:01:50, memory = 779.22 (MB).
+    Completing 80% with 346 violations.
+    elapsed time = 00:01:50, memory = 779.22 (MB).
+    Completing 90% with 346 violations.
+    elapsed time = 00:01:50, memory = 779.22 (MB).
+    Completing 100% with 339 violations.
+    elapsed time = 00:02:01, memory = 779.31 (MB).
+[INFO DRT-0199]   Number of violations = 339.
+Viol/Layer          M2     V2     M3     M4
+Metal Spacing       41      0     17      5
+NS Metal             3      0      0      0
+Short              134      4    135      0
+[INFO DRT-0267] cpu time = 00:02:01, elapsed time = 00:02:01, memory = 732.39 (MB), peak = 1312.80 (MB)
+Total wire length = 1416 um.
+Total wire length on LAYER M1 = 51 um.
+Total wire length on LAYER M2 = 451 um.
+Total wire length on LAYER M3 = 634 um.
+Total wire length on LAYER M4 = 232 um.
+Total wire length on LAYER M5 = 32 um.
+Total wire length on LAYER M6 = 11 um.
+Total wire length on LAYER M7 = 2 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7159.
+Up-via summary (total 7159):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    2994
+             M2    3128
+             M3     804
+             M4     127
+             M5      96
+             M6      10
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7159
+
+
+[INFO DRT-0195] Start 21st optimization iteration.
+    Completing 10% with 339 violations.
+    elapsed time = 00:00:00, memory = 732.39 (MB).
+    Completing 20% with 339 violations.
+    elapsed time = 00:00:20, memory = 757.81 (MB).
+    Completing 30% with 330 violations.
+    elapsed time = 00:00:20, memory = 757.81 (MB).
+    Completing 40% with 330 violations.
+    elapsed time = 00:00:25, memory = 766.92 (MB).
+    Completing 50% with 330 violations.
+    elapsed time = 00:00:26, memory = 766.92 (MB).
+    Completing 60% with 300 violations.
+    elapsed time = 00:00:26, memory = 766.09 (MB).
+    Completing 70% with 300 violations.
+    elapsed time = 00:00:44, memory = 766.19 (MB).
+    Completing 80% with 287 violations.
+    elapsed time = 00:00:44, memory = 766.19 (MB).
+    Completing 90% with 287 violations.
+    elapsed time = 00:00:44, memory = 1005.97 (MB).
+    Completing 100% with 284 violations.
+    elapsed time = 00:01:21, memory = 766.19 (MB).
+[INFO DRT-0199]   Number of violations = 284.
+Viol/Layer          M2     V2     M3     M4
+Cut Spacing          0      2      0      0
+Metal Spacing       16      0     17      3
+NS Metal             0      0      1      0
+Short              137      2    106      0
+[INFO DRT-0267] cpu time = 00:01:35, elapsed time = 00:01:21, memory = 703.95 (MB), peak = 1312.80 (MB)
+Total wire length = 1415 um.
+Total wire length on LAYER M1 = 51 um.
+Total wire length on LAYER M2 = 449 um.
+Total wire length on LAYER M3 = 634 um.
+Total wire length on LAYER M4 = 232 um.
+Total wire length on LAYER M5 = 32 um.
+Total wire length on LAYER M6 = 11 um.
+Total wire length on LAYER M7 = 2 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7171.
+Up-via summary (total 7171):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    2994
+             M2    3134
+             M3     806
+             M4     131
+             M5      96
+             M6      10
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7171
+
+
+[INFO DRT-0195] Start 22nd optimization iteration.
+    Completing 10% with 284 violations.
+    elapsed time = 00:00:00, memory = 703.95 (MB).
+    Completing 20% with 284 violations.
+    elapsed time = 00:00:05, memory = 728.58 (MB).
+    Completing 30% with 264 violations.
+    elapsed time = 00:00:05, memory = 728.58 (MB).
+    Completing 40% with 264 violations.
+    elapsed time = 00:00:05, memory = 920.58 (MB).
+    Completing 50% with 264 violations.
+    elapsed time = 00:00:16, memory = 730.38 (MB).
+    Completing 60% with 264 violations.
+    elapsed time = 00:00:16, memory = 730.38 (MB).
+    Completing 70% with 264 violations.
+    elapsed time = 00:00:50, memory = 735.31 (MB).
+    Completing 80% with 260 violations.
+    elapsed time = 00:00:50, memory = 735.31 (MB).
+    Completing 90% with 260 violations.
+    elapsed time = 00:01:04, memory = 958.78 (MB).
+    Completing 100% with 241 violations.
+    elapsed time = 00:01:45, memory = 743.94 (MB).
+[INFO DRT-0199]   Number of violations = 241.
+Viol/Layer          M2     V2     M3     M4
+Metal Spacing       18      0     10      3
+Short              118      4     88      0
+[INFO DRT-0267] cpu time = 00:02:10, elapsed time = 00:01:45, memory = 743.52 (MB), peak = 1312.80 (MB)
+Total wire length = 1415 um.
+Total wire length on LAYER M1 = 51 um.
+Total wire length on LAYER M2 = 449 um.
+Total wire length on LAYER M3 = 634 um.
+Total wire length on LAYER M4 = 232 um.
+Total wire length on LAYER M5 = 32 um.
+Total wire length on LAYER M6 = 11 um.
+Total wire length on LAYER M7 = 2 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7177.
+Up-via summary (total 7177):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    2994
+             M2    3140
+             M3     806
+             M4     131
+             M5      96
+             M6      10
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7177
+
+
+[INFO DRT-0195] Start 23rd optimization iteration.
+    Completing 10% with 241 violations.
+    elapsed time = 00:00:00, memory = 743.52 (MB).
+    Completing 20% with 241 violations.
+    elapsed time = 00:00:00, memory = 750.50 (MB).
+    Completing 30% with 241 violations.
+    elapsed time = 00:00:00, memory = 750.50 (MB).
+    Completing 40% with 241 violations.
+    elapsed time = 00:00:00, memory = 750.50 (MB).
+    Completing 50% with 241 violations.
+    elapsed time = 00:00:26, memory = 750.50 (MB).
+    Completing 60% with 241 violations.
+    elapsed time = 00:00:26, memory = 750.50 (MB).
+    Completing 70% with 241 violations.
+    elapsed time = 00:00:51, memory = 753.55 (MB).
+    Completing 80% with 241 violations.
+    elapsed time = 00:00:51, memory = 753.55 (MB).
+    Completing 90% with 241 violations.
+    elapsed time = 00:01:18, memory = 936.72 (MB).
+    Completing 100% with 241 violations.
+    elapsed time = 00:01:45, memory = 753.55 (MB).
+[INFO DRT-0199]   Number of violations = 241.
+Viol/Layer          M2     V2     M3     M4
+Metal Spacing       18      0     10      3
+Short              118      4     88      0
+[INFO DRT-0267] cpu time = 00:02:13, elapsed time = 00:01:45, memory = 747.59 (MB), peak = 1312.80 (MB)
+Total wire length = 1415 um.
+Total wire length on LAYER M1 = 51 um.
+Total wire length on LAYER M2 = 449 um.
+Total wire length on LAYER M3 = 634 um.
+Total wire length on LAYER M4 = 232 um.
+Total wire length on LAYER M5 = 32 um.
+Total wire length on LAYER M6 = 11 um.
+Total wire length on LAYER M7 = 2 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total number of vias = 7177.
+Up-via summary (total 7177):
+
+-----------------------
+ FR_MASTERSLICE       0
+             M1    2994
+             M2    3140
+             M3     806
+             M4     131
+             M5      96
+             M6      10
+             M7       0
+             M8       0
+             M9       0
+            M10       0
+            M11       0
+-----------------------
+                   7177
+
+
+[INFO DRT-0195] Start 24th optimization iteration.
+    Completing 10% with 241 violations.
+    elapsed time = 00:00:00, memory = 747.59 (MB).
+    Completing 20% with 241 violations.
+    elapsed time = 00:00:00, memory = 747.59 (MB).
+    Completing 30% with 241 violations.
+    elapsed time = 00:00:00, memory = 747.59 (MB).
+    Completing 40% with 241 violations.
+    elapsed time = 00:00:00, memory = 753.69 (MB).
+    Completing 50% with 241 violations.
+    elapsed time = 00:00:00, memory = 753.69 (MB).
+    Completing 60% with 241 violations.
+    elapsed time = 00:00:45, memory = 755.45 (MB).
+    Completing 70% with 241 violations.
+    elapsed time = 00:00:45, memory = 755.45 (MB).
+    Completing 80% with 241 violations.
+    elapsed time = 00:00:45, memory = 755.45 (MB).

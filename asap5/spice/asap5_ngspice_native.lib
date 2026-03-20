@@ -1,0 +1,412 @@
+* =============================================================================
+* ASAP5 5nm GAA Nanosheet — ngspice-Native Level-1 Model Library
+* =============================================================================
+*
+* Parallel to asap5_ngspice.lib (which wraps BSIM-CMG geomod=3 .pm files).
+* Uses Shichman-Hodges (level=1) subcircuit models for per-sheet encapsulation.
+* No BSIM-CMG dependency — runs on any ngspice version.
+*
+* Calibrated targets (per nanosheet, LVT, TT, 25C):
+*   Cg  = ~0.05 fF/sheet    Cd = ~0.02 fF/sheet    Cs = ~0.02 fF/sheet
+*   NMOS LVT  Ion @0.7V = ~15 uA/sheet
+*   PMOS LVT  Ion @0.7V = ~10 uA/sheet
+*
+* Device geometry (geomod=3, nanosheet):
+*   Lg = 16 nm, Leff = 14 nm, CGP = 44 nm
+*   Nanosheet width (hfin) = 32 nm, thickness (d) = 8 nm
+*   Sheet pitch = 24 nm, VDD = 0.7 V
+*   Weff/sheet = 2*(d + hfin) = 80 nm
+*
+* Vt flavors (4):
+*   SLVT (super-low Vt) — fastest, highest leakage
+*   LVT  (low Vt)       — primary design choice
+*   RVT  (regular Vt)   — balanced
+*   SRAM                — highest Vt, lowest leakage
+*
+* Model names (matching BSIM-CMG library):
+*   NMOS: nmos_slvt, nmos_lvt, nmos_rvt, nmos_sram
+*   PMOS: pmos_slvt, pmos_lvt, pmos_rvt, pmos_sram
+*
+* Usage:
+*   .lib '/Users/bruce/CLAUDE/asap5/spice/asap5_ngspice_native.lib' tt
+*   xn1 d g s b nmos_lvt          $ single-sheet NMOS LVT
+*   xp1 d g s b pmos_lvt m=3      $ 3-sheet PMOS LVT
+*
+* NOTE: x-prefix required (subcircuit instances). Use m=N for multi-sheet.
+*
+* Limitations vs BSIM-CMG:
+*   - No subthreshold current (use BSIM-CMG for near-threshold analysis)
+*   - No short-channel effects, no self-heating
+*   - Adequate for: Liberty characterization, buffer chain delay, cap extraction,
+*     power estimation, standard cell timing at nominal VDD
+*
+* Corners: tt, ff, ss, sf, fs
+* =============================================================================
+
+.param asap5_vdd = 0.7
+
+
+* =============================================================================
+* TYPICAL-TYPICAL CORNER
+* =============================================================================
+.lib tt
+
+* ── NMOS internal models ───────────────────────────────────────────────────
+* kp calibrated: Id = kp*W/(2L)*(Vgs-Vt)^2*(1+lambda*Vds)
+*   W=80n, L=14n, W/L=5.714
+*   LVT: 15uA = 24.5u * 5.714/2 * (0.45)^2 * 1.056
+
+.model _nmos_slvt_tt nmos level=1
++ vto=0.20 kp=24.5u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _nmos_lvt_tt nmos level=1
++ vto=0.25 kp=24.5u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _nmos_rvt_tt nmos level=1
++ vto=0.30 kp=24.5u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _nmos_sram_tt nmos level=1
++ vto=0.35 kp=24.5u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+* ── PMOS internal models ───────────────────────────────────────────────────
+*   LVT: 10uA = 18u * 5.714/2 * (0.43)^2 * 1.056
+
+.model _pmos_slvt_tt pmos level=1
++ vto=-0.22 kp=18.0u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _pmos_lvt_tt pmos level=1
++ vto=-0.27 kp=18.0u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _pmos_rvt_tt pmos level=1
++ vto=-0.32 kp=18.0u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _pmos_sram_tt pmos level=1
++ vto=-0.37 kp=18.0u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+* ── NMOS subcircuits (per-sheet) ───────────────────────────────────────────
+.subckt nmos_slvt d g s b
+mn1 d g s b _nmos_slvt_tt w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_slvt
+
+.subckt nmos_lvt d g s b
+mn1 d g s b _nmos_lvt_tt w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_lvt
+
+.subckt nmos_rvt d g s b
+mn1 d g s b _nmos_rvt_tt w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_rvt
+
+.subckt nmos_sram d g s b
+mn1 d g s b _nmos_sram_tt w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_sram
+
+* ── PMOS subcircuits (per-sheet) ───────────────────────────────────────────
+.subckt pmos_slvt d g s b
+mp1 d g s b _pmos_slvt_tt w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_slvt
+
+.subckt pmos_lvt d g s b
+mp1 d g s b _pmos_lvt_tt w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_lvt
+
+.subckt pmos_rvt d g s b
+mp1 d g s b _pmos_rvt_tt w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_rvt
+
+.subckt pmos_sram d g s b
+mp1 d g s b _pmos_sram_tt w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_sram
+
+.endl tt
+
+
+* =============================================================================
+* FAST-FAST CORNER (Vt -25mV, kp +10%)
+* =============================================================================
+.lib ff
+
+.model _nmos_slvt_ff nmos level=1
++ vto=0.175 kp=26.95u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_lvt_ff nmos level=1
++ vto=0.225 kp=26.95u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_rvt_ff nmos level=1
++ vto=0.275 kp=26.95u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_sram_ff nmos level=1
++ vto=0.325 kp=26.95u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _pmos_slvt_ff pmos level=1
++ vto=-0.195 kp=19.8u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_lvt_ff pmos level=1
++ vto=-0.245 kp=19.8u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_rvt_ff pmos level=1
++ vto=-0.295 kp=19.8u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_sram_ff pmos level=1
++ vto=-0.345 kp=19.8u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.subckt nmos_slvt d g s b
+mn1 d g s b _nmos_slvt_ff w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_slvt
+.subckt nmos_lvt d g s b
+mn1 d g s b _nmos_lvt_ff w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_lvt
+.subckt nmos_rvt d g s b
+mn1 d g s b _nmos_rvt_ff w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_rvt
+.subckt nmos_sram d g s b
+mn1 d g s b _nmos_sram_ff w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_sram
+
+.subckt pmos_slvt d g s b
+mp1 d g s b _pmos_slvt_ff w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_slvt
+.subckt pmos_lvt d g s b
+mp1 d g s b _pmos_lvt_ff w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_lvt
+.subckt pmos_rvt d g s b
+mp1 d g s b _pmos_rvt_ff w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_rvt
+.subckt pmos_sram d g s b
+mp1 d g s b _pmos_sram_ff w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_sram
+
+.endl ff
+
+
+* =============================================================================
+* SLOW-SLOW CORNER (Vt +25mV, kp -10%)
+* =============================================================================
+.lib ss
+
+.model _nmos_slvt_ss nmos level=1
++ vto=0.225 kp=22.05u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_lvt_ss nmos level=1
++ vto=0.275 kp=22.05u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_rvt_ss nmos level=1
++ vto=0.325 kp=22.05u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_sram_ss nmos level=1
++ vto=0.375 kp=22.05u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _pmos_slvt_ss pmos level=1
++ vto=-0.245 kp=16.2u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_lvt_ss pmos level=1
++ vto=-0.295 kp=16.2u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_rvt_ss pmos level=1
++ vto=-0.345 kp=16.2u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_sram_ss pmos level=1
++ vto=-0.395 kp=16.2u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.subckt nmos_slvt d g s b
+mn1 d g s b _nmos_slvt_ss w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_slvt
+.subckt nmos_lvt d g s b
+mn1 d g s b _nmos_lvt_ss w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_lvt
+.subckt nmos_rvt d g s b
+mn1 d g s b _nmos_rvt_ss w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_rvt
+.subckt nmos_sram d g s b
+mn1 d g s b _nmos_sram_ss w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_sram
+
+.subckt pmos_slvt d g s b
+mp1 d g s b _pmos_slvt_ss w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_slvt
+.subckt pmos_lvt d g s b
+mp1 d g s b _pmos_lvt_ss w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_lvt
+.subckt pmos_rvt d g s b
+mp1 d g s b _pmos_rvt_ss w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_rvt
+.subckt pmos_sram d g s b
+mp1 d g s b _pmos_sram_ss w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_sram
+
+.endl ss
+
+
+* =============================================================================
+* SLOW-N FAST-P CORNER
+* =============================================================================
+.lib sf
+
+.model _nmos_slvt_sf nmos level=1
++ vto=0.225 kp=22.05u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_lvt_sf nmos level=1
++ vto=0.275 kp=22.05u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_rvt_sf nmos level=1
++ vto=0.325 kp=22.05u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_sram_sf nmos level=1
++ vto=0.375 kp=22.05u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _pmos_slvt_sf pmos level=1
++ vto=-0.195 kp=19.8u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_lvt_sf pmos level=1
++ vto=-0.245 kp=19.8u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_rvt_sf pmos level=1
++ vto=-0.295 kp=19.8u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_sram_sf pmos level=1
++ vto=-0.345 kp=19.8u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.subckt nmos_slvt d g s b
+mn1 d g s b _nmos_slvt_sf w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_slvt
+.subckt nmos_lvt d g s b
+mn1 d g s b _nmos_lvt_sf w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_lvt
+.subckt nmos_rvt d g s b
+mn1 d g s b _nmos_rvt_sf w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_rvt
+.subckt nmos_sram d g s b
+mn1 d g s b _nmos_sram_sf w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_sram
+
+.subckt pmos_slvt d g s b
+mp1 d g s b _pmos_slvt_sf w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_slvt
+.subckt pmos_lvt d g s b
+mp1 d g s b _pmos_lvt_sf w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_lvt
+.subckt pmos_rvt d g s b
+mp1 d g s b _pmos_rvt_sf w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_rvt
+.subckt pmos_sram d g s b
+mp1 d g s b _pmos_sram_sf w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_sram
+
+.endl sf
+
+
+* =============================================================================
+* FAST-N SLOW-P CORNER
+* =============================================================================
+.lib fs
+
+.model _nmos_slvt_fs nmos level=1
++ vto=0.175 kp=26.95u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_lvt_fs nmos level=1
++ vto=0.225 kp=26.95u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_rvt_fs nmos level=1
++ vto=0.275 kp=26.95u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _nmos_sram_fs nmos level=1
++ vto=0.325 kp=26.95u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.model _pmos_slvt_fs pmos level=1
++ vto=-0.245 kp=16.2u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_lvt_fs pmos level=1
++ vto=-0.295 kp=16.2u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_rvt_fs pmos level=1
++ vto=-0.345 kp=16.2u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+.model _pmos_sram_fs pmos level=1
++ vto=-0.395 kp=16.2u lambda=0.08 tox=1.0n cgso=1.5e-10 cgdo=1.5e-10 tnom=25
+
+.subckt nmos_slvt d g s b
+mn1 d g s b _nmos_slvt_fs w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_slvt
+.subckt nmos_lvt d g s b
+mn1 d g s b _nmos_lvt_fs w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_lvt
+.subckt nmos_rvt d g s b
+mn1 d g s b _nmos_rvt_fs w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_rvt
+.subckt nmos_sram d g s b
+mn1 d g s b _nmos_sram_fs w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends nmos_sram
+
+.subckt pmos_slvt d g s b
+mp1 d g s b _pmos_slvt_fs w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_slvt
+.subckt pmos_lvt d g s b
+mp1 d g s b _pmos_lvt_fs w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_lvt
+.subckt pmos_rvt d g s b
+mp1 d g s b _pmos_rvt_fs w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_rvt
+.subckt pmos_sram d g s b
+mp1 d g s b _pmos_sram_fs w=80n l=14n ad=0 as=0 pd=0 ps=0
+Cd_jn d b 0.02f
+Cs_jn s b 0.02f
+.ends pmos_sram
+
+.endl fs
+
+* =============================================================================
+* END OF LIBRARY
+* =============================================================================

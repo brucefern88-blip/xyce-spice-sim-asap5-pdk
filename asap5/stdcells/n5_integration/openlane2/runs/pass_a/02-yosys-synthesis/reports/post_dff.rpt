@@ -1,0 +1,196 @@
+96. Printing statistics.
+
+=== $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum ===
+
+   Number of wires:                 76
+   Number of wire bits:            100
+   Number of public wires:           4
+   Number of public wire bits:      28
+   Number of ports:                  3
+   Number of port bits:             27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 85
+     $_AND_                         49
+     $_OR_                          36
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum ===
+
+   Number of wires:                132
+   Number of wire bits:            164
+   Number of public wires:           4
+   Number of public wire bits:      36
+   Number of ports:                  3
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                145
+     $_AND_                         81
+     $_OR_                          64
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum ===
+
+   Number of wires:                 36
+   Number of wire bits:             52
+   Number of public wires:           4
+   Number of public wire bits:      20
+   Number of ports:                  3
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 41
+     $_AND_                         25
+     $_OR_                          16
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum ===
+
+   Number of wires:                 22
+   Number of wire bits:             34
+   Number of public wires:           4
+   Number of public wire bits:      16
+   Number of ports:                  3
+   Number of port bits:             15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 25
+     $_AND_                         16
+     $_OR_                           9
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum ===
+
+   Number of wires:                292
+   Number of wire bits:            340
+   Number of public wires:           4
+   Number of public wire bits:      52
+   Number of ports:                  3
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                313
+     $_AND_                        169
+     $_OR_                         144
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum ===
+
+   Number of wires:                 12
+   Number of wire bits:             20
+   Number of public wires:           4
+   Number of public wire bits:      12
+   Number of ports:                  3
+   Number of port bits:             11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 13
+     $_AND_                          9
+     $_OR_                           4
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum ===
+
+   Number of wires:                196
+   Number of wire bits:            240
+   Number of public wires:           4
+   Number of public wire bits:      48
+   Number of ports:                  3
+   Number of port bits:             47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                215
+     $_AND_                        119
+     $_OR_                          96
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+
+=== hamming_64b_cuboid_r4_xp ===
+
+   Number of wires:                192
+   Number of wire bits:            772
+   Number of public wires:          23
+   Number of public wire bits:     603
+   Number of ports:                  3
+   Number of port bits:            135
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                365
+     $_AND_                         32
+     $_NOR_                         32
+     $_OR_                         166
+     $_XNOR_                        64
+     $_XOR_                         32
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum     10
+     $paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum      4
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum     20
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum is unknown!
+   Area for cell type $paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum is unknown!
+   Area for cell type $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum is unknown!
+   Area for cell type $paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum is unknown!
+   Area for cell type $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum is unknown!
+   Area for cell type $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum is unknown!
+   Area for cell type $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum is unknown!
+
+=== design hierarchy ===
+
+   hamming_64b_cuboid_r4_xp          1
+     $paramod$0c81c207a310b72408f4f8831a797da054d9c1db\crosspoint_sum      2
+     $paramod$447b57bf24c7b74983678fdc90ff9df1e2f74a99\crosspoint_sum      1
+     $paramod$8edda239f4d2df5686186831f84415ebef22b7be\crosspoint_sum     10
+     $paramod$a585b6e25e29b07a6e2324d7b4f0c92b553b4785\crosspoint_sum      4
+     $paramod$ba9e7beca6b891b4c373258dc7af53ad2b461b1f\crosspoint_sum      1
+     $paramod$c1a59b1b683d21837d149d3f4c2c64c6f94abdf5\crosspoint_sum     20
+     $paramod$cfb50a1dbed197bd831b1d7c0bd1d07ff391e3eb\crosspoint_sum      1
+
+   Number of wires:               1652
+   Number of wire bits:           2772
+   Number of public wires:         179
+   Number of public wire bits:    1299
+   Number of ports:                120
+   Number of port bits:            792
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1939
+     $_AND_                        993
+     $_NOR_                         32
+     $_OR_                         818
+     $_XNOR_                        64
+     $_XOR_                         32
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+

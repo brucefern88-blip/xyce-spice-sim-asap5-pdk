@@ -1,0 +1,12 @@
+make_tracks M1 -x_offset 0.014 -x_pitch 0.028 -y_offset 0.014 -y_pitch 0.028
+make_tracks M2 -x_offset 0.014 -x_pitch 0.028 -y_offset 0.014 -y_pitch 0.028
+make_tracks M3 -x_offset 0.014 -x_pitch 0.028 -y_offset 0.014 -y_pitch 0.028
+make_tracks M4 -x_offset 0.020 -x_pitch 0.040 -y_offset 0.020 -y_pitch 0.040
+make_tracks M5 -x_offset 0.020 -x_pitch 0.040 -y_offset 0.020 -y_pitch 0.040
+make_tracks M6 -x_offset 0.020 -x_pitch 0.040 -y_offset 0.020 -y_pitch 0.040
+make_tracks M7 -x_offset 0.040 -x_pitch 0.080 -y_offset 0.040 -y_pitch 0.080
+make_tracks M8 -x_offset 0.040 -x_pitch 0.080 -y_offset 0.040 -y_pitch 0.080
+make_tracks M9 -x_offset 0.080 -x_pitch 0.160 -y_offset 0.080 -y_pitch 0.160
+make_tracks M10 -x_offset 0.080 -x_pitch 0.160 -y_offset 0.080 -y_pitch 0.160
+make_tracks M11 -x_offset 0.400 -x_pitch 0.800 -y_offset 0.400 -y_pitch 0.800
+make_tracks M12 -x_offset 0.400 -x_pitch 0.800 -y_offset 0.400 -y_pitch 0.800

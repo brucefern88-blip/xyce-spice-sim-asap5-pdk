@@ -1,0 +1,58 @@
+* =============================================================================
+* test_invx1_cal_tran.cir — ASAP5 INVx1 Transient: Delay, Power, Energy
+* =============================================================================
+* Calibrated models (Cg=0.05, Cd=0.02 fF/nfin), nfin=2, LVT TT, VDD=0.7V
+* Run:  Xyce test_invx1_cal_tran.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+
+* === Xyce Global Options ===
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.7
+
+vdd  vdd  0  dc {vdd_val}
+vss  vss  0  dc 0
+
+* Pulse: 0→0.7V, delay=50ps, rise/fall=5ps, width=95ps, period=200ps
+vin  in  0  pulse(0 {vdd_val} 50p 5p 5p 95p 200p)
+
+* INVx1 — 2 nfin each (minimum size)
+mp1  out in  vdd vdd pmos_lvt l=16n nfin=2
+mn1  out in  vss vss nmos_lvt l=16n nfin=2
+
+cload out 0 1.0f
+
+.TRAN 0.5p 400p
+.PRINT TRAN V(in) V(out)
+
+* --- Propagation Delay ---
+.MEASURE TRAN tphl TRIG V(in) VAL={vdd_val/2} RISE=1
++                    TARG V(out) VAL={vdd_val/2} FALL=1
+.MEASURE TRAN tplh TRIG V(in) VAL={vdd_val/2} FALL=1
++                    TARG V(out) VAL={vdd_val/2} RISE=1
+
+* --- Transition Times ---
+.MEASURE TRAN fall_time TRIG V(out) VAL={vdd_val*0.9} FALL=1
++                        TARG V(out) VAL={vdd_val*0.1} FALL=1
+.MEASURE TRAN rise_time TRIG V(out) VAL={vdd_val*0.1} RISE=1
++                        TARG V(out) VAL={vdd_val*0.9} RISE=1
+
+* --- Average Supply Current (one full cycle) ---
+.MEASURE TRAN avg_idd AVG I(vdd) FROM=50p TO=250p
+
+* --- Energy per Falling Transition (output falls = NMOS pulls down) ---
+.MEASURE TRAN e_fall INTEG {V(vdd)*I(vdd)} FROM=50p TO=150p
+
+* --- Energy per Rising Transition (output rises = PMOS pulls up) ---
+.MEASURE TRAN e_rise INTEG {V(vdd)*I(vdd)} FROM=150p TO=250p
+
+* --- Total Energy (one full cycle) ---
+.MEASURE TRAN e_total INTEG {V(vdd)*I(vdd)} FROM=50p TO=250p
+
+.END

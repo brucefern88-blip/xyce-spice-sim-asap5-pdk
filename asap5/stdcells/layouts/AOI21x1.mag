@@ -1,0 +1,102 @@
+magic
+tech asap5
+timestamp 1710720000
+<< checkpaint >>
+rect -20000 -20000 20260 20140
+<< nwell >>
+rect 0 65 260 140
+<< poly >>
+rect 36 72 52 135
+rect 124 72 140 135
+rect 212 72 228 135
+rect 36 5 52 58
+rect 124 5 140 58
+rect 212 5 228 58
+<< ndiff >>
+rect 2 46 36 55
+rect 52 46 124 55
+rect 140 46 212 55
+rect 228 46 258 55
+rect 2 22 4 46
+rect 26 22 36 46
+rect 52 22 124 46
+rect 140 22 150 46
+rect 176 22 212 46
+rect 228 22 238 46
+rect 256 22 258 46
+rect 2 10 36 22
+rect 52 10 124 22
+rect 140 10 212 22
+rect 228 10 258 22
+<< pdiff >>
+rect 2 120 36 130
+rect 52 120 124 130
+rect 140 120 212 130
+rect 228 120 258 130
+rect 2 116 4 120
+rect 26 116 36 120
+rect 52 116 62 120
+rect 88 116 124 120
+rect 140 116 150 120
+rect 176 116 212 120
+rect 228 116 238 120
+rect 256 116 258 120
+rect 2 84 4 116
+rect 26 84 36 116
+rect 52 84 62 116
+rect 88 84 124 116
+rect 140 84 150 116
+rect 176 84 212 116
+rect 228 84 238 116
+rect 256 84 258 116
+rect 2 75 36 84
+rect 52 75 124 84
+rect 140 75 212 84
+rect 228 75 258 84
+<< metal1 >>
+rect 0 126 260 140
+rect 64 116 86 126
+rect 2 82 28 84
+rect 64 84 86 116
+rect 148 82 178 84
+rect 236 82 258 84
+rect 240 84 254 118
+rect 36 58 52 72
+rect 124 58 140 72
+rect 212 58 228 72
+rect 240 46 254 84
+rect 6 22 24 50
+rect 152 14 174 22
+rect 152 22 174 46
+rect 240 22 254 46
+rect 0 0 260 14
+<< cogc >>
+rect 38 60 50 70
+rect 126 60 138 70
+rect 214 60 226 70
+<< ndc >>
+rect 4 22 26 46
+rect 150 22 176 46
+rect 238 22 256 46
+<< pdc >>
+rect 4 84 26 116
+rect 62 84 88 116
+rect 150 84 176 116
+rect 238 84 256 116
+<< via1 >>
+rect 6 90 20 104
+rect 152 90 166 104
+rect 6 28 20 42
+rect 240 28 254 42
+<< metal2 >>
+rect 4 88 178 106
+rect 4 26 256 44
+<< labels >>
+rlabel metal1 15 34 15 34 1 Y
+rlabel metal1 247 100 247 100 1 Y
+rlabel cogc 44 65 44 65 1 A0
+rlabel cogc 132 65 132 65 1 A1
+rlabel cogc 220 65 220 65 1 B
+rlabel metal1 163 7 163 7 1 VSS
+rlabel metal1 130 133 130 133 5 VDD
+<< end >>

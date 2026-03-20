@@ -1,0 +1,18 @@
+Pass '--accept-flake-config' to trust it
+Pass '--accept-flake-config' to trust it
+[17:44:57] WARNING  The following warnings have been generated:  __main__.py:155
+[17:44:57] WARNING  The configuration variable 'FP_WELLTAP_CELL' __main__.py:157
+                    is deprecated. Please check the docs for the                
+                    usage on the replacement variable                           
+                    'WELLTAP_CELL'.                                             
+[17:44:57] WARNING  The configuration variable 'FP_ENDCAP_CELL'  __main__.py:157
+                    is deprecated. Please check the docs for the                
+                    usage on the replacement variable                           
+                    'ENDCAP_CELL'.                                              
+[17:44:57] ERROR    Errors have occurred while loading the PDK   __main__.py:158
+                    configuration files.                                        
+[17:44:57] ERROR    Required PDK variable 'LIB' did not get a    __main__.py:160
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:44:57] ERROR    OpenLane will now quit. Please check your    __main__.py:162
+                    configuration.                                              

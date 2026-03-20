@@ -1,0 +1,24 @@
+Pass '--accept-flake-config' to trust it
+Pass '--accept-flake-config' to trust it
+[17:46:16] WARNING  The following warnings have been generated:  __main__.py:155
+[17:46:16] WARNING  The configuration variable                   __main__.py:157
+                    'SYNTH_MAX_FANOUT' is deprecated. Please                    
+                    check the docs for the usage on the                         
+                    replacement variable                                        
+                    'MAX_FANOUT_CONSTRAINT'.                                    
+[17:46:16] WARNING  The configuration variable 'BASE_SDC_FILE'   __main__.py:157
+                    is deprecated. Please check the docs for the                
+                    usage on the replacement variable                           
+                    'FALLBACK_SDC_FILE'.                                        
+[17:46:16] WARNING  The configuration variable 'SYNTH_NO_FLAT'   __main__.py:157
+                    is deprecated. Please check the docs for the                
+                    usage on the replacement variable                           
+                    'SYNTH_HIERARCHY_MODE'.                                     
+[17:46:16] ERROR    Errors have occurred while loading the       __main__.py:158
+                    design configuration file.                                  
+[17:46:16] ERROR    Unknown key                                  __main__.py:160
+                    'CELL_PAD_IN_SITES_GLOBAL_PLACEMENT'                        
+                    provided.                                                   
+[17:46:16] ERROR    Unknown key 'STA_REPORT_POWER' provided.     __main__.py:160
+[17:46:16] ERROR    OpenLane will now quit. Please check your    __main__.py:162
+                    configuration.                                              

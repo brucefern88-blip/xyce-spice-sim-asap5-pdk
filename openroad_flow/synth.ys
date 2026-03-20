@@ -1,0 +1,23 @@
+# Yosys synthesis script for counter design targeting Nangate45
+
+# Read RTL
+read_verilog counter.v
+
+# Elaborate
+hierarchy -top counter
+
+# Synthesize
+synth -top counter
+
+# Technology mapping to Nangate45 standard cells
+dfflibmap -liberty ../OpenROAD/test/Nangate45/Nangate45_typ.lib
+abc -liberty ../OpenROAD/test/Nangate45/Nangate45_typ.lib
+
+# Clean up
+clean
+
+# Write gate-level netlist
+write_verilog -noattr counter_synth.v
+
+# Print statistics
+stat -liberty ../OpenROAD/test/Nangate45/Nangate45_typ.lib

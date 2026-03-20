@@ -1,0 +1,23 @@
+* NGSPICE file created from MUX21x1.ext - technology: asap5
+
+.global Vdd 0 
+
+.subckt MUX21x1
+M1000 VDD a_206_85# a_188_85# w_0_65# pmos_lvt w=0.35u l=0.16u
++  ad=89.99999f pd=1.3u as=81f ps=1.26u
+M1001 VSS a_206_20# a_188_20# 0 nmos_lvt w=0.3u l=0.16u
++  ad=60f pd=1u as=54f ps=0.96u
+M1002 a_156_85# a_140_85# a_112_85# w_0_65# pmos_lvt w=0.35u l=0.16u
++  ad=89.99999f pd=1.3u as=63f ps=0.73u
+M1003 D1 a_140_20# a_112_20# 0 nmos_lvt w=0.3u l=0.16u
++  ad=60f pd=1u as=42f ps=0.58u
+M1004 a_112_85# a_96_85# a_78_85# w_0_65# pmos_lvt w=0.35u l=0.16u
++  ad=63f pd=0.73u as=81f ps=1.26u
+M1005 a_112_20# a_96_20# D0 0 nmos_lvt w=0.3u l=0.16u
++  ad=42f pd=0.58u as=54f ps=0.96u
+M1006 a_46_20# a_30_85# VDD w_0_65# pmos_lvt w=0.35u l=0.16u
++  ad=89.99999f pd=1.3u as=0.126p ps=1.46u
+M1007 a_46_20# a_30_20# VSS 0 nmos_lvt w=0.3u l=0.16u
++  ad=60f pd=1u as=83.99999f ps=1.16u
+.ends
+

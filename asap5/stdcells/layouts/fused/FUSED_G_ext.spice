@@ -1,0 +1,87 @@
+* NGSPICE file created from FUSED_G.ext - technology: asap5
+
+.global Vdd 0 
+
+.subckt FUSED_G
+M1000 a_426_85# a_410_85# a_382_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1001 a_866_10# a_850_10# a_822_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=1.18u as=63f ps=0.73u
+M1002 noh2 a_762_85# a_734_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1003 a_74_10# a_58_10# a_30_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1004 a_250_10# a_234_10# a_206_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1005 a_74_10# a_146_85# a_118_10# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1006 a_514_85# a_498_85# a_470_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1007 noh1 a_586_10# a_558_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1008 a_30_10# a_14_85# a_0_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=1.18u
+M1009 a_206_85# a_190_85# a_74_10# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1010 a_646_10# a_630_10# noh1 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1011 a_558_10# a_542_85# a_514_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1012 a_294_85# a_278_85# a_250_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1013 a_382_10# a_366_10# a_338_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1014 a_734_10# a_718_10# a_690_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1015 a_426_10# a_410_10# a_382_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1016 a_338_85# a_322_85# a_294_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1017 noh2 a_762_10# a_734_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1018 a_690_10# a_674_85# a_646_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1019 a_74_10# a_146_10# a_118_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1020 a_514_10# a_498_10# a_470_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1021 a_118_10# a_102_85# a_74_10# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1022 a_30_10# a_14_10# a_0_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=1.18u
+M1023 a_206_10# a_190_10# a_74_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1024 a_558_10# a_542_10# a_514_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1025 a_470_85# a_454_85# a_426_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1026 a_822_85# a_806_85# noh2 w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1027 a_294_10# a_278_10# a_250_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1028 a_866_85# a_850_85# a_822_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=1.18u as=63f ps=0.73u
+M1029 a_338_10# a_322_10# a_294_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1030 a_74_10# a_58_85# a_30_10# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1031 a_250_85# a_234_85# a_206_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1032 a_690_10# a_674_10# a_646_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1033 noh1 a_586_85# a_558_10# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1034 a_646_85# a_630_85# noh1 w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1035 a_118_10# a_102_10# a_74_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1036 a_470_10# a_454_10# a_426_10# 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1037 a_822_10# a_806_10# noh2 0 nmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1038 a_382_85# a_366_85# a_338_85# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+M1039 a_734_85# a_718_85# a_690_10# w_0_65# pmos_lvt w=0.45u l=0.16u
++  ad=63f pd=0.73u as=63f ps=0.73u
+.ends
+

@@ -1,0 +1,204 @@
+Pass '--accept-flake-config' to trust it
+Pass '--accept-flake-config' to trust it
+[17:42:10] WARNING  The following warnings have been generated:  __main__.py:155
+[17:42:10] WARNING  The configuration variable 'FP_WELLTAP_CELL' __main__.py:157
+                    is deprecated. Please check the docs for the                
+                    usage on the replacement variable                           
+                    'WELLTAP_CELL'.                                             
+[17:42:10] WARNING  The configuration variable 'FP_ENDCAP_CELL'  __main__.py:157
+                    is deprecated. Please check the docs for the                
+                    usage on the replacement variable                           
+                    'ENDCAP_CELL'.                                              
+[17:42:10] ERROR    Errors have occurred while loading the PDK   __main__.py:158
+                    configuration files.                                        
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'PRIMARY_GDSII_STREAMOUT_TOOL' did not get a                
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'DEFAULT_CORNER' did   __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'STA_CORNERS' did not  __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_TRACKS_INFO' did   __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_TAPCELL_DIST' did  __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_IO_HLAYER' did not __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_IO_VLAYER' did not __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'RT_MIN_LAYER' did not __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'RT_MAX_LAYER' did not __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'SCL_GROUND_PINS' did  __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'SCL_POWER_PINS' did   __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'DECAP_CELL' did not   __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'LIB' did not get a    __main__.py:160
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'SYNTH_EXCLUDED_CELL_FILE' did not get a                    
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'PNR_EXCLUDED_CELL_FILE' did not get a                      
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'OUTPUT_CAP_LOAD' did  __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'MAX_FANOUT_CONSTRAINT' did not get a                       
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'CLOCK_UNCERTAINTY_CONSTRAINT' did not get a                
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'CLOCK_TRANSITION_CONSTRAINT' did not get a                 
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'TIME_DERATING_CONSTRAINT' did not get a                    
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'IO_DELAY_CONSTRAINT'  __main__.py:160
+                    did not get a specified value. This PDK may                 
+                    be incompatible with your flow.                             
+[17:42:10] ERROR    Required PDK variable 'CELL_PAD_EXCLUDE' did __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_RAIL_OFFSET'   __main__.py:160
+                    did not get a specified value. This PDK may                 
+                    be incompatible with your flow.                             
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_VWIDTH' did    __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_HWIDTH' did    __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_VSPACING' did  __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_HSPACING' did  __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_VPITCH' did    __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_HPITCH' did    __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_VOFFSET' did   __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_HOFFSET' did   __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'FP_PDN_CORE_RING_VWIDTH' did not get a                     
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'FP_PDN_CORE_RING_HWIDTH' did not get a                     
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'FP_PDN_CORE_RING_VSPACING' did not get a                   
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'FP_PDN_CORE_RING_HSPACING' did not get a                   
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'FP_PDN_CORE_RING_VOFFSET' did not get a                    
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'FP_PDN_CORE_RING_HOFFSET' did not get a                    
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_RAIL_LAYER'    __main__.py:160
+                    did not get a specified value. This PDK may                 
+                    be incompatible with your flow.                             
+[17:42:10] ERROR    Required PDK variable 'FP_PDN_RAIL_WIDTH'    __main__.py:160
+                    did not get a specified value. This PDK may                 
+                    be incompatible with your flow.                             
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'FP_PDN_HORIZONTAL_LAYER' did not get a                     
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'FP_PDN_VERTICAL_LAYER' did not get a                       
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'GRT_LAYER_ADJUSTMENTS' did not get a                       
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'GPL_CELL_PADDING' did __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'DPL_CELL_PADDING' did __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'CTS_ROOT_BUFFER' did  __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'CTS_CLK_BUFFERS' did  __main__.py:160
+                    not get a specified value. This PDK may be                  
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'HEURISTIC_ANTENNA_THRESHOLD' did not get a                 
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'RCX_RULESETS' did not __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'MAGICRC' did not get  __main__.py:160
+                    a specified value. This PDK may be                          
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'MAGIC_TECH' did not   __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Path provided for variable 'MAGIC_PDK_SETUP' __main__.py:160
+                    is invalid:                                                 
+                    '/Users/bruce/CLAUDE/asap5/asap5PDK_r0p4/lib                
+                    s.tech/magic/asap5PDK_r0p4.tcl' does not                    
+                    exist                                                       
+[17:42:10] ERROR    Required PDK variable 'KLAYOUT_TECH' did not __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'KLAYOUT_PROPERTIES'   __main__.py:160
+                    did not get a specified value. This PDK may                 
+                    be incompatible with your flow.                             
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'KLAYOUT_DEF_LAYER_MAP' did not get a                       
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable 'NETGEN_SETUP' did not __main__.py:160
+                    get a specified value. This PDK may be                      
+                    incompatible with your flow.                                
+[17:42:10] ERROR    Required PDK variable                        __main__.py:160
+                    'TIMING_VIOLATION_CORNERS' did not get a                    
+                    specified value. This PDK may be                            
+                    incompatible with your flow.                                
+[17:42:10] ERROR    OpenLane will now quit. Please check your    __main__.py:162
+                    configuration.                                              

@@ -1,0 +1,15 @@
+Pass '--accept-flake-config' to trust it
+Pass '--accept-flake-config' to trust it
+[17:55:43] INFO     Using existing run at 'pass_a' with the          flow.py:578
+                    'Classic' flow.                                             
+[17:55:43] VERBOSE  Using state at                                   flow.py:617
+                    '/Users/bruce/CLAUDE/asap5/stdcells/n5_integrati            
+                    on/openlane2/runs/pass_a/83-odb-diodesonports/st            
+                    ate_out.json'.                                              
+Classic                                            0/100 0:00:00
+[17:55:43] ERROR    The flow has encountered an unexpected       __main__.py:183
+                    error:                                                      
+                    Failed to process 'OpenROAD.DiodeInsertion':                
+                    no step(s) with ID 'OpenROAD.DiodeInsertion'                
+                    found in flow. Did you mean: 'OpenROAD.RCX'?                
+[17:55:43] ERROR    OpenLane will now quit.                      __main__.py:184

@@ -1,0 +1,32 @@
+* =============================================================================
+* test_invx1_xyce_cin.cir — ASAP5 INVx1 Input Capacitance (Cin) via AC
+* =============================================================================
+* Cin = Im(I(vin)) / (2*pi*f) at 1GHz with 1V AC
+* INVx1: 2 nfin NMOS + 2 nfin PMOS, LVT TT, VDD=0.7V
+* Bias: input at mid-rail (both devices in saturation)
+* Run:  Xyce test_invx1_xyce_cin.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt.pm'
+
+* === Xyce Global Options ===
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.7
+
+vdd  vdd  0  dc {vdd_val}
+vss  vss  0  dc 0
+vin  in   0  dc {vdd_val/2} ac 1
+
+mp1  out in  vdd vdd pmos_lvt l=16n nfin=2
+mn1  out in  vss vss nmos_lvt l=16n nfin=2
+
+cload out 0 1.0f
+
+.AC DEC 10 1e8 1e11
+.PRINT AC II(vin) IR(vin) IM(vin) IP(vin)
+
+.END

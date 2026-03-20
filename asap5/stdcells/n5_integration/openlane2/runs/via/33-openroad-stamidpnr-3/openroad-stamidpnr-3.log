@@ -1,0 +1,1911 @@
+Reading OpenROAD database at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/openlane2/runs/via/30-openroad-globalrouting/hamming_64b_cuboid_r4_via.odb'…
+Reading library file at '/Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib'…
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 134, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 145, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 231, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 242, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 339, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 471, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 482, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 497, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 508, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 651, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 677, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 855, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 866, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 881, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 892, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 907, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 918, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1096, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1107, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1122, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1133, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1148, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1159, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1291, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1302, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1317, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1460, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1471, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1486, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1497, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1629, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1655, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1798, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1809, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1824, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 1835, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2013, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2024, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2039, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2050, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2065, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2076, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2302, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2313, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2328, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2339, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2354, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2365, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2380, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2391, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2577, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2588, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2603, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2614, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2629, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2640, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2655, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2666, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2892, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2903, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2918, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2929, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2944, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2955, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2970, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 2981, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3167, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3178, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3193, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3204, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3219, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3230, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3245, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3256, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3442, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3453, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3468, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3479, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3494, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3505, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3520, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3531, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3757, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3768, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3783, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3794, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3809, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3820, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3835, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 3846, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4032, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4043, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4058, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4069, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4084, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4095, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4110, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4121, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4307, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4318, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4333, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4344, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4359, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4370, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4385, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4396, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4622, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4633, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4648, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4659, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4674, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4685, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4700, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4711, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4897, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4908, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4923, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4934, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4949, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4960, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4975, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 4986, table template power_5x5 not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 5041, table template scalar not found.
+[WARNING STA-1256] /Users/bruce/CLAUDE/asap5/stdcells/lib/asap5_stdcells_tt_0p5v_25c.lib line 5042, table template scalar not found.
+Reading library file at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/lib/n5_utility_cells_tt_0p5v_25c.lib'…
+Reading library file at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib'…
+Reading extra library file at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib'…
+[WARNING STA-1140] /Users/bruce/CLAUDE/asap5/stdcells/n5_integration/via_macros/lib/xp_via_macros_tt_0p5v_25c.lib line 1, library xp_via_macros_tt_0p5v_25c already exists.
+Reading design constraints file at '/Users/bruce/CLAUDE/asap5/stdcells/n5_integration/sdc/hamming_cuboid_r4.sdc'…
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[WARNING STA-0450] virtual clock vclk can not be propagated.
+[INFO] Setting RC values…
+%OL_CREATE_REPORT min.rpt
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+======================= nom_tt_025C_0v50 Corner ===================================
+
+Startpoint: A[26] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 ^ input external delay
+     1    0.000286    0.100000    0.000000    0.050000 ^ A[26] (in)
+                                                         A[26] (net)
+                      0.100061    0.000019    0.050019 ^ _480_/A (XNOR2x1)
+     2    0.000575    0.000000    0.000000    0.050019 v _480_/Y (XNOR2x1)
+                                                         _128_ (net)
+                      0.000000    0.000079    0.050098 v _485_/A (NOR2x1)
+     2    0.018687    0.000000    0.000000    0.050098 ^ _485_/Y (NOR2x1)
+                                                         cell_oh[41] (net)
+                      0.000000    0.000799    0.050897 ^ xp3_s2l1_6/h2 (XP_3x3_M2M3)
+     1    0.030852    0.002000    0.001000    0.051897 ^ xp3_s2l1_6/s3 (XP_3x3_M2M3)
+                                                         ps[33] (net)
+                      0.002000    0.000860    0.052757 ^ xp5_s2l2_3/v3 (XP_5x5_M2M3)
+     2    0.000639    0.002000    0.001000    0.053757 ^ xp5_s2l2_3/s3 (XP_5x5_M2M3)
+                                                         boh[30] (net)
+                      0.002000    0.000046    0.053803 ^ _679_/A (NOR2x1)
+     1    0.000335    0.000000    0.000000    0.053803 v _679_/Y (NOR2x1)
+                                                         _248_ (net)
+                      0.000000    0.000021    0.053824 v _681_/A (NAND2x1)
+     1    0.031286    0.000000    0.000000    0.053824 ^ _681_/Y (NAND2x1)
+                                                         hi[9] (net)
+                      0.000000    0.000985    0.054809 ^ xp3_hi_l1_1/h0 (XP_3x3_M4M5)
+     3    0.000773    0.002000    0.001000    0.055809 ^ xp3_hi_l1_1/s2 (XP_3x3_M4M5)
+                                                         hl1[7] (net)
+                      0.002000    0.000066    0.055875 ^ xp5h[0].u/_31_/A (INVx1)
+     3    0.000550    0.000000    0.000000    0.055875 v xp5h[0].u/_31_/Y (INVx1)
+                                                         xp5h[0].u/_04_ (net)
+                      0.000000    0.000009    0.055884 v xp5h[0].u/_40_/A0 (OAI21x1)
+     6    0.001765    0.000000    0.000000    0.055884 ^ xp5h[0].u/_40_/Y (OAI21x1)
+                                                         hl2[3] (net)
+                      0.000000    0.000115    0.055999 ^ u_hi_l3/_135_/A0 (AOI21x1)
+     1    0.000247    0.000000    0.000000    0.055999 v u_hi_l3/_135_/Y (AOI21x1)
+                                                         u_hi_l3/_073_ (net)
+                      0.000000    0.000023    0.056022 v u_hi_l3/_136_/B (NAND2x1)
+     5    0.001186    0.000000    0.000000    0.056022 ^ u_hi_l3/_136_/Y (NAND2x1)
+                                                         high_sum[6] (net)
+                      0.000000    0.000093    0.056115 ^ u_carry/_206_/A (INVx1)
+     3    0.000781    0.000000    0.000000    0.056115 v u_carry/_206_/Y (INVx1)
+                                                         u_carry/_005_ (net)
+                      0.000000    0.000014    0.056130 v u_carry/_208_/A0 (OAI21x1)
+     1    0.000347    0.000000    0.000000    0.056130 ^ u_carry/_208_/Y (OAI21x1)
+                                                         u_carry/_007_ (net)
+                      0.000000    0.000048    0.056178 ^ u_carry/_209_/B (AOI21x1)
+     1    0.000188    0.000000    0.000000    0.056178 v u_carry/_209_/Y (AOI21x1)
+                                                         u_carry/_008_ (net)
+                      0.000000    0.000009    0.056187 v u_carry/_210_/B (NAND2x1)
+     1    0.000316    0.000000    0.000000    0.056187 ^ u_carry/_210_/Y (NAND2x1)
+                                                         upper[8] (net)
+                      0.000000    0.000016    0.056203 ^ _374_/A (INVx1)
+     1    0.000287    0.000000    0.000000    0.056203 v _374_/Y (INVx1)
+                                                         _063_ (net)
+                      0.000000    0.000006    0.056209 v _375_/A (NAND2x1)
+     1    0.000537    0.000000    0.000000    0.056209 ^ _375_/Y (NAND2x1)
+                                                         _064_ (net)
+                      0.000000    0.000029    0.056238 ^ _378_/A (NOR2x1)
+     1    0.000192    0.000000    0.000000    0.056238 v _378_/Y (NOR2x1)
+                                                         _067_ (net)
+                      0.000000    0.000009    0.056247 v _380_/A (NAND2x1)
+     1    0.000148    0.000000    0.000000    0.056247 ^ _380_/Y (NAND2x1)
+                                                         hd[5] (net)
+                      0.000000    0.000006    0.056252 ^ hd[5] (out)
+                                              0.056252   data arrival time
+
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.000000    0.000000   clock reconvergence pessimism
+                                 -0.050000   -0.050000   output external delay
+                                             -0.050000   data required time
+---------------------------------------------------------------------------------------------
+                                             -0.050000   data required time
+                                             -0.056252   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.106252   slack (MET)
+
+
+Startpoint: A[26] (input port clocked by vclk)
+Endpoint: hd[3] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 ^ input external delay
+     1    0.000286    0.100000    0.000000    0.050000 ^ A[26] (in)
+                                                         A[26] (net)
+                      0.100061    0.000019    0.050019 ^ _480_/A (XNOR2x1)
+     2    0.000575    0.000000    0.000000    0.050019 v _480_/Y (XNOR2x1)
+                                                         _128_ (net)
+                      0.000000    0.000079    0.050098 v _485_/A (NOR2x1)
+     2    0.018687    0.000000    0.000000    0.050098 ^ _485_/Y (NOR2x1)
+                                                         cell_oh[41] (net)
+                      0.000000    0.000799    0.050897 ^ xp3_s2l1_6/h2 (XP_3x3_M2M3)
+     1    0.030852    0.002000    0.001000    0.051897 ^ xp3_s2l1_6/s3 (XP_3x3_M2M3)
+                                                         ps[33] (net)
+                      0.002000    0.000860    0.052757 ^ xp5_s2l2_3/v3 (XP_5x5_M2M3)
+     2    0.000639    0.002000    0.001000    0.053757 ^ xp5_s2l2_3/s3 (XP_5x5_M2M3)
+                                                         boh[30] (net)
+                      0.002000    0.000046    0.053803 ^ _679_/A (NOR2x1)
+     1    0.000335    0.000000    0.000000    0.053803 v _679_/Y (NOR2x1)
+                                                         _248_ (net)
+                      0.000000    0.000021    0.053824 v _681_/A (NAND2x1)
+     1    0.031286    0.000000    0.000000    0.053824 ^ _681_/Y (NAND2x1)
+                                                         hi[9] (net)
+                      0.000000    0.000985    0.054809 ^ xp3_hi_l1_1/h0 (XP_3x3_M4M5)
+     2    0.000440    0.002000    0.001000    0.055809 ^ xp3_hi_l1_1/s1 (XP_3x3_M4M5)
+                                                         hl1[6] (net)
+                      0.002000    0.000012    0.055822 ^ xp5h[0].u/_27_/A (INVx1)
+     4    0.001061    0.000000    0.000000    0.055822 v xp5h[0].u/_27_/Y (INVx1)
+                                                         xp5h[0].u/_01_ (net)
+                      0.000000    0.000101    0.055923 v xp5h[0].u/_29_/A1 (OAI21x1)
+     5    0.001666    0.000000    0.000000    0.055923 ^ xp5h[0].u/_29_/Y (OAI21x1)
+                                                         hl2[1] (net)
+                      0.000000    0.000095    0.056018 ^ u_hi_l3/_121_/A1 (AOI21x1)
+     1    0.000387    0.000000    0.000000    0.056018 v u_hi_l3/_121_/Y (AOI21x1)
+                                                         u_hi_l3/_060_ (net)
+                      0.000000    0.000023    0.056041 v u_hi_l3/_125_/A (NAND2x1)
+     4    0.000690    0.000000    0.000000    0.056041 ^ u_hi_l3/_125_/Y (NAND2x1)
+                                                         high_sum[5] (net)
+                      0.000000    0.000033    0.056074 ^ u_carry/_221_/A (NAND2x1)
+     1    0.000127    0.000000    0.000000    0.056074 v u_carry/_221_/Y (NAND2x1)
+                                                         u_carry/_018_ (net)
+                      0.000000    0.000004    0.056078 v u_carry/_222_/B (OAI21x1)
+     1    0.000322    0.000000    0.000000    0.056078 ^ u_carry/_222_/Y (OAI21x1)
+                                                         u_carry/_019_ (net)
+                      0.000000    0.000020    0.056098 ^ u_carry/_225_/A (NOR2x1)
+     1    0.000510    0.000000    0.000000    0.056098 v u_carry/_225_/Y (NOR2x1)
+                                                         u_carry/_022_ (net)
+                      0.000000    0.000041    0.056140 v u_carry/_230_/A (NAND2x1)
+     1    0.000261    0.000000    0.000000    0.056140 ^ u_carry/_230_/Y (NAND2x1)
+                                                         upper[10] (net)
+                      0.000000    0.000009    0.056149 ^ _360_/A (INVx1)
+     2    0.000609    0.000000    0.000000    0.056149 v _360_/Y (INVx1)
+                                                         _051_ (net)
+                      0.000000    0.000123    0.056271 v _362_/A (NAND2x1)
+     1    0.000149    0.000000    0.000000    0.056271 ^ _362_/Y (NAND2x1)
+                                                         _053_ (net)
+                      0.000000    0.000006    0.056278 ^ _363_/A (NOR2x1)
+     1    0.000248    0.000000    0.000000    0.056278 v _363_/Y (NOR2x1)
+                                                         _054_ (net)
+                      0.000000    0.000018    0.056296 v _364_/B (NAND2x1)
+     1    0.000208    0.000000    0.000000    0.056296 ^ _364_/Y (NAND2x1)
+                                                         hd[3] (net)
+                      0.000000    0.000011    0.056307 ^ hd[3] (out)
+                                              0.056307   data arrival time
+
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.000000    0.000000   clock reconvergence pessimism
+                                 -0.050000   -0.050000   output external delay
+                                             -0.050000   data required time
+---------------------------------------------------------------------------------------------
+                                             -0.050000   data required time
+                                             -0.056307   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.106307   slack (MET)
+
+
+Startpoint: A[26] (input port clocked by vclk)
+Endpoint: hd[4] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 ^ input external delay
+     1    0.000286    0.100000    0.000000    0.050000 ^ A[26] (in)
+                                                         A[26] (net)
+                      0.100061    0.000019    0.050019 ^ _480_/A (XNOR2x1)
+     2    0.000575    0.000000    0.000000    0.050019 v _480_/Y (XNOR2x1)
+                                                         _128_ (net)
+                      0.000000    0.000079    0.050098 v _485_/A (NOR2x1)
+     2    0.018687    0.000000    0.000000    0.050098 ^ _485_/Y (NOR2x1)
+                                                         cell_oh[41] (net)
+                      0.000000    0.000799    0.050897 ^ xp3_s2l1_6/h2 (XP_3x3_M2M3)
+     1    0.030852    0.002000    0.001000    0.051897 ^ xp3_s2l1_6/s3 (XP_3x3_M2M3)
+                                                         ps[33] (net)
+                      0.002000    0.000860    0.052757 ^ xp5_s2l2_3/v3 (XP_5x5_M2M3)
+     2    0.000639    0.002000    0.001000    0.053757 ^ xp5_s2l2_3/s3 (XP_5x5_M2M3)
+                                                         boh[30] (net)
+                      0.002000    0.000046    0.053803 ^ _679_/A (NOR2x1)
+     1    0.000335    0.000000    0.000000    0.053803 v _679_/Y (NOR2x1)
+                                                         _248_ (net)
+                      0.000000    0.000021    0.053824 v _681_/A (NAND2x1)
+     1    0.031286    0.000000    0.000000    0.053824 ^ _681_/Y (NAND2x1)
+                                                         hi[9] (net)
+                      0.000000    0.000985    0.054809 ^ xp3_hi_l1_1/h0 (XP_3x3_M4M5)
+     3    0.000773    0.002000    0.001000    0.055809 ^ xp3_hi_l1_1/s2 (XP_3x3_M4M5)
+                                                         hl1[7] (net)
+                      0.002000    0.000066    0.055875 ^ xp5h[0].u/_31_/A (INVx1)
+     3    0.000550    0.000000    0.000000    0.055875 v xp5h[0].u/_31_/Y (INVx1)
+                                                         xp5h[0].u/_04_ (net)
+                      0.000000    0.000009    0.055884 v xp5h[0].u/_40_/A0 (OAI21x1)
+     6    0.001765    0.000000    0.000000    0.055884 ^ xp5h[0].u/_40_/Y (OAI21x1)
+                                                         hl2[3] (net)
+                      0.000000    0.000194    0.056077 ^ u_hi_l3/_106_/A (NAND2x1)
+     1    0.000426    0.000000    0.000000    0.056077 v u_hi_l3/_106_/Y (NAND2x1)
+                                                         u_hi_l3/_047_ (net)
+                      0.000000    0.000051    0.056129 v u_hi_l3/_107_/B (OAI21x1)
+     1    0.000180    0.000000    0.000000    0.056129 ^ u_hi_l3/_107_/Y (OAI21x1)
+                                                         u_hi_l3/_048_ (net)
+                      0.000000    0.000009    0.056138 ^ u_hi_l3/_108_/B (AOI21x1)
+     1    0.000328    0.000000    0.000000    0.056138 v u_hi_l3/_108_/Y (AOI21x1)
+                                                         u_hi_l3/_049_ (net)
+                      0.000000    0.000022    0.056159 v u_hi_l3/_109_/B (OAI21x1)
+     4    0.000643    0.000000    0.000000    0.056159 ^ u_hi_l3/_109_/Y (OAI21x1)
+                                                         high_sum[3] (net)
+                      0.000000    0.000030    0.056189 ^ u_carry/_163_/A (INVx1)
+     4    0.001070    0.000000    0.000000    0.056189 v u_carry/_163_/Y (INVx1)
+                                                         u_carry/_114_ (net)
+                      0.000000    0.000006    0.056195 v u_carry/_185_/A0 (OAI21x1)
+     1    0.000149    0.000000    0.000000    0.056195 ^ u_carry/_185_/Y (OAI21x1)
+                                                         u_carry/_134_ (net)
+                      0.000000    0.000006    0.056200 ^ u_carry/_186_/B (NOR2x1)
+     1    0.000288    0.000000    0.000000    0.056200 v u_carry/_186_/Y (NOR2x1)
+                                                         u_carry/_135_ (net)
+                      0.000000    0.000015    0.056215 v u_carry/_191_/A (NAND2x1)
+     2    0.000676    0.000000    0.000000    0.056215 ^ u_carry/_191_/Y (NAND2x1)
+                                                         upper[6] (net)
+                      0.000000    0.000051    0.056266 ^ _366_/A (NOR2x1)
+     1    0.000224    0.000000    0.000000    0.056266 v _366_/Y (NOR2x1)
+                                                         _056_ (net)
+                      0.000000    0.000014    0.056281 v _367_/A (NAND2x1)
+     1    0.000215    0.000000    0.000000    0.056281 ^ _367_/Y (NAND2x1)
+                                                         _057_ (net)
+                      0.000000    0.000012    0.056293 ^ _368_/B (NOR2x1)
+     1    0.000273    0.000000    0.000000    0.056293 v _368_/Y (NOR2x1)
+                                                         _058_ (net)
+                      0.000000    0.000029    0.056322 v _373_/A (NAND2x1)
+     1    0.000139    0.000000    0.000000    0.056322 ^ _373_/Y (NAND2x1)
+                                                         hd[4] (net)
+                      0.000000    0.000005    0.056327 ^ hd[4] (out)
+                                              0.056327   data arrival time
+
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.000000    0.000000   clock reconvergence pessimism
+                                 -0.050000   -0.050000   output external delay
+                                             -0.050000   data required time
+---------------------------------------------------------------------------------------------
+                                             -0.050000   data required time
+                                             -0.056327   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.106327   slack (MET)
+
+
+Startpoint: A[26] (input port clocked by vclk)
+Endpoint: hd[2] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 ^ input external delay
+     1    0.000286    0.100000    0.000000    0.050000 ^ A[26] (in)
+                                                         A[26] (net)
+                      0.100061    0.000019    0.050019 ^ _480_/A (XNOR2x1)
+     2    0.000575    0.000000    0.000000    0.050019 v _480_/Y (XNOR2x1)
+                                                         _128_ (net)
+                      0.000000    0.000079    0.050098 v _485_/A (NOR2x1)
+     2    0.018687    0.000000    0.000000    0.050098 ^ _485_/Y (NOR2x1)
+                                                         cell_oh[41] (net)
+                      0.000000    0.000799    0.050897 ^ xp3_s2l1_6/h2 (XP_3x3_M2M3)
+     1    0.030852    0.002000    0.001000    0.051897 ^ xp3_s2l1_6/s3 (XP_3x3_M2M3)
+                                                         ps[33] (net)
+                      0.002000    0.000860    0.052757 ^ xp5_s2l2_3/v3 (XP_5x5_M2M3)
+     2    0.000639    0.002000    0.001000    0.053757 ^ xp5_s2l2_3/s3 (XP_5x5_M2M3)
+                                                         boh[30] (net)
+                      0.002000    0.000046    0.053803 ^ _679_/A (NOR2x1)
+     1    0.000335    0.000000    0.000000    0.053803 v _679_/Y (NOR2x1)
+                                                         _248_ (net)
+                      0.000000    0.000021    0.053824 v _681_/A (NAND2x1)
+     1    0.031286    0.000000    0.000000    0.053824 ^ _681_/Y (NAND2x1)
+                                                         hi[9] (net)
+                      0.000000    0.000985    0.054809 ^ xp3_hi_l1_1/h0 (XP_3x3_M4M5)
+     2    0.000440    0.002000    0.001000    0.055809 ^ xp3_hi_l1_1/s1 (XP_3x3_M4M5)
+                                                         hl1[6] (net)
+                      0.002000    0.000012    0.055822 ^ xp5h[0].u/_27_/A (INVx1)
+     4    0.001061    0.000000    0.000000    0.055822 v xp5h[0].u/_27_/Y (INVx1)
+                                                         xp5h[0].u/_01_ (net)
+                      0.000000    0.000101    0.055923 v xp5h[0].u/_29_/A1 (OAI21x1)
+     5    0.001666    0.000000    0.000000    0.055923 ^ xp5h[0].u/_29_/Y (OAI21x1)
+                                                         hl2[1] (net)
+                      0.000000    0.000095    0.056018 ^ u_hi_l3/_121_/A1 (AOI21x1)
+     1    0.000387    0.000000    0.000000    0.056018 v u_hi_l3/_121_/Y (AOI21x1)
+                                                         u_hi_l3/_060_ (net)
+                      0.000000    0.000023    0.056041 v u_hi_l3/_125_/A (NAND2x1)
+     4    0.000690    0.000000    0.000000    0.056041 ^ u_hi_l3/_125_/Y (NAND2x1)
+                                                         high_sum[5] (net)
+                      0.000000    0.000034    0.056075 ^ u_carry/_171_/A (INVx1)
+     4    0.001324    0.000000    0.000000    0.056075 v u_carry/_171_/Y (INVx1)
+                                                         u_carry/_121_ (net)
+                      0.000000    0.000084    0.056160 v u_carry/_232_/A1 (OAI21x1)
+     1    0.000282    0.000000    0.000000    0.056160 ^ u_carry/_232_/Y (OAI21x1)
+                                                         u_carry/_028_ (net)
+                      0.000000    0.000008    0.056168 ^ u_carry/_235_/A (NOR2x1)
+     1    0.000485    0.000000    0.000000    0.056168 v u_carry/_235_/Y (NOR2x1)
+                                                         u_carry/_031_ (net)
+                      0.000000    0.000055    0.056223 v u_carry/_240_/A (NAND2x1)
+     2    0.000540    0.000000    0.000000    0.056223 ^ u_carry/_240_/Y (NAND2x1)
+                                                         upper[11] (net)
+                      0.000000    0.000069    0.056292 ^ _345_/A (NOR2x1)
+     1    0.000255    0.000000    0.000000    0.056292 v _345_/Y (NOR2x1)
+                                                         _037_ (net)
+                      0.000000    0.000025    0.056317 v _347_/A (NAND2x1)
+     2    0.000383    0.000000    0.000000    0.056317 ^ _347_/Y (NAND2x1)
+                                                         _039_ (net)
+                      0.000000    0.000024    0.056341 ^ _351_/A (NOR2x1)
+     1    0.000148    0.000000    0.000000    0.056341 v _351_/Y (NOR2x1)
+                                                         _043_ (net)
+                      0.000000    0.000005    0.056346 v _352_/B (NAND2x1)
+     1    0.000149    0.000000    0.000000    0.056346 ^ _352_/Y (NAND2x1)
+                                                         hd[2] (net)
+                      0.000000    0.000006    0.056352 ^ hd[2] (out)
+                                              0.056352   data arrival time
+
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.000000    0.000000   clock reconvergence pessimism
+                                 -0.050000   -0.050000   output external delay
+                                             -0.050000   data required time
+---------------------------------------------------------------------------------------------
+                                             -0.050000   data required time
+                                             -0.056352   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.106352   slack (MET)
+
+
+Startpoint: B[34] (input port clocked by vclk)
+Endpoint: hd[0] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 ^ input external delay
+     1    0.000253    0.100000    0.000000    0.050000 ^ B[34] (in)
+                                                         B[34] (net)
+                      0.100017    0.000005    0.050005 ^ _508_/B (XNOR2x1)
+     2    0.000278    0.000000    0.000000    0.050005 v _508_/Y (XNOR2x1)
+                                                         _144_ (net)
+                      0.000000    0.000008    0.050013 v _509_/A (INVx1)
+     1    0.000189    0.000000    0.000000    0.050013 ^ _509_/Y (INVx1)
+                                                         _145_ (net)
+                      0.000000    0.000013    0.050026 ^ _512_/A (NOR2x1)
+     2    0.018810    0.000000    0.000000    0.050026 v _512_/Y (NOR2x1)
+                                                         cell_oh[51] (net)
+                      0.000000    0.000259    0.050285 v _514_/B (NOR2x1)
+     1    0.018583    0.000000    0.000000    0.050285 ^ _514_/Y (NOR2x1)
+                                                         cell_oh[52] (net)
+                      0.000000    0.000941    0.051226 ^ xp3_s2l1_8/h1 (XP_3x3_M2M3)
+     1    0.030848    0.002000    0.001000    0.052226 ^ xp3_s2l1_8/s1 (XP_3x3_M2M3)
+                                                         ps[41] (net)
+                      0.002000    0.000770    0.052995 ^ xp5_s2l2_4/v1 (XP_5x5_M2M3)
+     2    0.000403    0.002000    0.001000    0.053995 ^ xp5_s2l2_4/s1 (XP_5x5_M2M3)
+                                                         boh[37] (net)
+                      0.002000    0.000013    0.054009 ^ _688_/A (INVx1)
+     1    0.000118    0.000000    0.000000    0.054009 v _688_/Y (INVx1)
+                                                         _254_ (net)
+                      0.000000    0.000004    0.054012 v _690_/A (NAND2x1)
+     1    0.041647    0.000000    0.000000    0.054012 ^ _690_/Y (NAND2x1)
+                                                         lo[17] (net)
+                      0.000000    0.000755    0.054767 ^ xp4_lo_l1_2/v1 (XP_4x4_M4M5)
+     4    0.000905    0.002000    0.001000    0.055767 ^ xp4_lo_l1_2/s3 (XP_4x4_M4M5)
+                                                         ll1[17] (net)
+                      0.002000    0.000052    0.055819 ^ xp7[1].u/_120_/A1 (AOI21x1)
+     1    0.000161    0.000000    0.000000    0.055819 v xp7[1].u/_120_/Y (AOI21x1)
+                                                         xp7[1].u/_054_ (net)
+                      0.000000    0.000005    0.055825 v xp7[1].u/_121_/B (OAI21x1)
+     8    0.002389    0.000000    0.000000    0.055825 ^ xp7[1].u/_121_/Y (OAI21x1)
+                                                         ll2[22] (net)
+                      0.000000    0.000261    0.056086 ^ u_lo_l3/_392_/A0 (AOI21x1)
+     1    0.000335    0.000000    0.000000    0.056086 v u_lo_l3/_392_/Y (AOI21x1)
+                                                         u_lo_l3/_122_ (net)
+                      0.000000    0.000023    0.056109 v u_lo_l3/_393_/B (OAI21x1)
+     1    0.000161    0.000000    0.000000    0.056109 ^ u_lo_l3/_393_/Y (OAI21x1)
+                                                         u_lo_l3/_123_ (net)
+                      0.000000    0.000006    0.056115 ^ u_lo_l3/_396_/A (NOR2x1)
+     1    0.000327    0.000000    0.000000    0.056115 v u_lo_l3/_396_/Y (NOR2x1)
+                                                         u_lo_l3/_126_ (net)
+                      0.000000    0.000017    0.056133 v u_lo_l3/_397_/B (NAND2x1)
+     2    0.000843    0.000000    0.000000    0.056133 ^ u_lo_l3/_397_/Y (NAND2x1)
+                                                         low_sum[15] (net)
+                      0.000000    0.000092    0.056225 ^ _328_/B (NOR2x1)
+     1    0.000305    0.000000    0.000000    0.056225 v _328_/Y (NOR2x1)
+                                                         _022_ (net)
+                      0.000000    0.000037    0.056262 v _330_/A (NAND2x1)
+     1    0.000142    0.000000    0.000000    0.056262 ^ _330_/Y (NAND2x1)
+                                                         _024_ (net)
+                      0.000000    0.000004    0.056266 ^ _331_/A (NOR2x1)
+     2    0.000543    0.000000    0.000000    0.056266 v _331_/Y (NOR2x1)
+                                                         _025_ (net)
+                      0.000000    0.000047    0.056313 v _332_/B (NAND2x1)
+     1    0.000757    0.000000    0.000000    0.056313 ^ _332_/Y (NAND2x1)
+                                                         hd[0] (net)
+                      0.000000    0.000129    0.056442 ^ hd[0] (out)
+                                              0.056442   data arrival time
+
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.000000    0.000000   clock reconvergence pessimism
+                                 -0.050000   -0.050000   output external delay
+                                             -0.050000   data required time
+---------------------------------------------------------------------------------------------
+                                             -0.050000   data required time
+                                             -0.056442   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.106442   slack (MET)
+
+
+Startpoint: B[34] (input port clocked by vclk)
+Endpoint: hd[1] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 ^ input external delay
+     1    0.000253    0.100000    0.000000    0.050000 ^ B[34] (in)
+                                                         B[34] (net)
+                      0.100017    0.000005    0.050005 ^ _508_/B (XNOR2x1)
+     2    0.000278    0.000000    0.000000    0.050005 v _508_/Y (XNOR2x1)
+                                                         _144_ (net)
+                      0.000000    0.000008    0.050013 v _509_/A (INVx1)
+     1    0.000189    0.000000    0.000000    0.050013 ^ _509_/Y (INVx1)
+                                                         _145_ (net)
+                      0.000000    0.000013    0.050026 ^ _512_/A (NOR2x1)
+     2    0.018810    0.000000    0.000000    0.050026 v _512_/Y (NOR2x1)
+                                                         cell_oh[51] (net)
+                      0.000000    0.000259    0.050285 v _514_/B (NOR2x1)
+     1    0.018583    0.000000    0.000000    0.050285 ^ _514_/Y (NOR2x1)
+                                                         cell_oh[52] (net)
+                      0.000000    0.000941    0.051226 ^ xp3_s2l1_8/h1 (XP_3x3_M2M3)
+     1    0.030848    0.002000    0.001000    0.052226 ^ xp3_s2l1_8/s1 (XP_3x3_M2M3)
+                                                         ps[41] (net)
+                      0.002000    0.000770    0.052995 ^ xp5_s2l2_4/v1 (XP_5x5_M2M3)
+     2    0.000403    0.002000    0.001000    0.053995 ^ xp5_s2l2_4/s1 (XP_5x5_M2M3)
+                                                         boh[37] (net)
+                      0.002000    0.000013    0.054009 ^ _688_/A (INVx1)
+     1    0.000118    0.000000    0.000000    0.054009 v _688_/Y (INVx1)
+                                                         _254_ (net)
+                      0.000000    0.000004    0.054012 v _690_/A (NAND2x1)
+     1    0.041647    0.000000    0.000000    0.054012 ^ _690_/Y (NAND2x1)
+                                                         lo[17] (net)
+                      0.000000    0.000755    0.054767 ^ xp4_lo_l1_2/v1 (XP_4x4_M4M5)
+     4    0.000905    0.002000    0.001000    0.055767 ^ xp4_lo_l1_2/s3 (XP_4x4_M4M5)
+                                                         ll1[17] (net)
+                      0.002000    0.000052    0.055819 ^ xp7[1].u/_120_/A1 (AOI21x1)
+     1    0.000161    0.000000    0.000000    0.055819 v xp7[1].u/_120_/Y (AOI21x1)
+                                                         xp7[1].u/_054_ (net)
+                      0.000000    0.000005    0.055825 v xp7[1].u/_121_/B (OAI21x1)
+     8    0.002389    0.000000    0.000000    0.055825 ^ xp7[1].u/_121_/Y (OAI21x1)
+                                                         ll2[22] (net)
+                      0.000000    0.000329    0.056154 ^ u_lo_l3/_427_/A1 (AOI21x1)
+     1    0.000284    0.000000    0.000000    0.056154 v u_lo_l3/_427_/Y (AOI21x1)
+                                                         u_lo_l3/_154_ (net)
+                      0.000000    0.000032    0.056185 v u_lo_l3/_428_/B (NAND2x1)
+     2    0.000487    0.000000    0.000000    0.056185 ^ u_lo_l3/_428_/Y (NAND2x1)
+                                                         low_sum[18] (net)
+                      0.000000    0.000022    0.056207 ^ _333_/B (NOR2x1)
+     1    0.000171    0.000000    0.000000    0.056207 v _333_/Y (NOR2x1)
+                                                         _026_ (net)
+                      0.000000    0.000007    0.056214 v _335_/A (NAND2x1)
+     1    0.000317    0.000000    0.000000    0.056214 ^ _335_/Y (NAND2x1)
+                                                         _028_ (net)
+                      0.000000    0.000017    0.056232 ^ _339_/A (NOR2x1)
+     1    0.000353    0.000000    0.000000    0.056232 v _339_/Y (NOR2x1)
+                                                         _032_ (net)
+                      0.000000    0.000028    0.056260 v _340_/A (NAND2x1)
+     1    0.000863    0.000000    0.000000    0.056260 ^ _340_/Y (NAND2x1)
+                                                         hd[1] (net)
+                      0.000000    0.000224    0.056483 ^ hd[1] (out)
+                                              0.056483   data arrival time
+
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.000000    0.000000   clock reconvergence pessimism
+                                 -0.050000   -0.050000   output external delay
+                                             -0.050000   data required time
+---------------------------------------------------------------------------------------------
+                                             -0.050000   data required time
+                                             -0.056483   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.106483   slack (MET)
+
+
+Startpoint: B[34] (input port clocked by vclk)
+Endpoint: hd[6] (output port clocked by vclk)
+Path Group: vclk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 ^ input external delay
+     1    0.000253    0.100000    0.000000    0.050000 ^ B[34] (in)
+                                                         B[34] (net)
+                      0.100017    0.000005    0.050005 ^ _508_/B (XNOR2x1)
+     2    0.000278    0.000000    0.000000    0.050005 v _508_/Y (XNOR2x1)
+                                                         _144_ (net)
+                      0.000000    0.000008    0.050013 v _509_/A (INVx1)
+     1    0.000189    0.000000    0.000000    0.050013 ^ _509_/Y (INVx1)
+                                                         _145_ (net)
+                      0.000000    0.000013    0.050026 ^ _512_/A (NOR2x1)
+     2    0.018810    0.000000    0.000000    0.050026 v _512_/Y (NOR2x1)
+                                                         cell_oh[51] (net)
+                      0.000000    0.000259    0.050285 v _514_/B (NOR2x1)
+     1    0.018583    0.000000    0.000000    0.050285 ^ _514_/Y (NOR2x1)
+                                                         cell_oh[52] (net)
+                      0.000000    0.000941    0.051226 ^ xp3_s2l1_8/h1 (XP_3x3_M2M3)
+     1    0.030848    0.002000    0.001000    0.052226 ^ xp3_s2l1_8/s1 (XP_3x3_M2M3)
+                                                         ps[41] (net)
+                      0.002000    0.000770    0.052995 ^ xp5_s2l2_4/v1 (XP_5x5_M2M3)
+     2    0.000403    0.002000    0.001000    0.053995 ^ xp5_s2l2_4/s1 (XP_5x5_M2M3)
+                                                         boh[37] (net)
+                      0.002000    0.000013    0.054009 ^ _688_/A (INVx1)
+     1    0.000118    0.000000    0.000000    0.054009 v _688_/Y (INVx1)
+                                                         _254_ (net)
+                      0.000000    0.000004    0.054012 v _690_/A (NAND2x1)
+     1    0.041647    0.000000    0.000000    0.054012 ^ _690_/Y (NAND2x1)
+                                                         lo[17] (net)
+                      0.000000    0.000755    0.054767 ^ xp4_lo_l1_2/v1 (XP_4x4_M4M5)
+     4    0.000905    0.002000    0.001000    0.055767 ^ xp4_lo_l1_2/s3 (XP_4x4_M4M5)
+                                                         ll1[17] (net)
+                      0.002000    0.000052    0.055819 ^ xp7[1].u/_120_/A1 (AOI21x1)
+     1    0.000161    0.000000    0.000000    0.055819 v xp7[1].u/_120_/Y (AOI21x1)
+                                                         xp7[1].u/_054_ (net)
+                      0.000000    0.000005    0.055825 v xp7[1].u/_121_/B (OAI21x1)
+     8    0.002389    0.000000    0.000000    0.055825 ^ xp7[1].u/_121_/Y (OAI21x1)
+                                                         ll2[22] (net)
+                      0.000000    0.000261    0.056086 ^ u_lo_l3/_392_/A0 (AOI21x1)
+     1    0.000335    0.000000    0.000000    0.056086 v u_lo_l3/_392_/Y (AOI21x1)
+                                                         u_lo_l3/_122_ (net)
+                      0.000000    0.000023    0.056109 v u_lo_l3/_393_/B (OAI21x1)
+     1    0.000161    0.000000    0.000000    0.056109 ^ u_lo_l3/_393_/Y (OAI21x1)
+                                                         u_lo_l3/_123_ (net)
+                      0.000000    0.000006    0.056115 ^ u_lo_l3/_396_/A (NOR2x1)
+     1    0.000327    0.000000    0.000000    0.056115 v u_lo_l3/_396_/Y (NOR2x1)
+                                                         u_lo_l3/_126_ (net)
+                      0.000000    0.000017    0.056133 v u_lo_l3/_397_/B (NAND2x1)
+     2    0.000843    0.000000    0.000000    0.056133 ^ u_lo_l3/_397_/Y (NAND2x1)
+                                                         low_sum[15] (net)
+                      0.000000    0.000093    0.056225 ^ _309_/A (NOR2x1)
+     1    0.000299    0.000000    0.000000    0.056225 v _309_/Y (NOR2x1)
+                                                         _006_ (net)
+                      0.000000    0.000017    0.056242 v _311_/A (NAND2x1)
+     4    0.001180    0.000000    0.000000    0.056242 ^ _311_/Y (NAND2x1)
+                                                         carry[3] (net)
+                      0.000000    0.000089    0.056332 ^ u_carry/_308_/B (NAND2x1)
+     1    0.000471    0.000000    0.000000    0.056332 v u_carry/_308_/Y (NAND2x1)
+                                                         u_carry/_096_ (net)
+                      0.000000    0.000041    0.056373 v u_carry/_309_/B (OAI21x1)
+     1    0.000306    0.000000    0.000000    0.056373 ^ u_carry/_309_/Y (OAI21x1)
+                                                         u_carry/_097_ (net)
+                      0.000000    0.000020    0.056393 ^ u_carry/_310_/B (AOI21x1)
+     1    0.000450    0.000000    0.000000    0.056393 v u_carry/_310_/Y (AOI21x1)
+                                                         u_carry/_098_ (net)
+                      0.000000    0.000055    0.056448 v u_carry/_311_/B (OAI21x1)
+     2    0.000461    0.000000    0.000000    0.056448 ^ u_carry/_311_/Y (OAI21x1)
+                                                         upper[19] (net)
+                      0.000000    0.000035    0.056482 ^ _341_/A (INVx1)
+     1    0.000157    0.000000    0.000000    0.056482 v _341_/Y (INVx1)
+                                                         _033_ (net)
+                      0.000000    0.000008    0.056491 v _343_/A (NAND2x1)
+     1    0.000264    0.000000    0.000000    0.056491 ^ _343_/Y (NAND2x1)
+                                                         _035_ (net)
+                      0.000000    0.000027    0.056518 ^ _344_/A (NOR2x1)
+     2    0.000408    0.000000    0.000000    0.056518 v _344_/Y (NOR2x1)
+                                                         _036_ (net)
+                      0.000000    0.000016    0.056534 v _388_/B (NAND2x1)
+     1    0.000200    0.000000    0.000000    0.056534 ^ _388_/Y (NAND2x1)
+                                                         hd[6] (net)
+                      0.000000    0.000010    0.056545 ^ hd[6] (out)
+                                              0.056545   data arrival time
+
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.000000    0.000000   clock reconvergence pessimism
+                                 -0.050000   -0.050000   output external delay
+                                             -0.050000   data required time
+---------------------------------------------------------------------------------------------
+                                             -0.050000   data required time
+                                             -0.056545   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.106545   slack (MET)
+
+
+
+%OL_END_REPORT
+%OL_CREATE_REPORT max.rpt
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+======================= nom_tt_025C_0v50 Corner ===================================
+
+Startpoint: A[50] (input port clocked by vclk)
+Endpoint: hd[2] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000488    0.100000    0.000000    0.050000 v A[50] (in)
+                                                         A[50] (net)
+                      0.100138    0.000044    0.050044 v _564_/A (XNOR2x1)
+     2    0.000562    0.000000    0.000000    0.050044 v _564_/Y (XNOR2x1)
+                                                         _176_ (net)
+                      0.000000    0.000039    0.050083 v _565_/A (INVx1)
+     1    0.000367    0.000000    0.000000    0.050083 ^ _565_/Y (INVx1)
+                                                         _177_ (net)
+                      0.000000    0.000009    0.050092 ^ _568_/A (NOR2x1)
+     2    0.019306    0.000000    0.000000    0.050092 v _568_/Y (NOR2x1)
+                                                         cell_oh[75] (net)
+                      0.000000    0.007011    0.057103 v _570_/B (NOR2x1)
+     1    0.018710    0.000000    0.000000    0.057103 ^ _570_/Y (NOR2x1)
+                                                         cell_oh[76] (net)
+                      0.000000    0.003105    0.060208 ^ xp3_s2l1_12/h1 (XP_3x3_M2M3)
+     1    0.030858    0.002000    0.001000    0.061208 ^ xp3_s2l1_12/s1 (XP_3x3_M2M3)
+                                                         ps[61] (net)
+                      0.002000    0.000893    0.062101 ^ xp5_s2l2_6/v1 (XP_5x5_M2M3)
+     2    0.000520    0.002000    0.001000    0.063101 ^ xp5_s2l2_6/s3 (XP_5x5_M2M3)
+                                                         boh[57] (net)
+                      0.002000    0.000053    0.063153 ^ _733_/A (NOR2x1)
+     1    0.000216    0.000000    0.000000    0.063153 v _733_/Y (NOR2x1)
+                                                         _284_ (net)
+                      0.000000    0.000012    0.063166 v _735_/A (NAND2x1)
+     1    0.031627    0.000000    0.000000    0.063166 ^ _735_/Y (NAND2x1)
+                                                         hi[18] (net)
+                      0.000000    0.010318    0.073484 ^ xp3_hi_l1_3/v0 (XP_3x3_M4M5)
+     4    0.001222    0.002000    0.001000    0.074484 ^ xp3_hi_l1_3/s0 (XP_3x3_M4M5)
+                                                         hl1[15] (net)
+                      0.002000    0.000222    0.074706 ^ xp5h[1].u/_36_/A (INVx1)
+     2    0.000454    0.000000    0.000000    0.074706 v xp5h[1].u/_36_/Y (INVx1)
+                                                         xp5h[1].u/_08_ (net)
+                      0.000000    0.000024    0.074730 v xp5h[1].u/_59_/A (NOR2x1)
+     1    0.070903    0.000000    0.000000    0.074730 ^ xp5h[1].u/_59_/Y (NOR2x1)
+                                                         xp5h[1].u/sum_bit[0].grid_and (net)
+                      0.000000    0.035549    0.110279 ^ xp5h[1].u/_61_/A (BUFx1)
+     6    0.001599    0.200000    0.188000    0.298279 ^ xp5h[1].u/_61_/Y (BUFx1)
+                                                         hl2[9] (net)
+                      0.200000    0.000096    0.298375 ^ u_hi_l3/_101_/A (INVx1)
+     4    0.000682    0.000000    0.000000    0.298375 v u_hi_l3/_101_/Y (INVx1)
+                                                         u_hi_l3/_043_ (net)
+                      0.000000    0.000010    0.298385 v u_hi_l3/_205_/A (NOR2x1)
+     1    0.070244    0.000000    0.000000    0.298385 ^ u_hi_l3/_205_/Y (NOR2x1)
+                                                         u_hi_l3/sum_bit[0].grid_and (net)
+                      0.000000    0.014231    0.312616 ^ u_hi_l3/_207_/A (BUFx1)
+     3    0.000805    0.200000    0.188000    0.500616 ^ u_hi_l3/_207_/Y (BUFx1)
+                                                         high_sum[0] (net)
+                      0.200000    0.000063    0.500679 ^ u_carry/_148_/A (INVx1)
+     5    0.001067    0.000000    0.000000    0.500679 v u_carry/_148_/Y (INVx1)
+                                                         u_carry/_102_ (net)
+                      0.000000    0.000130    0.500809 v u_carry/_162_/A1 (OAI21x1)
+     2    0.000610    0.000000    0.000000    0.500809 ^ u_carry/_162_/Y (OAI21x1)
+                                                         upper[3] (net)
+                      0.000000    0.000056    0.500866 ^ _349_/B (NOR2x1)
+     1    0.000456    0.000000    0.000000    0.500866 v _349_/Y (NOR2x1)
+                                                         _041_ (net)
+                      0.000000    0.000064    0.500930 v _350_/B (NAND2x1)
+     1    0.000525    0.000000    0.000000    0.500930 ^ _350_/Y (NAND2x1)
+                                                         _042_ (net)
+                      0.000000    0.000073    0.501003 ^ _351_/B (NOR2x1)
+     1    0.000148    0.000000    0.000000    0.501003 v _351_/Y (NOR2x1)
+                                                         _043_ (net)
+                      0.000000    0.000005    0.501008 v _352_/B (NAND2x1)
+     1    0.000149    0.000000    0.000000    0.501008 ^ _352_/Y (NAND2x1)
+                                                         hd[2] (net)
+                      0.000000    0.000006    0.501014 ^ hd[2] (out)
+                                              0.501014   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.501014   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.351014   slack (VIOLATED)
+
+
+Startpoint: A[50] (input port clocked by vclk)
+Endpoint: hd[4] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000488    0.100000    0.000000    0.050000 v A[50] (in)
+                                                         A[50] (net)
+                      0.100138    0.000044    0.050044 v _564_/A (XNOR2x1)
+     2    0.000562    0.000000    0.000000    0.050044 v _564_/Y (XNOR2x1)
+                                                         _176_ (net)
+                      0.000000    0.000039    0.050083 v _565_/A (INVx1)
+     1    0.000367    0.000000    0.000000    0.050083 ^ _565_/Y (INVx1)
+                                                         _177_ (net)
+                      0.000000    0.000009    0.050092 ^ _568_/A (NOR2x1)
+     2    0.019306    0.000000    0.000000    0.050092 v _568_/Y (NOR2x1)
+                                                         cell_oh[75] (net)
+                      0.000000    0.007011    0.057103 v _570_/B (NOR2x1)
+     1    0.018710    0.000000    0.000000    0.057103 ^ _570_/Y (NOR2x1)
+                                                         cell_oh[76] (net)
+                      0.000000    0.003105    0.060208 ^ xp3_s2l1_12/h1 (XP_3x3_M2M3)
+     1    0.030858    0.002000    0.001000    0.061208 ^ xp3_s2l1_12/s1 (XP_3x3_M2M3)
+                                                         ps[61] (net)
+                      0.002000    0.000893    0.062101 ^ xp5_s2l2_6/v1 (XP_5x5_M2M3)
+     2    0.000520    0.002000    0.001000    0.063101 ^ xp5_s2l2_6/s3 (XP_5x5_M2M3)
+                                                         boh[57] (net)
+                      0.002000    0.000053    0.063153 ^ _733_/A (NOR2x1)
+     1    0.000216    0.000000    0.000000    0.063153 v _733_/Y (NOR2x1)
+                                                         _284_ (net)
+                      0.000000    0.000012    0.063166 v _735_/A (NAND2x1)
+     1    0.031627    0.000000    0.000000    0.063166 ^ _735_/Y (NAND2x1)
+                                                         hi[18] (net)
+                      0.000000    0.010318    0.073484 ^ xp3_hi_l1_3/v0 (XP_3x3_M4M5)
+     4    0.001222    0.002000    0.001000    0.074484 ^ xp3_hi_l1_3/s0 (XP_3x3_M4M5)
+                                                         hl1[15] (net)
+                      0.002000    0.000222    0.074706 ^ xp5h[1].u/_36_/A (INVx1)
+     2    0.000454    0.000000    0.000000    0.074706 v xp5h[1].u/_36_/Y (INVx1)
+                                                         xp5h[1].u/_08_ (net)
+                      0.000000    0.000024    0.074730 v xp5h[1].u/_59_/A (NOR2x1)
+     1    0.070903    0.000000    0.000000    0.074730 ^ xp5h[1].u/_59_/Y (NOR2x1)
+                                                         xp5h[1].u/sum_bit[0].grid_and (net)
+                      0.000000    0.035549    0.110279 ^ xp5h[1].u/_61_/A (BUFx1)
+     6    0.001599    0.200000    0.188000    0.298279 ^ xp5h[1].u/_61_/Y (BUFx1)
+                                                         hl2[9] (net)
+                      0.200000    0.000096    0.298375 ^ u_hi_l3/_101_/A (INVx1)
+     4    0.000682    0.000000    0.000000    0.298375 v u_hi_l3/_101_/Y (INVx1)
+                                                         u_hi_l3/_043_ (net)
+                      0.000000    0.000010    0.298385 v u_hi_l3/_205_/A (NOR2x1)
+     1    0.070244    0.000000    0.000000    0.298385 ^ u_hi_l3/_205_/Y (NOR2x1)
+                                                         u_hi_l3/sum_bit[0].grid_and (net)
+                      0.000000    0.014231    0.312616 ^ u_hi_l3/_207_/A (BUFx1)
+     3    0.000805    0.200000    0.188000    0.500616 ^ u_hi_l3/_207_/Y (BUFx1)
+                                                         high_sum[0] (net)
+                      0.200000    0.000063    0.500679 ^ u_carry/_148_/A (INVx1)
+     5    0.001067    0.000000    0.000000    0.500679 v u_carry/_148_/Y (INVx1)
+                                                         u_carry/_102_ (net)
+                      0.000000    0.000130    0.500809 v u_carry/_183_/A1 (OAI21x1)
+     1    0.000296    0.000000    0.000000    0.500809 ^ u_carry/_183_/Y (OAI21x1)
+                                                         u_carry/_132_ (net)
+                      0.000000    0.000034    0.500843 ^ u_carry/_186_/A (NOR2x1)
+     1    0.000288    0.000000    0.000000    0.500843 v u_carry/_186_/Y (NOR2x1)
+                                                         u_carry/_135_ (net)
+                      0.000000    0.000015    0.500858 v u_carry/_191_/A (NAND2x1)
+     2    0.000676    0.000000    0.000000    0.500858 ^ u_carry/_191_/Y (NAND2x1)
+                                                         upper[6] (net)
+                      0.000000    0.000051    0.500910 ^ _366_/A (NOR2x1)
+     1    0.000224    0.000000    0.000000    0.500910 v _366_/Y (NOR2x1)
+                                                         _056_ (net)
+                      0.000000    0.000014    0.500924 v _367_/A (NAND2x1)
+     1    0.000215    0.000000    0.000000    0.500924 ^ _367_/Y (NAND2x1)
+                                                         _057_ (net)
+                      0.000000    0.000012    0.500936 ^ _368_/B (NOR2x1)
+     1    0.000273    0.000000    0.000000    0.500936 v _368_/Y (NOR2x1)
+                                                         _058_ (net)
+                      0.000000    0.000029    0.500965 v _373_/A (NAND2x1)
+     1    0.000139    0.000000    0.000000    0.500965 ^ _373_/Y (NAND2x1)
+                                                         hd[4] (net)
+                      0.000000    0.000005    0.500970 ^ hd[4] (out)
+                                              0.500970   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.500970   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.350970   slack (VIOLATED)
+
+
+Startpoint: A[50] (input port clocked by vclk)
+Endpoint: hd[3] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000488    0.100000    0.000000    0.050000 v A[50] (in)
+                                                         A[50] (net)
+                      0.100138    0.000044    0.050044 v _564_/A (XNOR2x1)
+     2    0.000562    0.000000    0.000000    0.050044 v _564_/Y (XNOR2x1)
+                                                         _176_ (net)
+                      0.000000    0.000039    0.050083 v _565_/A (INVx1)
+     1    0.000367    0.000000    0.000000    0.050083 ^ _565_/Y (INVx1)
+                                                         _177_ (net)
+                      0.000000    0.000009    0.050092 ^ _568_/A (NOR2x1)
+     2    0.019306    0.000000    0.000000    0.050092 v _568_/Y (NOR2x1)
+                                                         cell_oh[75] (net)
+                      0.000000    0.007011    0.057103 v _570_/B (NOR2x1)
+     1    0.018710    0.000000    0.000000    0.057103 ^ _570_/Y (NOR2x1)
+                                                         cell_oh[76] (net)
+                      0.000000    0.003105    0.060208 ^ xp3_s2l1_12/h1 (XP_3x3_M2M3)
+     1    0.030858    0.002000    0.001000    0.061208 ^ xp3_s2l1_12/s1 (XP_3x3_M2M3)
+                                                         ps[61] (net)
+                      0.002000    0.000893    0.062101 ^ xp5_s2l2_6/v1 (XP_5x5_M2M3)
+     2    0.000520    0.002000    0.001000    0.063101 ^ xp5_s2l2_6/s3 (XP_5x5_M2M3)
+                                                         boh[57] (net)
+                      0.002000    0.000053    0.063153 ^ _733_/A (NOR2x1)
+     1    0.000216    0.000000    0.000000    0.063153 v _733_/Y (NOR2x1)
+                                                         _284_ (net)
+                      0.000000    0.000012    0.063166 v _735_/A (NAND2x1)
+     1    0.031627    0.000000    0.000000    0.063166 ^ _735_/Y (NAND2x1)
+                                                         hi[18] (net)
+                      0.000000    0.010318    0.073484 ^ xp3_hi_l1_3/v0 (XP_3x3_M4M5)
+     4    0.001222    0.002000    0.001000    0.074484 ^ xp3_hi_l1_3/s0 (XP_3x3_M4M5)
+                                                         hl1[15] (net)
+                      0.002000    0.000222    0.074706 ^ xp5h[1].u/_36_/A (INVx1)
+     2    0.000454    0.000000    0.000000    0.074706 v xp5h[1].u/_36_/Y (INVx1)
+                                                         xp5h[1].u/_08_ (net)
+                      0.000000    0.000024    0.074730 v xp5h[1].u/_59_/A (NOR2x1)
+     1    0.070903    0.000000    0.000000    0.074730 ^ xp5h[1].u/_59_/Y (NOR2x1)
+                                                         xp5h[1].u/sum_bit[0].grid_and (net)
+                      0.000000    0.035549    0.110279 ^ xp5h[1].u/_61_/A (BUFx1)
+     6    0.001599    0.200000    0.188000    0.298279 ^ xp5h[1].u/_61_/Y (BUFx1)
+                                                         hl2[9] (net)
+                      0.200000    0.000096    0.298375 ^ u_hi_l3/_101_/A (INVx1)
+     4    0.000682    0.000000    0.000000    0.298375 v u_hi_l3/_101_/Y (INVx1)
+                                                         u_hi_l3/_043_ (net)
+                      0.000000    0.000010    0.298385 v u_hi_l3/_205_/A (NOR2x1)
+     1    0.070244    0.000000    0.000000    0.298385 ^ u_hi_l3/_205_/Y (NOR2x1)
+                                                         u_hi_l3/sum_bit[0].grid_and (net)
+                      0.000000    0.014231    0.312616 ^ u_hi_l3/_207_/A (BUFx1)
+     3    0.000805    0.200000    0.188000    0.500616 ^ u_hi_l3/_207_/Y (BUFx1)
+                                                         high_sum[0] (net)
+                      0.200000    0.000063    0.500679 ^ u_carry/_148_/A (INVx1)
+     5    0.001067    0.000000    0.000000    0.500679 v u_carry/_148_/Y (INVx1)
+                                                         u_carry/_102_ (net)
+                      0.000000    0.000130    0.500809 v u_carry/_183_/A1 (OAI21x1)
+     1    0.000296    0.000000    0.000000    0.500809 ^ u_carry/_183_/Y (OAI21x1)
+                                                         u_carry/_132_ (net)
+                      0.000000    0.000034    0.500843 ^ u_carry/_186_/A (NOR2x1)
+     1    0.000288    0.000000    0.000000    0.500843 v u_carry/_186_/Y (NOR2x1)
+                                                         u_carry/_135_ (net)
+                      0.000000    0.000015    0.500858 v u_carry/_191_/A (NAND2x1)
+     2    0.000676    0.000000    0.000000    0.500858 ^ u_carry/_191_/Y (NAND2x1)
+                                                         upper[6] (net)
+                      0.000000    0.000051    0.500909 ^ _361_/A (INVx1)
+     1    0.000137    0.000000    0.000000    0.500909 v _361_/Y (INVx1)
+                                                         _052_ (net)
+                      0.000000    0.000006    0.500915 v _362_/B (NAND2x1)
+     1    0.000149    0.000000    0.000000    0.500915 ^ _362_/Y (NAND2x1)
+                                                         _053_ (net)
+                      0.000000    0.000006    0.500921 ^ _363_/A (NOR2x1)
+     1    0.000248    0.000000    0.000000    0.500921 v _363_/Y (NOR2x1)
+                                                         _054_ (net)
+                      0.000000    0.000018    0.500939 v _364_/B (NAND2x1)
+     1    0.000208    0.000000    0.000000    0.500939 ^ _364_/Y (NAND2x1)
+                                                         hd[3] (net)
+                      0.000000    0.000011    0.500950 ^ hd[3] (out)
+                                              0.500950   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.500950   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.350950   slack (VIOLATED)
+
+
+Startpoint: B[13] (input port clocked by vclk)
+Endpoint: hd[6] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000345    0.100000    0.000000    0.050000 v B[13] (in)
+                                                         B[13] (net)
+                      0.100092    0.000029    0.050029 v _433_/B (XNOR2x1)
+     2    0.000627    0.000000    0.000000    0.050029 v _433_/Y (XNOR2x1)
+                                                         _102_ (net)
+                      0.000000    0.000093    0.050122 v _436_/B (NOR2x1)
+     2    0.019125    0.000000    0.000000    0.050122 ^ _436_/Y (NOR2x1)
+                                                         cell_oh[20] (net)
+                      0.000000    0.006117    0.056239 ^ xp3_s2l1_3/v2 (XP_3x3_M2M3)
+     1    0.030974    0.002000    0.001000    0.057239 ^ xp3_s2l1_3/s4 (XP_3x3_M2M3)
+                                                         ps[19] (net)
+                      0.002000    0.003137    0.060376 ^ xp5_s2l2_1/h4 (XP_5x5_M2M3)
+     2    0.031674    0.002000    0.001000    0.061376 ^ xp5_s2l2_1/s8 (XP_5x5_M2M3)
+                                                         boh[17] (net)
+                      0.002000    0.002409    0.063784 ^ _632_/A (INVx1)
+     1    0.000179    0.000000    0.000000    0.063784 v _632_/Y (INVx1)
+                                                         _217_ (net)
+                      0.000000    0.000011    0.063796 v _633_/B (NAND2x1)
+     1    0.041853    0.000000    0.000000    0.063796 ^ _633_/Y (NAND2x1)
+                                                         lo[4] (net)
+                      0.000000    0.007764    0.071559 ^ xp4_lo_l1_0/h0 (XP_4x4_M4M5)
+     4    0.001286    0.002000    0.001000    0.072559 ^ xp4_lo_l1_0/s0 (XP_4x4_M4M5)
+                                                         ll1[0] (net)
+                      0.002000    0.000148    0.072707 ^ xp7[0].u/_058_/A (INVx1)
+     4    0.000739    0.000000    0.000000    0.072707 v xp7[0].u/_058_/Y (INVx1)
+                                                         xp7[0].u/_000_ (net)
+                      0.000000    0.000074    0.072781 v xp7[0].u/_127_/B (NOR2x1)
+     1    0.070102    0.000000    0.000000    0.072781 ^ xp7[0].u/_127_/Y (NOR2x1)
+                                                         xp7[0].u/sum_bit[0].grid_and (net)
+                      0.000000    0.005298    0.078079 ^ xp7[0].u/_129_/A (BUFx1)
+     6    0.002351    0.200000    0.188000    0.266079 ^ xp7[0].u/_129_/Y (BUFx1)
+                                                         ll2[0] (net)
+                      0.200000    0.001256    0.267336 ^ u_lo_l3/_214_/A (INVx1)
+     8    0.002108    0.000000    0.000000    0.267336 v u_lo_l3/_214_/Y (INVx1)
+                                                         u_lo_l3/_172_ (net)
+                      0.000000    0.000157    0.267493 v u_lo_l3/_451_/B (NOR2x1)
+     1    0.070062    0.000000    0.000000    0.267493 ^ u_lo_l3/_451_/Y (NOR2x1)
+                                                         u_lo_l3/sum_bit[0].grid_and (net)
+                      0.000000    0.003291    0.270784 ^ u_lo_l3/_453_/A (BUFx1)
+     1    0.000212    0.200000    0.188000    0.458784 ^ u_lo_l3/_453_/Y (BUFx1)
+                                                         low_sum[0] (net)
+                      0.200000    0.000013    0.458797 ^ _301_/B (NOR2x1)
+     1    0.000306    0.000000    0.000000    0.458797 v _301_/Y (NOR2x1)
+                                                         _001_ (net)
+                      0.000000    0.000037    0.458834 v _302_/B (NAND2x1)
+    15    0.004380    0.000000    0.000000    0.458834 ^ _302_/Y (NAND2x1)
+                                                         carry[0] (net)
+                      0.000000    0.001992    0.460826 ^ u_carry/_289_/A1 (AOI21x1)
+     1    0.000440    0.000000    0.000000    0.460826 v u_carry/_289_/Y (AOI21x1)
+                                                         u_carry/_080_ (net)
+                      0.000000    0.000060    0.460886 v u_carry/_290_/B (NAND2x1)
+     1    0.000159    0.000000    0.000000    0.460886 ^ u_carry/_290_/Y (NAND2x1)
+                                                         upper[16] (net)
+                      0.000000    0.000006    0.460892 ^ _381_/A (INVx1)
+     1    0.000170    0.000000    0.000000    0.460892 v _381_/Y (INVx1)
+                                                         _069_ (net)
+                      0.000000    0.000010    0.460902 v _383_/A (NAND2x1)
+     1    0.000302    0.000000    0.000000    0.460902 ^ _383_/Y (NAND2x1)
+                                                         _071_ (net)
+                      0.000000    0.000036    0.460938 ^ _387_/A (NOR2x1)
+     1    0.000191    0.000000    0.000000    0.460938 v _387_/Y (NOR2x1)
+                                                         _075_ (net)
+                      0.000000    0.000010    0.460948 v _388_/A (NAND2x1)
+     1    0.000200    0.000000    0.000000    0.460948 ^ _388_/Y (NAND2x1)
+                                                         hd[6] (net)
+                      0.000000    0.000010    0.460958 ^ hd[6] (out)
+                                              0.460958   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.460958   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.310958   slack (VIOLATED)
+
+
+Startpoint: B[13] (input port clocked by vclk)
+Endpoint: hd[5] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000345    0.100000    0.000000    0.050000 v B[13] (in)
+                                                         B[13] (net)
+                      0.100092    0.000029    0.050029 v _433_/B (XNOR2x1)
+     2    0.000627    0.000000    0.000000    0.050029 v _433_/Y (XNOR2x1)
+                                                         _102_ (net)
+                      0.000000    0.000093    0.050122 v _436_/B (NOR2x1)
+     2    0.019125    0.000000    0.000000    0.050122 ^ _436_/Y (NOR2x1)
+                                                         cell_oh[20] (net)
+                      0.000000    0.006117    0.056239 ^ xp3_s2l1_3/v2 (XP_3x3_M2M3)
+     1    0.030974    0.002000    0.001000    0.057239 ^ xp3_s2l1_3/s4 (XP_3x3_M2M3)
+                                                         ps[19] (net)
+                      0.002000    0.003137    0.060376 ^ xp5_s2l2_1/h4 (XP_5x5_M2M3)
+     2    0.031674    0.002000    0.001000    0.061376 ^ xp5_s2l2_1/s8 (XP_5x5_M2M3)
+                                                         boh[17] (net)
+                      0.002000    0.002409    0.063784 ^ _632_/A (INVx1)
+     1    0.000179    0.000000    0.000000    0.063784 v _632_/Y (INVx1)
+                                                         _217_ (net)
+                      0.000000    0.000011    0.063796 v _633_/B (NAND2x1)
+     1    0.041853    0.000000    0.000000    0.063796 ^ _633_/Y (NAND2x1)
+                                                         lo[4] (net)
+                      0.000000    0.007764    0.071559 ^ xp4_lo_l1_0/h0 (XP_4x4_M4M5)
+     4    0.001286    0.002000    0.001000    0.072559 ^ xp4_lo_l1_0/s0 (XP_4x4_M4M5)
+                                                         ll1[0] (net)
+                      0.002000    0.000148    0.072707 ^ xp7[0].u/_058_/A (INVx1)
+     4    0.000739    0.000000    0.000000    0.072707 v xp7[0].u/_058_/Y (INVx1)
+                                                         xp7[0].u/_000_ (net)
+                      0.000000    0.000074    0.072781 v xp7[0].u/_127_/B (NOR2x1)
+     1    0.070102    0.000000    0.000000    0.072781 ^ xp7[0].u/_127_/Y (NOR2x1)
+                                                         xp7[0].u/sum_bit[0].grid_and (net)
+                      0.000000    0.005298    0.078079 ^ xp7[0].u/_129_/A (BUFx1)
+     6    0.002351    0.200000    0.188000    0.266079 ^ xp7[0].u/_129_/Y (BUFx1)
+                                                         ll2[0] (net)
+                      0.200000    0.001256    0.267336 ^ u_lo_l3/_214_/A (INVx1)
+     8    0.002108    0.000000    0.000000    0.267336 v u_lo_l3/_214_/Y (INVx1)
+                                                         u_lo_l3/_172_ (net)
+                      0.000000    0.000157    0.267493 v u_lo_l3/_451_/B (NOR2x1)
+     1    0.070062    0.000000    0.000000    0.267493 ^ u_lo_l3/_451_/Y (NOR2x1)
+                                                         u_lo_l3/sum_bit[0].grid_and (net)
+                      0.000000    0.003291    0.270784 ^ u_lo_l3/_453_/A (BUFx1)
+     1    0.000212    0.200000    0.188000    0.458784 ^ u_lo_l3/_453_/Y (BUFx1)
+                                                         low_sum[0] (net)
+                      0.200000    0.000013    0.458797 ^ _301_/B (NOR2x1)
+     1    0.000306    0.000000    0.000000    0.458797 v _301_/Y (NOR2x1)
+                                                         _001_ (net)
+                      0.000000    0.000037    0.458834 v _302_/B (NAND2x1)
+    15    0.004380    0.000000    0.000000    0.458834 ^ _302_/Y (NAND2x1)
+                                                         carry[0] (net)
+                      0.000000    0.001947    0.460781 ^ u_carry/_269_/A1 (AOI21x1)
+     1    0.000280    0.000000    0.000000    0.460781 v u_carry/_269_/Y (AOI21x1)
+                                                         u_carry/_062_ (net)
+                      0.000000    0.000031    0.460812 v u_carry/_270_/B (NAND2x1)
+     2    0.000613    0.000000    0.000000    0.460812 ^ u_carry/_270_/Y (NAND2x1)
+                                                         upper[14] (net)
+                      0.000000    0.000032    0.460844 ^ _376_/A (INVx1)
+     1    0.000434    0.000000    0.000000    0.460844 v _376_/Y (INVx1)
+                                                         _065_ (net)
+                      0.000000    0.000058    0.460902 v _377_/A (NAND2x1)
+     1    0.000211    0.000000    0.000000    0.460902 ^ _377_/Y (NAND2x1)
+                                                         _066_ (net)
+                      0.000000    0.000014    0.460915 ^ _378_/B (NOR2x1)
+     1    0.000192    0.000000    0.000000    0.460915 v _378_/Y (NOR2x1)
+                                                         _067_ (net)
+                      0.000000    0.000009    0.460925 v _380_/A (NAND2x1)
+     1    0.000148    0.000000    0.000000    0.460925 ^ _380_/Y (NAND2x1)
+                                                         hd[5] (net)
+                      0.000000    0.000006    0.460930 ^ hd[5] (out)
+                                              0.460930   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.460930   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.310930   slack (VIOLATED)
+
+
+Startpoint: B[13] (input port clocked by vclk)
+Endpoint: hd[1] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000345    0.100000    0.000000    0.050000 v B[13] (in)
+                                                         B[13] (net)
+                      0.100092    0.000029    0.050029 v _433_/B (XNOR2x1)
+     2    0.000627    0.000000    0.000000    0.050029 v _433_/Y (XNOR2x1)
+                                                         _102_ (net)
+                      0.000000    0.000093    0.050122 v _436_/B (NOR2x1)
+     2    0.019125    0.000000    0.000000    0.050122 ^ _436_/Y (NOR2x1)
+                                                         cell_oh[20] (net)
+                      0.000000    0.006117    0.056239 ^ xp3_s2l1_3/v2 (XP_3x3_M2M3)
+     1    0.030974    0.002000    0.001000    0.057239 ^ xp3_s2l1_3/s4 (XP_3x3_M2M3)
+                                                         ps[19] (net)
+                      0.002000    0.003137    0.060376 ^ xp5_s2l2_1/h4 (XP_5x5_M2M3)
+     2    0.031674    0.002000    0.001000    0.061376 ^ xp5_s2l2_1/s8 (XP_5x5_M2M3)
+                                                         boh[17] (net)
+                      0.002000    0.002409    0.063784 ^ _632_/A (INVx1)
+     1    0.000179    0.000000    0.000000    0.063784 v _632_/Y (INVx1)
+                                                         _217_ (net)
+                      0.000000    0.000011    0.063796 v _633_/B (NAND2x1)
+     1    0.041853    0.000000    0.000000    0.063796 ^ _633_/Y (NAND2x1)
+                                                         lo[4] (net)
+                      0.000000    0.007764    0.071559 ^ xp4_lo_l1_0/h0 (XP_4x4_M4M5)
+     4    0.001286    0.002000    0.001000    0.072559 ^ xp4_lo_l1_0/s0 (XP_4x4_M4M5)
+                                                         ll1[0] (net)
+                      0.002000    0.000148    0.072707 ^ xp7[0].u/_058_/A (INVx1)
+     4    0.000739    0.000000    0.000000    0.072707 v xp7[0].u/_058_/Y (INVx1)
+                                                         xp7[0].u/_000_ (net)
+                      0.000000    0.000074    0.072781 v xp7[0].u/_127_/B (NOR2x1)
+     1    0.070102    0.000000    0.000000    0.072781 ^ xp7[0].u/_127_/Y (NOR2x1)
+                                                         xp7[0].u/sum_bit[0].grid_and (net)
+                      0.000000    0.005298    0.078079 ^ xp7[0].u/_129_/A (BUFx1)
+     6    0.002351    0.200000    0.188000    0.266079 ^ xp7[0].u/_129_/Y (BUFx1)
+                                                         ll2[0] (net)
+                      0.200000    0.001256    0.267336 ^ u_lo_l3/_214_/A (INVx1)
+     8    0.002108    0.000000    0.000000    0.267336 v u_lo_l3/_214_/Y (INVx1)
+                                                         u_lo_l3/_172_ (net)
+                      0.000000    0.000104    0.267440 v u_lo_l3/_247_/A1 (OAI21x1)
+     1    0.000326    0.000000    0.000000    0.267440 ^ u_lo_l3/_247_/Y (OAI21x1)
+                                                         u_lo_l3/_200_ (net)
+                      0.000000    0.000042    0.267482 ^ u_lo_l3/_251_/A (NOR2x1)
+     1    0.000209    0.000000    0.000000    0.267482 v u_lo_l3/_251_/Y (NOR2x1)
+                                                         u_lo_l3/_204_ (net)
+                      0.000000    0.000013    0.267495 v u_lo_l3/_255_/A (NAND2x1)
+     2    0.000649    0.000000    0.000000    0.267495 ^ u_lo_l3/_255_/Y (NAND2x1)
+                                                         low_sum[6] (net)
+                      0.000000    0.000157    0.267652 ^ _336_/A (INVx1)
+     1    0.000177    0.000000    0.000000    0.267652 v _336_/Y (INVx1)
+                                                         _029_ (net)
+                      0.000000    0.000011    0.267663 v _338_/A (NAND2x1)
+     1    0.000477    0.000000    0.000000    0.267663 ^ _338_/Y (NAND2x1)
+                                                         _031_ (net)
+                      0.000000    0.000068    0.267731 ^ _339_/B (NOR2x1)
+     1    0.000353    0.000000    0.000000    0.267731 v _339_/Y (NOR2x1)
+                                                         _032_ (net)
+                      0.000000    0.000028    0.267759 v _340_/A (NAND2x1)
+     1    0.000863    0.000000    0.000000    0.267759 ^ _340_/Y (NAND2x1)
+                                                         hd[1] (net)
+                      0.000000    0.000224    0.267982 ^ hd[1] (out)
+                                              0.267982   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.267982   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.117982   slack (VIOLATED)
+
+
+Startpoint: B[13] (input port clocked by vclk)
+Endpoint: hd[0] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000345    0.100000    0.000000    0.050000 v B[13] (in)
+                                                         B[13] (net)
+                      0.100092    0.000029    0.050029 v _433_/B (XNOR2x1)
+     2    0.000627    0.000000    0.000000    0.050029 v _433_/Y (XNOR2x1)
+                                                         _102_ (net)
+                      0.000000    0.000093    0.050122 v _436_/B (NOR2x1)
+     2    0.019125    0.000000    0.000000    0.050122 ^ _436_/Y (NOR2x1)
+                                                         cell_oh[20] (net)
+                      0.000000    0.006117    0.056239 ^ xp3_s2l1_3/v2 (XP_3x3_M2M3)
+     1    0.030974    0.002000    0.001000    0.057239 ^ xp3_s2l1_3/s4 (XP_3x3_M2M3)
+                                                         ps[19] (net)
+                      0.002000    0.003137    0.060376 ^ xp5_s2l2_1/h4 (XP_5x5_M2M3)
+     2    0.031674    0.002000    0.001000    0.061376 ^ xp5_s2l2_1/s8 (XP_5x5_M2M3)
+                                                         boh[17] (net)
+                      0.002000    0.002409    0.063784 ^ _632_/A (INVx1)
+     1    0.000179    0.000000    0.000000    0.063784 v _632_/Y (INVx1)
+                                                         _217_ (net)
+                      0.000000    0.000011    0.063796 v _633_/B (NAND2x1)
+     1    0.041853    0.000000    0.000000    0.063796 ^ _633_/Y (NAND2x1)
+                                                         lo[4] (net)
+                      0.000000    0.007764    0.071559 ^ xp4_lo_l1_0/h0 (XP_4x4_M4M5)
+     4    0.001286    0.002000    0.001000    0.072559 ^ xp4_lo_l1_0/s0 (XP_4x4_M4M5)
+                                                         ll1[0] (net)
+                      0.002000    0.000148    0.072707 ^ xp7[0].u/_058_/A (INVx1)
+     4    0.000739    0.000000    0.000000    0.072707 v xp7[0].u/_058_/Y (INVx1)
+                                                         xp7[0].u/_000_ (net)
+                      0.000000    0.000074    0.072781 v xp7[0].u/_127_/B (NOR2x1)
+     1    0.070102    0.000000    0.000000    0.072781 ^ xp7[0].u/_127_/Y (NOR2x1)
+                                                         xp7[0].u/sum_bit[0].grid_and (net)
+                      0.000000    0.005298    0.078079 ^ xp7[0].u/_129_/A (BUFx1)
+     6    0.002351    0.200000    0.188000    0.266079 ^ xp7[0].u/_129_/Y (BUFx1)
+                                                         ll2[0] (net)
+                      0.200000    0.001256    0.267336 ^ u_lo_l3/_214_/A (INVx1)
+     8    0.002108    0.000000    0.000000    0.267336 v u_lo_l3/_214_/Y (INVx1)
+                                                         u_lo_l3/_172_ (net)
+                      0.000000    0.000139    0.267474 v u_lo_l3/_293_/A1 (OAI21x1)
+     1    0.000187    0.000000    0.000000    0.267474 ^ u_lo_l3/_293_/Y (OAI21x1)
+                                                         u_lo_l3/_029_ (net)
+                      0.000000    0.000011    0.267485 ^ u_lo_l3/_297_/A (NOR2x1)
+     1    0.000346    0.000000    0.000000    0.267485 v u_lo_l3/_297_/Y (NOR2x1)
+                                                         u_lo_l3/_033_ (net)
+                      0.000000    0.000029    0.267514 v u_lo_l3/_298_/B (NAND2x1)
+     2    0.000496    0.000000    0.000000    0.267514 ^ u_lo_l3/_298_/Y (NAND2x1)
+                                                         low_sum[9] (net)
+                      0.000000    0.000058    0.267572 ^ _319_/B (NOR2x1)
+     1    0.000538    0.000000    0.000000    0.267572 v _319_/Y (NOR2x1)
+                                                         _013_ (net)
+                      0.000000    0.000099    0.267671 v _320_/B (NAND2x1)
+     1    0.000529    0.000000    0.000000    0.267671 ^ _320_/Y (NAND2x1)
+                                                         _014_ (net)
+                      0.000000    0.000040    0.267711 ^ _324_/A (NOR2x1)
+     1    0.000188    0.000000    0.000000    0.267711 v _324_/Y (NOR2x1)
+                                                         _018_ (net)
+                      0.000000    0.000010    0.267721 v _332_/A (NAND2x1)
+     1    0.000757    0.000000    0.000000    0.267721 ^ _332_/Y (NAND2x1)
+                                                         hd[0] (net)
+                      0.000000    0.000129    0.267850 ^ hd[0] (out)
+                                              0.267850   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.267850   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.117850   slack (VIOLATED)
+
+
+
+%OL_END_REPORT
+%OL_CREATE_REPORT checks.rpt
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_0v50 Corner ===================================
+
+Startpoint: A[50] (input port clocked by vclk)
+Endpoint: hd[2] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000488    0.100000    0.000000    0.050000 v A[50] (in)
+                                                         A[50] (net)
+                      0.100138    0.000044    0.050044 v _564_/A (XNOR2x1)
+     2    0.000562    0.000000    0.000000    0.050044 v _564_/Y (XNOR2x1)
+                                                         _176_ (net)
+                      0.000000    0.000039    0.050083 v _565_/A (INVx1)
+     1    0.000367    0.000000    0.000000    0.050083 ^ _565_/Y (INVx1)
+                                                         _177_ (net)
+                      0.000000    0.000009    0.050092 ^ _568_/A (NOR2x1)
+     2    0.019306    0.000000    0.000000    0.050092 v _568_/Y (NOR2x1)
+                                                         cell_oh[75] (net)
+                      0.000000    0.007011    0.057103 v _570_/B (NOR2x1)
+     1    0.018710    0.000000    0.000000    0.057103 ^ _570_/Y (NOR2x1)
+                                                         cell_oh[76] (net)
+                      0.000000    0.003105    0.060208 ^ xp3_s2l1_12/h1 (XP_3x3_M2M3)
+     1    0.030858    0.002000    0.001000    0.061208 ^ xp3_s2l1_12/s1 (XP_3x3_M2M3)
+                                                         ps[61] (net)
+                      0.002000    0.000893    0.062101 ^ xp5_s2l2_6/v1 (XP_5x5_M2M3)
+     2    0.000520    0.002000    0.001000    0.063101 ^ xp5_s2l2_6/s3 (XP_5x5_M2M3)
+                                                         boh[57] (net)
+                      0.002000    0.000053    0.063153 ^ _733_/A (NOR2x1)
+     1    0.000216    0.000000    0.000000    0.063153 v _733_/Y (NOR2x1)
+                                                         _284_ (net)
+                      0.000000    0.000012    0.063166 v _735_/A (NAND2x1)
+     1    0.031627    0.000000    0.000000    0.063166 ^ _735_/Y (NAND2x1)
+                                                         hi[18] (net)
+                      0.000000    0.010318    0.073484 ^ xp3_hi_l1_3/v0 (XP_3x3_M4M5)
+     4    0.001222    0.002000    0.001000    0.074484 ^ xp3_hi_l1_3/s0 (XP_3x3_M4M5)
+                                                         hl1[15] (net)
+                      0.002000    0.000222    0.074706 ^ xp5h[1].u/_36_/A (INVx1)
+     2    0.000454    0.000000    0.000000    0.074706 v xp5h[1].u/_36_/Y (INVx1)
+                                                         xp5h[1].u/_08_ (net)
+                      0.000000    0.000024    0.074730 v xp5h[1].u/_59_/A (NOR2x1)
+     1    0.070903    0.000000    0.000000    0.074730 ^ xp5h[1].u/_59_/Y (NOR2x1)
+                                                         xp5h[1].u/sum_bit[0].grid_and (net)
+                      0.000000    0.035549    0.110279 ^ xp5h[1].u/_61_/A (BUFx1)
+     6    0.001599    0.200000    0.188000    0.298279 ^ xp5h[1].u/_61_/Y (BUFx1)
+                                                         hl2[9] (net)
+                      0.200000    0.000096    0.298375 ^ u_hi_l3/_101_/A (INVx1)
+     4    0.000682    0.000000    0.000000    0.298375 v u_hi_l3/_101_/Y (INVx1)
+                                                         u_hi_l3/_043_ (net)
+                      0.000000    0.000010    0.298385 v u_hi_l3/_205_/A (NOR2x1)
+     1    0.070244    0.000000    0.000000    0.298385 ^ u_hi_l3/_205_/Y (NOR2x1)
+                                                         u_hi_l3/sum_bit[0].grid_and (net)
+                      0.000000    0.014231    0.312616 ^ u_hi_l3/_207_/A (BUFx1)
+     3    0.000805    0.200000    0.188000    0.500616 ^ u_hi_l3/_207_/Y (BUFx1)
+                                                         high_sum[0] (net)
+                      0.200000    0.000063    0.500679 ^ u_carry/_148_/A (INVx1)
+     5    0.001067    0.000000    0.000000    0.500679 v u_carry/_148_/Y (INVx1)
+                                                         u_carry/_102_ (net)
+                      0.000000    0.000130    0.500809 v u_carry/_162_/A1 (OAI21x1)
+     2    0.000610    0.000000    0.000000    0.500809 ^ u_carry/_162_/Y (OAI21x1)
+                                                         upper[3] (net)
+                      0.000000    0.000056    0.500866 ^ _349_/B (NOR2x1)
+     1    0.000456    0.000000    0.000000    0.500866 v _349_/Y (NOR2x1)
+                                                         _041_ (net)
+                      0.000000    0.000064    0.500930 v _350_/B (NAND2x1)
+     1    0.000525    0.000000    0.000000    0.500930 ^ _350_/Y (NAND2x1)
+                                                         _042_ (net)
+                      0.000000    0.000073    0.501003 ^ _351_/B (NOR2x1)
+     1    0.000148    0.000000    0.000000    0.501003 v _351_/Y (NOR2x1)
+                                                         _043_ (net)
+                      0.000000    0.000005    0.501008 v _352_/B (NAND2x1)
+     1    0.000149    0.000000    0.000000    0.501008 ^ _352_/Y (NAND2x1)
+                                                         hd[2] (net)
+                      0.000000    0.000006    0.501014 ^ hd[2] (out)
+                                              0.501014   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.501014   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.351014   slack (VIOLATED)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_0v50 Corner ===================================
+
+Startpoint: A[50] (input port clocked by vclk)
+Endpoint: hd[2] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock vclk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.050000    0.050000 v input external delay
+     1    0.000488    0.100000    0.000000    0.050000 v A[50] (in)
+                                                         A[50] (net)
+                      0.100138    0.000044    0.050044 v _564_/A (XNOR2x1)
+     2    0.000562    0.000000    0.000000    0.050044 v _564_/Y (XNOR2x1)
+                                                         _176_ (net)
+                      0.000000    0.000039    0.050083 v _565_/A (INVx1)
+     1    0.000367    0.000000    0.000000    0.050083 ^ _565_/Y (INVx1)
+                                                         _177_ (net)
+                      0.000000    0.000009    0.050092 ^ _568_/A (NOR2x1)
+     2    0.019306    0.000000    0.000000    0.050092 v _568_/Y (NOR2x1)
+                                                         cell_oh[75] (net)
+                      0.000000    0.007011    0.057103 v _570_/B (NOR2x1)
+     1    0.018710    0.000000    0.000000    0.057103 ^ _570_/Y (NOR2x1)
+                                                         cell_oh[76] (net)
+                      0.000000    0.003105    0.060208 ^ xp3_s2l1_12/h1 (XP_3x3_M2M3)
+     1    0.030858    0.002000    0.001000    0.061208 ^ xp3_s2l1_12/s1 (XP_3x3_M2M3)
+                                                         ps[61] (net)
+                      0.002000    0.000893    0.062101 ^ xp5_s2l2_6/v1 (XP_5x5_M2M3)
+     2    0.000520    0.002000    0.001000    0.063101 ^ xp5_s2l2_6/s3 (XP_5x5_M2M3)
+                                                         boh[57] (net)
+                      0.002000    0.000053    0.063153 ^ _733_/A (NOR2x1)
+     1    0.000216    0.000000    0.000000    0.063153 v _733_/Y (NOR2x1)
+                                                         _284_ (net)
+                      0.000000    0.000012    0.063166 v _735_/A (NAND2x1)
+     1    0.031627    0.000000    0.000000    0.063166 ^ _735_/Y (NAND2x1)
+                                                         hi[18] (net)
+                      0.000000    0.010318    0.073484 ^ xp3_hi_l1_3/v0 (XP_3x3_M4M5)
+     4    0.001222    0.002000    0.001000    0.074484 ^ xp3_hi_l1_3/s0 (XP_3x3_M4M5)
+                                                         hl1[15] (net)
+                      0.002000    0.000222    0.074706 ^ xp5h[1].u/_36_/A (INVx1)
+     2    0.000454    0.000000    0.000000    0.074706 v xp5h[1].u/_36_/Y (INVx1)
+                                                         xp5h[1].u/_08_ (net)
+                      0.000000    0.000024    0.074730 v xp5h[1].u/_59_/A (NOR2x1)
+     1    0.070903    0.000000    0.000000    0.074730 ^ xp5h[1].u/_59_/Y (NOR2x1)
+                                                         xp5h[1].u/sum_bit[0].grid_and (net)
+                      0.000000    0.035549    0.110279 ^ xp5h[1].u/_61_/A (BUFx1)
+     6    0.001599    0.200000    0.188000    0.298279 ^ xp5h[1].u/_61_/Y (BUFx1)
+                                                         hl2[9] (net)
+                      0.200000    0.000096    0.298375 ^ u_hi_l3/_101_/A (INVx1)
+     4    0.000682    0.000000    0.000000    0.298375 v u_hi_l3/_101_/Y (INVx1)
+                                                         u_hi_l3/_043_ (net)
+                      0.000000    0.000010    0.298385 v u_hi_l3/_205_/A (NOR2x1)
+     1    0.070244    0.000000    0.000000    0.298385 ^ u_hi_l3/_205_/Y (NOR2x1)
+                                                         u_hi_l3/sum_bit[0].grid_and (net)
+                      0.000000    0.014231    0.312616 ^ u_hi_l3/_207_/A (BUFx1)
+     3    0.000805    0.200000    0.188000    0.500616 ^ u_hi_l3/_207_/Y (BUFx1)
+                                                         high_sum[0] (net)
+                      0.200000    0.000063    0.500679 ^ u_carry/_148_/A (INVx1)
+     5    0.001067    0.000000    0.000000    0.500679 v u_carry/_148_/Y (INVx1)
+                                                         u_carry/_102_ (net)
+                      0.000000    0.000130    0.500809 v u_carry/_162_/A1 (OAI21x1)
+     2    0.000610    0.000000    0.000000    0.500809 ^ u_carry/_162_/Y (OAI21x1)
+                                                         upper[3] (net)
+                      0.000000    0.000056    0.500866 ^ _349_/B (NOR2x1)
+     1    0.000456    0.000000    0.000000    0.500866 v _349_/Y (NOR2x1)
+                                                         _041_ (net)
+                      0.000000    0.000064    0.500930 v _350_/B (NAND2x1)
+     1    0.000525    0.000000    0.000000    0.500930 ^ _350_/Y (NAND2x1)
+                                                         _042_ (net)
+                      0.000000    0.000073    0.501003 ^ _351_/B (NOR2x1)
+     1    0.000148    0.000000    0.000000    0.501003 v _351_/Y (NOR2x1)
+                                                         _043_ (net)
+                      0.000000    0.000005    0.501008 v _352_/B (NAND2x1)
+     1    0.000149    0.000000    0.000000    0.501008 ^ _352_/Y (NAND2x1)
+                                                         hd[2] (net)
+                      0.000000    0.000006    0.501014 ^ hd[2] (out)
+                                              0.501014   data arrival time
+
+                      0.000000    0.200000    0.200000   clock vclk (rise edge)
+                                  0.000000    0.200000   clock network delay (ideal)
+                                  0.000000    0.200000   clock reconvergence pessimism
+                                 -0.050000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.501014   data arrival time
+---------------------------------------------------------------------------------------------
+                                             -0.351014   slack (VIOLATED)
+
+
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_0v50 Corner ===================================
+
+max capacitance
+
+Pin                                        Limit         Cap       Slack
+------------------------------------------------------------------------
+xp5h[1].u/_59_/Y                        0.010000    0.070903   -0.060903 (VIOLATED)
+xp5h[0].u/_59_/Y                        0.010000    0.070417   -0.060417 (VIOLATED)
+u_hi_l3/_205_/Y                         0.010000    0.070244   -0.060244 (VIOLATED)
+xp7[1].u/_127_/Y                        0.010000    0.070115   -0.060115 (VIOLATED)
+xp7[0].u/_127_/Y                        0.010000    0.070102   -0.060102 (VIOLATED)
+u_lo_l3/_451_/Y                         0.010000    0.070062   -0.060062 (VIOLATED)
+u_carry/_317_/Y                         0.010000    0.070036   -0.060036 (VIOLATED)
+_669_/Y                                 0.010000    0.042005   -0.032005 (VIOLATED)
+_747_/Y                                 0.010000    0.042004   -0.032004 (VIOLATED)
+_672_/Y                                 0.010000    0.041982   -0.031982 (VIOLATED)
+_714_/Y                                 0.010000    0.041935   -0.031935 (VIOLATED)
+_711_/Y                                 0.010000    0.041931   -0.031931 (VIOLATED)
+_732_/Y                                 0.010000    0.041903   -0.031903 (VIOLATED)
+_708_/Y                                 0.010000    0.041903   -0.031903 (VIOLATED)
+_636_/Y                                 0.010000    0.041884   -0.031884 (VIOLATED)
+_705_/Y                                 0.010000    0.041878   -0.031878 (VIOLATED)
+_693_/Y                                 0.010000    0.041871   -0.031871 (VIOLATED)
+_750_/Y                                 0.010000    0.041870   -0.031870 (VIOLATED)
+_678_/Y                                 0.010000    0.041858   -0.031858 (VIOLATED)
+_624_/Y                                 0.010000    0.041856   -0.031856 (VIOLATED)
+_621_/Y                                 0.010000    0.041855   -0.031855 (VIOLATED)
+_633_/Y                                 0.010000    0.041853   -0.031853 (VIOLATED)
+_744_/Y                                 0.010000    0.041847   -0.031847 (VIOLATED)
+_642_/Y                                 0.010000    0.041844   -0.031844 (VIOLATED)
+_675_/Y                                 0.010000    0.041838   -0.031838 (VIOLATED)
+_696_/Y                                 0.010000    0.041825   -0.031825 (VIOLATED)
+_729_/Y                                 0.010000    0.041818   -0.031818 (VIOLATED)
+_741_/Y                                 0.010000    0.041804   -0.031804 (VIOLATED)
+_660_/Y                                 0.010000    0.041800   -0.031800 (VIOLATED)
+_639_/Y                                 0.010000    0.041794   -0.031794 (VIOLATED)
+_618_/Y                                 0.010000    0.041780   -0.031780 (VIOLATED)
+_654_/Y                                 0.010000    0.041722   -0.031722 (VIOLATED)
+_657_/Y                                 0.010000    0.041699   -0.031699 (VIOLATED)
+_615_/Y                                 0.010000    0.041691   -0.031691 (VIOLATED)
+_726_/Y                                 0.010000    0.041679   -0.031679 (VIOLATED)
+_651_/Y                                 0.010000    0.041678   -0.031678 (VIOLATED)
+_723_/Y                                 0.010000    0.041669   -0.031669 (VIOLATED)
+_687_/Y                                 0.010000    0.041659   -0.031659 (VIOLATED)
+_690_/Y                                 0.010000    0.041647   -0.031647 (VIOLATED)
+_630_/Y                                 0.010000    0.031630   -0.021630 (VIOLATED)
+_735_/Y                                 0.010000    0.031627   -0.021627 (VIOLATED)
+_720_/Y                                 0.010000    0.031578   -0.021578 (VIOLATED)
+_627_/Y                                 0.010000    0.031572   -0.021572 (VIOLATED)
+_645_/Y                                 0.010000    0.031547   -0.021547 (VIOLATED)
+_738_/Y                                 0.010000    0.031530   -0.021530 (VIOLATED)
+_753_/Y                                 0.010000    0.031519   -0.021519 (VIOLATED)
+_648_/Y                                 0.010000    0.031513   -0.021513 (VIOLATED)
+_684_/Y                                 0.010000    0.031506   -0.021506 (VIOLATED)
+_699_/Y                                 0.010000    0.031488   -0.021488 (VIOLATED)
+_702_/Y                                 0.010000    0.031455   -0.021455 (VIOLATED)
+_756_/Y                                 0.010000    0.031408   -0.021408 (VIOLATED)
+_717_/Y                                 0.010000    0.031381   -0.021381 (VIOLATED)
+_666_/Y                                 0.010000    0.031365   -0.021365 (VIOLATED)
+_663_/Y                                 0.010000    0.031311   -0.021311 (VIOLATED)
+_681_/Y                                 0.010000    0.031286   -0.021286 (VIOLATED)
+_422_/Y                                 0.010000    0.019312   -0.009312 (VIOLATED)
+_568_/Y                                 0.010000    0.019306   -0.009306 (VIOLATED)
+_428_/Y                                 0.010000    0.019287   -0.009287 (VIOLATED)
+_569_/Y                                 0.010000    0.019263   -0.009263 (VIOLATED)
+_429_/Y                                 0.010000    0.019212   -0.009212 (VIOLATED)
+_421_/Y                                 0.010000    0.019182   -0.009182 (VIOLATED)
+_436_/Y                                 0.010000    0.019125   -0.009125 (VIOLATED)
+_548_/Y                                 0.010000    0.019124   -0.009124 (VIOLATED)
+_394_/Y                                 0.010000    0.019084   -0.009084 (VIOLATED)
+_435_/Y                                 0.010000    0.019044   -0.009044 (VIOLATED)
+_520_/Y                                 0.010000    0.019035   -0.009035 (VIOLATED)
+_596_/Y                                 0.010000    0.019021   -0.009021 (VIOLATED)
+_408_/Y                                 0.010000    0.019015   -0.009015 (VIOLATED)
+_547_/Y                                 0.010000    0.018990   -0.008990 (VIOLATED)
+_533_/Y                                 0.010000    0.018971   -0.008971 (VIOLATED)
+_393_/Y                                 0.010000    0.018965   -0.008965 (VIOLATED)
+_610_/Y                                 0.010000    0.018965   -0.008965 (VIOLATED)
+_561_/Y                                 0.010000    0.018956   -0.008956 (VIOLATED)
+_443_/Y                                 0.010000    0.018951   -0.008951 (VIOLATED)
+_505_/Y                                 0.010000    0.018951   -0.008951 (VIOLATED)
+_611_/Y                                 0.010000    0.018948   -0.008948 (VIOLATED)
+_555_/Y                                 0.010000    0.018945   -0.008945 (VIOLATED)
+_442_/Y                                 0.010000    0.018941   -0.008941 (VIOLATED)
+_506_/Y                                 0.010000    0.018940   -0.008940 (VIOLATED)
+_597_/Y                                 0.010000    0.018939   -0.008939 (VIOLATED)
+_534_/Y                                 0.010000    0.018938   -0.008938 (VIOLATED)
+_414_/Y                                 0.010000    0.018922   -0.008922 (VIOLATED)
+_583_/Y                                 0.010000    0.018914   -0.008914 (VIOLATED)
+_519_/Y                                 0.010000    0.018896   -0.008896 (VIOLATED)
+_554_/Y                                 0.010000    0.018883   -0.008883 (VIOLATED)
+_407_/Y                                 0.010000    0.018880   -0.008880 (VIOLATED)
+_590_/Y                                 0.010000    0.018877   -0.008877 (VIOLATED)
+_477_/Y                                 0.010000    0.018859   -0.008859 (VIOLATED)
+_449_/Y                                 0.010000    0.018857   -0.008857 (VIOLATED)
+_603_/Y                                 0.010000    0.018856   -0.008856 (VIOLATED)
+_604_/Y                                 0.010000    0.018851   -0.008851 (VIOLATED)
+_562_/Y                                 0.010000    0.018851   -0.008851 (VIOLATED)
+_484_/Y                                 0.010000    0.018851   -0.008851 (VIOLATED)
+_589_/Y                                 0.010000    0.018844   -0.008844 (VIOLATED)
+_463_/Y                                 0.010000    0.018839   -0.008839 (VIOLATED)
+_450_/Y                                 0.010000    0.018830   -0.008830 (VIOLATED)
+_526_/Y                                 0.010000    0.018823   -0.008823 (VIOLATED)
+_513_/Y                                 0.010000    0.018820   -0.008820 (VIOLATED)
+_464_/Y                                 0.010000    0.018817   -0.008817 (VIOLATED)
+_549_/Y                                 0.010000    0.018816   -0.008816 (VIOLATED)
+_512_/Y                                 0.010000    0.018810   -0.008810 (VIOLATED)
+_527_/Y                                 0.010000    0.018810   -0.008810 (VIOLATED)
+_415_/Y                                 0.010000    0.018806   -0.008806 (VIOLATED)
+_612_/Y                                 0.010000    0.018796   -0.008796 (VIOLATED)
+_575_/Y                                 0.010000    0.018796   -0.008796 (VIOLATED)
+_492_/Y                                 0.010000    0.018793   -0.008793 (VIOLATED)
+_401_/Y                                 0.010000    0.018793   -0.008793 (VIOLATED)
+_582_/Y                                 0.010000    0.018787   -0.008787 (VIOLATED)
+_430_/Y                                 0.010000    0.018785   -0.008785 (VIOLATED)
+_400_/Y                                 0.010000    0.018767   -0.008767 (VIOLATED)
+_491_/Y                                 0.010000    0.018767   -0.008767 (VIOLATED)
+_521_/Y                                 0.010000    0.018759   -0.008759 (VIOLATED)
+_540_/Y                                 0.010000    0.018741   -0.008741 (VIOLATED)
+_556_/Y                                 0.010000    0.018737   -0.008737 (VIOLATED)
+_478_/Y                                 0.010000    0.018729   -0.008729 (VIOLATED)
+_570_/Y                                 0.010000    0.018710   -0.008710 (VIOLATED)
+_409_/Y                                 0.010000    0.018701   -0.008701 (VIOLATED)
+_395_/Y                                 0.010000    0.018698   -0.008698 (VIOLATED)
+_498_/Y                                 0.010000    0.018690   -0.008690 (VIOLATED)
+_423_/Y                                 0.010000    0.018689   -0.008689 (VIOLATED)
+_485_/Y                                 0.010000    0.018687   -0.008687 (VIOLATED)
+_563_/Y                                 0.010000    0.018684   -0.008684 (VIOLATED)
+_528_/Y                                 0.010000    0.018683   -0.008683 (VIOLATED)
+_499_/Y                                 0.010000    0.018679   -0.008679 (VIOLATED)
+_402_/Y                                 0.010000    0.018678   -0.008678 (VIOLATED)
+_598_/Y                                 0.010000    0.018675   -0.008675 (VIOLATED)
+_437_/Y                                 0.010000    0.018674   -0.008674 (VIOLATED)
+_584_/Y                                 0.010000    0.018662   -0.008662 (VIOLATED)
+_507_/Y                                 0.010000    0.018661   -0.008661 (VIOLATED)
+_471_/Y                                 0.010000    0.018660   -0.008660 (VIOLATED)
+_456_/Y                                 0.010000    0.018660   -0.008660 (VIOLATED)
+_576_/Y                                 0.010000    0.018655   -0.008655 (VIOLATED)
+_605_/Y                                 0.010000    0.018651   -0.008651 (VIOLATED)
+_457_/Y                                 0.010000    0.018647   -0.008647 (VIOLATED)
+_470_/Y                                 0.010000    0.018631   -0.008631 (VIOLATED)
+_541_/Y                                 0.010000    0.018599   -0.008599 (VIOLATED)
+_591_/Y                                 0.010000    0.018595   -0.008595 (VIOLATED)
+_479_/Y                                 0.010000    0.018589   -0.008589 (VIOLATED)
+_514_/Y                                 0.010000    0.018583   -0.008583 (VIOLATED)
+_451_/Y                                 0.010000    0.018576   -0.008576 (VIOLATED)
+_416_/Y                                 0.010000    0.018574   -0.008574 (VIOLATED)
+_444_/Y                                 0.010000    0.018574   -0.008574 (VIOLATED)
+_465_/Y                                 0.010000    0.018570   -0.008570 (VIOLATED)
+_535_/Y                                 0.010000    0.018566   -0.008566 (VIOLATED)
+_500_/Y                                 0.010000    0.018545   -0.008545 (VIOLATED)
+_458_/Y                                 0.010000    0.018543   -0.008543 (VIOLATED)
+_486_/Y                                 0.010000    0.018542   -0.008542 (VIOLATED)
+_493_/Y                                 0.010000    0.018540   -0.008540 (VIOLATED)
+_542_/Y                                 0.010000    0.018523   -0.008523 (VIOLATED)
+_577_/Y                                 0.010000    0.018517   -0.008517 (VIOLATED)
+_472_/Y                                 0.010000    0.018505   -0.008505 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 1 unannotated drivers.
+ u_carry/_319_/Y
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+Writing metric design__max_slew_violation__count__corner:nom_tt_025C_0v50: 0
+max fanout violation count 0
+Writing metric design__max_fanout_violation__count__corner:nom_tt_025C_0v50: 0
+max cap violation count 151
+Writing metric design__max_cap_violation__count__corner:nom_tt_025C_0v50: 151
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+%OL_END_REPORT
+%OL_CREATE_REPORT power.rpt
+
+===========================================================================
+ report_power
+============================================================================
+======================= nom_tt_025C_0v50 Corner ===================================
+
+Group                    Internal    Switching      Leakage        Total
+                            Power        Power        Power        Power (Watts)
+------------------------------------------------------------------------
+Sequential           0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+Combinational        0.000000e+00 1.540937e-03 1.056903e-06 1.541994e-03 100.0%
+Clock                0.000000e+00 0.000000e+00 9.600000e-10 9.600000e-10   0.0%
+Macro                0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+Pad                  0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+------------------------------------------------------------------------
+Total                0.000000e+00 1.540937e-03 1.057864e-06 1.541995e-03 100.0%
+                             0.0%        99.9%         0.1%
+Writing metric power__internal__total: 0.0
+Writing metric power__switching__total: 0.0015409366460517049
+Writing metric power__leakage__total: 1.0578636420177645e-6
+Writing metric power__total: 0.0015419945120811462
+
+%OL_END_REPORT
+%OL_CREATE_REPORT skew.min.rpt
+
+===========================================================================
+Clock Skew (Hold)
+============================================================================
+Writing metric clock__skew__worst_hold__corner:nom_tt_025C_0v50: 0.0
+======================= nom_tt_025C_0v50 Corner ===================================
+
+Clock vclk
+No launch/capture paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT skew.max.rpt
+
+===========================================================================
+Clock Skew (Setup)
+============================================================================
+Writing metric clock__skew__worst_setup__corner:nom_tt_025C_0v50: 0.0
+======================= nom_tt_025C_0v50 Corner ===================================
+
+Clock vclk
+No launch/capture paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT ws.min.rpt
+
+===========================================================================
+Worst Slack (Hold)
+============================================================================
+Writing metric timing__hold__ws__corner:nom_tt_025C_0v50: 0.10625236408121992
+nom_tt_025C_0v50: 0.10625236408121992
+%OL_END_REPORT
+%OL_CREATE_REPORT ws.max.rpt
+
+===========================================================================
+Worst Slack (Setup)
+============================================================================
+Writing metric timing__setup__ws__corner:nom_tt_025C_0v50: -0.3510137002635336
+nom_tt_025C_0v50: -0.3510137002635336
+%OL_END_REPORT
+%OL_CREATE_REPORT tns.min.rpt
+
+===========================================================================
+Total Negative Slack (Hold)
+============================================================================
+Writing metric timing__hold__tns__corner:nom_tt_025C_0v50: 0.0
+nom_tt_025C_0v50: 0.0
+%OL_END_REPORT
+%OL_CREATE_REPORT tns.max.rpt
+
+===========================================================================
+Total Negative Slack (Setup)
+============================================================================
+Writing metric timing__setup__tns__corner:nom_tt_025C_0v50: -1.9106547995664358
+nom_tt_025C_0v50: -1.9106547995664358
+%OL_END_REPORT
+%OL_CREATE_REPORT wns.min.rpt
+
+===========================================================================
+Worst Negative Slack (Hold)
+============================================================================
+Writing metric timing__hold__wns__corner:nom_tt_025C_0v50: 0
+nom_tt_025C_0v50: 0
+%OL_END_REPORT
+%OL_CREATE_REPORT wns.max.rpt
+
+===========================================================================
+Worst Negative Slack (Setup)
+============================================================================
+Writing metric timing__setup__wns__corner:nom_tt_025C_0v50: -0.3510137002635336
+nom_tt_025C_0v50: -0.3510137002635336
+%OL_END_REPORT
+%OL_CREATE_REPORT violator_list.rpt
+
+===========================================================================
+Violator List
+============================================================================
+[setup in-out] A[50] -> hd[2] : -0.351014
+[setup in-out] A[50] -> hd[4] : -0.350970
+[setup in-out] A[50] -> hd[3] : -0.350950
+[setup in-out] B[13] -> hd[6] : -0.310958
+[setup in-out] B[13] -> hd[5] : -0.310930
+[setup in-out] B[13] -> hd[1] : -0.117982
+[setup in-out] B[13] -> hd[0] : -0.117850
+Writing metric timing__hold_vio__count__corner:nom_tt_025C_0v50: 0
+Writing metric timing__hold_r2r__ws__corner:nom_tt_025C_0v50: 1e30
+Writing metric timing__hold_r2r_vio__count__corner:nom_tt_025C_0v50: 0
+Writing metric timing__setup_vio__count__corner:nom_tt_025C_0v50: 7
+Writing metric timing__setup_r2r__ws__corner:nom_tt_025C_0v50: 1e30
+Writing metric timing__setup_r2r_vio__count__corner:nom_tt_025C_0v50: 0
+%OL_END_REPORT
+%OL_CREATE_REPORT unpropagated.rpt
+vclk
+%OL_END_REPORT
+%OL_CREATE_REPORT clock.rpt
+Clock: vclk
+Sources: 
+Generated: no
+Virtual: yes
+Propagated: no
+Period: 0.200000
+
+===========================================================================
+report_clock_properties
+============================================================================
+Clock                   Period          Waveform
+----------------------------------------------------
+vclk                  0.200000    0.000000  0.100000
+
+===========================================================================
+report_clock_latency
+============================================================================
+Clock vclk
+
+
+===========================================================================
+report_clock_min_period
+============================================================================
+vclk period_min = 0.00 fmax = inf
+%OL_END_REPORT

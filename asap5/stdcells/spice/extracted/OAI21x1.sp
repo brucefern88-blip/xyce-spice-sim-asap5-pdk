@@ -1,0 +1,20 @@
+* Extracted subcircuit for OAI21x1
+* Magic layout extraction parasitics from OAI21x1.ext
+* Devices: 0 ()
+* Total extracted node cap: 7.9 fF
+*
+.subckt OAI21x1 A0 A1 B Y VDD VSS
+mn_a0 mid_n A0 VSS   VSS nmos_lvt l=16n w=32n
+mn_a1 mid_n A1 VSS   VSS nmos_lvt l=16n w=32n
+mn_b  Y    B  mid_n VSS nmos_lvt l=16n w=32n
+mp_a0 Y    A0 mid_p VDD pmos_lvt l=16n w=32n
+mp_a1 mid_p A1 VDD   VDD pmos_lvt l=16n w=32n
+mp_b  Y    B  VDD   VDD pmos_lvt l=16n w=32n
+* --- Extracted parasitic capacitances ---
+Cext_Y Y 0 2.7790f
+Cext_A0 A0 0 0.6352f
+Cext_A1 A1 0 0.6352f
+Cext_B B 0 0.6352f
+Cext_mid_n mid_n 0 0.9528f
+Cext_mid_p mid_p 0 0.9528f
+.ends

@@ -1,0 +1,10 @@
+* SPICE3 file created from INVx1.ext - technology: asap5
+
+.option scale=10n
+
+M1000 a_30_18# a_14_18# a_0_18# nwell nmos_lvt w=49 l=14
++  ad=0.448n pd=92u as=0.496n ps=96u
+C0 a_0_18# 0 0.11131p **FLOATING
+C1 a_14_50# 0 48.4f **FLOATING
+C2 a_30_18# 0 0.16786p **FLOATING
+C3 a_0_90# 0 0.11093p **FLOATING

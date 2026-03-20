@@ -1,0 +1,100 @@
+* Single FUSED_G cell -- Xyce BSIM-CMG verification
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt.pm'
+
+Vvdd VDD 0 0.5
+Vvss VSS 0 0
+
+* FUSED_G cell 0 (bits 0,1) -- ASAP5 extracted sizes
+MN_nai nai ai VSS VSS nmos_lvt l=16n nfin=2
+MP_nai nai ai VDD VDD pmos_lvt l=16n nfin=2
+MN_nbi nbi bi VSS VSS nmos_lvt l=16n nfin=2
+MP_nbi nbi bi VDD VDD pmos_lvt l=16n nfin=2
+MN_naj naj aj VSS VSS nmos_lvt l=16n nfin=2
+MP_naj naj aj VDD VDD pmos_lvt l=16n nfin=2
+MN_nbj nbj bj VSS VSS nmos_lvt l=16n nfin=2
+MP_nbj nbj bj VDD VDD pmos_lvt l=16n nfin=2
+
+MP_q01 x0 nai q0p1 VDD pmos_lvt l=16n nfin=2
+MP_q02 q0p1 nbi VDD VDD pmos_lvt l=16n nfin=2
+MP_q03 x0 ai q0p2 VDD pmos_lvt l=16n nfin=2
+MP_q04 q0p2 bi VDD VDD pmos_lvt l=16n nfin=2
+MN_q01 q0n nai VSS VSS nmos_lvt l=16n nfin=2
+MN_q02 q0n nbi VSS VSS nmos_lvt l=16n nfin=2
+MN_q03 x0 ai q0n VSS nmos_lvt l=16n nfin=2
+MN_q04 x0 bi q0n VSS nmos_lvt l=16n nfin=2
+
+MP_q11 x1 naj q1p1 VDD pmos_lvt l=16n nfin=2
+MP_q12 q1p1 nbj VDD VDD pmos_lvt l=16n nfin=2
+MP_q13 x1 aj q1p2 VDD pmos_lvt l=16n nfin=2
+MP_q14 q1p2 bj VDD VDD pmos_lvt l=16n nfin=2
+MN_q11 q1n naj VSS VSS nmos_lvt l=16n nfin=2
+MN_q12 q1n nbj VSS VSS nmos_lvt l=16n nfin=2
+MN_q13 x1 aj q1n VSS nmos_lvt l=16n nfin=2
+MN_q14 x1 bj q1n VSS nmos_lvt l=16n nfin=2
+
+MN_ix0 d0 x0 VSS VSS nmos_lvt l=16n nfin=2
+MP_ix0 d0 x0 VDD VDD pmos_lvt l=16n nfin=2
+MN_ix1 d1 x1 VSS VSS nmos_lvt l=16n nfin=2
+MP_ix1 d1 x1 VDD VDD pmos_lvt l=16n nfin=2
+
+MP_a11 a1p d0 VDD VDD pmos_lvt l=16n nfin=2
+MP_a12 a1p x1 VDD VDD pmos_lvt l=16n nfin=2
+MP_a13 noh1 x0 a1p VDD pmos_lvt l=16n nfin=2
+MP_a14 noh1 d1 a1p VDD pmos_lvt l=16n nfin=2
+MN_a11 noh1 d0 a1n1 VSS nmos_lvt l=16n nfin=2
+MN_a12 a1n1 x1 VSS VSS nmos_lvt l=16n nfin=2
+MN_a13 noh1 x0 a1n2 VSS nmos_lvt l=16n nfin=2
+MN_a14 a1n2 d1 VSS VSS nmos_lvt l=16n nfin=2
+
+MP_n21 noh2 d0 VDD VDD pmos_lvt l=16n nfin=2
+MP_n22 noh2 d1 VDD VDD pmos_lvt l=16n nfin=2
+MN_n21 noh2 d0 n2s VSS nmos_lvt l=16n nfin=2
+MN_n22 n2s d1 VSS VSS nmos_lvt l=16n nfin=2
+
+* INVx1 output buffers
+MP_i1 oh1 noh1 VDD VDD pmos_lvt l=14n nfin=2
+MN_i1 oh1 noh1 VSS VSS nmos_lvt l=14n nfin=2
+MP_i2 oh2 noh2 VDD VDD pmos_lvt l=14n nfin=2
+MN_i2 oh2 noh2 VSS VSS nmos_lvt l=14n nfin=2
+
+* NOR2x1: oh0 = NOR(oh1, oh2)
+MP_nr0 VDD oh1 nmid VDD pmos_lvt l=16n nfin=1
+MP_nr1 nmid oh2 oh0 VDD pmos_lvt l=16n nfin=1
+MN_nr0 oh0 oh1 VSS VSS nmos_lvt l=16n nfin=1
+MN_nr1 oh0 oh2 VSS VSS nmos_lvt l=16n nfin=1
+
+Cl0 oh0 0 1fF
+Cl1 oh1 0 1fF
+Cl2 oh2 0 1fF
+
+* 5 test vectors (10ns each)
+* Vec0: 0000->HD=0, Vec1: 1000->HD=1, Vec2: 1010->HD=2, Vec3: 1100->HD=0, Vec4: 0110->HD=2
+Vai ai 0 PWL(0n 0 9.9n 0 10n 0.5 19.9n 0.5 20n 0.5 29.9n 0.5 30n 0.5 39.9n 0.5 40n 0 49.9n 0)
+Vbi bi 0 PWL(0n 0 9.9n 0 10n 0 19.9n 0 20n 0 29.9n 0 30n 0.5 39.9n 0.5 40n 0.5 49.9n 0.5)
+Vaj aj 0 PWL(0n 0 9.9n 0 10n 0 19.9n 0 20n 0.5 29.9n 0.5 30n 0 39.9n 0 40n 0.5 49.9n 0.5)
+Vbj bj 0 PWL(0n 0 9.9n 0 10n 0 19.9n 0 20n 0 29.9n 0 30n 0 39.9n 0 40n 0 49.9n 0)
+
+.TRAN 1p 50n
+
+.PRINT TRAN V(ai) V(bi) V(aj) V(bj) V(noh1) V(noh2) V(oh0) V(oh1) V(oh2) I(Vvdd)
+
+.MEASURE TRAN oh0_v0 FIND V(oh0) AT=8n
+.MEASURE TRAN oh1_v0 FIND V(oh1) AT=8n
+.MEASURE TRAN oh2_v0 FIND V(oh2) AT=8n
+.MEASURE TRAN oh0_v1 FIND V(oh0) AT=18n
+.MEASURE TRAN oh1_v1 FIND V(oh1) AT=18n
+.MEASURE TRAN oh2_v1 FIND V(oh2) AT=18n
+.MEASURE TRAN oh0_v2 FIND V(oh0) AT=28n
+.MEASURE TRAN oh1_v2 FIND V(oh1) AT=28n
+.MEASURE TRAN oh2_v2 FIND V(oh2) AT=28n
+.MEASURE TRAN oh0_v3 FIND V(oh0) AT=38n
+.MEASURE TRAN oh1_v3 FIND V(oh1) AT=38n
+.MEASURE TRAN oh2_v3 FIND V(oh2) AT=38n
+.MEASURE TRAN oh0_v4 FIND V(oh0) AT=48n
+.MEASURE TRAN oh1_v4 FIND V(oh1) AT=48n
+.MEASURE TRAN oh2_v4 FIND V(oh2) AT=48n
+
+.MEASURE TRAN p_avg AVG {V(VDD)*I(Vvdd)} FROM=0n TO=50n
+
+.END

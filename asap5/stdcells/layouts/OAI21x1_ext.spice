@@ -1,0 +1,9 @@
+* NGSPICE file created from OAI21x1.ext - technology: asap5
+
+.global Vdd 0 
+
+
+* Top level circuit OAI21x1
+
+.end
+
