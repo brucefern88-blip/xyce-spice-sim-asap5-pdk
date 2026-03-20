@@ -1,0 +1,30 @@
+* =============================================================================
+* test_m_invx1_dc.cir — INVx1 DC VTC Sweep for Xyce
+* =============================================================================
+* ASAP5 LVT nanosheet GAA, VDD=0.7V, CL=1.0fF
+* Run:  Xyce test_m_invx1_dc.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/asap5_inv_lib.sp'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.7
+
+vdd  vdd  0  dc {vdd_val}
+vss  vss  0  dc 0
+vin  in   0  dc 0
+
+xinv in out vdd vss INVx1
+
+cload out 0 1.0f
+
+.DC vin 0 0.7 0.001
+.PRINT DC V(in) V(out)
+.MEASURE DC v_trip FIND V(in) WHEN V(out)=0.35
+
+.END

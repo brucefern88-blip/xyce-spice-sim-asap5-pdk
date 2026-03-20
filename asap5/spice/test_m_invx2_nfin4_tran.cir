@@ -1,0 +1,47 @@
+* =============================================================================
+* test_m_invx2_nfin4_tran.cir — INVx2_nfin4 Transient Delay + Energy for Xyce
+* =============================================================================
+* ASAP5 LVT nanosheet GAA, VDD=0.7V, CL=1.0fF
+* INVx2_nfin4 = single device nfin=4 (equivalent Weff to INVx2 M=2 nfin=2)
+* Run:  Xyce test_m_invx2_nfin4_tran.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/asap5_inv_lib.sp'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+
+.param vdd_val = 0.7
+
+vdd  vdd  0  dc {vdd_val}
+vss  vss  0  dc 0
+vin  in   0  pulse(0 0.7 50p 5p 5p 95p 200p)
+
+xinv in out vdd vss INVx2_nfin4
+
+cload out 0 1.0f
+
+.TRAN 0.5p 400p
+.PRINT TRAN V(in) V(out) I(vdd)
+
+* --- Propagation delay ---
+.MEASURE TRAN tphl TRIG V(in) VAL=0.35 RISE=1 TARG V(out) VAL=0.35 FALL=1
+.MEASURE TRAN tplh TRIG V(in) VAL=0.35 FALL=1 TARG V(out) VAL=0.35 RISE=1
+
+* --- Output transition times (10%-90%) ---
+.MEASURE TRAN fall_time TRIG V(out) VAL=0.63 FALL=1 TARG V(out) VAL=0.07 FALL=1
+.MEASURE TRAN rise_time TRIG V(out) VAL=0.07 RISE=1 TARG V(out) VAL=0.63 RISE=1
+
+* --- Average supply current ---
+.MEASURE TRAN avg_idd AVG I(vdd) FROM=50p TO=250p
+
+* --- Energy: integrate VDD*I(VDD) ---
+.MEASURE TRAN e_fall INTEG {V(vdd)*I(vdd)} FROM=50p TO=150p
+.MEASURE TRAN e_rise INTEG {V(vdd)*I(vdd)} FROM=150p TO=250p
+.MEASURE TRAN e_total INTEG {V(vdd)*I(vdd)} FROM=50p TO=250p
+
+.END

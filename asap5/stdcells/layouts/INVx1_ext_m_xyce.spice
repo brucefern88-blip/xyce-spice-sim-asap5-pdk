@@ -1,0 +1,24 @@
+* Xyce-compatible SPICE netlist for INVx1 — ASAP5 5nm GAA nanosheet
+* Extracted by Magic 8.3.624 from INVx1.mag, technology: asap5
+* Converted from ngspice format: removed .option scale, used absolute dimensions
+*
+* Node mapping (Magic internal -> logical):
+*   a_30_18# = Y   (output)
+*   a_14_18# = A   (NMOS gate, poly below nwell)
+*   a_14_90# = A   (PMOS gate, poly in nwell — same net as a_14_18#)
+*   a_0_18#  = Gnd (NMOS source)
+*   a_0_90#  = Vdd (PMOS source)
+*   w_0_65#  = Vdd (nwell tie)
+
+.subckt INVx1 Y A Vdd Gnd
+M1000 Y A Vdd Vdd pmos_lvt w=0.49u l=0.14u
++  ad=44.8f pd=0.92u as=49.6f ps=0.96u
+M1001 Y A Gnd Gnd nmos_lvt w=0.49u l=0.14u
++  ad=44.8f pd=0.92u as=49.6f ps=0.96u
+
+* Extracted parasitic capacitances (substrate caps from Magic)
+C_Gnd  Gnd 0 0.11131p
+C_gate A   0 48.4f
+C_Y    Y   0 0.16786p
+C_Vdd  Vdd 0 0.11093p
+.ends INVx1

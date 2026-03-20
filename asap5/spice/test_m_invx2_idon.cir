@@ -1,0 +1,56 @@
+* =============================================================================
+* test_m_invx2_idon.cir — Id_on/Id_off for NMOS and PMOS (nfin=2) for Xyce
+* =============================================================================
+* Sweep shared gate 0→0.7V.
+* NMOS: drain=0.7V, source=0V (conventional orientation)
+* PMOS: drain=0V, source=0.7V (conventional orientation)
+* Measure on-state and off-state currents for both.
+* Also: mn2 in parallel with mn1 to measure M=2 total Id_on.
+* Run:  Xyce test_m_invx2_idon.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/asap5_inv_lib.sp'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+
+* --- Shared gate sweep ---
+vgate  gate  0  dc 0
+
+* --- NMOS mn1: single nfin=2 ---
+vdn1   nd1   0  dc 0.7
+vsn1   ns1   0  dc 0
+mn1    nd1 gate ns1 ns1 nmos_lvt l=16n nfin=2
+
+* --- NMOS mn2: second nfin=2 in parallel (shares drain node with mn1 via vdn_m2) ---
+vdn_m2 nd_m2 0  dc 0.7
+mn2    nd_m2 gate ns1 ns1 nmos_lvt l=16n nfin=2
+
+* --- PMOS mp1: single nfin=2 ---
+* PMOS: source=0.7V, drain=0V (|Vgs|=0.7 when gate=0, |Vds|=0.7)
+vdp1   pd1   0  dc 0
+vsp1   ps1   0  dc 0.7
+mp1    pd1 gate ps1 ps1 pmos_lvt l=16n nfin=2
+
+.DC vgate 0 0.7 0.001
+.PRINT DC V(gate) I(vdn1) I(vdn_m2) I(vdp1)
+
+* --- NMOS Id_on: Vgs=0.7V (gate high) ---
+.MEASURE DC idon_n FIND I(vdn1) AT=0.7
+
+* --- NMOS Id_off: Vgs=0V (gate low) ---
+.MEASURE DC idoff_n FIND I(vdn1) AT=0
+
+* --- PMOS Id_on: Vgs=0V (gate low, |Vgs|=0.7V) ---
+.MEASURE DC idon_p FIND I(vdp1) AT=0
+
+* --- PMOS Id_off: Vgs=0.7V (gate high, |Vgs|=0V) ---
+.MEASURE DC idoff_p FIND I(vdp1) AT=0.7
+
+* --- NMOS M=2 total Id_on: sum of mn1+mn2 via separate drain voltage source ---
+.MEASURE DC idon_n_m2 FIND I(vdn_m2) AT=0.7
+
+.END

@@ -1,0 +1,46 @@
+* =============================================================================
+* test_m_invx2_cg.cir — INVx2 Input Capacitance (Cin) via AC for Xyce
+* =============================================================================
+* Bare devices (NOT subcircuit): 2x NMOS nfin=2 + 2x PMOS nfin=2
+* Simulates M=2 with 4 total devices, gates tied together.
+* Cin = |II(vg)| / (2*pi*f) at f=1GHz
+* Bias: NMOS Vgs=Vds=0.35V, PMOS Vg=0.35V Vd=0.35V Vs=0.7V
+* Run:  Xyce test_m_invx2_cg.cir
+* =============================================================================
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/asap5_inv_lib.sp'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS MEASURE MEASDGT=5
+
+* --- Bias supplies ---
+vdd  vdd  0  dc 0.7
+vss  vss  0  dc 0
+
+* --- Gate: AC source with DC bias at mid-rail ---
+vg   gate  0  dc 0.35 ac 1
+
+* --- NMOS pair (M=2): drain=0.35V, source=0V ---
+vdn  nd  0  dc 0.35
+vsn  ns  0  dc 0
+
+mn1  nd gate ns vss nmos_lvt l=16n nfin=2
+mn2  nd gate ns vss nmos_lvt l=16n nfin=2
+
+* --- PMOS pair (M=2): drain=0.35V, source=0.7V ---
+vdp  pd  0  dc 0.35
+vsp  ps  0  dc 0.7
+
+mp1  pd gate ps vdd pmos_lvt l=16n nfin=2
+mp2  pd gate ps vdd pmos_lvt l=16n nfin=2
+
+.AC DEC 10 1e8 1e11
+.PRINT AC II(vg) IR(vg)
+
+* Cin = |II(vg)| / (2*pi*1e9)
+.MEASURE AC cin FIND {II(vg)/(2*3.14159265*1e9)} AT=1e9
+
+.END
