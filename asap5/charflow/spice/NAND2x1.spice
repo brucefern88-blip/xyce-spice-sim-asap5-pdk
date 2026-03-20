@@ -1,0 +1,16 @@
+* Extracted subcircuit for NAND2x1
+* Magic layout extraction parasitics from NAND2x1.ext
+* Devices: 4 (nmos_lvt, nmos_lvt, pmos_lvt, pmos_lvt)
+* Total extracted node cap: 2.8 fF
+*
+.subckt NAND2x1 A B Y VDD VSS
+mn1 Y A mid VSS nmos_lvt l=16n nfin=2
+mn2 mid B VSS VSS nmos_lvt l=16n nfin=2
+mp1 Y A VDD VDD pmos_lvt l=16n nfin=2
+mp2 Y B VDD VDD pmos_lvt l=16n nfin=2
+* --- Extracted parasitic capacitances ---
+Cext_Y Y 0 0.9852f
+Cext_A A 0 0.2252f
+Cext_B B 0 0.2252f
+Cext_mid mid 0 0.3378f
+.ends

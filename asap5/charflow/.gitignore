@@ -1,0 +1,5 @@
+__pycache__/
+netlists/
+*.prn
+*.mt[0-9]*
+*.raw

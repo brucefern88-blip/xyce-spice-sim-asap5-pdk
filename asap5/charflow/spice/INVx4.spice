@@ -1,0 +1,17 @@
+* Extracted subcircuit for INVx4
+* Magic layout extraction parasitics from INVx4.ext
+* Devices: 2 (nmos_lvt, pmos_lvt)
+* Total extracted node cap: 4.0 fF
+*
+* INVx4 - ASAP5 5nm GAA Nanosheet Inverter, 4x drive strength
+* Cell: 44nm x 140nm (1 CPP)
+* Process: ASAP5 GAA, Lg=16nm, CPP=44nm, VDD=0.7V
+* Model: BSIM-CMG level=72 version=107
+
+.subckt INVx4 A Y VDD VSS
+mn1 Y A VSS VSS nmos_lvt l=16n nfin=8
+mp1 Y A VDD VDD pmos_lvt l=16n nfin=8
+* --- Extracted parasitic capacitances ---
+Cext_Y Y 0 1.3993f
+Cext_A A 0 0.3198f
+.ends INVx4

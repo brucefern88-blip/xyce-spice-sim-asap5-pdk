@@ -1,0 +1,26 @@
+* Extracted subcircuit for MUX21x1
+* Magic layout extraction parasitics from MUX21x1.ext
+* Devices: 8 (nmos_lvt, nmos_lvt, nmos_lvt, nmos_lvt, pmos_lvt, pmos_lvt, pmos_lvt, pmos_lvt)
+* Total extracted node cap: 10.8 fF
+*
+.subckt MUX21x1 D0 D1 S Y VDD VSS
+* Select inverter
+mn_invs SB S VSS VSS nmos_lvt l=16n nfin=2
+mp_invs SB S VDD VDD pmos_lvt l=16n nfin=2
+* TG0: pass D0 when S=0
+mn_tg0 int SB D0 VSS nmos_lvt l=16n nfin=2
+mp_tg0 int S  D0 VDD pmos_lvt l=16n nfin=2
+* TG1: pass D1 when S=1
+mn_tg1 int S  D1 VSS nmos_lvt l=16n nfin=2
+mp_tg1 int SB D1 VDD pmos_lvt l=16n nfin=2
+* Output inverter
+mn_invy Y int VSS VSS nmos_lvt l=16n nfin=2
+mp_invy Y int VDD VDD pmos_lvt l=16n nfin=2
+* --- Extracted parasitic capacitances ---
+Cext_Y Y 0 3.7730f
+Cext_D0 D0 0 0.8624f
+Cext_D1 D1 0 0.8624f
+Cext_S S 0 0.8624f
+Cext_SB SB 0 1.2936f
+Cext_int int 0 1.2936f
+.ends
