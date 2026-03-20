@@ -6,7 +6,7 @@ magic/
 cicsim/
 vsdStdCellCharacterizer_sky130/
 ngspice-45.2/
-iverilog/iverilog/
+iverilog/
 
 # Empty placeholder dirs
 Xyce_Build/
