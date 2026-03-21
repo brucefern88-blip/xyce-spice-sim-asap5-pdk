@@ -1,0 +1,37 @@
+NOR2x1 PPA Summary — A→Y path (B=0)
+=====================================
+Cell: NOR2x1 (4T: 2 parallel NMOS + 2 series PMOS)
+Topology: mn1,mn2 parallel to VSS; mp1→mp2 series VDD→Y
+Extraction: charflow/extraction/NOR2x1.spice (nfin=2, l=16n)
+Parasitics: Cext_Y=0.070fF, Cext_A=0.035fF, Cext_B=0.035fF, Cext_mid=0.040fF
+Load: 1fF, Input slew: 100ps (20-80%)
+Area: 88nm x 140nm = 12320 nm²
+
+--- 0.7V LVT (TT corner) ---
+  cell_fall      =  49.92 ps
+  cell_rise      =  61.02 ps
+  tpd (average)  =  55.47 ps
+  fall_transition=  28.46 ps
+  rise_transition=  33.44 ps
+  energy/switch  =  0.725 fJ  (total_charge=1.035fC x 0.7V)
+
+--- 0.40V SLVT (TT corner) ---
+  cell_fall      =  81.71 ps
+  cell_rise      = 122.10 ps
+  tpd (average)  = 101.91 ps
+  fall_transition=  29.85 ps
+  rise_transition=  66.67 ps
+  energy/switch  =  0.406 fJ  (total_charge=1.015fC x 0.4V)
+
+--- Comparison ---
+  tpd ratio (0.4V/0.7V)    = 1.84x slower
+  energy ratio (0.4V/0.7V) = 0.56x (44% savings)
+  EDP  @0.7V  = 55.47ps x 0.725fJ = 4.02e-26 J·s
+  EDP  @0.4V  = 101.91ps x 0.406fJ = 4.14e-26 J·s
+
+--- Notes ---
+  Rise is slower than fall due to series PMOS stack (2 PMOS in series
+  for pull-up vs 1 parallel NMOS for pull-down when A switches).
+  At 0.40V SLVT, rise penalty is more pronounced (rise/fall = 1.49x)
+  vs 0.7V LVT (rise/fall = 1.22x) due to reduced overdrive on series stack.
+  EDP is roughly comparable between the two operating points.

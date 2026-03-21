@@ -1,0 +1,20 @@
+.subckt XNOR2x2_SLVT A B Y VDD VSS
+* XOR core (output to internal node X)
+mn_invb BB B VSS VSS nmos_slvt l=16n nfin=4
+mp_invb BB B VDD VDD pmos_slvt l=16n nfin=4
+mn_inva AB A VSS VSS nmos_slvt l=16n nfin=4
+mp_inva AB A VDD VDD pmos_slvt l=16n nfin=4
+mn_tg1 A B X VSS nmos_slvt l=16n nfin=4
+mp_tg1 A BB X VDD pmos_slvt l=16n nfin=4
+mn_tg2 AB BB X VSS nmos_slvt l=16n nfin=4
+mp_tg2 AB B X VDD pmos_slvt l=16n nfin=4
+* Output inverter
+mn_out Y X VSS VSS nmos_slvt l=16n nfin=4
+mp_out Y X VDD VDD pmos_slvt l=16n nfin=4
+Cext_Y Y 0 0.060f
+Cext_X X 0 0.140f
+Cext_A A 0 0.070f
+Cext_B B 0 0.070f
+Cext_BB BB 0 0.060f
+Cext_AB AB 0 0.060f
+.ends XNOR2x2_SLVT

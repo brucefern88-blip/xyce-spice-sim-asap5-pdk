@@ -1,0 +1,12 @@
+.subckt NOR2x1 A B Y VDD VSS
+* Parallel NMOS
+mn1 Y A VSS VSS nmos_slvt l=16n nfin=2
+mn2 Y B VSS VSS nmos_slvt l=16n nfin=2
+* Series PMOS: VDD → A → mid_p → B → Y
+mp1 mid_p A VDD VDD pmos_slvt l=16n nfin=2
+mp2 Y B mid_p VDD pmos_slvt l=16n nfin=2
+Cext_Y Y 0 0.070f
+Cext_A A 0 0.035f
+Cext_B B 0 0.035f
+Cext_mid mid_p 0 0.040f
+.ends NOR2x1

@@ -1,0 +1,66 @@
+* DFFx1 CLK-to-Q delay @ 0.7V LVT
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.7
+VDD vdd 0 DC {vdd_val}
+VSS vss 0 DC 0
+
+* Add .IC to force initial state: Q=0, internal nodes resolved
+.IC V(X1:CLKb)={vdd_val} V(X1:ML)=0 V(X1:MI)={vdd_val} V(X1:SL)={vdd_val} V(X1:SI)=0
+
+* Timeline:
+*   0-200p:   D=0, CLK=0 (warm up with .IC forcing Q near 0)
+*   Phase 1: Init -- CLK cycles with D=0 to fully resolve Q to low
+*     200p:     CLK edge 0 rises, D=0 -> Q stays low
+*     450p:     CLK falls
+*     700p:     CLK edge 1 rises, D=0 -> Q stays low
+*     950p:     CLK falls
+*   Phase 2: Measure CLK-to-Q rise
+*     1000p:    D rises to 1 (setup 200p before CLK)
+*     1200p:    CLK edge 2 rises -> captures D=1 (CLK-to-Q rise)
+*     1450p:    CLK falls
+*   Phase 3: Measure CLK-to-Q fall
+*     1500p:    D falls to 0 (setup 200p before CLK)
+*     1700p:    CLK edge 3 rises -> captures D=0 (CLK-to-Q fall)
+*     1950p:    CLK falls
+
+VD d 0 PWL(0 0 1000p 0 1005p {vdd_val} 1500p {vdd_val} 1505p 0 3000p 0)
+VCLK clk 0 PULSE(0 {vdd_val} 200p 5p 5p 245p 500p)
+
+.include '/Users/bruce/CLAUDE/asap5/charflow/extraction/DFFx1.spice'
+X1 d clk q vdd vss DFFx1
+
+CLOAD q 0 1.0f
+
+.TRAN 0.5p 3000p
+
+.PRINT TRAN V(d) V(clk) V(q)
+
+* CLK-to-Q rise: CLK edge 2 at 1200p captures D=1
+.MEASURE TRAN tpd_rise TRIG V(clk) VAL={vdd_val*0.5} RISE=3
++                      TARG V(q) VAL={vdd_val*0.5} RISE=1
+
+* CLK-to-Q fall: CLK edge 3 at 1700p captures D=0
+.MEASURE TRAN tpd_fall TRIG V(clk) VAL={vdd_val*0.5} RISE=4
++                      TARG V(q) VAL={vdd_val*0.5} FALL=1
+
+* Rise time on Q (20%-80%)
+.MEASURE TRAN trise TRIG V(q) VAL={vdd_val*0.2} RISE=1
++                    TARG V(q) VAL={vdd_val*0.8} RISE=1
+
+* Fall time on Q (80%-20%)
+.MEASURE TRAN tfall TRIG V(q) VAL={vdd_val*0.8} FALL=1
++                    TARG V(q) VAL={vdd_val*0.2} FALL=1
+
+* Average current over two active CLK cycles (1200p-2200p)
+.MEASURE TRAN avg_i AVG I(VDD) FROM=1200p TO=2200p
+* Charge over two active cycles
+.MEASURE TRAN q_total INTEG I(VDD) FROM=1200p TO=2200p
+
+.END

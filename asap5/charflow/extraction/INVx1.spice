@@ -1,0 +1,9 @@
+.subckt INVx1 A Y VDD VSS
+mn1 Y A VSS VSS nmos_lvt l=16n nfin=2
+mp1 Y A VDD VDD pmos_lvt l=16n nfin=2
+* Layout-derived parasitic caps (scaled from ASAP5 geometry)
+* Output Y: ~1 M1 wire segment (30nm) + drain junction = ~0.05fF
+* Input A: ~1 poly segment (130nm vertical) = ~0.03fF
+Cext_Y Y 0 0.050f
+Cext_A A 0 0.030f
+.ends INVx1

@@ -1,0 +1,59 @@
+Cell: DFFx1
+Area: 396nm x 140nm = 55440 nm^2 (9 CPP)
+Transistors: 16T (8 NMOS + 8 PMOS, all nfin=2)
+Topology: Master-slave TG DFF (INV_CLK + TG1+INV1 + TG2+INV2 + INV_OUT)
+
+Extraction: Hand-crafted subcircuit with analytical parasitic estimates
+  Cext_D=0.86fF, Cext_CLK=0.92fF, Cext_CLKb=2.12fF
+  Cext_ML=1.81fF, Cext_MI=1.81fF, Cext_SL=2.02fF
+  Cext_SI=1.29fF, Cext_Q=1.21fF
+
+Simulator: Xyce DEVELOPMENT-202603192040, BSIM-CMG level=107
+Models: ASAP5 GAA nanosheet, TT corner, calibrated
+Load: 1.0 fF, CLK edges: 5ps (0.7V) / 10ps (0.4V)
+Init: .IC on internal nodes + 2 CLK warmup cycles with D=0
+
+=== LVT TT @ 0.7V, 1fF load ===
+tpd_rise (CLK-to-Q): 62.4 ps
+tpd_fall (CLK-to-Q): 31.4 ps
+tpd_avg:             46.9 ps
+Q output swing:      0.24V to 0.56V (46% of VDD)
+trise/tfall:         FAILED (Q never reaches 10%/90% thresholds)
+Avg current:         9.94 uA  (over 1ns, two CLK cycles)
+Energy/cycle:        3480 aJ  (Q=4.97 fC * 0.7V, per cycle)
+
+=== SLVT TT @ 0.40V, 1fF load ===
+tpd_rise (CLK-to-Q): 321.5 ps
+tpd_fall (CLK-to-Q): 316.6 ps
+tpd_avg:             319.1 ps
+Q output swing:      0.18V to 0.28V (25% of VDD)
+trise/tfall:         FAILED (Q never reaches 20%/80% thresholds)
+Avg current:         3.58 uA  (over 2ns, two CLK cycles)
+Energy/cycle:        1430 aJ  (Q=3.58 fC * 0.4V, per cycle)
+
+=== PPA Comparison ===
+Voltage scaling 0.7V -> 0.40V:
+  Delay penalty:  6.80x (46.9 -> 319.1 ps)
+  Energy savings: 2.43x (3480 -> 1430 aJ)
+  EDP improvement: 0.36x (worse at 0.40V)
+
+=== Design Notes ===
+OUTPUT SWING WARNING: The DFF output does not reach rail-to-rail at either
+voltage. The estimated parasitic capacitances on internal nodes (CLKb=2.1fF,
+SL=2.0fF, ML/MI=1.8fF) are large relative to the nfin=2 drive strength.
+The TG feedback loops create contention that, combined with these parasitics,
+prevents the latch nodes from resolving to full supply/ground within the
+clock half-period.
+
+At 0.7V, the swing is 0.24-0.56V (320mV, 46% of VDD) -- marginal but
+the 50% threshold crossings are valid for CLK-to-Q measurement.
+
+At 0.40V, the swing is only 0.18-0.28V (100mV, 25% of VDD) -- the DFF
+is barely functional. Near-threshold operation requires either:
+  1. Larger transistors (nfin=3 or nfin=4) for stronger drive
+  2. Reduced parasitic capacitances (actual layout extraction vs estimates)
+  3. Longer clock periods to allow full state resolution
+
+The high parasitic capacitances also explain the large energy/cycle (3.5 fJ
+at 0.7V) compared to a simple inverter (0.6 fJ) -- the DFF has 8 internal
+nodes with ~12 fF total estimated parasitic load being charged/discharged.

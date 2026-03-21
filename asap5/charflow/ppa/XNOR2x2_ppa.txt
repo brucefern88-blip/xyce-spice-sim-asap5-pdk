@@ -1,0 +1,51 @@
+XNOR2x2 PPA Characterization — ASAP5 5nm GAA Nanosheet
+=======================================================
+Cell: XNOR2x2 (10T: XOR core 8T + output inverter 2T, nfin=4 for 2x drive)
+Path: A->Y with B=0 (TG2 active, X=~A, Y=~X=A, non-inverting)
+Load: 1.0 fF, input slew: 100 ps (20-80%)
+Area: 220 nm x 140 nm = 30,800 nm^2
+Subcircuit: /Users/bruce/CLAUDE/asap5/charflow/extraction/XNOR2x2.spice
+Simulator: Xyce DEVELOPMENT-202603192040 (BSIM-CMG level=107)
+
+Parasitics (layout-estimated):
+  Cext_Y  = 0.060 fF
+  Cext_X  = 0.140 fF  (internal XOR output, drives output inverter)
+  Cext_A  = 0.070 fF
+  Cext_B  = 0.070 fF
+  Cext_BB = 0.060 fF
+  Cext_AB = 0.060 fF
+
+--------------------------------------------------------------------------------
+                        0.7V LVT (TT)           0.40V SLVT (TT)
+--------------------------------------------------------------------------------
+cell_rise (A->Y)        55.82 ps                 165.95 ps
+cell_fall (A->Y)        62.03 ps                 180.88 ps
+tpd  (average)          58.92 ps                 173.41 ps
+fall_transition          9.71 ps                  34.45 ps
+rise_transition         10.55 ps                  31.01 ps
+energy (per cycle)       1.409 fJ                  1.219 fJ
+power @1GHz              1.409 uW                  1.219 uW
+energy ratio             1.0x                      0.865x (1.16x lower)
+delay ratio              1.0x                      2.94x (2.94x slower)
+EDP (energy*delay)      83.0 aJ*ps               211.4 aJ*ps
+--------------------------------------------------------------------------------
+
+Notes:
+- tpd = (|cell_rise| + |cell_fall|) / 2
+- Topology: XOR TG core (nfin=4) drives internal node X, output INV (nfin=4) to Y
+- B=0: TG2 passes ~A to X, inverter gives Y=A (non-inverting overall)
+- nfin=4 output inverter gives very sharp transitions (~10ps @ 0.7V)
+- Energy ~1.4x higher than XNOR2x1 due to doubled fin count (more gate cap)
+- 2x drive: 12% faster tpd than XNOR2x1 (58.9 vs 67.1 ps @ 0.7V)
+- Energy measured over one full transition cycle (1400 ps period)
+- 0.40V SLVT achieves 1.16x energy reduction at 2.94x delay cost
+- EDP worse at 0.40V (211.4 vs 83.0 aJ*ps) — not favorable for near-threshold
+
+Comparison with XNOR2x1 (same area):
+  tpd:    58.9 vs 67.1 ps @ 0.7V  (12% faster, nfin=4 vs nfin=2)
+  energy: 1.409 vs 0.997 fJ       (41% more energy)
+  EDP:    83.0 vs 66.9 aJ*ps      (24% worse EDP — speed gain < energy cost)
+
+Netlists:
+  /Users/bruce/CLAUDE/asap5/charflow/extraction/XNOR2x2_ppa_0p7V.cir
+  /Users/bruce/CLAUDE/asap5/charflow/extraction/XNOR2x2_ppa_0p4V.cir

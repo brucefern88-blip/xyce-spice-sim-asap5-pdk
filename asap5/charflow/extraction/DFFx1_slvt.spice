@@ -1,0 +1,79 @@
+* Hand-crafted subcircuit for DFFx1
+* 16T positive-edge-triggered D flip-flop (master-slave with TGs)
+* Process: ASAP5 5nm GAA Nanosheet, Lg=16nm, CPP=44nm, VDD=0.7V
+* Model: BSIM-CMG level=107 (Xyce), nfin=2 per device
+* Cell: 4 CPP x 140nm (176nm x 140nm estimated)
+* Topology: INV_CLK + TG1 + INV1 + TG2 + INV2 + INV_OUT
+* Total: 16 transistors (8 NMOS + 8 PMOS)
+*
+* D ──[TG1]──┬── M ──[TG2]──┬──[INV_OUT]── Q
+*            [INV1]         [INV2]
+* CLK ──[INV_CLK]── CLKb
+*
+* TG1 transparent when CLK=0: NMOS gate=CLKb, PMOS gate=CLK
+* TG2 transparent when CLK=1: NMOS gate=CLK, PMOS gate=CLKb
+*
+
+.subckt DFFx1 D CLK Q VDD VSS
+*
+* Internal nodes: CLKb, ML (master latch), MI (master inv), SL (slave latch), SI (slave inv)
+*
+* --- INV_CLK: CLK buffer inverter (2T) ---
+mn_clk CLKb CLK VSS VSS nmos_slvt l=16n nfin=2
+mp_clk CLKb CLK VDD VDD pmos_slvt l=16n nfin=2
+*
+* --- TG1_fwd: master forward pass gate (2T) ---
+* Transparent when CLK=0 (CLKb=1): passes D to ML
+* NMOS gate=CLKb, PMOS gate=CLK
+mn_tg1f D CLKb ML VSS nmos_slvt l=16n nfin=2
+mp_tg1f D CLK  ML VDD pmos_slvt l=16n nfin=2
+*
+* --- INV1: master latch inverter (2T) ---
+mn_inv1 MI ML VSS VSS nmos_slvt l=16n nfin=2
+mp_inv1 MI ML VDD VDD pmos_slvt l=16n nfin=2
+*
+* --- TG1_fb: master feedback pass gate (2T) ---
+* Transparent when CLK=1 (CLKb=0): feeds MI back to ML, holds master
+* NMOS gate=CLK, PMOS gate=CLKb
+mn_tg1b MI CLK  ML VSS nmos_slvt l=16n nfin=2
+mp_tg1b MI CLKb ML VDD pmos_slvt l=16n nfin=2
+*
+* --- TG2_fwd: slave forward pass gate (2T) ---
+* Transparent when CLK=1 (CLKb=0): passes MI to SL
+* NMOS gate=CLK, PMOS gate=CLKb
+mn_tg2f MI CLK  SL VSS nmos_slvt l=16n nfin=2
+mp_tg2f MI CLKb SL VDD pmos_slvt l=16n nfin=2
+*
+* --- INV2: slave latch inverter (2T) ---
+mn_inv2 SI SL VSS VSS nmos_slvt l=16n nfin=2
+mp_inv2 SI SL VDD VDD pmos_slvt l=16n nfin=2
+*
+* --- TG2_fb: slave feedback pass gate (2T) ---
+* Transparent when CLK=0 (CLKb=1): feeds SI back to SL, holds slave
+* NMOS gate=CLKb, PMOS gate=CLK
+mn_tg2b SI CLKb SL VSS nmos_slvt l=16n nfin=2
+mp_tg2b SI CLK  SL VDD pmos_slvt l=16n nfin=2
+*
+* --- INV_OUT: output buffer inverter (2T) ---
+mn_out Q SL VSS VSS nmos_slvt l=16n nfin=2
+mp_out Q SL VDD VDD pmos_slvt l=16n nfin=2
+*
+* --- Estimated parasitic capacitances ---
+* Based on ASAP5 extracted cell scaling (INVx1, XOR2x1, MUX21x1)
+* Input pins: ~0.9fF (D: TG1_fwd S/D; CLK: INV_CLK gate + 4 TG gates)
+* CLKb: ~2.1fF (INV_CLK output, drives 4 TG gates: tg1f, tg1b, tg2f, tg2b)
+* ML: ~1.8fF (TG1_fwd output + TG1_fb output + INV1 gate, contended node)
+* MI: ~1.8fF (INV1 output + TG1_fb input + TG2_fwd input)
+* SL: ~2.0fF (TG2_fwd output + TG2_fb output + INV2 gate + INV_OUT gate)
+* SI: ~1.3fF (INV2 output + TG2_fb input)
+* Q:  ~1.2fF (INV_OUT output)
+*
+Cext_D    D    0  0.8624f
+Cext_CLK  CLK  0  0.9200f
+Cext_CLKb CLKb 0  2.1180f
+Cext_ML   ML   0  1.8120f
+Cext_MI   MI   0  1.8120f
+Cext_SL   SL   0  2.0240f
+Cext_SI   SI   0  1.2936f
+Cext_Q    Q    0  1.2064f
+.ends DFFx1

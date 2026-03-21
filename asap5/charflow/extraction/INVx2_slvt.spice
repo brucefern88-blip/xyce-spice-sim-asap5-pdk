@@ -1,0 +1,6 @@
+.subckt INVx2 A Y VDD VSS
+mn1 Y A VSS VSS nmos_slvt l=16n nfin=4
+mp1 Y A VDD VDD pmos_slvt l=16n nfin=4
+Cext_Y Y 0 0.060f
+Cext_A A 0 0.035f
+.ends INVx2

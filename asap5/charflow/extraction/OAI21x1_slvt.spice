@@ -1,0 +1,16 @@
+.subckt OAI21x1 A0 A1 B Y VDD VSS
+* NMOS: A0-A1 parallel + B series
+mn_a0 mid_n A0 VSS VSS nmos_slvt l=16n nfin=2
+mn_a1 mid_n A1 VSS VSS nmos_slvt l=16n nfin=2
+mn_b Y B mid_n VSS nmos_slvt l=16n nfin=2
+* PMOS: A0-A1 series, B parallel
+mp_a0 mid_p A0 VDD VDD pmos_slvt l=16n nfin=2
+mp_a1 Y A1 mid_p VDD pmos_slvt l=16n nfin=2
+mp_b Y B VDD VDD pmos_slvt l=16n nfin=2
+Cext_Y Y 0 0.090f
+Cext_A0 A0 0 0.035f
+Cext_A1 A1 0 0.035f
+Cext_B B 0 0.035f
+Cext_mid_n mid_n 0 0.040f
+Cext_mid_p mid_p 0 0.040f
+.ends OAI21x1

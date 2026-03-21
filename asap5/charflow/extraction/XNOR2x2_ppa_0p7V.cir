@@ -1,0 +1,52 @@
+* XNOR2x2 PPA characterization — A->Y path, B=0, 0.7V LVT
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.7
+.param slew_val = 100p
+.param load_val = 1f
+
+VDD vdd 0 DC {vdd_val}
+VSS vss 0 DC 0
+
+.param actual_slew = {slew_val * 1.667}
+VA in_a 0 PULSE(0 {vdd_val} 200p {actual_slew} {actual_slew} 500p 1400p)
+
+VB in_b 0 DC 0
+
+.include '/Users/bruce/CLAUDE/asap5/charflow/extraction/XNOR2x2.spice'
+X1 in_a in_b Y vdd vss XNOR2x2
+
+CLOAD Y 0 {load_val}
+
+.TRAN 500f 2.8n
+
+* Delay measurements (XNOR 10T: B=0 -> X=~A -> Y=A, non-inverting)
+.MEASURE TRAN cell_rise TRIG V(in_a) VAL={vdd_val*0.5} RISE=1
++                       TARG V(Y) VAL={vdd_val*0.5} RISE=1
+.MEASURE TRAN cell_fall TRIG V(in_a) VAL={vdd_val*0.5} FALL=1
++                       TARG V(Y) VAL={vdd_val*0.5} FALL=1
+
+* Transition measurements
+.MEASURE TRAN fall_transition TRIG V(Y) VAL={vdd_val*0.8} FALL=1
++                             TARG V(Y) VAL={vdd_val*0.2} FALL=1
+.MEASURE TRAN rise_transition TRIG V(Y) VAL={vdd_val*0.2} RISE=1
++                             TARG V(Y) VAL={vdd_val*0.8} RISE=1
+
+* Energy: integrate supply current over one full cycle
+.MEASURE TRAN rise_charge INTEG I(VDD) FROM=200p TO=900p
+.MEASURE TRAN fall_charge INTEG I(VDD) FROM=900p TO=1600p
+
+* Average tpd
+.MEASURE TRAN tpd_avg PARAM = {(ABS(cell_fall)+ABS(cell_rise))/2}
+
+* Total switching energy = |charge| * VDD
+.MEASURE TRAN total_charge PARAM = {ABS(fall_charge)+ABS(rise_charge)}
+.MEASURE TRAN energy PARAM = {total_charge * vdd_val}
+
+.END

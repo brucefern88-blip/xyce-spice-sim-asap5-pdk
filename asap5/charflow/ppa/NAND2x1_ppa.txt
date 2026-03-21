@@ -1,0 +1,40 @@
+NAND2x1 PPA Characterization — ASAP5 5nm GAA Nanosheet
+======================================================
+Cell: NAND2x1 (4T: 2 series NMOS + 2 parallel PMOS)
+Path: A->Y with B=VDD (series NMOS enabled)
+Load: 1.0 fF
+Area: 88 nm x 140 nm = 12,320 nm^2
+Subcircuit: /Users/bruce/CLAUDE/asap5/charflow/extraction/NAND2x1.spice
+Simulator: Xyce DEVELOPMENT-202603192040 (BSIM-CMG level=107)
+
+Parasitics (layout-estimated):
+  Cext_Y   = 0.070 fF
+  Cext_A   = 0.035 fF
+  Cext_B   = 0.035 fF
+  Cext_mid = 0.040 fF
+
+--------------------------------------------------------------------------------
+                        0.7V LVT (TT)           0.40V SLVT (TT)
+--------------------------------------------------------------------------------
+tphl (A->Y fall)        20.88 ps                 55.65 ps
+tplh (A->Y rise)        17.64 ps                 39.44 ps
+tpd  (average)          19.26 ps                 47.55 ps
+avg_i (supply)           4.77 uA                  0.223 uA
+energy (per cycle)       0.953 fJ                 0.089 fJ
+power @1GHz              0.953 uW                 0.089 uW
+energy ratio             1.0x                     0.093x (10.7x lower)
+delay ratio              1.0x                     2.47x (2.47x slower)
+EDP (energy*delay)       18.4 aJ*ps               4.24 aJ*ps
+--------------------------------------------------------------------------------
+
+Notes:
+- tpd = (tphl + tplh) / 2
+- Energy measured over one full transition cycle (200 ps @ 0.7V, 400 ps @ 0.4V)
+- Power = energy * frequency (normalized to 1 GHz for comparison)
+- EDP = energy * tpd (energy-delay product, lower is better)
+- 0.40V SLVT achieves 10.7x energy reduction at 2.47x delay cost
+- EDP improves 4.3x at 0.40V, favorable for energy-constrained designs
+
+Netlists:
+  /Users/bruce/CLAUDE/asap5/charflow/extraction/NAND2x1_ppa_0p7V.cir
+  /Users/bruce/CLAUDE/asap5/charflow/extraction/NAND2x1_ppa_0p4V.cir

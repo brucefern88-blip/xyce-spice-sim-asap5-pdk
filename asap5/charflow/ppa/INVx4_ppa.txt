@@ -1,0 +1,49 @@
+INVx4 PPA Characterization Report
+==================================
+Cell: INVx4 (ASAP5 5nm GAA Nanosheet Inverter, 4x drive)
+Topology: 2T (1 NMOS + 1 PMOS), nfin=8 (2 gate columns)
+Dimensions: 88nm x 140nm (2 CPP)
+Area: 12320 nm^2 (0.01232 um^2)
+Parasitics: analytical (Cext_Y=0.080fF, Cext_A=0.045fF)
+Load: 1 fF
+Input slew: 5 ps (10%-90%)
+Simulator: Xyce BSIM-CMG level=107 (ASAP5 GAA)
+Corner: TT, 25C
+
+--- 0.7V LVT (Nominal) ---
+  Model: nmos_lvt / pmos_lvt
+  tphl:            5.68 ps
+  tplh:            6.75 ps
+  tpd (avg):       6.21 ps
+  fall_transition:  3.75 ps
+  rise_transition:  4.83 ps
+  Q_cycle:         1.14e-15 C
+  E_cycle:         7.97e-16 J  (0.797 fJ)
+  Power @1GHz:     0.797 uW
+
+--- 0.40V SLVT (Near-Threshold) ---
+  Model: nmos_slvt / pmos_slvt
+  tphl:           13.46 ps
+  tplh:           18.43 ps
+  tpd (avg):      15.95 ps
+  fall_transition:  8.40 ps
+  rise_transition: 12.02 ps
+  Q_cycle:         1.39e-15 C
+  E_cycle:         5.56e-16 J  (0.556 fJ)
+  Power @1GHz:     0.556 uW
+
+--- Comparison ---
+  Delay ratio (0.40V/0.7V):  2.57x slower
+  Energy ratio (0.40V/0.7V): 0.70x (30% energy reduction)
+  EDP 0.7V:   4.95e-27 J*s
+  EDP 0.40V:  8.87e-27 J*s
+  EDP ratio:  1.79x (0.40V is 79% worse in EDP)
+
+--- Area ---
+  Cell area: 12320 nm^2 (0.01232 um^2)
+  Transistor count: 2
+  Total nfin: 16 (8 NMOS + 8 PMOS)
+
+--- INVx4 vs INVx2 (same VDD) ---
+  @0.7V:  tpd 6.21 vs 8.90 ps  (1.43x faster, 1.20x more energy, 2.00x area)
+  @0.40V: tpd 15.95 vs 19.68 ps (1.23x faster, 1.51x more energy, 2.00x area)

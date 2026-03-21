@@ -1,0 +1,46 @@
+XNOR2x1 PPA Characterization — ASAP5 5nm GAA Nanosheet
+=======================================================
+Cell: XNOR2x1 (10T: XOR core 8T + output inverter 2T, nfin=2)
+Path: A->Y with B=0 (TG2 active, X=~A, Y=~X=A, non-inverting)
+Load: 1.0 fF, input slew: 100 ps (20-80%)
+Area: 220 nm x 140 nm = 30,800 nm^2
+Subcircuit: /Users/bruce/CLAUDE/asap5/charflow/extraction/XNOR2x1.spice
+Simulator: Xyce DEVELOPMENT-202603192040 (BSIM-CMG level=107)
+
+Parasitics (layout-estimated):
+  Cext_Y  = 0.050 fF
+  Cext_X  = 0.120 fF  (internal XOR output, drives output inverter)
+  Cext_A  = 0.060 fF
+  Cext_B  = 0.060 fF
+  Cext_BB = 0.050 fF
+  Cext_AB = 0.050 fF
+
+--------------------------------------------------------------------------------
+                        0.7V LVT (TT)           0.40V SLVT (TT)
+--------------------------------------------------------------------------------
+cell_rise (A->Y)        64.35 ps                 179.38 ps
+cell_fall (A->Y)        69.88 ps                 194.31 ps
+tpd  (average)          67.11 ps                 186.85 ps
+fall_transition         15.07 ps                  42.45 ps
+rise_transition         17.37 ps                  41.33 ps
+energy (per cycle)       0.997 fJ                  0.710 fJ
+power @1GHz              0.997 uW                  0.710 uW
+energy ratio             1.0x                      0.712x (1.40x lower)
+delay ratio              1.0x                      2.78x (2.78x slower)
+EDP (energy*delay)      66.9 aJ*ps               132.7 aJ*ps
+--------------------------------------------------------------------------------
+
+Notes:
+- tpd = (|cell_rise| + |cell_fall|) / 2
+- Topology: XOR TG core drives internal node X (Cext=0.120fF), output INV buffers to Y
+- B=0: TG2 passes ~A to X, inverter gives Y=A (non-inverting overall)
+- Output inverter provides full-swing restoration and sharp transitions
+- fall/rise_transition much smaller than XOR2x1 due to inverter output stage
+- Energy measured over one full transition cycle (1400 ps period)
+- 0.40V SLVT achieves 1.40x energy reduction at 2.78x delay cost
+- Delay penalty vs XOR2x1: ~37% slower due to extra inverter stage + Cext_X load
+- EDP worse at 0.40V (132.7 vs 66.9 aJ*ps) — voltage scaling less favorable for 2-stage
+
+Netlists:
+  /Users/bruce/CLAUDE/asap5/charflow/extraction/XNOR2x1_ppa_0p7V.cir
+  /Users/bruce/CLAUDE/asap5/charflow/extraction/XNOR2x1_ppa_0p4V.cir

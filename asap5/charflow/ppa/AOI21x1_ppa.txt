@@ -1,0 +1,48 @@
+AOI21x1 PPA Summary — B->Y path (A0=A1=0, Y=!B)
+=================================================
+Function: Y = !((A0 & A1) | B), 6T CMOS, nfin=2
+Load: 1.0 fF, input slew: 5ps (0.7V) / 10ps (0.4V)
+
+AREA
+----
+  Cell dimensions:  132 nm x 140 nm
+  Cell area:        18,480 nm^2
+
+PERFORMANCE @ 0.7V LVT (TT corner)
+-----------------------------------
+  tphl (B rise -> Y fall):  13.4 ps
+  tplh (B fall -> Y rise):  20.8 ps
+  tpd  (average):           17.1 ps
+
+PERFORMANCE @ 0.40V SLVT (TT corner)
+-------------------------------------
+  tphl (B rise -> Y fall):  26.3 ps
+  tplh (B fall -> Y rise):  54.5 ps
+  tpd  (average):           40.4 ps
+
+POWER @ 0.7V LVT
+-----------------
+  Avg supply current:  4.55 uA  (over 200ps switching window)
+  Switching energy:    0.637 fJ/cycle  (VDD * |charge integral|)
+  Dynamic power @1GHz: 0.637 uW
+
+POWER @ 0.40V SLVT
+-------------------
+  Avg supply current:  0.218 uA  (over 400ps switching window)
+  Switching energy:    0.035 fJ/cycle
+  Dynamic power @1GHz: 0.035 uW
+
+VOLTAGE SCALING RATIOS (0.40V / 0.70V)
+---------------------------------------
+  Delay ratio:   2.36x slower  (40.4 / 17.1 ps)
+  Energy ratio:  18.2x lower   (0.035 / 0.637 fJ)
+  EDP ratio:     7.7x better   at 0.40V
+
+SIMULATION DETAILS
+------------------
+  Simulator:  Xyce DEVELOPMENT-202603192040-opensource
+  Models:     ASAP5 BSIM-CMG level=107, nfin=2, l=16nm
+  0.7V deck:  extraction/AOI21x1_ppa_0p7V.cir
+  0.4V deck:  extraction/AOI21x1_ppa_0p4V.cir
+  Subcircuit: extraction/AOI21x1.spice (LVT)
+              extraction/AOI21x1_slvt.spice (SLVT)

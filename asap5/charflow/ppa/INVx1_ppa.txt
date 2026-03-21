@@ -1,0 +1,35 @@
+Cell: INVx1
+Area: 44nm x 140nm = 6160 nm^2 (1 CPP)
+Transistors: 2T (nfin=2 NMOS + nfin=2 PMOS)
+
+Extraction: Analytical (Magic GDS import failed — layer map mismatch)
+  Parasitic Cext_Y = 0.050 fF (M1 wire + drain junction)
+  Parasitic Cext_A = 0.030 fF (poly gate segment)
+
+Simulator: Xyce DEVELOPMENT-202603192040, BSIM-CMG level=107
+Models: ASAP5 GAA nanosheet, TT corner, calibrated
+Load: 1.0 fF, input edges: 5 ps rise/fall
+
+=== LVT TT @ 0.7V, 1fF load, 5ps edges ===
+tpHL:   12.6 ps
+tpLH:   15.5 ps
+tpd:    14.1 ps
+tfall:  12.1 ps
+trise:  15.7 ps
+Avg current:    4.23 uA  (over 50-250ps, one full cycle)
+Energy/cycle:   592.3 aJ (Q=846.1 aC * 0.7V)
+
+=== SLVT TT @ 0.40V, 1fF load, 5ps edges ===
+tpHL:   22.3 ps
+tpLH:   31.0 ps
+tpd:    26.6 ps
+tfall:  19.6 ps
+trise:  28.0 ps
+Avg current:    1.35 uA  (over 100-600ps, one full cycle)
+Energy/cycle:   269.6 aJ (Q=673.9 aC * 0.4V)
+
+=== PPA Comparison ===
+Voltage scaling 0.7V -> 0.40V:
+  Delay penalty:  1.89x (14.1 -> 26.6 ps)
+  Energy savings: 2.20x (592.3 -> 269.6 aJ)
+  EDP improvement: 1.16x (better at 0.40V)

@@ -1,0 +1,31 @@
+* XOR2x1 PPA characterization @ 0.7V LVT — A->Y path, B=0
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_lvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_lvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.7
+VDD vdd 0 DC {vdd_val}
+VSS vss 0 DC 0
+VA in_a 0 PULSE(0 {vdd_val} 50p 5p 5p 95p 200p)
+VB in_b 0 DC 0
+
+.include '/Users/bruce/CLAUDE/asap5/charflow/extraction/XOR2x1.spice'
+X1 in_a in_b out vdd vss XOR2x1
+
+CLOAD out 0 1.0f
+
+.TRAN 0.5p 400p
+
+* Non-inverting path (B=0, Y=A): A rise -> Y rise, A fall -> Y fall
+.MEASURE TRAN tplh TRIG V(in_a) VAL={vdd_val*0.5} RISE=1 TARG V(out) VAL={vdd_val*0.5} RISE=1
+.MEASURE TRAN tphl TRIG V(in_a) VAL={vdd_val*0.5} FALL=1 TARG V(out) VAL={vdd_val*0.5} FALL=1
+.MEASURE TRAN trise TRIG V(out) VAL={vdd_val*0.2} RISE=1 TARG V(out) VAL={vdd_val*0.8} RISE=1
+.MEASURE TRAN tfall TRIG V(out) VAL={vdd_val*0.8} FALL=1 TARG V(out) VAL={vdd_val*0.2} FALL=1
+.MEASURE TRAN avg_i AVG I(VDD) FROM=50p TO=250p
+.MEASURE TRAN e_total INTEG I(VDD) FROM=50p TO=250p
+
+.END

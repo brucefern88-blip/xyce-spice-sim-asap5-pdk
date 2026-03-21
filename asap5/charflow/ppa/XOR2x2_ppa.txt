@@ -1,0 +1,43 @@
+XOR2x2 PPA Characterization — ASAP5 5nm GAA Nanosheet
+======================================================
+Cell: XOR2x2 (8T: 2 inverters + 2 transmission gates, nfin=4 for 2x drive)
+Path: A->Y with B=0 (TG2 active, Y=~A inverting)
+Load: 1.0 fF, input slew: 100 ps (20-80%)
+Area: 176 nm x 140 nm = 24,640 nm^2
+Subcircuit: /Users/bruce/CLAUDE/asap5/charflow/extraction/XOR2x2.spice
+Simulator: Xyce DEVELOPMENT-202603192040 (BSIM-CMG level=107)
+
+Parasitics (layout-estimated):
+  Cext_Y  = 0.060 fF
+  Cext_A  = 0.070 fF
+  Cext_B  = 0.070 fF
+  Cext_BB = 0.060 fF
+  Cext_AB = 0.060 fF
+
+--------------------------------------------------------------------------------
+                        0.7V LVT (TT)           0.40V SLVT (TT)
+--------------------------------------------------------------------------------
+cell_fall (A->Y)        45.32 ps                 101.33 ps
+cell_rise (A->Y)        52.76 ps                 109.46 ps
+tpd  (average)          49.04 ps                 105.39 ps
+fall_transition         25.90 ps                  52.90 ps
+rise_transition         29.73 ps                  66.86 ps
+energy (per cycle)       0.954 fJ                  0.701 fJ
+power @1GHz              0.954 uW                  0.701 uW
+energy ratio             1.0x                      0.735x (1.36x lower)
+delay ratio              1.0x                      2.15x (2.15x slower)
+EDP (energy*delay)      46.8 aJ*ps                73.9 aJ*ps
+--------------------------------------------------------------------------------
+
+Notes:
+- tpd = (|cell_fall| + |cell_rise|) / 2
+- B=0: TG2 passes ~A to Y (inverting path through A-inverter + TG2)
+- Energy measured over one full transition cycle (1400 ps period)
+- Power = energy * frequency (normalized to 1 GHz for comparison)
+- EDP = energy * tpd (energy-delay product, lower is better)
+- 0.40V SLVT achieves 1.36x energy reduction at 2.15x delay cost
+- nfin=4 (2x drive) vs XOR2x1 nfin=2: faster transitions, ~same tpd structure
+
+Netlists:
+  /Users/bruce/CLAUDE/asap5/charflow/extraction/XOR2x2_ppa_0p7V.cir
+  /Users/bruce/CLAUDE/asap5/charflow/extraction/XOR2x2_ppa_0p4V.cir

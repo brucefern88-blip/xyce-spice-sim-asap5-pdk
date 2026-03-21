@@ -1,0 +1,44 @@
+* INVx4 PPA characterization — 0.40V SLVT (near-threshold)
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-6 ABSTOL=1e-12
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-6 ABSTOL=1e-15 TRTOL=1.0
+.OPTIONS MEASURE MEASDGT=5
+
+.param vdd_val = 0.40
+.param cload = 1f
+
+VDD vdd 0 DC {vdd_val}
+VSS vss 0 DC 0
+
+VA A 0 PULSE(0 {vdd_val} 100p 5p 5p 395p 1000p)
+
+.include '/Users/bruce/CLAUDE/asap5/charflow/extraction/INVx4_slvt.spice'
+X1 A Y VDD VSS INVx4
+
+CLOAD Y 0 {cload}
+
+.TRAN 0.5p 1000p
+
+* Delay measurements (50% thresholds)
+.MEASURE TRAN tphl TRIG V(A) VAL={vdd_val*0.5} RISE=1
++                   TARG V(Y) VAL={vdd_val*0.5} FALL=1
+.MEASURE TRAN tplh TRIG V(A) VAL={vdd_val*0.5} FALL=1
++                   TARG V(Y) VAL={vdd_val*0.5} RISE=1
+.MEASURE TRAN tpd PARAM={(tphl+tplh)/2}
+
+* Transition measurements (20%-80%)
+.MEASURE TRAN fall_trans TRIG V(Y) VAL={vdd_val*0.8} FALL=1
++                        TARG V(Y) VAL={vdd_val*0.2} FALL=1
+.MEASURE TRAN rise_trans TRIG V(Y) VAL={vdd_val*0.2} RISE=1
++                        TARG V(Y) VAL={vdd_val*0.8} RISE=1
+
+* Energy: integrate supply current over one full cycle
+.MEASURE TRAN q_fall INTEG I(VDD) FROM=100p TO=500p
+.MEASURE TRAN q_rise INTEG I(VDD) FROM=500p TO=1000p
+.MEASURE TRAN q_cycle INTEG I(VDD) FROM=100p TO=1000p
+.MEASURE TRAN e_cycle PARAM={abs(q_cycle)*vdd_val}
+
+.END

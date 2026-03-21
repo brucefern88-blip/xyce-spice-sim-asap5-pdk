@@ -1,0 +1,57 @@
+XOR2x1 PPA Summary — ASAP5 5nm GAA Nanosheet
+=============================================
+Cell:       XOR2x1 (A ^ B), 8T transmission-gate topology
+Layout:     176 nm x 140 nm
+Transistors: 8 (2 inverters + 2 TGs), all nfin=2, l=16nm
+Path:       A -> Y with B=0 (TG2 active, non-inverting: Y=A)
+Load:       1.0 fF
+Slew:       5 ps input rise/fall
+
+Netlist logic verification:
+  B=0 -> TG2 ON (passes A),   TG1 OFF  -> Y = A      -> XOR(A,0) = A   [correct]
+  B=1 -> TG1 ON (passes ~A),  TG2 OFF  -> Y = ~A     -> XOR(A,1) = ~A  [correct]
+  NOTE: Original user netlist had TG1 passing A and TG2 passing ~A,
+        which implements XNOR. Corrected: TG1 passes AB(~A), TG2 passes A.
+
+Simulator: Xyce DEVELOPMENT-202603192040-opensource (BSIM-CMG level=107)
+Models:    ASAP5 TT corner, calibrated
+
+=== 0.7V LVT (nominal VDD) ===
+  tplh (A rise -> Y rise)  =   9.48 ps
+  tphl (A fall -> Y fall)  =   9.41 ps
+  tpd  (average)           =   9.44 ps
+  trise (20%-80%)          =  16.48 ps
+  tfall (80%-20%)          =  13.66 ps
+  Avg current (50-250ps)   =   0.876 uA
+  Avg power                =   0.613 uW   (0.876 uA x 0.7 V)
+  Energy/cycle (200ps)     =   0.175 fJ   (|e_total| = 1.752e-16 J)
+
+=== 0.40V SLVT (near-threshold) ===
+  tplh (A rise -> Y rise)  =  19.78 ps
+  tphl (A fall -> Y fall)  =  24.13 ps
+  tpd  (average)           =  21.95 ps
+  trise (20%-80%)          =  37.60 ps
+  tfall (80%-20%)          =  32.28 ps
+  Avg current (100-600ps)  =   0.775 uA
+  Avg power                =   0.310 uW   (0.775 uA x 0.4 V)
+  Energy/cycle (500ps)     =   0.387 fJ   (|e_total| = 3.872e-16 J)
+
+=== Area ===
+  Width x Height           = 176 nm x 140 nm
+  Cell area                = 24,640 nm^2  (0.02464 um^2)
+  4 CPP x 3.18 track       (CPP=44nm, M2 pitch=44nm)
+
+=== Comparison ===
+  Metric              0.7V LVT     0.40V SLVT    Ratio (0.4/0.7)
+  -------             --------     ----------    ---------------
+  tpd                  9.44 ps      21.95 ps        2.33x
+  trise               16.48 ps      37.60 ps        2.28x
+  tfall               13.66 ps      32.28 ps        2.36x
+  Avg power            0.613 uW      0.310 uW       0.51x
+  Energy/cycle         0.175 fJ      0.387 fJ        2.21x
+
+=== Files ===
+  Subcircuit (LVT):   /Users/bruce/CLAUDE/asap5/charflow/extraction/XOR2x1.spice
+  Subcircuit (SLVT):  /Users/bruce/CLAUDE/asap5/charflow/extraction/XOR2x1_slvt.spice
+  0.7V deck:          /Users/bruce/CLAUDE/asap5/charflow/extraction/XOR2x1_tran_07v.cir
+  0.40V deck:         /Users/bruce/CLAUDE/asap5/charflow/extraction/XOR2x1_tran_04v.cir

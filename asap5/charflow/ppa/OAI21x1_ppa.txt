@@ -1,0 +1,43 @@
+====================================================================
+OAI21x1 PPA Report  --  !((A0|A1) & B),  6T,  132nm x 140nm
+====================================================================
+Function:         Y = !((A0 | A1) & B)    [OAI21]
+Transistors:      6T (3N + 3P), all nfin=2, l=16nm
+Layout:           132 nm  x  140 nm
+Area:             18480 nm^2  (0.018480 um^2)
+Characterization: B -> Y  (A0 = VDD, A1 = 0)
+Slew:             100 ps input  |  Load: 1 fF
+Simulator:        Xyce (BSIM-CMG level=107, ASAP5 GAA)
+
+--------------------------------------------------------------------
+Metric                                 0.7V LVT         0.40V SLVT
+--------------------------------------------------------------------
+cell_fall (B->Y) [ps]                      58.2              104.4
+cell_rise (B->Y) [ps]                      55.9               86.0
+tpd avg [ps]                               57.0               95.2
+fall_transition [ps]                       34.8               53.8
+rise_transition [ps]                       32.9               39.8
+
+C_in(B) [fF]                              0.439              0.736
+
+fall_charge [fC]                         0.0551             0.1052
+rise_charge [fC]                        -0.9905            -0.9105
+E_cycle [aJ]                             731.91             406.29
+P_dyn @1GHz [uW]                          0.732              0.406
+
+--------------------------------------------------------------------
+Voltage Scaling Ratios (0.40V / 0.70V)
+--------------------------------------------------------------------
+tpd ratio                                  1.67x
+E_cycle ratio                              0.56x
+P_dyn ratio                                0.56x
+
+--------------------------------------------------------------------
+Notes
+--------------------------------------------------------------------
+- Models: ASAP5 GAA nanosheet, BSIM-CMG level=107, TT corner
+- 0.7V uses LVT devices; 0.40V uses SLVT (near-threshold)
+- Parasitic caps: geometry-estimated (Cext_Y=0.09fF, pins=0.035fF)
+- Power: charge integration over VDD supply (INTEG I(VDD))
+- B input enabled via A0=VDD path (parallel NMOS mn_a0 on)
+====================================================================

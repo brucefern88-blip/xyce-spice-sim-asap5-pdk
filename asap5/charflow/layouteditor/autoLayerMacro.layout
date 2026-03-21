@@ -1,0 +1,592 @@
+#!/usr/bin/layout
+#name=ASAP5 Layer Setup
+#help=Layer and settings setup for ASAP5 5nm GAA nanosheet PDK.
+
+// This macro needs to be run before loading any design.
+// GDS layer numbers from asap5.tech cifoutput section.
+// ASAP5: Lg=16nm, CPP=44nm, finpitch=24nm, VDD=0.7V, 12 metals
+
+int main(){
+setup::paintEngine=1;
+setup::placeModeForPCB=false;
+setup::lefCellBoundaryLayer=200;
+setup::gdsAutoMapDatatypes=false;
+setup::gdsMapLayer=true;
+setup::oasisAutoMapDatatypes=false;
+setup::oasisMapLayer=true;
+setup::autoLoadLayerFiles=true;
+setup::databaseUnit=1e-9;
+
+layers::disableAllLayer();
+string s;
+for( int i=0; i<1023; ++i){
+    s.setNum(i);
+    layers::num[i].name="layer_"+s;
+    layers::num[i].mapToLayer=i;
+    layers::num[i].mapToDatatype=-1;
+}
+layers::reset3dView();
+
+// ================================================================
+//  ASAP5 GDS Layer Map (from asap5.tech cifoutput)
+//
+//  Layer Name      GDS#  Datatype
+//  WELL (nwell)       1     0
+//  FIN                2     0
+//  BOUNDARY           5     0
+//  GATE (poly)        7     0
+//  DUMMY              8     0
+//  GCUT              10     0
+//  ACTIVE            11     0
+//  NSELECT           12     0
+//  PSELECT           13     0
+//  M1                19     0
+//  M2                20     0
+//  V1                21     0
+//  V2                25     0
+//  M3                30     0
+//  V3                35     0
+//  M4                40     0
+//  V4                45     0
+//  M5                50     0
+//  V5                55     0
+//  M6                60     0
+//  V6                65     0
+//  M7                70     0
+//  V7                75     0
+//  M8                80     0
+//  V8                85     0
+//  COG               87     0
+//  SDT               88     0
+//  COSD              89     0
+//  M9                90     0
+//  V9                95     0
+//  SLVT              97     0
+//  LVT               98     0
+//  SRAMDRC           99     0
+//  M10              100     0
+//  TEXT             101     0
+//  SRAMVT           103     0
+//  V10              105     0
+//  M11              110     0
+//  V11              115     0
+//  M12              120     0
+//  V12              125     0
+//
+//  Internal index = GDS# (direct 1:1 mapping, no remapping needed)
+// ================================================================
+
+// Use GDS numbers directly as internal layer indices
+// (no conflicts since we just use the GDS number as the index)
+
+// ---- 3D Extrusion Heights ----
+// Heights in arbitrary units for 3D visualization
+// Stack: substrate -> fin -> gate -> SDT/COG -> M1 -> V1 -> M2 -> ...
+
+layers::num[1].set3dView(-200,200);       // NWELL (buried)
+layers::num[2].set3dView(0,100);          // FIN
+layers::num[7].set3dView(100,120);        // GATE (poly wraps fin)
+layers::num[11].set3dView(0,80);          // ACTIVE
+layers::num[88].set3dView(220,100);       // SDT (S/D contact)
+layers::num[87].set3dView(220,100);       // COG (gate contact)
+layers::num[89].set3dView(220,100);       // COSD
+layers::num[19].set3dView(320,80);        // M1
+layers::num[21].set3dView(400,60);        // V1
+layers::num[20].set3dView(460,80);        // M2
+layers::num[25].set3dView(540,60);        // V2
+layers::num[30].set3dView(600,80);        // M3 (GDS 30)
+layers::num[35].set3dView(680,60);        // V3
+layers::num[40].set3dView(740,80);        // M4
+layers::num[45].set3dView(820,60);        // V4
+layers::num[50].set3dView(880,80);        // M5
+layers::num[55].set3dView(960,60);        // V5
+layers::num[60].set3dView(1020,80);       // M6
+layers::num[65].set3dView(1100,60);       // V6
+layers::num[70].set3dView(1160,100);      // M7
+layers::num[75].set3dView(1260,60);       // V7
+layers::num[80].set3dView(1320,100);      // M8
+layers::num[85].set3dView(1420,60);       // V8
+layers::num[90].set3dView(1480,160);      // M9
+layers::num[95].set3dView(1640,80);       // V9
+layers::num[100].set3dView(1720,200);     // M10
+layers::num[105].set3dView(1920,80);      // V10
+layers::num[110].set3dView(2000,300);     // M11
+layers::num[115].set3dView(2300,100);     // V11
+layers::num[120].set3dView(2400,400);     // M12
+layers::num[125].set3dView(2800,100);     // V12
+
+// ================================================================
+//  Layer Properties: enable, name, color, style, shortkey, GDS map
+// ================================================================
+
+// -- Error layer --
+layers::num[0].enable();
+layers::num[0].name="error";
+layers::num[0].setStyle(7);
+layers::num[0].setColor(255,0,0);
+layers::num[0].shortkey="e";
+
+// -- NWELL (GDS 1) --
+layers::num[1].enable();
+layers::num[1].name="NWELL";
+layers::num[1].setStyle(1);
+layers::num[1].setColor("#ffbff2");
+layers::num[1].shortkey="w";
+layers::num[1].mapToLayer=1;
+layers::num[1].mapToDatatype=0;
+
+// -- FIN (GDS 2) --
+layers::num[2].enable();
+layers::num[2].name="FIN";
+layers::num[2].setStyle(5);
+layers::num[2].setColor("#808080");
+layers::num[2].shortkey="f";
+layers::num[2].mapToLayer=2;
+layers::num[2].mapToDatatype=0;
+
+// -- BOUNDARY (GDS 5) --
+layers::num[5].enable();
+layers::num[5].name="BOUNDARY";
+layers::num[5].setStyle(0);
+layers::num[5].setColor("#ccccd9");
+layers::num[5].shortkey="shift+B";
+layers::num[5].mapToLayer=5;
+layers::num[5].mapToDatatype=0;
+
+// -- GATE / Poly (GDS 7) --
+layers::num[7].enable();
+layers::num[7].name="POLY";
+layers::num[7].setStyle(5);
+layers::num[7].setColor("#ff0000");
+layers::num[7].shortkey="p";
+layers::num[7].mapToLayer=7;
+layers::num[7].mapToDatatype=0;
+
+// -- DUMMY gate (GDS 8) --
+layers::num[8].enable();
+layers::num[8].name="DUMMY";
+layers::num[8].setStyle(1);
+layers::num[8].setColor("#cc6666");
+layers::num[8].shortkey="";
+layers::num[8].mapToLayer=8;
+layers::num[8].mapToDatatype=0;
+
+// -- Gate Cut (GDS 10) --
+layers::num[10].enable();
+layers::num[10].name="GCUT";
+layers::num[10].setStyle(6);
+layers::num[10].setColor("#ff8080");
+layers::num[10].shortkey="";
+layers::num[10].mapToLayer=10;
+layers::num[10].mapToDatatype=0;
+
+// -- ACTIVE (GDS 11) --
+layers::num[11].enable();
+layers::num[11].name="ACTIVE";
+layers::num[11].setStyle(5);
+layers::num[11].setColor("#00ff00");
+layers::num[11].shortkey="a";
+layers::num[11].mapToLayer=11;
+layers::num[11].mapToDatatype=0;
+
+// -- NSELECT (GDS 12) --
+layers::num[12].enable();
+layers::num[12].name="NSELECT";
+layers::num[12].setStyle(1);
+layers::num[12].setColor("#33cc33");
+layers::num[12].shortkey="n";
+layers::num[12].mapToLayer=12;
+layers::num[12].mapToDatatype=0;
+
+// -- PSELECT (GDS 13) --
+layers::num[13].enable();
+layers::num[13].name="PSELECT";
+layers::num[13].setStyle(1);
+layers::num[13].setColor("#ff66cc");
+layers::num[13].shortkey="s";
+layers::num[13].mapToLayer=13;
+layers::num[13].mapToDatatype=0;
+
+// -- M1 (GDS 19) --
+layers::num[19].enable();
+layers::num[19].name="M1";
+layers::num[19].setStyle(5);
+layers::num[19].setColor("#0000ff");
+layers::num[19].shortkey="1";
+layers::num[19].mapToLayer=19;
+layers::num[19].mapToDatatype=0;
+
+// -- M2 (GDS 20) --
+layers::num[20].enable();
+layers::num[20].name="M2";
+layers::num[20].setStyle(4);
+layers::num[20].setColor("#ff00ff");
+layers::num[20].shortkey="2";
+layers::num[20].mapToLayer=20;
+layers::num[20].mapToDatatype=0;
+
+// -- V1 (GDS 21) --
+layers::num[21].enable();
+layers::num[21].name="VIA1";
+layers::num[21].setStyle(6);
+layers::num[21].setColor("#5e00e6");
+layers::num[21].shortkey="v";
+layers::num[21].mapToLayer=21;
+layers::num[21].mapToDatatype=0;
+
+// -- V2 (GDS 25) --
+layers::num[25].enable();
+layers::num[25].name="VIA2";
+layers::num[25].setStyle(7);
+layers::num[25].setColor("#ff8000");
+layers::num[25].shortkey="";
+layers::num[25].mapToLayer=25;
+layers::num[25].mapToDatatype=0;
+
+// -- M3 (GDS 30) --
+layers::num[30].enable();
+layers::num[30].name="M3";
+layers::num[30].setStyle(3);
+layers::num[30].setColor("#00ffff");
+layers::num[30].shortkey="3";
+layers::num[30].mapToLayer=30;
+layers::num[30].mapToDatatype=0;
+
+// -- V3 (GDS 35) --
+layers::num[35].enable();
+layers::num[35].name="VIA3";
+layers::num[35].setStyle(5);
+layers::num[35].setColor("#268c6b");
+layers::num[35].shortkey="";
+layers::num[35].mapToLayer=35;
+layers::num[35].mapToDatatype=0;
+
+// -- M4 (GDS 40) --
+layers::num[40].enable();
+layers::num[40].name="M4";
+layers::num[40].setStyle(2);
+layers::num[40].setColor("#808000");
+layers::num[40].shortkey="4";
+layers::num[40].mapToLayer=40;
+layers::num[40].mapToDatatype=0;
+
+// -- V4 (GDS 45) --
+layers::num[45].enable();
+layers::num[45].name="VIA4";
+layers::num[45].setStyle(5);
+layers::num[45].setColor("#a0a000");
+layers::num[45].shortkey="";
+layers::num[45].mapToLayer=45;
+layers::num[45].mapToDatatype=0;
+
+// -- M5 (GDS 50) --
+layers::num[50].enable();
+layers::num[50].name="M5";
+layers::num[50].setStyle(4);
+layers::num[50].setColor("#e6b800");
+layers::num[50].shortkey="5";
+layers::num[50].mapToLayer=50;
+layers::num[50].mapToDatatype=0;
+
+// -- V5 (GDS 55) --
+layers::num[55].enable();
+layers::num[55].name="VIA5";
+layers::num[55].setStyle(5);
+layers::num[55].setColor("#d9a300");
+layers::num[55].shortkey="";
+layers::num[55].mapToLayer=55;
+layers::num[55].mapToDatatype=0;
+
+// -- M6 (GDS 60) --
+layers::num[60].enable();
+layers::num[60].name="M6";
+layers::num[60].setStyle(3);
+layers::num[60].setColor("#cc6600");
+layers::num[60].shortkey="6";
+layers::num[60].mapToLayer=60;
+layers::num[60].mapToDatatype=0;
+
+// -- V6 (GDS 65) --
+layers::num[65].enable();
+layers::num[65].name="VIA6";
+layers::num[65].setStyle(5);
+layers::num[65].setColor("#b35900");
+layers::num[65].shortkey="";
+layers::num[65].mapToLayer=65;
+layers::num[65].mapToDatatype=0;
+
+// -- M7 (GDS 70) --
+layers::num[70].enable();
+layers::num[70].name="M7";
+layers::num[70].setStyle(2);
+layers::num[70].setColor("#996633");
+layers::num[70].shortkey="7";
+layers::num[70].mapToLayer=70;
+layers::num[70].mapToDatatype=0;
+
+// -- V7 (GDS 75) --
+layers::num[75].enable();
+layers::num[75].name="VIA7";
+layers::num[75].setStyle(5);
+layers::num[75].setColor("#805500");
+layers::num[75].shortkey="";
+layers::num[75].mapToLayer=75;
+layers::num[75].mapToDatatype=0;
+
+// -- M8 (GDS 80) --
+layers::num[80].enable();
+layers::num[80].name="M8";
+layers::num[80].setStyle(4);
+layers::num[80].setColor("#669999");
+layers::num[80].shortkey="8";
+layers::num[80].mapToLayer=80;
+layers::num[80].mapToDatatype=0;
+
+// -- V8 (GDS 85) --
+layers::num[85].enable();
+layers::num[85].name="VIA8";
+layers::num[85].setStyle(5);
+layers::num[85].setColor("#4d8080");
+layers::num[85].shortkey="";
+layers::num[85].mapToLayer=85;
+layers::num[85].mapToDatatype=0;
+
+// -- COG (GDS 87) --
+layers::num[87].enable();
+layers::num[87].name="COG";
+layers::num[87].setStyle(3);
+layers::num[87].setColor("#ffff00");
+layers::num[87].shortkey="g";
+layers::num[87].mapToLayer=87;
+layers::num[87].mapToDatatype=0;
+
+// -- SDT (GDS 88) --
+layers::num[88].enable();
+layers::num[88].name="SDT";
+layers::num[88].setStyle(3);
+layers::num[88].setColor("#ffffcc");
+layers::num[88].shortkey="k";
+layers::num[88].mapToLayer=88;
+layers::num[88].mapToDatatype=0;
+
+// -- COSD (GDS 89) --
+layers::num[89].enable();
+layers::num[89].name="COSD";
+layers::num[89].setStyle(6);
+layers::num[89].setColor("#ffeeaa");
+layers::num[89].shortkey="";
+layers::num[89].mapToLayer=89;
+layers::num[89].mapToDatatype=0;
+
+// -- M9 (GDS 90) --
+layers::num[90].enable();
+layers::num[90].name="M9";
+layers::num[90].setStyle(3);
+layers::num[90].setColor("#339966");
+layers::num[90].shortkey="9";
+layers::num[90].mapToLayer=90;
+layers::num[90].mapToDatatype=0;
+
+// -- V9 (GDS 95) --
+layers::num[95].enable();
+layers::num[95].name="VIA9";
+layers::num[95].setStyle(5);
+layers::num[95].setColor("#267a4d");
+layers::num[95].shortkey="";
+layers::num[95].mapToLayer=95;
+layers::num[95].mapToDatatype=0;
+
+// -- SLVT implant (GDS 97) --
+layers::num[97].enable();
+layers::num[97].name="SLVT";
+layers::num[97].setStyle(0);
+layers::num[97].setColor("#e6e600");
+layers::num[97].shortkey="";
+layers::num[97].mapToLayer=97;
+layers::num[97].mapToDatatype=0;
+
+// -- LVT implant (GDS 98) --
+layers::num[98].enable();
+layers::num[98].name="LVT";
+layers::num[98].setStyle(0);
+layers::num[98].setColor("#cccc00");
+layers::num[98].shortkey="";
+layers::num[98].mapToLayer=98;
+layers::num[98].mapToDatatype=0;
+
+// -- SRAMDRC (GDS 99) --
+layers::num[99].enable();
+layers::num[99].name="SRAMDRC";
+layers::num[99].setStyle(0);
+layers::num[99].setColor("#aaaaaa");
+layers::num[99].shortkey="";
+layers::num[99].mapToLayer=99;
+layers::num[99].mapToDatatype=0;
+
+// -- M10 (GDS 100) --
+layers::num[100].enable();
+layers::num[100].name="M10";
+layers::num[100].setStyle(2);
+layers::num[100].setColor("#cc3366");
+layers::num[100].shortkey="";
+layers::num[100].mapToLayer=100;
+layers::num[100].mapToDatatype=0;
+
+// -- TEXT (GDS 101) --
+layers::num[101].enable();
+layers::num[101].name="TEXT";
+layers::num[101].setStyle(0);
+layers::num[101].setColor("#aaaaaa");
+layers::num[101].shortkey="t";
+layers::num[101].mapToLayer=101;
+layers::num[101].mapToDatatype=0;
+
+// -- SRAMVT (GDS 103) --
+layers::num[103].enable();
+layers::num[103].name="SRAMVT";
+layers::num[103].setStyle(0);
+layers::num[103].setColor("#999900");
+layers::num[103].shortkey="";
+layers::num[103].mapToLayer=103;
+layers::num[103].mapToDatatype=0;
+
+// -- V10 (GDS 105) --
+layers::num[105].enable();
+layers::num[105].name="VIA10";
+layers::num[105].setStyle(5);
+layers::num[105].setColor("#b3264d");
+layers::num[105].shortkey="";
+layers::num[105].mapToLayer=105;
+layers::num[105].mapToDatatype=0;
+
+// -- M11 (GDS 110) --
+layers::num[110].enable();
+layers::num[110].name="M11";
+layers::num[110].setStyle(4);
+layers::num[110].setColor("#6633cc");
+layers::num[110].shortkey="";
+layers::num[110].mapToLayer=110;
+layers::num[110].mapToDatatype=0;
+
+// -- V11 (GDS 115) --
+layers::num[115].enable();
+layers::num[115].name="VIA11";
+layers::num[115].setStyle(5);
+layers::num[115].setColor("#5929b3");
+layers::num[115].shortkey="";
+layers::num[115].mapToLayer=115;
+layers::num[115].mapToDatatype=0;
+
+// -- M12 (GDS 120) --
+layers::num[120].enable();
+layers::num[120].name="M12";
+layers::num[120].setStyle(2);
+layers::num[120].setColor("#d9cc00");
+layers::num[120].shortkey="";
+layers::num[120].mapToLayer=120;
+layers::num[120].mapToDatatype=0;
+
+// -- V12 (GDS 125) --
+layers::num[125].enable();
+layers::num[125].name="VIA12";
+layers::num[125].setStyle(5);
+layers::num[125].setColor("#bfb300");
+layers::num[125].shortkey="";
+layers::num[125].mapToLayer=125;
+layers::num[125].mapToDatatype=0;
+
+// -- Cell boundary (internal, GDS 200) --
+layers::num[200].enable();
+layers::num[200].name="prBoundary";
+layers::num[200].setStyle(0);
+layers::num[200].setColor("#ccccd9");
+layers::num[200].shortkey="shift+B";
+layers::num[200].mapToLayer=200;
+layers::num[200].mapToDatatype=0;
+
+// ================================================================
+//  3D Technology Layer Stack (for cross-section view)
+// ================================================================
+
+layers::technologyLayerRemoveAll();
+
+// Substrate/well
+layers::technologyLayerAdd(1,2);          // NWELL
+layers::technologyLayerSetParameter(1,0,0);
+layers::technologyLayerSetParameter(1,1,200);
+layers::technologyLayerSetParameter(1,2,200);
+
+// Active region
+layers::technologyLayerAdd(11,2);         // ACTIVE
+layers::technologyLayerSetParameter(11,0,1);
+layers::technologyLayerSetParameter(11,1,80);
+layers::technologyLayerSetParameter(11,2,80);
+
+// Poly gate
+layers::technologyLayerAdd(7,2);          // POLY
+layers::technologyLayerSetParameter(7,0,2);
+layers::technologyLayerSetParameter(7,1,120);
+layers::technologyLayerSetParameter(7,2,120);
+
+// SDT contact
+layers::technologyLayerAdd(88,1);         // SDT
+layers::technologyLayerSetParameter(88,0,3);
+layers::technologyLayerSetParameter(88,1,100);
+layers::technologyLayerSetParameter(88,2,0);
+layers::technologyLayerSetParameter(88,3,0);
+layers::technologyLayerSetParameter(88,4,100);
+layers::technologyLayerSetParameter(88,5,0);
+
+// COG contact
+layers::technologyLayerAdd(87,1);         // COG
+layers::technologyLayerSetParameter(87,0,3);
+layers::technologyLayerSetParameter(87,1,100);
+layers::technologyLayerSetParameter(87,2,0);
+layers::technologyLayerSetParameter(87,3,0);
+layers::technologyLayerSetParameter(87,4,100);
+layers::technologyLayerSetParameter(87,5,0);
+
+// M1
+layers::technologyLayerAdd(19,2);         // M1
+layers::technologyLayerSetParameter(19,0,4);
+layers::technologyLayerSetParameter(19,1,80);
+layers::technologyLayerSetParameter(19,2,80);
+
+// V1
+layers::technologyLayerAdd(21,1);         // VIA1
+layers::technologyLayerSetParameter(21,0,5);
+layers::technologyLayerSetParameter(21,1,60);
+layers::technologyLayerSetParameter(21,2,0);
+layers::technologyLayerSetParameter(21,3,0);
+layers::technologyLayerSetParameter(21,4,60);
+layers::technologyLayerSetParameter(21,5,0);
+
+// M2
+layers::technologyLayerAdd(20,2);         // M2
+layers::technologyLayerSetParameter(20,0,6);
+layers::technologyLayerSetParameter(20,1,80);
+layers::technologyLayerSetParameter(20,2,80);
+
+// V2
+layers::technologyLayerAdd(25,1);         // VIA2
+layers::technologyLayerSetParameter(25,0,7);
+layers::technologyLayerSetParameter(25,1,60);
+layers::technologyLayerSetParameter(25,2,0);
+layers::technologyLayerSetParameter(25,3,0);
+layers::technologyLayerSetParameter(25,4,60);
+layers::technologyLayerSetParameter(25,5,0);
+
+// M3
+layers::technologyLayerAdd(30,2);         // M3
+layers::technologyLayerSetParameter(30,0,8);
+layers::technologyLayerSetParameter(30,1,80);
+layers::technologyLayerSetParameter(30,2,80);
+
+if ( layers::displayedLayers<300) layers::displayedLayers=300;
+
+if (layout::objectExists()){
+    layout->showStatus("ASAP5 5nm GAA layer setup complete (1nm units, 12 metals)");
+    if (layout->drawing->currentCell->firstElement!=NULL) layout->showStatus("Warning: setup should be run before loading any design!");
+}
+
+}

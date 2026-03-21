@@ -1,0 +1,13 @@
+.subckt NAND2x1 A B Y VDD VSS
+* Series NMOS: VSS → A → mid → B → Y
+mn1 mid A VSS VSS nmos_lvt l=16n nfin=2
+mn2 Y B mid VSS nmos_lvt l=16n nfin=2
+* Parallel PMOS
+mp1 Y A VDD VDD pmos_lvt l=16n nfin=2
+mp2 Y B VDD VDD pmos_lvt l=16n nfin=2
+* Layout parasitics
+Cext_Y Y 0 0.070f
+Cext_A A 0 0.035f
+Cext_B B 0 0.035f
+Cext_mid mid 0 0.040f
+.ends NAND2x1

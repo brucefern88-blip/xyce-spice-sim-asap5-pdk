@@ -1,0 +1,59 @@
+MUX21x1 PPA Summary — ASAP5 5nm GAA Nanosheet
+===============================================
+Cell: MUX21x1  Y = (S & D1) | (!S & D0)
+Topology: S-inverter + 2 transmission gates + output inverter
+Transistors: 8T (4 NMOS + 4 PMOS), all nfin=2, l=16nm
+Path characterized: D1 → Y with S=1 (TG1 active), D0=0
+Load: 1 fF, input slew: 5 ps (10%-90%)
+
+Area
+----
+  Width:  176 nm
+  Height: 140 nm
+  Area:   24640 nm²
+
+Performance @ 0.7V LVT TT
+--------------------------
+  tphl (D1↑→Y↓):    20.0 ps
+  tplh (D1↓→Y↑):    21.0 ps
+  tpd (average):     20.5 ps
+  fall transition:   12.8 ps  (20%-80%)
+  rise transition:   16.0 ps  (20%-80%)
+
+Power @ 0.7V LVT TT
+--------------------
+  E_cycle:           0.586 fJ  (one full 0→1→0 transition, 400 ps period)
+  Q_cycle:           0.838 fC  (charge drawn per cycle)
+  Dynamic power @ 2.5 GHz:  1.47 uW  (E_cycle × f)
+
+Performance @ 0.40V SLVT TT (near-threshold)
+---------------------------------------------
+  tphl (D1↑→Y↓):    77.2 ps
+  tplh (D1↓→Y↑):    63.3 ps
+  tpd (average):     70.2 ps
+  fall transition:   29.8 ps  (20%-80%)
+  rise transition:   33.0 ps  (20%-80%)
+
+Power @ 0.40V SLVT TT
+----------------------
+  E_cycle:           0.257 fJ  (one full 0→1→0 transition, 1000 ps period)
+  Q_cycle:           0.643 fC  (charge drawn per cycle)
+  Dynamic power @ 1.0 GHz:  0.257 uW  (E_cycle × f)
+
+Voltage Scaling Summary
+-----------------------
+  0.7V → 0.40V:
+    tpd ratio:     3.42×  slowdown  (20.5 ps → 70.2 ps)
+    Energy ratio:  0.44×  savings   (0.586 fJ → 0.257 fJ)
+    EDP:           12.0 aJ·ps (0.7V) vs 18.1 aJ·ps (0.40V)
+
+Comparison with Other Cells (0.7V LVT, 1fF load)
+-------------------------------------------------
+  INVx1:   ~13 ps tpd,  2T,   4 CPP
+  NAND2x1: ~19 ps tpd,  4T,   4 CPP
+  MUX21x1: ~21 ps tpd,  8T,   4 CPP (this cell)
+  XOR2x1:  ~14 ps tpd,  8T,   4 CPP (TG topology)
+
+Simulator: Xyce DEVELOPMENT-202603192040-opensource
+Models: ASAP5 BSIM-CMG level=107, nfin=2
+Extraction: layout parasitics (Cext on all nodes)

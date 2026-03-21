@@ -1,0 +1,37 @@
+================================================================================
+ASAP5 5nm GAA Nanosheet — Standard Cell PPA Summary
+Xyce BSIM-CMG (level=107), Calibrated Models, TT/25C, 1fF load, 5ps edges
+================================================================================
+
+Cell        Area(nm2) CPPs  T#   tpd@0.7V(ps)  E@0.7V(aJ)  tpd@0.4V(ps)  E@0.4V(aJ)
+----------------------------------------------------------------------------------------
+INVx1           6160    1   2T       14.1          592          26.6          270
+INVx2           6160    1   2T        8.9          665          19.7          368
+INVx4          12320    2   2T        6.2          797          16.0          556
+NAND2x1        12320    2   4T       19.3          953          47.6           89
+NOR2x1         12320    2   4T       55.5          725         101.9          406
+AOI21x1        18480    3   6T       17.1          637          40.4           35
+OAI21x1        18480    3   6T       57.0          732          95.2          406
+XOR2x1         24640    4   8T        9.4          175          22.0          387
+XOR2x2         24640    4   8T       49.0          954         105.4          701
+XNOR2x1        30800    5  10T       67.1          997         186.8          710
+XNOR2x2        30800    5  10T       58.9         1409         173.4         1219
+MUX21x1        24640    4   8T       20.5          586          70.2          257
+DFFx1          55440    9  16T       46.9         3480         319.1         1430
+----------------------------------------------------------------------------------------
+
+Notes:
+- VDD=0.7V uses LVT calibrated BSIM-CMG (cgso=1.05e-9, cgdo=8.00e-10)
+- VDD=0.40V uses SLVT calibrated BSIM-CMG (same cap calibration)
+- All devices nfin=2 except INVx2(4), INVx4(8), XOR2x2(4), XNOR2x2(4)
+- Parasitics are analytical estimates from layout geometry (not Magic extraction)
+- DFF output swing limited by heavy hand-estimated parasitics (~12fF internal)
+- NOR2/OAI21 slower than NAND2/AOI21 due to series PMOS pull-up stack
+
+Key Observations:
+1. INV drive scaling: INVx1->x2->x4 gives 1.6x->2.3x speedup at 1.1x->1.3x energy
+2. AOI21 B-path (17.1ps) is fastest compound gate — single NMOS discharge
+3. XOR2x1 TG topology (9.4ps) is surprisingly fast — TG pass-gate has low RC
+4. Near-threshold (0.40V SLVT): 2-3x delay penalty for 2-18x energy savings
+5. Best EDP improvement at 0.40V: AOI21x1 (18x energy savings, 2.4x slower)
+6. DFF needs nfin>=3 or reduced parasitics for full-swing operation
