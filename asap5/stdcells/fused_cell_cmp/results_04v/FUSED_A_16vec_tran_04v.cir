@@ -1,0 +1,145 @@
+* FUSED_A (48T) — 16-vector transient, Xyce BSIM-CMG
+* Post-layout parasitics from Magic ASAP5 extraction
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=6
+
+Vvdd VDD 0 0.4
+
+* 16 vectors x 1ns = 16ns, 5ps rise/fall
+Vai ai 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 3.0000e-09 0.0 4.0000e-09 0.0 5.0000e-09 0.0 6.0000e-09 0.0 7.0000e-09 0.0 8.0000e-09 0.0 8.0050e-09 0.5 9.0000e-09 0.5 1.0000e-08 0.5 1.1000e-08 0.5 1.2000e-08 0.5 1.3000e-08 0.5 1.4000e-08 0.5 1.5000e-08 0.4)
+Vbi bi 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 3.0000e-09 0.0 4.0000e-09 0.0 4.0050e-09 0.5 5.0000e-09 0.5 6.0000e-09 0.5 7.0000e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 1.0000e-08 0.0 1.1000e-08 0.0 1.2000e-08 0.0 1.2005e-08 0.5 1.3000e-08 0.5 1.4000e-08 0.5 1.5000e-08 0.4)
+Vaj aj 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 2.0000e-09 0.0 2.0050e-09 0.5 3.0000e-09 0.5 4.0000e-09 0.5 4.0050e-09 0.0 5.0000e-09 0.0 6.0000e-09 0.0 6.0050e-09 0.5 7.0000e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 1.0000e-08 0.0 1.0005e-08 0.5 1.1000e-08 0.5 1.2000e-08 0.5 1.2005e-08 0.0 1.3000e-08 0.0 1.4000e-08 0.0 1.4005e-08 0.5 1.5000e-08 0.4)
+Vbj bj 0 PWL(0.0000e+00 0.0 1.0000e-09 0.0 1.0050e-09 0.5 2.0000e-09 0.5 2.0050e-09 0.0 3.0000e-09 0.0 3.0050e-09 0.5 4.0000e-09 0.5 4.0050e-09 0.0 5.0000e-09 0.0 5.0050e-09 0.5 6.0000e-09 0.5 6.0050e-09 0.0 7.0000e-09 0.0 7.0050e-09 0.5 8.0000e-09 0.5 8.0050e-09 0.0 9.0000e-09 0.0 9.0050e-09 0.5 1.0000e-08 0.5 1.0005e-08 0.0 1.1000e-08 0.0 1.1005e-08 0.5 1.2000e-08 0.5 1.2005e-08 0.0 1.3000e-08 0.0 1.3005e-08 0.5 1.4000e-08 0.5 1.4005e-08 0.0 1.5000e-08 0.0 1.5005e-08 0.4)
+
+* === A circuit (48T) ===
+Mp_ia nai ai VDD VDD pmos_slvt l=16n nfin=2
+Mn_ia nai ai 0 0 nmos_slvt l=16n nfin=2
+Mp_ib nbi bi VDD VDD pmos_slvt l=16n nfin=2
+Mn_ib nbi bi 0 0 nmos_slvt l=16n nfin=2
+Mp_iaj naj aj VDD VDD pmos_slvt l=16n nfin=2
+Mn_iaj naj aj 0 0 nmos_slvt l=16n nfin=2
+Mp_ibj nbj bj VDD VDD pmos_slvt l=16n nfin=2
+Mn_ibj nbj bj 0 0 nmos_slvt l=16n nfin=2
+Mp1_x0 x0_pm ai VDD VDD pmos_slvt l=16n nfin=2
+Mp2_x0 x0_pm bi VDD VDD pmos_slvt l=16n nfin=2
+Mp3_x0 d0 nai x0_pm VDD pmos_slvt l=16n nfin=2
+Mp4_x0 d0 nbi x0_pm VDD pmos_slvt l=16n nfin=2
+Mn1_x0 d0 ai x0_nm1 0 nmos_slvt l=16n nfin=2
+Mn2_x0 x0_nm1 bi 0 0 nmos_slvt l=16n nfin=2
+Mn3_x0 d0 nai x0_nm2 0 nmos_slvt l=16n nfin=2
+Mn4_x0 x0_nm2 nbi 0 0 nmos_slvt l=16n nfin=2
+Mp1_x1 x1_pm aj VDD VDD pmos_slvt l=16n nfin=2
+Mp2_x1 x1_pm bj VDD VDD pmos_slvt l=16n nfin=2
+Mp3_x1 d1 naj x1_pm VDD pmos_slvt l=16n nfin=2
+Mp4_x1 d1 nbj x1_pm VDD pmos_slvt l=16n nfin=2
+Mn1_x1 d1 aj x1_nm1 0 nmos_slvt l=16n nfin=2
+Mn2_x1 x1_nm1 bj 0 0 nmos_slvt l=16n nfin=2
+Mn3_x1 d1 naj x1_nm2 0 nmos_slvt l=16n nfin=2
+Mn4_x1 x1_nm2 nbj 0 0 nmos_slvt l=16n nfin=2
+Mp_id0 xn0 d0 VDD VDD pmos_slvt l=16n nfin=2
+Mn_id0 xn0 d0 0 0 nmos_slvt l=16n nfin=2
+Mp_id1 xn1 d1 VDD VDD pmos_slvt l=16n nfin=2
+Mn_id1 xn1 d1 0 0 nmos_slvt l=16n nfin=2
+Mp1_o0 o0_ps d0 VDD VDD pmos_slvt l=16n nfin=2
+Mp2_o0 oh0 d1 o0_ps VDD pmos_slvt l=16n nfin=2
+Mn1_o0 oh0 d0 0 0 nmos_slvt l=16n nfin=2
+Mn2_o0 oh0 d1 0 0 nmos_slvt l=16n nfin=2
+Mp1_a1 a1_pm d0 VDD VDD pmos_slvt l=16n nfin=2
+Mp2_a1 a1_pm xn1 VDD VDD pmos_slvt l=16n nfin=2
+Mp3_a1 no1 xn0 a1_pm VDD pmos_slvt l=16n nfin=2
+Mp4_a1 no1 d1 a1_pm VDD pmos_slvt l=16n nfin=2
+Mn1_a1 no1 d0 a1_nm1 0 nmos_slvt l=16n nfin=2
+Mn2_a1 a1_nm1 xn1 0 0 nmos_slvt l=16n nfin=2
+Mn3_a1 no1 xn0 a1_nm2 0 nmos_slvt l=16n nfin=2
+Mn4_a1 a1_nm2 d1 0 0 nmos_slvt l=16n nfin=2
+Mp_io1 oh1 no1 VDD VDD pmos_slvt l=16n nfin=2
+Mn_io1 oh1 no1 0 0 nmos_slvt l=16n nfin=2
+Mp1_n2 no2 d0 VDD VDD pmos_slvt l=16n nfin=2
+Mp2_n2 no2 d1 VDD VDD pmos_slvt l=16n nfin=2
+Mn1_n2 no2 d0 n2_ns 0 nmos_slvt l=16n nfin=2
+Mn2_n2 n2_ns d1 0 0 nmos_slvt l=16n nfin=2
+Mp_io2 oh2 no2 VDD VDD pmos_slvt l=16n nfin=2
+Mn_io2 oh2 no2 0 0 nmos_slvt l=16n nfin=2
+
+CL_oh0 oh0 0 1f
+CL_oh1 oh1 0 1f
+CL_oh2 oh2 0 1f
+
+* Estimated wire parasitics (from layout geometry)
+Cwire_0 nai 0 0.3f
+Cwire_1 nbi 0 0.3f
+Cwire_2 naj 0 0.3f
+Cwire_3 nbj 0 0.3f
+Cwire_4 d0 0 0.3f
+Cwire_5 d1 0 0.3f
+Cwire_6 xn0 0 0.3f
+Cwire_7 xn1 0 0.3f
+Cwire_8 no1 0 0.3f
+Cwire_9 no2 0 0.3f
+
+.TRAN 1p 1.6000e-08
+
+.PRINT TRAN V(ai) V(bi) V(aj) V(bj) V(oh0) V(oh1) V(oh2) I(Vvdd)
+
+* Functional verification: sample at 0.8ns into each vector
+.MEASURE TRAN v_oh0_v0 FIND V(oh0) AT=8.0000e-10
+.MEASURE TRAN v_oh1_v0 FIND V(oh1) AT=8.0000e-10
+.MEASURE TRAN v_oh2_v0 FIND V(oh2) AT=8.0000e-10
+.MEASURE TRAN v_oh0_v1 FIND V(oh0) AT=1.8000e-09
+.MEASURE TRAN v_oh1_v1 FIND V(oh1) AT=1.8000e-09
+.MEASURE TRAN v_oh2_v1 FIND V(oh2) AT=1.8000e-09
+.MEASURE TRAN v_oh0_v2 FIND V(oh0) AT=2.8000e-09
+.MEASURE TRAN v_oh1_v2 FIND V(oh1) AT=2.8000e-09
+.MEASURE TRAN v_oh2_v2 FIND V(oh2) AT=2.8000e-09
+.MEASURE TRAN v_oh0_v3 FIND V(oh0) AT=3.8000e-09
+.MEASURE TRAN v_oh1_v3 FIND V(oh1) AT=3.8000e-09
+.MEASURE TRAN v_oh2_v3 FIND V(oh2) AT=3.8000e-09
+.MEASURE TRAN v_oh0_v4 FIND V(oh0) AT=4.8000e-09
+.MEASURE TRAN v_oh1_v4 FIND V(oh1) AT=4.8000e-09
+.MEASURE TRAN v_oh2_v4 FIND V(oh2) AT=4.8000e-09
+.MEASURE TRAN v_oh0_v5 FIND V(oh0) AT=5.8000e-09
+.MEASURE TRAN v_oh1_v5 FIND V(oh1) AT=5.8000e-09
+.MEASURE TRAN v_oh2_v5 FIND V(oh2) AT=5.8000e-09
+.MEASURE TRAN v_oh0_v6 FIND V(oh0) AT=6.8000e-09
+.MEASURE TRAN v_oh1_v6 FIND V(oh1) AT=6.8000e-09
+.MEASURE TRAN v_oh2_v6 FIND V(oh2) AT=6.8000e-09
+.MEASURE TRAN v_oh0_v7 FIND V(oh0) AT=7.8000e-09
+.MEASURE TRAN v_oh1_v7 FIND V(oh1) AT=7.8000e-09
+.MEASURE TRAN v_oh2_v7 FIND V(oh2) AT=7.8000e-09
+.MEASURE TRAN v_oh0_v8 FIND V(oh0) AT=8.8000e-09
+.MEASURE TRAN v_oh1_v8 FIND V(oh1) AT=8.8000e-09
+.MEASURE TRAN v_oh2_v8 FIND V(oh2) AT=8.8000e-09
+.MEASURE TRAN v_oh0_v9 FIND V(oh0) AT=9.8000e-09
+.MEASURE TRAN v_oh1_v9 FIND V(oh1) AT=9.8000e-09
+.MEASURE TRAN v_oh2_v9 FIND V(oh2) AT=9.8000e-09
+.MEASURE TRAN v_oh0_v10 FIND V(oh0) AT=1.0800e-08
+.MEASURE TRAN v_oh1_v10 FIND V(oh1) AT=1.0800e-08
+.MEASURE TRAN v_oh2_v10 FIND V(oh2) AT=1.0800e-08
+.MEASURE TRAN v_oh0_v11 FIND V(oh0) AT=1.1800e-08
+.MEASURE TRAN v_oh1_v11 FIND V(oh1) AT=1.1800e-08
+.MEASURE TRAN v_oh2_v11 FIND V(oh2) AT=1.1800e-08
+.MEASURE TRAN v_oh0_v12 FIND V(oh0) AT=1.2800e-08
+.MEASURE TRAN v_oh1_v12 FIND V(oh1) AT=1.2800e-08
+.MEASURE TRAN v_oh2_v12 FIND V(oh2) AT=1.2800e-08
+.MEASURE TRAN v_oh0_v13 FIND V(oh0) AT=1.3800e-08
+.MEASURE TRAN v_oh1_v13 FIND V(oh1) AT=1.3800e-08
+.MEASURE TRAN v_oh2_v13 FIND V(oh2) AT=1.3800e-08
+.MEASURE TRAN v_oh0_v14 FIND V(oh0) AT=1.4800e-08
+.MEASURE TRAN v_oh1_v14 FIND V(oh1) AT=1.4800e-08
+.MEASURE TRAN v_oh2_v14 FIND V(oh2) AT=1.4800e-08
+.MEASURE TRAN v_oh0_v15 FIND V(oh0) AT=1.5800e-08
+.MEASURE TRAN v_oh1_v15 FIND V(oh1) AT=1.5800e-08
+.MEASURE TRAN v_oh2_v15 FIND V(oh2) AT=1.5800e-08
+
+* Delay: bi rises at vec4 (4ns), oh1 should rise
+.MEASURE TRAN t_bi_rise WHEN V(bi)=0.25 RISE=1
+.MEASURE TRAN t_oh1_rise WHEN V(oh1)=0.25 RISE=1
+.MEASURE TRAN tpd_oh1 PARAM='t_oh1_rise - t_bi_rise'
+.MEASURE TRAN i_avg AVG I(Vvdd) FROM=0 TO=1.6000e-08
+.MEASURE TRAN i_switch AVG I(Vvdd) FROM=4.0000e-09 TO=8.0000e-09
+
+.END

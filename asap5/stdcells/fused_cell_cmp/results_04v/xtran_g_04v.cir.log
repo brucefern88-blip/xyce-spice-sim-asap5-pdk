@@ -1,0 +1,195 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce DEVELOPMENT-202603192040-opensource
+***** Date: Fri Mar 20 19:29:27 PDT 2026
+
+
+***** Executing netlist xtran_g_04v.cir
+
+***** Reading and parsing netlist...
+Netlist warning in file
+ /Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm at or near
+ line 41
+ No model parameter VERSION found for model PMOS_SLVT of type PMOS, parameter
+ ignored.
+Netlist warning in file
+ /Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm at or near
+ line 41
+ Device model PMOS_SLVT: ADMSbsimcmg: Parameter LRSD value 0 out of range ] 0,
+  (+inf) [
+Netlist warning in file
+ /Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm at or near
+ line 41
+ No model parameter VERSION found for model NMOS_SLVT of type NMOS, parameter
+ ignored.
+Maximum warning count has been exceeded and will no longer be displayed
+***** Setting up topology...
+
+***** Device Count Summary ...
+       C level 1 (Capacitor)                   2
+       M level 107 (BSIM-CMG FINFET v107.0.0) 40
+       V level 1 (Independent Voltage Source)  6
+       -----------------------------------------
+       Total Devices                          48
+***** Setting up matrix structure...
+***** Number of Unknowns = 159
+***** Initializing...
+
+***** Beginning DC Operating Point Calculation...
+
+Netlist info in file xtran_g_04v.cir at or near line 55
+ Device instance M1039: Fatal: DROUT_i = %e is non-positive. 0 
+ 
+Netlist info in file xtran_g_04v.cir at or near line 46
+ Device instance M1030: Fatal: DROUT_i = %e is non-positive. 0 
+ 
+Netlist info in file xtran_g_04v.cir at or near line 43
+ Device instance M1027: Fatal: DROUT_i = %e is non-positive. 0 
+ 
+Maximum informational count has been exceeded and will no longer be displayed
+***** Beginning Transient Calculation...
+
+***** Percent complete: 1.9375 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  1 sec.
+
+***** Percent complete: 3.9375 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 7.9375 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 15.9375 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 25 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 26.0798 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 27.2598 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 29.3981 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 31.8418 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 36.7292 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 46.5041 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 56.5041 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 66.5041 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 76.5041 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 86.5041 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 96.5041 %
+***** Current system time: Fri Mar 20 19:29:27 2026
+***** Estimated time to completion:  0 sec.
+
+***** Problem read in and set up time: 0.00657988 seconds
+ ***** DCOP time: 0.0350571 seconds.  Breakdown follows:
+	Number Successful Steps Taken:		1
+	Number Failed Steps Attempted:		0
+	Number Jacobians Evaluated:		28
+	Number Linear Solves:			28
+	Number Failed Linear Solves:		1
+	Number Residual Evaluations:		41
+	Number Nonlinear Convergence Failures:	0
+	Total Residual Load Time:		0.0275071 seconds
+	Total Jacobian Load Time:		0.000417709 seconds
+	Total Linear Solution Time:		0.00238895 seconds
+
+ ***** Transient Stepping time: 0.0705049 seconds.  Breakdown follows:
+	Number Successful Steps Taken:		56
+	Number Failed Steps Attempted:		7
+	Number Jacobians Evaluated:		128
+	Number Linear Solves:			128
+	Number Failed Linear Solves:		0
+	Number Residual Evaluations:		191
+	Number Nonlinear Convergence Failures:	0
+	Total Residual Load Time:		0.0545506 seconds
+	Total Jacobian Load Time:		0.00116277 seconds
+	Total Linear Solution Time:		0.00336313 seconds
+
+
+***** Solution Summary *****
+	Number Successful Steps Taken:		57
+	Number Failed Steps Attempted:		7
+	Number Jacobians Evaluated:		156
+	Number Linear Solves:			156
+	Number Failed Linear Solves:		1
+	Number Residual Evaluations:		232
+	Number Nonlinear Convergence Failures:	0
+	Total Residual Load Time:		0.0820577 seconds
+	Total Jacobian Load Time:		0.00158048 seconds
+	Total Linear Solution Time:		0.00575209 seconds
+
+
+ ***** Measure Functions ***** 
+
+TPD_OH1 = 0.000000e+00 FAILED with targ = not found and trig = 2.025000e-10
+
+I_AVG = -3.921089e-08
+Measure Start Time= 0.000000e+00	Measure End Time= 8.000000e-10
+
+I_SWITCH = -7.211435e-08
+Measure Start Time= 2.000000e-10	Measure End Time= 6.000000e-10
+
+
+***** Total Simulation Solvers Run Time: 0.106117 seconds
+***** Total Elapsed Run Time:            0.112697 seconds
+*****
+***** End of Xyce(TM) Simulation
+*****
+
+Timing summary of 1 processor
+                 Stats                   Count       CPU Time              Wall Time
+---------------------------------------- ----- --------------------- ---------------------
+Xyce                                         1        0.045 (100.0%)        0.114 (100.0%)
+  Analysis                                   1        0.041 (92.07%)        0.106 (93.28%)
+    Transient                                1        0.041 (92.06%)        0.106 (93.28%)
+      Nonlinear Solve                       64        0.040 (89.55%)        0.103 (91.06%)
+        Residual                           232        0.032 (71.84%)        0.082 (72.39%)
+        Jacobian                           156        0.002 ( 3.47%)        0.002 ( 1.44%)
+        Linear Solve                       156        0.004 ( 8.56%)        0.006 ( 5.13%)
+      Successful DCOP Steps                  1        0.000 ( 0.28%)        0.000 ( 0.38%)
+      Successful Step                       56        0.001 ( 1.22%)        0.001 ( 0.85%)
+      Failed Steps                           7        0.000 ( 0.01%)        0.000 (<0.01%)
+  Netlist Import                             1        0.002 ( 5.28%)        0.005 ( 4.00%)
+    Parse Context                            1        0.000 ( 1.03%)        0.001 ( 0.62%)
+    Distribute Devices                       1        0.001 ( 3.33%)        0.003 ( 2.58%)
+    Verify Devices                           1        0.000 (<0.01%)        0.000 ( 0.07%)
+    Instantiate                              1        0.000 ( 0.31%)        0.000 ( 0.17%)
+  Late Initialization                        1        0.001 ( 1.28%)        0.001 ( 0.94%)
+    Global Indices                           1        0.000 ( 0.29%)        0.000 ( 0.12%)
+  Setup Matrix Structure                     1        0.000 ( 0.29%)        0.001 ( 0.49%)
+

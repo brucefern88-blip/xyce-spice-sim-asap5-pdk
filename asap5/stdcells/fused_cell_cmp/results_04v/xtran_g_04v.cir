@@ -1,0 +1,68 @@
+* FUSED_G Transient Delay — Xyce BSIM-CMG post-layout
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=6
+
+Vvdd VDD 0 0.4
+Vgnd VSS 0 0
+Vai ai 0 DC 0
+Vbi bi 0 PWL(0 0 200p 0 205p 0.4)
+Vaj aj 0 DC 0
+Vbj bj 0 DC 0
+
+M1000 a_294_85# a_278_85# a_266_10# w_0_65# pmos_slvt l=16n nfin=2
+M1001 VSS a_146_225# a_118_225# Gnd nmos_slvt l=16n nfin=2
+M1002 VSS a_14_225# a_0_150# Gnd nmos_slvt l=16n nfin=2
+M1003 VDD a_322_85# a_294_85# w_0_65# pmos_slvt l=16n nfin=2
+M1004 a_74_10# bi VSS Gnd nmos_slvt l=16n nfin=2
+M1005 VSS a_234_5# a_206_10# Gnd nmos_slvt l=16n nfin=2
+M1006 a_250_150# a_234_145# a_206_150# w_0_65# pmos_slvt l=16n nfin=2
+M1007 a_206_150# a_190_145# a_178_150# w_0_65# pmos_slvt l=16n nfin=2
+M1008 VSS a_322_225# a_294_225# Gnd nmos_slvt l=16n nfin=2
+M1009 VDD a_102_85# a_90_10# w_0_65# pmos_slvt l=16n nfin=2
+M1010 a_0_150# a_58_145# VDD w_0_65# pmos_slvt l=16n nfin=2
+M1011 a_470_85# a_454_85# a_266_10# w_0_65# pmos_slvt l=16n nfin=2
+M1012 a_382_10# a_366_5# VSS Gnd nmos_slvt l=16n nfin=2
+M1013 a_294_225# a_278_225# a_266_150# Gnd nmos_slvt l=16n nfin=2
+M1014 a_118_225# a_102_225# a_90_225# Gnd nmos_slvt l=16n nfin=2
+M1015 VSS a_410_5# a_382_10# Gnd nmos_slvt l=16n nfin=2
+M1016 a_74_10# a_58_85# VDD w_0_65# pmos_slvt l=16n nfin=2
+M1017 VDD a_234_85# a_206_85# w_0_65# pmos_slvt l=16n nfin=2
+M1018 a_74_10# bj VSS Gnd nmos_slvt l=16n nfin=2
+M1019 VDD a_146_145# a_118_150# w_0_65# pmos_slvt l=16n nfin=2
+M1020 a_514_10# a_498_5# a_470_10# Gnd nmos_slvt l=16n nfin=2
+M1021 VSS ai a_0_10# Gnd nmos_slvt l=16n nfin=2
+M1022 a_206_10# a_190_5# VSS Gnd nmos_slvt l=16n nfin=2
+M1023 VDD a_14_145# a_0_150# w_0_65# pmos_slvt l=16n nfin=2
+M1024 VSS a_234_225# a_206_225# Gnd nmos_slvt l=16n nfin=2
+M1025 a_206_225# a_190_225# a_178_150# Gnd nmos_slvt l=16n nfin=2
+M1026 a_382_85# a_366_85# a_354_85# w_0_65# pmos_slvt l=16n nfin=2
+M1027 a_294_10# a_278_5# a_266_10# Gnd nmos_slvt l=16n nfin=2
+M1028 a_338_150# a_322_145# VDD w_0_65# pmos_slvt l=16n nfin=2
+M1029 VDD a_410_85# a_382_85# w_0_65# pmos_slvt l=16n nfin=2
+M1030 a_338_10# a_322_5# a_294_10# Gnd nmos_slvt l=16n nfin=2
+M1031 a_0_150# a_58_225# VSS Gnd nmos_slvt l=16n nfin=2
+M1032 a_118_150# a_102_145# VDD w_0_65# pmos_slvt l=16n nfin=2
+M1033 VDD a_278_145# a_266_150# w_0_65# pmos_slvt l=16n nfin=2
+M1034 a_74_10# a_146_85# VDD w_0_65# pmos_slvt l=16n nfin=2
+M1035 VDD a_498_85# a_470_85# w_0_65# pmos_slvt l=16n nfin=2
+M1036 VDD a_14_85# a_0_10# w_0_65# pmos_slvt l=16n nfin=2
+M1037 VSS aj a_90_10# Gnd nmos_slvt l=16n nfin=2
+M1038 a_206_85# a_190_85# a_178_85# w_0_65# pmos_slvt l=16n nfin=2
+M1039 a_470_10# a_454_5# a_266_10# Gnd nmos_slvt l=16n nfin=2
+
+CL_noh1 noh1 0 1f
+CL_noh2 noh2 0 1f
+
+.TRAN 0.5p 800p
+
+.PRINT TRAN V(bi) V(noh1) V(noh2) I(Vvdd)
+
+.MEASURE TRAN tpd_oh1 TRIG V(bi) VAL=0.2 RISE=1
++  TARG V(noh1) VAL=0.2 FALL=1
+.MEASURE TRAN i_avg AVG I(Vvdd) FROM=0 TO=800p
+.MEASURE TRAN i_switch AVG I(Vvdd) FROM=200p TO=600p
+.END

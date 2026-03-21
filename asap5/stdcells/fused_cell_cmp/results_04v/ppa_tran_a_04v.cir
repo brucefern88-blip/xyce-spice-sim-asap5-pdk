@@ -1,0 +1,93 @@
+* FUSED_A PPA Transient — Xyce BSIM-CMG level=107
+* ASAP5 SLVT TT cal, VDD=0.4V, nfin=2, L=16n
+* Parasitic caps from Magic .ext extraction
+
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm'
+.include '/Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm'
+
+.OPTIONS DEVICE GMIN=1e-12
+.OPTIONS NONLIN RELTOL=1e-4 ABSTOL=1e-9
+.OPTIONS TIMEINT METHOD=trap RELTOL=1e-3 ABSTOL=1e-12
+.OPTIONS MEASURE MEASDGT=5
+
+Vvdd VDD 0 0.4
+Vai ai 0 DC 0
+Vbi bi 0 PWL(0 0 200p 0 205p 0.4)
+Vaj aj 0 DC 0
+Vbj bj 0 DC 0
+
+* VARIANT A: Canonical (48T)
+Mp_a_iai a_nai ai VDD VDD pmos_slvt l=16n nfin=2
+Mn_a_iai a_nai ai 0 0 nmos_slvt l=16n nfin=2
+Cext_a_iai a_nai 0 0.7050f
+Mp_a_ibi a_nbi bi VDD VDD pmos_slvt l=16n nfin=2
+Mn_a_ibi a_nbi bi 0 0 nmos_slvt l=16n nfin=2
+Cext_a_ibi a_nbi 0 0.9100f
+Mp_a_iaj a_naj aj VDD VDD pmos_slvt l=16n nfin=2
+Mn_a_iaj a_naj aj 0 0 nmos_slvt l=16n nfin=2
+Cext_a_iaj a_naj 0 2.1840f
+Mp_a_ibj a_nbj bj VDD VDD pmos_slvt l=16n nfin=2
+Mn_a_ibj a_nbj bj 0 0 nmos_slvt l=16n nfin=2
+Cext_a_ibj a_nbj 0 2.1840f
+Mp1_a_x0 a_x0_pm ai VDD VDD pmos_slvt l=16n nfin=2
+Mp2_a_x0 a_x0_pm bi VDD VDD pmos_slvt l=16n nfin=2
+Mp3_a_x0 a_d0 a_nai a_x0_pm VDD pmos_slvt l=16n nfin=2
+Mp4_a_x0 a_d0 a_nbi a_x0_pm VDD pmos_slvt l=16n nfin=2
+Mn1_a_x0 a_d0 ai a_x0_nm1 0 nmos_slvt l=16n nfin=2
+Mn2_a_x0 a_x0_nm1 bi 0 0 nmos_slvt l=16n nfin=2
+Mn3_a_x0 a_d0 a_nai a_x0_nm2 0 nmos_slvt l=16n nfin=2
+Mn4_a_x0 a_x0_nm2 a_nbi 0 0 nmos_slvt l=16n nfin=2
+Cext_a_x0 a_d0 0 2.1840f
+Mp1_a_x1 a_x1_pm aj VDD VDD pmos_slvt l=16n nfin=2
+Mp2_a_x1 a_x1_pm bj VDD VDD pmos_slvt l=16n nfin=2
+Mp3_a_x1 a_d1 a_naj a_x1_pm VDD pmos_slvt l=16n nfin=2
+Mp4_a_x1 a_d1 a_nbj a_x1_pm VDD pmos_slvt l=16n nfin=2
+Mn1_a_x1 a_d1 aj a_x1_nm1 0 nmos_slvt l=16n nfin=2
+Mn2_a_x1 a_x1_nm1 bj 0 0 nmos_slvt l=16n nfin=2
+Mn3_a_x1 a_d1 a_naj a_x1_nm2 0 nmos_slvt l=16n nfin=2
+Mn4_a_x1 a_x1_nm2 a_nbj 0 0 nmos_slvt l=16n nfin=2
+Cext_a_x1 a_d1 0 2.1840f
+Mp_a_id0 a_xn0 a_d0 VDD VDD pmos_slvt l=16n nfin=2
+Mn_a_id0 a_xn0 a_d0 0 0 nmos_slvt l=16n nfin=2
+Cext_a_id0 a_xn0 0 2.1840f
+Mp_a_id1 a_xn1 a_d1 VDD VDD pmos_slvt l=16n nfin=2
+Mn_a_id1 a_xn1 a_d1 0 0 nmos_slvt l=16n nfin=2
+Cext_a_id1 a_xn1 0 2.1840f
+Mp1_a_o0 a_o0_ps a_d0 VDD VDD pmos_slvt l=16n nfin=2
+Mp2_a_o0 a_oh0 a_d1 a_o0_ps VDD pmos_slvt l=16n nfin=2
+Mn1_a_o0 a_oh0 a_d0 0 0 nmos_slvt l=16n nfin=2
+Mn2_a_o0 a_oh0 a_d1 0 0 nmos_slvt l=16n nfin=2
+Cext_a_o0 a_oh0 0 2.1840f
+CL_a_oh0 a_oh0 0 1f
+Mp1_a_a1 a_a1_pm a_d0 VDD VDD pmos_slvt l=16n nfin=2
+Mp2_a_a1 a_a1_pm a_xn1 VDD VDD pmos_slvt l=16n nfin=2
+Mp3_a_a1 a_no1 a_xn0 a_a1_pm VDD pmos_slvt l=16n nfin=2
+Mp4_a_a1 a_no1 a_d1 a_a1_pm VDD pmos_slvt l=16n nfin=2
+Mn1_a_a1 a_no1 a_d0 a_a1_nm1 0 nmos_slvt l=16n nfin=2
+Mn2_a_a1 a_a1_nm1 a_xn1 0 0 nmos_slvt l=16n nfin=2
+Mn3_a_a1 a_no1 a_xn0 a_a1_nm2 0 nmos_slvt l=16n nfin=2
+Mn4_a_a1 a_a1_nm2 a_d1 0 0 nmos_slvt l=16n nfin=2
+Cext_a_a1 a_no1 0 1.1730f
+Mp_a_io1 a_oh1 a_no1 VDD VDD pmos_slvt l=16n nfin=2
+Mn_a_io1 a_oh1 a_no1 0 0 nmos_slvt l=16n nfin=2
+Cext_a_io1 a_oh1 0 2.1880f
+CL_a_oh1 a_oh1 0 1f
+Mp1_a_n2 a_no2 a_d0 VDD VDD pmos_slvt l=16n nfin=2
+Mp2_a_n2 a_no2 a_d1 VDD VDD pmos_slvt l=16n nfin=2
+Mn1_a_n2 a_no2 a_d0 a_n2_ns 0 nmos_slvt l=16n nfin=2
+Mn2_a_n2 a_n2_ns a_d1 0 0 nmos_slvt l=16n nfin=2
+Cext_a_n2 a_no2 0 2.1840f
+Mp_a_io2 a_oh2 a_no2 VDD VDD pmos_slvt l=16n nfin=2
+Mn_a_io2 a_oh2 a_no2 0 0 nmos_slvt l=16n nfin=2
+Cext_a_io2 a_oh2 0 1.9030f
+CL_a_oh2 a_oh2 0 1f
+
+.TRAN 0.5p 1200p
+.PRINT TRAN V(bi) V(a_oh0) V(a_oh1) V(a_oh2) I(Vvdd)
+
+.MEASURE TRAN tpd_oh1 TRIG V(bi) VAL=0.2 RISE=1
++  TARG V(a_oh1) VAL=0.2 RISE=1
+.MEASURE TRAN i_avg AVG I(Vvdd) FROM=0 TO=1200p
+.MEASURE TRAN i_switch AVG I(Vvdd) FROM=200p TO=800p
+.MEASURE TRAN i_peak MAX I(Vvdd) FROM=200p TO=400p
+.END

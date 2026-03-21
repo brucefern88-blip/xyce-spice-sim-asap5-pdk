@@ -1,0 +1,107 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce DEVELOPMENT-202603192040-opensource
+***** Date: Fri Mar 20 19:29:27 PDT 2026
+
+
+***** Executing netlist xtran_f_04v.cir
+
+***** Reading and parsing netlist...
+Netlist warning in file
+ /Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm at or near
+ line 41
+ No model parameter VERSION found for model PMOS_SLVT of type PMOS, parameter
+ ignored.
+Netlist warning in file
+ /Users/bruce/CLAUDE/asap5/spice/xyce_models/pmos_slvt_tt_cal.pm at or near
+ line 41
+ Device model PMOS_SLVT: ADMSbsimcmg: Parameter LRSD value 0 out of range ] 0,
+  (+inf) [
+Netlist warning in file
+ /Users/bruce/CLAUDE/asap5/spice/xyce_models/nmos_slvt_tt_cal.pm at or near
+ line 41
+ No model parameter VERSION found for model NMOS_SLVT of type NMOS, parameter
+ ignored.
+Maximum warning count has been exceeded and will no longer be displayed
+***** Setting up topology...
+
+***** Device Count Summary ...
+       C level 1 (Capacitor)                   2
+       M level 107 (BSIM-CMG FINFET v107.0.0) 42
+       V level 1 (Independent Voltage Source)  6
+       -----------------------------------------
+       Total Devices                          50
+***** Setting up matrix structure...
+***** Number of Unknowns = 157
+***** Initializing...
+
+***** Beginning DC Operating Point Calculation...
+
+Netlist info in file xtran_f_04v.cir at or near line 56
+ Device instance M1040: Fatal: DROUT_i = %e is non-positive. 0 
+ 
+Netlist info in file xtran_f_04v.cir at or near line 52
+ Device instance M1036: Fatal: DROUT_i = %e is non-positive. 0 
+ 
+Netlist info in file xtran_f_04v.cir at or near line 50
+ Device instance M1034: Fatal: DROUT_i = %e is non-positive. 0 
+ 
+Maximum informational count has been exceeded and will no longer be displayed
+
+	Step size reached minimum step size bound
+
+	Step size reached minimum step size bound
+DC Operating Point Failed.  Exiting transient loop
+
+***** Solution Summary *****
+	Number Successful Steps Taken:		0
+	Number Failed Steps Attempted:		1
+	Number Jacobians Evaluated:		424
+	Number Linear Solves:			424
+	Number Failed Linear Solves:		9
+	Number Residual Evaluations:		527
+	Number Nonlinear Convergence Failures:	1
+	Total Residual Load Time:		0.149069 seconds
+	Total Jacobian Load Time:		0.00431228 seconds
+	Total Linear Solution Time:		0.0331533 seconds
+
+
+ ***** Measure Functions ***** 
+
+TPD_OH1 = 0.000000e+00 FAILED with targ = not found and trig = not found
+
+I_AVG = 0.000000e+00 FAILED
+Measure Start Time= 0.000000e+00	Measure End Time= 8.000000e-10
+
+I_SWITCH = 0.000000e+00 FAILED
+Measure Start Time= 2.000000e-10	Measure End Time= 6.000000e-10
+
+
+***** Total Simulation Solvers Run Time: 0.242856 seconds
+***** Total Elapsed Run Time:            0.247881 seconds
+*****
+***** End of Xyce(TM) Simulation
+*****
+
+Timing summary of 1 processor
+                 Stats                   Count       CPU Time              Wall Time
+---------------------------------------- ----- --------------------- ---------------------
+Xyce                                         1        0.102 (100.0%)        0.248 (100.0%)
+  Analysis                                   1        0.098 (96.36%)        0.243 (97.71%)
+    Transient                                1        0.098 (96.36%)        0.243 (97.71%)
+      Nonlinear Solve                        1        0.098 (96.34%)        0.243 (97.69%)
+        Residual                           527        0.067 (66.01%)        0.149 (60.15%)
+        Jacobian                           424        0.004 ( 3.96%)        0.004 ( 1.79%)
+        Linear Solve                       424        0.012 (11.74%)        0.033 (13.42%)
+      Failed DCOP Steps                      1        0.000 (<0.01%)        0.000 (<0.01%)
+  Netlist Import                             1        0.003 ( 2.54%)        0.004 ( 1.42%)
+    Parse Context                            1        0.000 ( 0.43%)        0.001 ( 0.36%)
+    Distribute Devices                       1        0.002 ( 1.73%)        0.002 ( 0.84%)
+    Verify Devices                           1        0.000 (<0.01%)        0.000 (<0.01%)
+    Instantiate                              1        0.000 ( 0.13%)        0.000 ( 0.06%)
+  Late Initialization                        1        0.001 ( 0.57%)        0.001 ( 0.44%)
+    Global Indices                           1        0.000 ( 0.12%)        0.000 ( 0.05%)
+  Setup Matrix Structure                     1        0.000 ( 0.13%)        0.000 ( 0.08%)
+
