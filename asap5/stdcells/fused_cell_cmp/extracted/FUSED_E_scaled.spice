@@ -1,0 +1,152 @@
+* NGSPICE file created from FUSED_E.ext - technology: asap5
+
+.option scale=10n
+
+M1000 a_294_85# a_278_85# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1001 VSS VSS a_118_225# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1002 VSS a_14_205# a_0_150# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=0.118m
+M1003 VDD a_322_85# a_294_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1004 VSS ai VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=12.6n ps=1.55m
+M1005 VSS ai a_206_10# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1006 VDD a_234_145# a_206_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1007 a_206_150# a_190_145# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1008 VSS ai a_294_225# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1009 a_118_85# a_102_85# VSS w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1010 VSS a_58_145# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1011 oh0 ai VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0.63n ps=73u
+M1012 a_294_225# ai a_250_225# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1013 a_426_150# a_410_145# a_382_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0.63n ps=73u
+M1014 a_118_225# a_0_150# VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1015 a_382_150# a_366_145# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1016 VSS a_58_85# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1017 VDD a_234_85# a_206_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1018 VSS VSS a_118_10# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1019 VDD a_146_145# a_118_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1020 VSS a_14_5# VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0 ps=0
+M1021 a_206_10# a_190_5# VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1022 VDD a_14_145# a_0_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=0.118m
+M1023 a_250_225# ai a_206_225# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1024 a_206_225# a_190_205# VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1025 oh0 a_366_85# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0.63n ps=73u
+M1026 a_294_10# ai VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1027 VDD a_322_145# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=11.34n ps=1.314m
+M1028 VSS ai a_294_10# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1029 VSS ai VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0 ps=0
+M1030 VSS ai oh1 Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0.63n ps=73u
+M1031 a_118_150# a_102_145# VSS w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1032 VDD a_278_145# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0 ps=0
+M1033 VDD a_146_85# a_118_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1034 VDD a_14_85# VSS w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=0.118m
+M1035 a_118_10# VSS VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1036 oh1 ai VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+M1037 a_206_85# a_190_85# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=73u
+C0 ai a_190_205# 0.0007f
+C1 ai a_206_10# 0.0741f
+C2 ai a_118_150# 0.0555f
+C3 ai oh0 0.0330f
+C4 ai a_118_225# 0.0471f
+C5 ai a_426_150# 0.0062f
+C6 ai a_294_10# 0.0455f
+C7 ai VSS 0.4792f
+C8 a_14_205# ai 0.0111f
+C9 ai a_14_5# 0.0136f
+C10 ai a_206_225# 0.0730f
+C11 ai m1_386_240# 0.0006f
+C12 ai VDD 0.7687f
+C13 ai a_118_85# 0.0657f
+C14 a_0_150# VSS 0.0306f
+C15 VSS a_118_10# 0.0354f
+C16 a_14_205# a_0_150# 0.0002f
+C17 ai a_250_225# 0.0365f
+C18 a_382_150# m1_386_240# 0.0160f
+C19 ai a_206_150# 0.0006f
+C20 ai a_206_85# 0.0012f
+C21 ai a_0_150# 0.0356f
+C22 ai a_382_150# 0.0497f
+C23 ai a_118_10# 0.0458f
+C24 oh1 m1_386_240# 0.0144f
+C25 a_118_225# VSS 0.0544f
+C26 ai a_294_85# 0.0014f
+C27 m1_4_24# 0 0.0246f $ **FLOATING
+C28 m1_386_240# 0 0.1272f
+C29 a_294_10# 0 1.6380f $ **FLOATING
+C30 a_206_10# 0 1.6380f $ **FLOATING
+C31 a_118_10# 0 1.6380f $ **FLOATING
+C32 a_190_5# 0 0.3275f $ **FLOATING
+C33 a_14_5# 0 0.3334f $ **FLOATING
+C34 oh0 0 2.0291f $ **FLOATING
+C35 a_294_85# 0 1.6506f $ **FLOATING
+C36 a_206_85# 0 1.6506f $ **FLOATING
+C37 a_118_85# 0 1.6506f $ **FLOATING
+C38 VSS 0 28.8901f $ **FLOATING
+C39 a_366_85# 0 0.0659f $ **FLOATING
+C40 a_322_85# 0 0.0659f $ **FLOATING
+C41 a_278_85# 0 0.0659f $ **FLOATING
+C42 a_234_85# 0 0.0659f $ **FLOATING
+C43 a_190_85# 0 0.0659f $ **FLOATING
+C44 a_146_85# 0 0.0659f $ **FLOATING
+C45 a_102_85# 0 0.0659f $ **FLOATING
+C46 a_58_85# 0 0.0659f $ **FLOATING
+C47 a_14_85# 0 0.0659f $ **FLOATING
+C48 a_426_150# 0 0.8999f $ **FLOATING
+C49 a_410_145# 0 0.0649f $ **FLOATING
+C50 a_382_150# 0 1.6506f $ **FLOATING
+C51 a_366_145# 0 0.0659f $ **FLOATING
+C52 a_322_145# 0 0.0659f $ **FLOATING
+C53 a_278_145# 0 0.0659f $ **FLOATING
+C54 a_234_145# 0 0.0659f $ **FLOATING
+C55 a_206_150# 0 1.6506f $ **FLOATING
+C56 a_190_145# 0 0.0659f $ **FLOATING
+C57 a_146_145# 0 0.0659f $ **FLOATING
+C58 a_118_150# 0 1.6506f $ **FLOATING
+C59 a_102_145# 0 0.0659f $ **FLOATING
+C60 a_58_145# 0 0.0659f $ **FLOATING
+C61 VDD 0 19.5188f $ **FLOATING
+C62 a_14_145# 0 0.0659f $ **FLOATING
+C63 oh1 0 1.6380f $ **FLOATING
+C64 a_294_225# 0 1.6506f $ **FLOATING
+C65 a_250_225# 0 1.6198f $ **FLOATING
+C66 a_206_225# 0 1.6380f $ **FLOATING
+C67 a_118_225# 0 1.6380f $ **FLOATING
+C68 a_190_205# 0 0.3373f $ **FLOATING
+C69 a_0_150# 0 2.6448f $ **FLOATING
+C70 ai 0 9.0827f $ **FLOATING
+C71 a_14_205# 0 0.3418f $ **FLOATING

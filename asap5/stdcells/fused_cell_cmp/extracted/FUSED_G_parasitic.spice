@@ -1,0 +1,218 @@
+* NGSPICE file created from FUSED_G.ext - technology: asap5
+
+.option scale=10n
+
+M1000 a_294_85# a_278_85# a_266_10# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1001 VSS a_146_225# a_118_225# Gnd nmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1002 VSS a_14_225# a_0_150# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=0.118m
+M1003 VDD a_322_85# a_294_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1004 a_74_10# bi VSS Gnd nmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1005 VSS a_234_5# a_206_10# Gnd nmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1006 a_250_150# a_234_145# a_206_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1007 a_206_150# a_190_145# a_178_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1008 VSS a_322_225# a_294_225# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0.63n ps=73u
+M1009 VDD a_102_85# a_90_10# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1010 a_0_150# a_58_145# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1011 a_470_85# a_454_85# a_266_10# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1012 a_382_10# a_366_5# VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1013 a_294_225# a_278_225# a_266_150# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1014 a_118_225# a_102_225# a_90_225# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1015 VSS a_410_5# a_382_10# Gnd nmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1016 a_74_10# a_58_85# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1017 VDD a_234_85# a_206_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1018 a_74_10# bj VSS Gnd nmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1019 VDD a_146_145# a_118_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1020 a_514_10# a_498_5# a_470_10# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0.63n ps=73u
+M1021 VSS ai a_0_10# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=0.118m
+M1022 a_206_10# a_190_5# VSS Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1023 VDD a_14_145# a_0_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=0.118m
+M1024 VSS a_234_225# a_206_225# Gnd nmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1025 a_206_225# a_190_225# a_178_150# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1026 a_382_85# a_366_85# a_354_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1027 a_294_10# a_278_5# a_266_10# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1028 a_338_150# a_322_145# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0.63n ps=73u
+M1029 VDD a_410_85# a_382_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1030 a_338_10# a_322_5# a_294_10# Gnd nmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1031 a_0_150# a_58_225# VSS Gnd nmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1032 a_118_150# a_102_145# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1033 VDD a_278_145# a_266_150# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1034 a_74_10# a_146_85# VDD w_0_65# pmos_slvt w=45 l=16
++  ad=0.54n pd=0.114m as=0.63n ps=73u
+M1035 VDD a_498_85# a_470_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=0.118m as=0.63n ps=73u
+M1036 VDD a_14_85# a_0_10# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.63n ps=0.118m
+M1037 VSS aj a_90_10# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1038 a_206_85# a_190_85# a_178_85# w_0_65# pmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+M1039 a_470_10# a_454_5# a_266_10# Gnd nmos_slvt w=45 l=16
++  ad=0.63n pd=73u as=0.54n ps=0.114m
+C0 a_146_145# a_266_10# 0.0245f
+C1 a_178_150# m1_122_166# 2.35275f
+C2 a_266_10# a_354_85# 5.53458f
+C3 a_0_150# a_206_225# 0.37724f
+C4 VDD a_266_10# 75.59f
+C5 a_266_10# aj 0.0292f
+C6 VSS m1_386_34# 2.39322f
+C7 a_206_10# m1_210_34# 4.6979f
+C8 a_74_10# a_90_10# 2.28378f
+C9 a_266_10# a_322_5# 0.0292f
+C10 a_322_145# noh2 0.02599f
+C11 a_470_10# m1_386_34# 0.58724f
+C12 a_74_10# a_354_85# 1.17631f
+C13 a_178_85# a_266_10# 5.53458f
+C14 a_0_150# noh2 0.03392f
+C15 a_338_150# noh2 1.95063f
+C16 VDD a_74_10# 5.88156f
+C17 a_266_10# a_382_85# 9.51523f
+C18 a_0_150# a_266_150# 4.80645f
+C19 VSS noh1 2.45679f
+C20 a_118_150# a_266_10# 1.64634f
+C21 a_266_10# bj 0.0292f
+C22 a_266_10# m1_210_34# 2.38354f
+C23 a_294_10# m1_210_34# 0.58724f
+C24 a_74_10# a_178_85# 1.17631f
+C25 a_14_145# a_266_10# 0.01634f
+C26 a_74_10# a_382_85# 3.34394f
+C27 a_206_85# a_266_10# 16.6277f
+C28 a_118_225# noh1 7.06187f
+C29 a_0_150# a_90_225# 0.1233f
+C30 a_266_10# a_470_85# 2.38394f
+C31 a_294_225# noh2 7.01945f
+C32 a_0_150# a_294_225# 0.36555f
+C33 VSS noh2 3.69625f
+C34 a_0_150# VSS 3.52949f
+C35 a_266_10# a_190_5# 0.0292f
+C36 a_266_10# m1_386_34# 2.38108f
+C37 a_178_150# a_266_10# 2.36769f
+C38 a_0_10# a_266_10# 0.65722f
+C39 a_74_10# a_206_85# 3.52893f
+C40 VDD m1_122_166# 2.48348f
+C41 a_58_145# a_266_10# 0.0245f
+C42 a_178_150# noh1 0.58977f
+C43 a_0_150# a_118_225# 0.3821f
+C44 a_266_10# a_234_5# 0.0292f
+C45 a_0_150# a_234_145# 0.02599f
+C46 a_74_10# a_266_10# 18.4948f
+C47 a_118_150# m1_122_166# 4.70792f
+C48 a_102_145# a_266_10# 0.04901f
+C49 a_266_10# a_294_85# 16.6277f
+C50 a_0_150# a_178_150# 4.7257f
+C51 a_266_10# bi 0.02434f
+C52 VSS m1_210_34# 2.39322f
+C53 a_0_150# a_266_10# 4.46908f
+C54 a_266_10# a_278_5# 0.0292f
+C55 a_382_10# m1_386_34# 4.6979f
+C56 a_74_10# a_294_85# 3.52893f
+C57 a_90_10# a_266_10# 6.12915f
+C58 a_206_150# m1_122_166# 0.58819f
+C59 a_0_150# a_250_150# 1.81532f
+C60 m1_386_34# 0 13.6551f
+C61 m1_210_34# 0 13.6838f
+C62 m1_122_166# 0 11.8989f
+C63 noh2 0 23.4273f
+C64 noh1 0 14.2528f
+C65 a_514_10# 0 91.25f $ **FLOATING
+C66 a_470_10# 0 0.1638p $ **FLOATING
+C67 a_382_10# 0 0.1638p $ **FLOATING
+C68 a_338_10# 0 79.42f $ **FLOATING
+C69 a_294_10# 0 0.1638p $ **FLOATING
+C70 a_206_10# 0 0.1638p $ **FLOATING
+C71 VSS 0 1.7423p $ **FLOATING
+C72 a_498_5# 0 38.4776f $ **FLOATING
+C73 a_454_5# 0 38.4387f $ **FLOATING
+C74 a_410_5# 0 38.4387f $ **FLOATING
+C75 a_366_5# 0 38.4387f $ **FLOATING
+C76 a_322_5# 0 38.4387f $ **FLOATING
+C77 a_278_5# 0 38.4387f $ **FLOATING
+C78 a_234_5# 0 38.4387f $ **FLOATING
+C79 a_190_5# 0 38.4387f $ **FLOATING
+C80 bj 0 38.4387f $ **FLOATING
+C81 aj 0 38.4387f $ **FLOATING
+C82 bi 0 38.4387f $ **FLOATING
+C83 ai 0 38.4776f $ **FLOATING
+C84 a_470_85# 0 0.16506p $ **FLOATING
+C85 a_382_85# 0 0.16506p $ **FLOATING
+C86 a_354_85# 0 79.42f $ **FLOATING
+C87 a_294_85# 0 0.16506p $ **FLOATING
+C88 a_266_10# 0 0.72345p $ **FLOATING
+C89 a_206_85# 0 0.16506p $ **FLOATING
+C90 a_178_85# 0 79.42f $ **FLOATING
+C91 a_90_10# 0 0.17543p $ **FLOATING
+C92 a_74_10# 0 0.4037p $ **FLOATING
+C93 a_0_10# 0 0.203p $ **FLOATING
+C94 a_498_85# 0 6.49118f $ **FLOATING
+C95 a_454_85# 0 6.48394f $ **FLOATING
+C96 a_410_85# 0 6.48394f $ **FLOATING
+C97 a_366_85# 0 6.48394f $ **FLOATING
+C98 a_322_85# 0 6.5855f $ **FLOATING
+C99 a_278_85# 0 6.5855f $ **FLOATING
+C100 a_234_85# 0 6.5855f $ **FLOATING
+C101 a_190_85# 0 6.5855f $ **FLOATING
+C102 a_146_85# 0 6.5855f $ **FLOATING
+C103 a_102_85# 0 6.5855f $ **FLOATING
+C104 a_58_85# 0 6.5855f $ **FLOATING
+C105 a_14_85# 0 6.59275f $ **FLOATING
+C106 a_338_150# 0 89.99f $ **FLOATING
+C107 a_250_150# 0 77.74f $ **FLOATING
+C108 a_206_150# 0 0.1638p $ **FLOATING
+C109 a_118_150# 0 0.1638p $ **FLOATING
+C110 VDD 0 1.72251p $ **FLOATING
+C111 a_322_145# 0 38.4776f $ **FLOATING
+C112 a_278_145# 0 38.4387f $ **FLOATING
+C113 a_234_145# 0 38.4387f $ **FLOATING
+C114 a_190_145# 0 35.4233f $ **FLOATING
+C115 a_146_145# 0 35.4233f $ **FLOATING
+C116 a_102_145# 0 38.4387f $ **FLOATING
+C117 a_58_145# 0 35.4233f $ **FLOATING
+C118 a_14_145# 0 35.4622f $ **FLOATING
+C119 a_294_225# 0 0.16506p $ **FLOATING
+C120 a_266_150# 0 0.17553p $ **FLOATING
+C121 a_206_225# 0 0.16506p $ **FLOATING
+C122 a_178_150# 0 0.17558p $ **FLOATING
+C123 a_118_225# 0 0.16506p $ **FLOATING
+C124 a_90_225# 0 77.74f $ **FLOATING
+C125 a_0_150# 0 0.51356p $ **FLOATING
+C126 a_322_225# 0 6.59275f $ **FLOATING
+C127 a_278_225# 0 6.5855f $ **FLOATING
+C128 a_234_225# 0 6.5855f $ **FLOATING
+C129 a_190_225# 0 6.5855f $ **FLOATING
+C130 a_146_225# 0 6.5855f $ **FLOATING
+C131 a_102_225# 0 6.5855f $ **FLOATING
+C132 a_58_225# 0 6.5855f $ **FLOATING
+C133 a_14_225# 0 6.59275f $ **FLOATING
